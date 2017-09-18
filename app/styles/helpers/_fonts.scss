@@ -24,3 +24,27 @@
 800 — Extra Bold, Ultra Bold
 900 — Black, Heavy
 */
+
+@font-face {
+  font-family: 'Gotha';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/GothaProMed.otf');
+  src: url('../fonts/GothaProMed.otf') format('otf');
+}
+
+@font-face {
+  font-family: 'Gotha';
+  font-style: normal;
+  font-weight: 300;
+  src: url('../fonts/GothaProLig.otf');
+  src: url('../fonts/GothaProLig.otf') format('otf');
+}
+
+@font-face {
+  font-family: 'Gotha';
+  font-style: normal;
+  font-weight: 500;
+  src: url('../fonts/GothaProReg.otf');
+  src: url('../fonts/GothaProReg.otf') format('otf');
+}

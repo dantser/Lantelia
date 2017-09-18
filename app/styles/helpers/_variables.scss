@@ -17,7 +17,8 @@ $color-basic: black; // Основной цвет текста (применяе
 $color-main: blue; // Основной фирменный цвет
 $color-placeholder: #777; // Основной цвет для placeholder
 $color-input: black; // Основной цвет input, select и textarea
-
+$color-white: white;
+$color-gray: #7c7c7c;
 // ##########
 // Transitions
 // ##########
@@ -26,5 +27,5 @@ $ease-main: .3s ease;
 // ##########
 // Шрифты
 // ##########
-$font-main: Arial, sans-serif; // Основной шрифт сайта
-$font-second: Times New Roman, sans-serif; // Дополнительный шрифт
+$font-main: Gotha, sans-serif; // Основной шрифт сайта
+// $font-second: Times New Roman, sans-serif; // Дополнительный шрифт

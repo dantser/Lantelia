@@ -1,0 +1,17 @@
+//- модификатор при черном фоне +header()._main
+
+include ../../blocks/icon/icons
+
+mixin header()
+  +b.header&attributes(attributes)
+    +e.logo-wrap
+      +icon('Lantelia_logo').logo
+    +e.nav
+      +e.nav-group
+        +e.A(href="#").link Продукция
+        +e.A(href="#").link Где купить
+      +e.nav-group
+        +e.A(href="#").link Обучение и новости
+        +e.A(href="#").link О компании
+        +e.A(href="#").link Контакты
+        //- +e.A(href="#").link Еще пункт

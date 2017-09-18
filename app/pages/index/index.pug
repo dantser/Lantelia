@@ -1,7 +1,9 @@
 extends ../../layouts/default
+include ../../components/header/header
 
 block head
   - var pageTitle = 'Versta Project Template'
 
 block content
   +b.index
+    +header()._main

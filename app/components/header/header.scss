@@ -1,0 +1,53 @@
+.header {
+  display: flex;
+  background: black;
+  padding: 20px 58px 20px 0;
+
+  &__logo-wrap {
+    margin-right: 10px;
+  }
+
+  &__logo {
+    fill: $color-white;
+    stroke: $color-white;
+  }
+
+  &__nav {
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+  }
+
+  &__link {
+    display: inline-flex;
+    margin-right: 48px;
+    text-decoration: none;
+    font-family: $font-main;
+    font-size: 12px;
+    letter-spacing: 1.5px;
+    text-align: left;
+    text-transform: uppercase;
+    color: $color-gray;
+
+    &:hover {
+      color: $color-basic;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  // модификатор при черном фоне
+
+  &_main {
+
+    .header__link {
+      color: $color-white;
+
+      &:hover {
+        color: $color-gray;
+      }
+    }
+  }
+}
