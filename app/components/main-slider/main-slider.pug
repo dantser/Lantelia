@@ -1,0 +1,29 @@
+include ../../blocks/grid/grid
+
+mixin main-slider()
+  +b.main-slider&attributes(attributes)
+    +grid
+      +col(5)
+        +e.H1.title Проффесиональная косметика для волос Lantelia
+        +e.link-wrapper
+          +e.A(href="#").link Начать работать с Lantelia
+      +col(7)
+        +e.slider.product-container
+          .product-wrapper
+            .product-slide
+              img(src="assets/images/picProduct/clarify_250ml_03(line)@2x.png")
+            .product-slide 
+              img(src="assets/images/picProduct/smooth_250ml_03(line)@2x.png")
+            .product-slide
+              img(src="assets/images/picProduct/spa_250ml_03(line)@2x.png")
+          +e.UL.pagination
+            li.slider-pagination-switch.active
+            li.slider-pagination-switch
+            li.slider-pagination-switch
+            
+    +e.bottom
+      +e.phones 
+        span 8 800 870-0697
+        span 8 495 700-0201
+      +e.A(href="#").link Подробнее
+      

@@ -1,7 +1,8 @@
 .header {
   display: flex;
-  background: black;
+  flex: 1;
   padding: 20px 58px 20px 0;
+  justify-content: space-around;
 
   &__logo-wrap {
     margin-right: 10px;
@@ -15,14 +16,13 @@
   &__nav {
     display: flex;
     flex: 1;
-    justify-content: space-between;
+    justify-content: space-around;
+    align-items: center;
   }
 
   &__link {
     display: inline-flex;
     margin-right: 48px;
-    text-decoration: none;
-    font-family: $font-main;
     font-size: 12px;
     letter-spacing: 1.5px;
     text-align: left;

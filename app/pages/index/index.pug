@@ -1,9 +1,11 @@
 extends ../../layouts/default
 include ../../components/header/header
+include ../../components/main-slider/main-slider
 
 block head
   - var pageTitle = 'Versta Project Template'
 
 block content
   +b.index
-    +header()._main
+    +header()
+    +main-slider()
