@@ -2,6 +2,9 @@ extends ../../layouts/default
 include ../../components/header/header
 include ../../components/main-slider/main-slider
 include ../../blocks/product-card/product-card
+include ../../blocks/section-head/section-head
+include ../../blocks/address-card/address-card
+include ../../components/whereToBuy/whereToBuy
 
 block head
   - var pageTitle = 'Versta Project Template'
@@ -13,3 +16,4 @@ block content
     +product-card(getData('product-card'))
     +product-card(getData('product-card-double'))
     +product-card(getData('product-card-xl'))._xl
+    +whereToBuy()

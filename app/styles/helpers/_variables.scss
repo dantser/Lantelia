@@ -14,7 +14,8 @@ $grid-col-width: $grid-container-width/$grid-cols; // Ширина одной к
 // Цвета
 // ##########
 $color-basic: black; // Основной цвет текста (применяется к body)
-$color-main: blue; // Основной фирменный цвет
+$color-main: #252525; // Основной фирменный цвет
+
 $color-placeholder: #777; // Основной цвет для placeholder
 $color-input: black; // Основной цвет input, select и textarea
 $color-white: white;
@@ -27,5 +28,5 @@ $ease-main: .3s ease;
 // ##########
 // Шрифты
 // ##########
-$font-main: Gotha, sans-serif; // Основной шрифт сайта
+$font-main: 'GothamPro', sans-serif; // Основной шрифт сайта
 // $font-second: Times New Roman, sans-serif; // Дополнительный шрифт

@@ -1,0 +1,17 @@
+.section-head {
+
+  &__subtitle {
+    font-size: 13px;
+    color: $color-gray;
+    margin: 50px 0 18px;
+    font-weight: 300;
+  }
+
+  &__title {
+    font-size: 28px;
+    letter-spacing: .8px;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+    font-weight: 300;
+  }
+}
