@@ -61,7 +61,20 @@
     width: 25px;
   }
 
-  // @media (max-width: 768px) {
-  //
-  // }
+  @media (max-width: 768px) {
+    border: none;
+    border-bottom: 1px solid #ededed;
+    max-width: none;
+    padding-right: 0;
+    padding-left: 0;
+    margin-right: 0;
+
+    &:first-child {
+      border-top: 1px solid #ededed;
+    }
+
+    &__content {
+      max-width: 90%;
+    }
+  }
 }

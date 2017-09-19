@@ -31,4 +31,19 @@
       margin-right: 0;
     }
   }
+
+  @media (max-width: 768px) {
+
+    .address-container {
+      overflow: auto;
+    }
+
+    .address-card {
+      margin-right: 0;
+    }
+
+    .address-wrapper {
+      display: block;
+    }
+  }
 }

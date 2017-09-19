@@ -6,6 +6,7 @@
 @import '../blocks/**/*';
 @import '../components/**/*';
 @import '../pages/**/*';
+@import '../../node_modules/jquery-nice-select/css/nice-select.css';
 
 .container {
   width: $container-width;
