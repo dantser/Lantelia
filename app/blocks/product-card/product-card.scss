@@ -1,0 +1,128 @@
+.product-card {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  border: 1px solid #ededed;
+  max-width: 362px;
+  box-sizing: border-box;
+
+  &_xl {
+    max-width: 722px;
+
+    .product-card__volume + .product-card__volume {
+      margin-left: 74px;
+    }
+
+    .product-card__name, .product-card__line {
+      max-width: 15%;
+    }
+  }
+
+  &__line {
+    font-size: 16px;
+    font-weight: 300;
+    text-align: left;
+    max-width: 30%;
+    line-height: 1.31;
+    text-transform: capitalize;
+  }
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 55px 0 60px;
+  }
+
+  &__name, &__volume {
+    font-size: 13px;
+    color: #7c7c7c;
+  }
+
+  &__name {
+    max-width: 30%;
+    line-height: 1.77;
+    text-transform: capitalize;
+  }
+
+  &__volume + &__volume {
+    margin-left: 91px;
+  }
+
+  &__image {
+    width: 360px;
+    height: 360px;
+    align-self: center;
+  }
+
+  &__bottom {
+    padding: 0 0 52px;
+    align-self: center;
+  }
+  &__cart, &__arrow {
+    display: none;
+  }
+
+  @media (max-width: 768px) {
+    padding: 25px 0;
+    border: none;
+    border-bottom: 1px solid #ededed;
+    flex-flow: row;
+    justify-content: center;
+    flex: 1;
+
+    &_xl {
+      max-width: 362px;
+    }
+
+    &__image {
+      width: 92px;
+      height: 92px;
+      align-self: flex-start;
+      order: 1;
+    }
+
+    &__line {
+      line-height: 1.5;
+      margin-bottom: 5px;
+    }
+
+    &__top {
+      flex-flow: column;
+      padding: 0;
+      order: 2;
+      margin-left: 24px;
+    }
+
+    &__bottom {
+      order: 3;
+      display: flex;
+      flex-flow: column;
+      padding: 0;
+      justify-content: space-between;
+      align-self: auto;
+    }
+
+    &__volume {
+      display: none;
+    }
+
+    &__cart {
+      display: block;
+
+      svg {
+        fill: $color-basic;
+        width: 24px;
+        height: 24px;
+      }
+    }
+
+    &__arrow {
+      display: block;
+      svg {
+        height: 24px;
+        width: 25px;
+        fill: $color-basic;
+      }
+    }
+  }
+}

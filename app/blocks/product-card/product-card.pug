@@ -1,0 +1,17 @@
+//- ._xl - для тройной карточки
+include ../../blocks/icon/icons
+
+mixin product-card(data)
+  +b.product-card&attributes(attributes)
+    +e.top
+      +e.H3.line= data.line
+      +e.SPAN.name= data.name
+    +e.IMG(src= data.img).image
+    +e.bottom
+      each item in data.volume
+        +e.SPAN.volume= item
+      +e.A(href="#", title="Перейти к товару").arrow
+        +icon('arrow')
+      +e.A(href="#", title="Добавить в корзину").cart
+        +icon('shopping-cart')
+      
