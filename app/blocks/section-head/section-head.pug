@@ -2,3 +2,7 @@ mixin section-head(subtitle, title)
   +b.section-head&attributes(attributes)
     +e.H3.subtitle= subtitle
     +e.H2.title= title
+    +e.SELECT.select
+      option(value, selected) Все офисы продаж
+      option(value='all') Все офисы продаж
+      option(value='one') Все офисы продаж
