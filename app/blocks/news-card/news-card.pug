@@ -1,0 +1,19 @@
+//- модификатор для цветных новостей ._colored
+//- ._blue, ._pink, ._gray, ._green
+
+mixin news-card(data)
+  +b.news-card&attributes(attributes)
+    +e.wrapper
+      +e.type= data.type
+      +e.text= data.text
+      +e.A(href="#").link= data.link
+
+mixin news-card-large(data)
+  +b.news-card._xl&attributes(attributes)
+    +e.wrapper
+      +e.top
+        +e.type= data.type
+        +e.logo Lantelia
+      +e.bottom
+        +e.text= data.text
+        +e.A(href="#").link= data.link

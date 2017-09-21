@@ -1,0 +1,129 @@
+.news-card {
+  display: block;
+  border: 1px solid #ededed;
+  box-sizing: border-box;
+  height: 312px;
+  width: 312px;
+  padding: 30px 36px 34px;
+  position: relative;
+
+  &_colored {
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: -6px;
+      left: 0;
+      right: 0;
+      width: 97%;
+      height: 6px;
+      margin: auto;
+    }
+  }
+
+  &_blue {
+    background-image: linear-gradient(315deg, rgba(179, 195, 233, .5), rgba(211, 223, 243, .5));
+
+    &::after {
+      background-image: linear-gradient(rgba(22, 22, 25, .03), rgba(22, 22, 25, .03)), linear-gradient(271deg, rgba(179, 195, 233, .5), rgba(211, 223, 243, .5));
+    }
+  }
+
+  &_pink {
+    background-image: linear-gradient(315deg, rgba(219, 178, 171, .5) 3%, rgba(242, 221, 223, .5));
+
+    &::after {
+      background-image: linear-gradient(rgba(22, 22, 25, .03), rgba(22, 22, 25, .03)), linear-gradient(271deg, rgba(219, 178, 171, .5) 3%, rgba(242, 221, 223, .5));
+    }
+  }
+
+  &_gray {
+    background-image: linear-gradient(315deg, rgba(206, 194, 150, .5), rgba(246, 239, 215, .5));
+
+    &::after {
+      background-image: linear-gradient(rgba(22, 22, 25, .03), rgba(22, 22, 25, .03)), linear-gradient(271deg, rgba(206, 194, 150, .5), rgba(246, 239, 215, .5));
+    }
+  }
+
+  &_green {
+    background-image: linear-gradient(315deg, rgba(156, 196, 158, .5), rgba(198, 222, 212, .5));
+
+    &::after {
+      background-image: linear-gradient(rgba(22, 22, 25, .03), rgba(22, 22, 25, .03)), linear-gradient(271deg, rgba(156, 196, 158, .5), rgba(198, 222, 212, .5));
+    }
+  }
+
+  &_xl {
+    width: 648px;
+    height: 648px;
+    border: none;
+    background: $color-gray url('../images/picMainPage/aboutUs@2x.jpg');
+    background-size: cover;
+
+    * {
+      color: $color-white !important;
+    }
+
+    .news-card__text {
+      max-width: 240px;
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    height: 100%;
+  }
+
+  &__type {
+    font-size: 13px;
+    font-weight: 300;
+    color: $color-gray;
+    margin-bottom: 20px;
+  }
+
+  &__text {
+    font-size: 16px;
+    line-height: 1.5;
+    color: $color-main;
+    font-weight: 400;
+    flex-grow: 1;
+  }
+
+  &__link {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1.4px;
+    color: rgba(0, 0, 0, .5);
+  }
+
+  &__logo {
+    text-transform: uppercase;
+    font-size: 36px;
+    font-weight: 300;
+    letter-spacing: 1px;
+  }
+
+  &__bottom {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+  }
+
+  @media (max-width: 768px) {
+    width: 276px;
+    height: 276px;
+
+    &_xl {
+
+      .news-card__text {
+        display: none;
+      }
+    }
+
+    &__logo {
+      font-size: 18px;
+    }
+  }
+}

@@ -3,6 +3,8 @@ import objectFitImages from 'object-fit-images';
 import mainSlider from '../components/main-slider/main-slider';
 import addressCard from '../blocks/address-card/address-card';
 import whereToBuy from '../components/whereToBuy/whereToBuy';
+import map from '../components/map/map';
+import newsCard from '../blocks/news-card/news-card';
 
 const $ = window.$;
 
@@ -12,4 +14,6 @@ $(() => {
   mainSlider();
   addressCard();
   whereToBuy();
+  map();
+  newsCard();
 });

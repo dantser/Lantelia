@@ -1,0 +1,16 @@
+include ../../blocks/section-head/section-head
+include ../../blocks/news-card/news-card
+
+mixin aboutcompany()
+  +b.SECTION.aboutcompany&attributes(attributes)
+    .container
+      +section-head('Компания Lantelia', 'Информация')
+      +e.content
+        +e.cell
+          +news-card-large(getData('news-card-large'))
+        +e.cell._nested
+          +news-card(getData('news-card'))._colored._blue
+          +news-card(getData('news-card'))._colored._blue
+          +news-card(getData('news-card'))._colored._pink
+          +news-card(getData('news-card'))._colored._gray
+          //- +news-card(getData('news-card'))._colored._green

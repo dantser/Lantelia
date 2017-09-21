@@ -1,13 +1,17 @@
 .product-card {
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: space-between;
   border: 1px solid #ededed;
   max-width: 362px;
   box-sizing: border-box;
   position: relative;
-  padding-bottom: 60px;
   cursor: pointer;
+
+  &__wrapper {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    padding-bottom: 60px;
+    min-height: 563px;
+  }
 
   &:hover {
 
@@ -40,12 +44,13 @@
   &__top {
     display: flex;
     justify-content: space-between;
-    padding: 50px 55px 0 60px;
+    padding: 50px 55px 10px 60px;
   }
 
   &__name, &__volume {
     font-size: 13px;
     color: #7c7c7c;
+    font-weight: 300;
   }
 
   &__name {
@@ -98,12 +103,16 @@
   }
 
   @media (max-width: 768px) {
-    padding: 25px 0;
     border: none;
     border-bottom: 1px solid #ededed;
-    flex-flow: row;
-    justify-content: center;
-    flex: 1;
+
+    &__wrapper {
+      padding: 25px 0;
+      flex-flow: row;
+      justify-content: center;
+      flex: 1;
+      min-height: 0;
+    }
 
     &_xl {
       max-width: 362px;

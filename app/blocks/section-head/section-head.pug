@@ -1,8 +1,9 @@
-mixin section-head(subtitle, title)
+mixin section-head(subtitle, title, dropdown)
   +b.section-head&attributes(attributes)
     +e.H3.subtitle= subtitle
     +e.H2.title= title
-    +e.SELECT.select
-      option(value, selected) Все офисы продаж
-      option(value='moskow') Москва
-      option(value='spb') Санкт-Петербург
+    if dropdown
+      +e.SELECT.select
+        option(value, selected) Все офисы продаж
+        option(value='moskow') Москва
+        option(value='spb') Санкт-Петербург

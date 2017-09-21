@@ -7,6 +7,7 @@
 @import '../components/**/*';
 @import '../pages/**/*';
 @import '../../node_modules/jquery-nice-select/css/nice-select.css';
+@import '../../node_modules/leaflet/dist/leaflet.css';
 
 .container {
   width: $container-width;
@@ -15,6 +16,11 @@
   margin: 0 auto;
   max-width: 100%;
   box-sizing: border-box;
+
+  @media (max-width: 768px) {
+    padding-left: 22px;
+    padding-right: 22px;
+  }
 }
 
 a {

@@ -1,0 +1,42 @@
+.map {
+  display: block;
+  height: 900px;
+
+  .leaflet-popup-content-wrapper {
+    background: #252525;
+    border-radius: 0;
+    font-family: $font-main;
+    box-shadow: none;
+  }
+
+  .leaflet-popup-content {
+    margin: 35px 36px;
+  }
+
+  .leaflet-popup {
+    margin-bottom: 15px;
+  }
+
+  .leaflet-popup-close-button, .leaflet-popup-tip-container {
+    display: none;
+  }
+
+  p {
+    color: $color-gray;
+    font-size: 13px;
+    line-height: 1.77;
+    margin-bottom: 25px;
+    margin-top: 0;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  h3 {
+    font-size: 16px;
+    color: $color-white;
+    line-height: 1.31;
+    margin-bottom: 7px;
+  }
+}
