@@ -5,6 +5,7 @@ import addressCard from '../blocks/address-card/address-card';
 import whereToBuy from '../components/whereToBuy/whereToBuy';
 import map from '../components/map/map';
 import newsCard from '../blocks/news-card/news-card';
+import needHelp from '../components/needHelp/needHelp';
 
 const $ = window.$;
 
@@ -16,4 +17,5 @@ $(() => {
   whereToBuy();
   map();
   newsCard();
+  needHelp();
 });

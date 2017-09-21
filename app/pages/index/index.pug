@@ -5,15 +5,21 @@ include ../../components/whereToBuy/whereToBuy
 include ../../components/main-products/main-products
 include ../../components/map/map
 include ../../components/aboutcompany/aboutcompany
+include ../../components/footer/footer
+include ../../components/needHelp/needHelp
+
 
 block head
   - var pageTitle = 'Versta Project Template'
 
 block content
   +b.index
+    #grayscreen
     +header()
     +main-slider()
     +main-products()
     +whereToBuy()
     +map()
     +aboutcompany()
+    +footer()
+  +needHelp()

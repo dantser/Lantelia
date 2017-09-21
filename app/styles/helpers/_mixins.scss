@@ -37,6 +37,19 @@ div::after {
   position: $pos;
 }
 
+// vendor prefixes
+@mixin vendor($property, $value) {
+  -webkit-#{$property}: $value;
+  -moz-#{$property}: $value;
+  -ms-#{$property}: $value;
+  #{$property}: $value;
+}
+
+// general transition options
+@mixin transited($args: 'all 250ms ease-in-out') {
+  @include vendor(transition, unquote(inspect($args)));
+}
+
 /*
 Миксин для треугольников, сделанных через :before и :after
 Пример:

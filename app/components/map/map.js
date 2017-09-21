@@ -19,7 +19,7 @@ export default () => {
           popupAnchor:  [-3, -76]
       }
   });
-  var markers = {};
+  var markers = [];
 
   var tsetnoyMsk = new LeafIcon({iconUrl: 'assets/images/pin.svg'});
   markers["marker1"] = L.marker([55.7788008, 37.5821708], {icon: tsetnoyMsk}, {title: marker1}).addTo(mymap).bindPopup(L.popup({maxWidth:201}).setContent("<h3>Цветной Москва</h3> <p>г. Москва, Ленинградский проспект, д. 2, цокольный этаж, оф. №1</p><h3>Контакты</h3> <p>Тел.: 79269464613<br>Эл. почта: msk.bel@cdek.ru</p> <p>Пн-Пт – с 10:00 до 20:00<br>Сб, Вс – с 10:00 до 16:00</p>")).on('click', clickZoom);

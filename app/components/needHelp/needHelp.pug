@@ -1,0 +1,21 @@
+include ../../components/social/social
+
+mixin needHelp()
+  +b.needHelp&attributes(attributes)
+    +e.wrapper
+      +icon('phone').icon
+      +icon('close').close
+      +e.text Нужна помощь
+  +needHelp-popup()
+
+mixin needHelp-popup()
+  +b.needHelp-popup&attributes(attributes)
+    +e.content
+      +e.H3.heading Нужна помощь?
+      +e.P.text Позвоните нам и наш менеджер ответит на Ваши вопросы
+    +e.A(href="tel:8 800 870—0697").phone
+      +e.num 8 800 870—0697
+      +icon('phonecopy3').icon
+    +e.A(href="tel:8 495 700—0201").phone
+      +e.num 8 495 700—0201
+      +icon('phonecopy3').icon
