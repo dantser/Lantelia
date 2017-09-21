@@ -3,10 +3,25 @@ import $ from 'jquery';
 
 export default () => {
   const needHelp = $('.needHelp');
+  const w = $(window);
+  const SHOW_ELEMENT_AT = $('.main-slider').offset().top;
 
   if(!needHelp) {
     return
   };
+  if(w.width > 971) {
+    w.on('scroll', function (e) { // eslint-disable-line
+      const scrollTop = w.scrollTop();
+      // eslint-disable-next-line
+
+      if (scrollTop > SHOW_ELEMENT_AT) {
+        needHelp.fadeIn();
+      } else {
+        needHelp.fadeOut();
+      }
+    });
+  }
+
 
   // Freeze page content scrolling
   function freeze() {
@@ -19,7 +34,6 @@ export default () => {
           if (window.innerWidth > h.width()) {
               h.css('overflow-y', 'scroll');
           }
-
           h.css({  position: 'fixed', top: -top });
       }
   };
@@ -44,11 +58,15 @@ export default () => {
 
     if ($(this).hasClass('needHelp_opened')) {
       freeze();
-      grayscreen.show();
+      if(w.width > 971) {
+        grayscreen.show();
+      }
       popup.show();
     } else {
       unfreeze();
-      grayscreen.hide();
+      if(w.width > 971) {
+        grayscreen.hide();
+      }
       popup.hide();
     }
   });

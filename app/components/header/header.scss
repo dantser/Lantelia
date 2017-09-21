@@ -1,33 +1,97 @@
 .header {
-  display: flex;
-  flex: 1;
-  padding: 20px 58px 20px 0;
-  justify-content: space-around;
 
-  &__logo-wrap {
-    margin-right: 10px;
+  .burger {
+    display: none;
+  }
+
+  &__wrapper {
+    display: flex;
+    padding: 20px 0;
+    justify-content: space-between;
+    flex-flow: row nowrap;
+    align-items: center;
+    position: relative;
   }
 
   &__logo {
-    fill: $color-white;
-    stroke: $color-white;
+    margin-right: 10px;
+    font-size: 17px;
+    letter-spacing: 8.5px;
+    color: $color-basic;
+    text-transform: uppercase;
+
+    @include transited;
+
+    &:hover {
+      opacity: .7;
+    }
   }
 
   &__nav {
-    display: flex;
-    flex: 1;
-    justify-content: space-around;
-    align-items: center;
+
+    &-wrapper {
+      display: flex;
+      align-items: center;
+    }
+
+    &-content {
+      display: none;
+    }
+
+    &-name {
+      font-size: 16px;
+      line-height: 1.5;
+      font-weight: 400;
+      color: $color-white;
+      margin-bottom: 8px;
+      display: block;
+    }
+
+    &-text {
+      color: $color-white;
+      font-size: 13px;
+      line-height: 1.77;
+      margin-bottom: 9px;
+    }
+
+    &-group {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-between;
+
+      & + .header__nav-group {
+        margin-left: 108px;
+      }
+    }
+
+    &-icon {
+      display: none;
+      width: 24px;
+      height: 25px;
+      fill: $color-white;
+    }
+  }
+
+  .header__social {
+    margin-bottom: 25px;
+
+    .social__icon {
+      fill: $color-white;
+    }
+  }
+
+  &__nav-item {
+    display: inline-flex;
+    margin-right: 48px;
   }
 
   &__link {
-    display: inline-flex;
-    margin-right: 48px;
     font-size: 12px;
     letter-spacing: 1.5px;
-    text-align: left;
     text-transform: uppercase;
     color: $color-gray;
+
+    @include transited;
 
     &:hover {
       color: $color-basic;
@@ -41,12 +105,88 @@
   // модификатор при черном фоне
 
   &_main {
+    background-color: $color-basic;
+
+    .header__logo {
+      color: $color-white;
+    }
 
     .header__link {
       color: $color-white;
 
       &:hover {
         color: $color-gray;
+      }
+    }
+  }
+
+  @media (max-width: 1280px) {
+
+    &__nav-link {
+      margin-right: 24px;
+    }
+
+    &__nav-group + .header__nav-group {
+      margin-left: 54px;
+    }
+  }
+
+  @media (max-width: 970px) {
+
+    .container {
+      padding: 0;
+    }
+
+    .burger {
+      display: block;
+      padding-left: 22px;
+    }
+
+    &__call {
+      padding-right: 22px;
+    }
+
+    &__nav {
+      display: none;
+      position: absolute;
+      top: 100%;
+      padding-top: 30px;
+      background-color: $color-basic;
+      z-index: 1000;
+      width: 100%;
+      margin: 0 auto;
+
+      &-wrapper {
+        flex-flow: column nowrap;
+        align-items: flex-start;
+      }
+
+      &-group {
+        display: block;
+        width: 100%;
+
+        & + .header__nav-group {
+          margin-left: 0;
+        }
+      }
+
+      &-content {
+        display: block;
+        padding: 0 22px;
+      }
+
+      &-item {
+        display: flex;
+        width: auto;
+        align-items: center;
+        justify-content: space-between;
+        margin-right: 0;
+        padding: 22px;
+        border-top: 1px solid $color-white;
+      }
+
+      &-icon {
+        display: inline-flex;
       }
     }
   }

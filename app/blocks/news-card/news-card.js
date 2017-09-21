@@ -26,4 +26,4 @@ export default () => {
     }
   });
 };
-/* eslint-ensable */
+/* eslint-enable */

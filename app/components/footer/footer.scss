@@ -1,6 +1,11 @@
 .footer {
   display: block;
 
+  &__wrapper {
+    padding: 55px 0 90px;
+    border-top: 1px solid #ededed;
+  }
+
   .grid {
 
     &__col {
@@ -81,6 +86,10 @@
   }
 
   @media (max-width: 768px) {
+
+    &__wrapper {
+      padding: 36px 0 31px;
+    }
 
     .grid {
       flex-flow: row wrap;

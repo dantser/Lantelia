@@ -1,17 +1,37 @@
 //- модификатор при черном фоне +header()._main
 
 include ../../blocks/icon/icons
+include ../../blocks/burger/burger
+include ../../components/social/social
 
 mixin header()
   +b.header&attributes(attributes)
-    +e.logo-wrap
-      +icon('Lantelia_logo').logo
-    +e.nav
-      +e.nav-group
-        +e.A(href="#").link Продукция
-        +e.A(href="#").link Где купить
-      +e.nav-group
-        +e.A(href="#").link Обучение и новости
-        +e.A(href="#").link О компании
-        +e.A(href="#").link Контакты
-        //- +e.A(href="#").link Еще пункт
+    .container
+      +e.wrapper
+        +burger()._white
+        +e.A(href="#").logo Lantelia
+        +e.A(href="#").call
+        +e.NAV.nav
+          +e.nav-wrapper
+            +e.nav-content
+              +e.SPAN.nav-name Lantelia
+              +e.P.nav-text Профессиональная косметика для волос Lantelia
+              +social('vk', 'f', 'instagram').__social
+            +e.UL.nav-group
+              +e.LI.nav-item
+                +e.A(href="#").link Продукция
+                +icon('arrow').nav-icon
+              +e.LI.nav-item
+                +e.A(href="#").link Где купить
+                +icon('arrow').nav-icon
+            +e.nav-group
+              +e.LI.nav-item
+                +e.A(href="#").link Обучение и новости
+                +icon('arrow').nav-icon
+              +e.LI.nav-item
+                +e.A(href="#").link О компании
+                +icon('arrow').nav-icon
+              +e.LI.nav-item
+                +e.A(href="#").link Контакты
+                +icon('arrow').nav-icon
+              //- +e.A(href="#").link Еще пункт
