@@ -6,10 +6,13 @@ export default () => {
   const needHelp = $('.needHelp');
   const w = $(window);
   const SHOW_ELEMENT_AT = $('.main-slider').offset().top;
+  const grayscreen = $('#grayscreen');
+  const popup = $('.needHelp-popup');
 
   if(!needHelp) {
     return
   };
+
   if(w.width > 971) {
     w.on('scroll', function (e) { // eslint-disable-line
       const scrollTop = w.scrollTop();
@@ -55,8 +58,6 @@ export default () => {
 
   $(document).on('click', '.needHelp', function (e) {
     e.preventDefault();
-    const grayscreen = $('#grayscreen');
-    const popup = $('.needHelp-popup');
     needHelp.toggleClass('needHelp_opened');
 
     if ($(this).hasClass('needHelp_opened')) {
@@ -70,6 +71,14 @@ export default () => {
       grayscreen.fadeOut();
       popup.fadeOut();
     }
+  });
+
+  $('html, body').on('click', function (e) {
+    // menu.slideUp();
+    needHelp.removeClass('needHelp_opened');
+    unfreeze();
+    popup.fadeOut();
+    grayscreen.fadeOut();
   });
 }
 /* eslint-enable */

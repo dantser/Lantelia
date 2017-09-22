@@ -1,7 +1,5 @@
 .aboutcompany {
   display: block;
-  max-width: 1440px;
-  margin: 0 auto;
 
   &__content {
     display: flex;
@@ -47,13 +45,20 @@
   .news-card {
     margin-right: 24px;
     margin-bottom: 24px;
+
+    &_xl {
+      margin-bottom: 0;
+    }
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 1000px) {
+
+    .grid__col_six {
+      width: 100%;
+    }
 
     .news-card_xl {
       width: 100%;
-      height: 276px;
       margin-right: 0;
     }
 
@@ -65,11 +70,6 @@
   }
 
   @media (max-width: 597px) {
-
-    .news-card_xl {
-      width: 276px;
-      height: 276px;
-    }
 
     .news-card {
       margin-right: 0;

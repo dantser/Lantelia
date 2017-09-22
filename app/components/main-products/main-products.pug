@@ -1,17 +1,19 @@
 include ../../blocks/product-card/product-card
 include ../../components/product-popup/product-popup
 include ../../blocks/modal/modal
+include ../../blocks/grid/grid
 
 mixin main-products()
   +b.SECTION.main-products&attributes(attributes)
-    +e.line
-      +product-card(getData('product-card'))(data-target-modal='#product-popup').js-open-modal
-      +product-card(getData('product-card-double'))(data-target-modal='#product-popup').js-open-modal
-      +product-card(getData('product-card-xl'))(data-target-modal='#product-popup')._xl.js-open-modal
-    +e.line
-      +product-card(getData('product-card-xl'))(data-target-modal='#product-popup')._xl.js-open-modal
-      +product-card(getData('product-card-double'))(data-target-modal='#product-popup').js-open-modal
-      +product-card(getData('product-card'))(data-target-modal='#product-popup').js-open-modal
+    .container
+      +e.line
+        +product-card(getData('product-card'))(data-target-modal='#product-popup').js-open-modal
+        +product-card(getData('product-card-double'))(data-target-modal='#product-popup').js-open-modal
+        +product-card(getData('product-card-xl'))(data-target-modal='#product-popup')._xl.js-open-modal
+      +e.line
+        +product-card(getData('product-card-xl'))(data-target-modal='#product-popup')._xl.js-open-modal
+        +product-card(getData('product-card-double'))(data-target-modal='#product-popup').js-open-modal
+        +product-card(getData('product-card'))(data-target-modal='#product-popup').js-open-modal
 
     //- popups
     +product-popup(getData('product-card'))

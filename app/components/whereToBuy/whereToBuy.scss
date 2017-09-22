@@ -38,6 +38,11 @@
 
   @media (max-width: 768px) {
 
+    .container {
+      padding-left: 22px;
+      padding-right: 22px;
+    }
+
     .address-container {
       overflow: auto;
     }

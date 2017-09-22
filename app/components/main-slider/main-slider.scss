@@ -1,6 +1,11 @@
 .main-slider {
   display: block;
   background-color: $color-basic;
+  padding-bottom: 55px;
+
+  .container {
+    padding: 0;
+  }
 
   .grid {
     padding-left: 132px;

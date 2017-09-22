@@ -5,12 +5,18 @@ mixin aboutcompany()
   +b.SECTION.aboutcompany&attributes(attributes)
     .container
       +section-head('Компания Lantelia', 'Информация')
-      +e.content
-        +e.cell
+      +grid
+        +col(6)
           +news-card-large(getData('news-card-large'))
-        +e.cell._nested
-          +news-card(getData('news-card'))._colored._blue
-          +news-card(getData('news-card'))._colored._blue
-          +news-card(getData('news-card'))._colored._pink
-          +news-card(getData('news-card'))._colored._gray
+        +col(6)._nested
+          +grid
+            +col(6)
+              +news-card(getData('news-card'))._colored._blue
+            +col(6)
+              +news-card(getData('news-card'))._colored._blue
+          +grid
+            +col(6)
+              +news-card(getData('news-card'))._colored._pink
+            +col(6)
+              +news-card(getData('news-card'))._colored._gray
           //- +news-card(getData('news-card'))._colored._green

@@ -27,7 +27,7 @@ export default () => {
     // menu.slideUp();
     $(burgerClass).removeClass(activeBurgerClass);
     unfreeze();
-  })
+  });
 
 
   function freeze() {

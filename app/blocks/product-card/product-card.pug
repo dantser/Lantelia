@@ -1,17 +1,20 @@
 //- ._xl - для тройной карточки
 include ../../blocks/icon/icons
 include ../../blocks/modal/modal
+
 mixin product-card(data)
   +b.product-card&attributes(attributes)
     +e.wrapper
       +e.top
         +e.H3.line= data.line
         +e.SPAN.name= data.name
-      +e.IMG(src= data.img).image
+      +e.image
+        img(src= data.img)
       +e.bottom
         each item in data.volume
           +e.SPAN.volume= item
         +e.A(href="#", title="Перейти к товару").arrow
+          +e.null
           +icon('arrow')
         +e.A(href="#", title="Добавить в корзину").cart
           +e.price 2199 P

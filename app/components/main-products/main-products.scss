@@ -3,18 +3,38 @@
   flex-flow: row wrap;
   justify-content: center;
 
+  .container {
+    padding: 0;
+  }
+
   .product-card {
     display: inline-flex;
+    width: 25%;
+    max-width: none;
+
+    &_xl {
+      width: 50%;
+      max-width: none;
+    }
   }
 
   &__line {
     display: flex;
+    width: 100%;
   }
 
   @media (max-width: 768px) {
 
     &__line {
       flex-flow: column nowrap;
+    }
+
+    .product-card {
+      width: 100%;
+    }
+
+    .container {
+      padding: 0 22px;
     }
   }
 }
