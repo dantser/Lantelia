@@ -4,6 +4,9 @@ include ../../blocks/button/button
 
 mixin product-popup(data)
   +modal()#product-popup
+    +b.A(href="#").cart
+      +icon('shopping-cart').icon
+      +e.SPAN.num 1
     +b.product-popup&attributes(attributes)
       +e.wrapper
         +product-card(data)

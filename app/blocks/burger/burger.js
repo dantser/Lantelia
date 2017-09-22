@@ -24,7 +24,7 @@ export default () => {
   });
 
   $('html, body').on('click', function (e) {
-    menu.slideUp();
+    // menu.slideUp();
     $(burgerClass).removeClass(activeBurgerClass);
     unfreeze();
   })

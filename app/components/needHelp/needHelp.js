@@ -1,5 +1,6 @@
 /* eslint-disable */
 import $ from 'jquery';
+import 'jquery-ui-bundle';
 
 export default () => {
   const needHelp = $('.needHelp');
@@ -23,6 +24,7 @@ export default () => {
   }
 
 
+
   // Freeze page content scrolling
   function freeze() {
       const { $ } = window;
@@ -34,9 +36,10 @@ export default () => {
           if (window.innerWidth > h.width()) {
               h.css('overflow-y', 'scroll');
           }
-          h.css({  position: 'fixed', top: -top });
+
+          h.css({ width: '100%', height: '100%', position: 'fixed', top: -top });
       }
-  };
+  }
 
   // Unfreeze page content scrolling
   function unfreeze() {
@@ -50,7 +53,7 @@ export default () => {
       }
   };
 
-  needHelp.on('click', function (e) {
+  $(document).on('click', '.needHelp', function (e) {
     e.preventDefault();
     const grayscreen = $('#grayscreen');
     const popup = $('.needHelp-popup');
@@ -58,16 +61,14 @@ export default () => {
 
     if ($(this).hasClass('needHelp_opened')) {
       freeze();
-      if(w.width > 971) {
-        grayscreen.show();
+      if($(window).width() > 971) {
+        grayscreen.fadeIn();
       }
-      popup.show();
+      popup.fadeIn();
     } else {
       unfreeze();
-      if(w.width > 971) {
-        grayscreen.hide();
-      }
-      popup.hide();
+      grayscreen.fadeOut();
+      popup.fadeOut();
     }
   });
 }

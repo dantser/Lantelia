@@ -165,3 +165,36 @@
     }
   }
 }
+
+.cart {
+  padding: 15px 18px;
+  border-radius: 50%;
+  background-image: linear-gradient(225deg, #ea86a6, #5b9df0);
+  box-shadow: 0 12px 36px 0 rgba(0, 0, 0, 0.11);
+  position: fixed;
+  bottom: 24px;
+  right: 23px;
+  cursor: pointer;
+
+  &__num {
+    position: absolute;
+    top: -3px;
+    display: block;
+    right: -3px;
+    width: 23px;
+    height: 23px;
+    border-radius: 50%;
+    font-size: 11px;
+    background-color: $color-main;
+    color: $color-white;
+    text-align: center;
+    line-height: 21px;
+  }
+
+  &__icon {
+    width: 24px;
+    height: 24px;
+    fill: $color-white;
+    display: inline-block;
+  }
+}
