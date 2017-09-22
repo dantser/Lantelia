@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimal-ui">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Versta Project Template</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="msapplication-config" content="/assets/images/favicons/browserconfig.xml">
+    <meta name="theme-color" content="#252525">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicons/favicon-16x16.png">
+    <link rel="manifest" href="/assets/images/favicons/manifest.json">
+    <link rel="mask-icon" href="/assets/images/favicons/safari-pinned-tab.svg" color="#252525">
+    <link href="/assets/images/favicons/favicon.ico" rel="shortcut icon">
+    <link href="assets/styles/app.min.css" rel="stylesheet">
+    <script src="assets/scripts/libs/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="index">
+        <div id="grayscreen"></div>
+        <div class="header header_main">
+            <div class="container">
+                <div class="header__wrapper">
+                    <div class="burger js-burger js-burger_white">
+                        <svg class="burger__icon burger__icon_type_burger"><use xlink:href="assets/images/icon.svg#icon_burger"></use></svg>
+                        <svg class="burger__icon burger__icon_type_close"><use xlink:href="assets/images/icon.svg#icon_close"></use></svg>
+                    </div>
+                    <a class="header__logo" href="#">Lantelia</a>
+                    <a class="header__call" href="#"></a>
+                    <nav class="header__nav">
+                        <div class="header__nav-wrapper">
+                            <div class="header__nav-content">
+                                <span class="header__nav-name">Lantelia</span>
+                                <p class="header__nav-text">Профессиональная косметика для волос Lantelia</p>
+                                <ul class="social header__social">
+                                    <li class="social__item">
+                                        <a class="social__link social__link social__link_type_vk" href="#">
+                                            <svg class="social__icon"><use xlink:href="assets/images/icon.svg#icon_vk"></use></svg>
+                                        </a>
+                                    </li>
+                                    <li class="social__item">
+                                        <a class="social__link social__link social__link_type_f" href="#">
+                                            <svg class="social__icon"><use xlink:href="assets/images/icon.svg#icon_f"></use></svg>
+                                        </a>
+                                    </li>
+                                    <li class="social__item">
+                                        <a class="social__link social__link social__link_type_instagram" href="#">
+                                            <svg class="social__icon"><use xlink:href="assets/images/icon.svg#icon_instagram"></use></svg>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <ul class="header__nav-group">
+                                <li class="header__nav-item">
+                                    <a class="header__link" href="#">Продукция</a>
+                                    <svg class="header__nav-icon"><use xlink:href="assets/images/icon.svg#icon_arrow"></use></svg>
+                                </li>
+                                <li class="header__nav-item">
+                                    <a class="header__link" href="#">Где купить</a>
+                                    <svg class="header__nav-icon"><use xlink:href="assets/images/icon.svg#icon_arrow"></use></svg>
+                                </li>
+                            </ul>
+                            <div class="header__nav-group">
+                                <ul>
+                                    <li class="header__nav-item">
+                                        <a class="header__link" href="#">Обучение и новости</a>
+                                        <svg class="header__nav-icon"><use xlink:href="assets/images/icon.svg#icon_arrow"></use></svg>
+                                    </li>
+                                    <li class="header__nav-item">
+                                        <a class="header__link" href="#">О компании</a>
+                                        <svg class="header__nav-icon"><use xlink:href="assets/images/icon.svg#icon_arrow"></use></svg>
+                                    </li>
+                                    <li class="header__nav-item">
+                                        <a class="header__link" href="#">Контакты</a>
+                                        <svg class="header__nav-icon"><use xlink:href="assets/images/icon.svg#icon_arrow"></use></svg>
+                                    </li>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <div class="main-slider">
+            <div class="grid">
+                <div class="grid__col grid__col_five">
+                    <h1 class="main-slider__title">Проффесиональная косметика для волос Lantelia</h1>
+                    <div class="main-slider__link-wrapper">
+                        <a class="main-slider__link" href="#">Начать работать с Lantelia</a>
+                    </div>
+                </div>
+                <div class="grid__col grid__col_seven">
+                    <div class="main-slider__slider product-container">
+                        <div class="product-wrapper">
+                            <div class="product-slide">
+                                <img src="assets/images/picProduct/clarify_250ml_03(line)@2x.png" />
+                            </div>
+                            <div class="product-slide">
+                                <img src="assets/images/picProduct/smooth_250ml_03(line)@2x.png" />
+                            </div>
+                            <div class="product-slide">
+                                <img src="assets/images/picProduct/spa_250ml_03(line)@2x.png" />
+                            </div>
+                        </div>
+                        <div class="main-slider__pagination"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="main-slider__bottom">
+                <div class="main-slider__phones">
+                    <span>8 800 870-0697</span>
+                    <span>8 495 700-0201</span>
+                </div>
+                <a class="main-slider__link" href="#">Подробнее</a>
+            </div>
+        </div>
+        <section class="main-products">
+            <div class="main-products__line">
+                <div class="product-card js-open-modal" data-target-modal="#product-popup">
+                    <div class="product-card__wrapper">
+                        <div class="product-card__top">
+                            <h3 class="product-card__line">Professional botox therapy</h3>
+                            <span class="product-card__name">Шампунь</span>
+                        </div>
+                        <img class="product-card__image" src="assets/images/picProduct/botox_100ml_01@2x.png" alt="" role="presentation" />
+                        <div class="product-card__bottom">
+                            <span class="product-card__volume">250 мл</span>
+                            <a class="product-card__arrow" href="#" title="Перейти к товару">
+                                <svg><use xlink:href="assets/images/icon.svg#icon_arrow"></use></svg>
+                            </a>
+                            <a class="product-card__cart" href="#" title="Добавить в корзину">
+                                <span class="product-card__price">2199 P</span>
+                                <svg><use xlink:href="assets/images/icon.svg#icon_shopping-cart"></use></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card js-open-modal" data-target-modal="#product-popup">
+                    <div class="product-card__wrapper">
+                        <div class="product-card__top">
+                            <h3 class="product-card__line">Professional botox therapy</h3>
+                            <span class="product-card__name">Шампунь, кондиционер</span>
+                        </div>
+                        <img class="product-card__image" src="assets/images/picProduct/botox_250ml_07 (line)@2x.png" alt="" role="presentation" />
+                        <div class="product-card__bottom">
+                            <span class="product-card__volume">250 мл</span>
+                            <span class="product-card__volume">250 мл</span>
+                            <a class="product-card__arrow" href="#" title="Перейти к товару">
+                                <svg><use xlink:href="assets/images/icon.svg#icon_arrow"></use></svg>
+                            </a>
+                            <a class="product-card__cart" href="#" title="Добавить в корзину">
+                                <span class="product-card__price">2199 P</span>
+                                <svg><use xlink:href="assets/images/icon.svg#icon_shopping-cart"></use></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card product-card_xl js-open-modal" data-target-modal="#product-popup">
+                    <div class="product-card__wrapper">
+                        <div class="product-card__top">
+                            <h3 class="product-card__line">Professional botox therapy</h3>
+                            <span class="product-card__name">Шампунь, реконструктор, Серум</span>
+                        </div>
+                        <img class="product-card__image" src="assets/images/picProduct/triple.png" alt="" role="presentation" />
+                        <div class="product-card__bottom">
+                            <span class="product-card__volume">100 мл</span>
+                            <span class="product-card__volume">100 мл</span>
+                            <span class="product-card__volume">100 мл</span>
+                            <a class="product-card__arrow" href="#" title="Перейти к товару">
+                                <svg><use xlink:href="assets/images/icon.svg#icon_arrow"></use></svg>
+                            </a>
+                            <a class="product-card__cart" href="#" title="Добавить в корзину">
+                                <span class="product-card__price">2199 P</span>
+                                <svg><use xlink:href="assets/images/icon.svg#icon_shopping-cart"></use></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="main-products__line">
+                <div class="product-card product-card_xl js-open-modal" data-target-modal="#product-popup">
+                    <div class="product-card__wrapper">
+                        <div class="product-card__top">
+                            <h3 class="product-card__line">Professional botox therapy</h3>
+                            <span class="product-card__name">Шампунь, реконструктор, Серум</span>
+                        </div>
+                        <img class="product-card__image" src="assets/images/picProduct/triple.png" alt="" role="presentation" />
+                        <div class="product-card__bottom">
+                            <span class="product-card__volume">100 мл</span>
+                            <span class="product-card__volume">100 мл</span>
+                            <span class="product-card__volume">100 мл</span>
+                            <a class="product-card__arrow" href="#" title="Перейти к товару">
+                                <svg><use xlink:href="assets/images/icon.svg#icon_arrow"></use></svg>
+                            </a>
+                            <a class="product-card__cart" href="#" title="Добавить в корзину">
+                                <span class="product-card__price">2199 P</span>
+                                <svg><use xlink:href="assets/images/icon.svg#icon_shopping-cart"></use></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card js-open-modal" data-target-modal="#product-popup">
+                    <div class="product-card__wrapper">
+                        <div class="product-card__top">
+                            <h3 class="product-card__line">Professional botox therapy</h3>
+                            <span class="product-card__name">Шампунь, кондиционер</span>
+                        </div>
+                        <img class="product-card__image" src="assets/images/picProduct/botox_250ml_07 (line)@2x.png" alt="" role="presentation" />
+                        <div class="product-card__bottom">
+                            <span class="product-card__volume">250 мл</span>
+                            <span class="product-card__volume">250 мл</span>
+                            <a class="product-card__arrow" href="#" title="Перейти к товару">
+                                <svg><use xlink:href="assets/images/icon.svg#icon_arrow"></use></svg>
+                            </a>
+                            <a class="product-card__cart" href="#" title="Добавить в корзину">
+                                <span class="product-card__price">2199 P</span>
+                                <svg><use xlink:href="assets/images/icon.svg#icon_shopping-cart"></use></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card js-open-modal" data-target-modal="#product-popup">
+                    <div class="product-card__wrapper">
+                        <div class="product-card__top">
+                            <h3 class="product-card__line">Professional botox therapy</h3>
+                            <span class="product-card__name">Шампунь</span>
+                        </div>
+                        <img class="product-card__image" src="assets/images/picProduct/botox_100ml_01@2x.png" alt="" role="presentation" />
+                        <div class="product-card__bottom">
+                            <span class="product-card__volume">250 мл</span>
+                            <a class="product-card__arrow" href="#" title="Перейти к товару">
+                                <svg><use xlink:href="assets/images/icon.svg#icon_arrow"></use></svg>
+                            </a>
+                            <a class="product-card__cart" href="#" title="Добавить в корзину">
+                                <span class="product-card__price">2199 P</span>
+                                <svg><use xlink:href="assets/images/icon.svg#icon_shopping-cart"></use></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal" id="product-popup">
+                <div class="modal__wrapper">
+                    <div class="modal__content">
+                        <div class="modal__body">
+                            <div class="product-popup">
+                                <div class="product-popup__wrapper">
+                                    <div class="product-card">
+                                        <div class="product-card__wrapper">
+                                            <div class="product-card__top">
+                                                <h3 class="product-card__line">Professional botox therapy</h3>
+                                                <span class="product-card__name">Шампунь</span>
+                                            </div>
+                                            <img class="product-card__image" src="assets/images/picProduct/botox_100ml_01@2x.png" alt="" role="presentation" />
+                                            <div class="product-card__bottom">
+                                                <span class="product-card__volume">250 мл</span>
+                                                <a class="product-card__arrow" href="#" title="Перейти к товару">
+                                                    <svg><use xlink:href="assets/images/icon.svg#icon_arrow"></use></svg>
+                                                </a>
+                                                <a class="product-card__cart" href="#" title="Добавить в корзину">
+                                                    <span class="product-card__price">2199 P</span>
+                                                    <svg><use xlink:href="assets/images/icon.svg#icon_shopping-cart"></use></svg>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="product-popup__info">
+                                        <div class="product-popup__info-wrapper">
+                                            <div class="product-popup__price-block">
+                                                <span class="product-popup__text">Цена</span>
+                                                <span class="product-popup__price">7 900 P</span>
+                                            </div>
+                                            <div class="product-popup__foot">
+                                                <span class="product-popup__text">Количество</span>
+                                                <div class="product-popup__dropdown">
+                                                    <select class="product-popup__select">
+                                                        <option value="1" selected="selected">1</option>
+                                                        <option value="2">2</option>
+                                                        <option value="3">3</option>
+                                                        <option value="4">4</option>
+                                                        <option value="5">5</option>
+                                                    </select>
+                                                </div>
+                                                <a class="button button_gradiented button_black" href="#">
+                                                    <svg class="button__icon"><use xlink:href="assets/images/icon.svg#icon_shopping-cart"></use></svg>
+                                                    <span class="button__text">в корзину</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <svg class="product-popup__icon-close modal__close"><use xlink:href="assets/images/icon.svg#icon_close"></use></svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="whereToBuy">
+            <div class="container">
+                <div class="section-head">
+                    <h3 class="section-head__subtitle">Где купить</h3>
+                    <h2 class="section-head__title">Офисы продаж</h2>
+                    <select class="section-head__select">
+                        <option value="value" selected="selected">Все офисы продаж</option>
+                        <option value="moskow">Москва</option>
+                        <option value="spb">Санкт-Петербург</option>
+                    </select>
+                </div>
+                <div class="address-container">
+                    <div class="address-wrapper">
+                        <a class="address-card" href="#" id="marker1">
+                            <span class="address-card__wrapper">
+                                <span class="address-card__content">
+                                    <h3 class="address-card__title">Цветной Москва</h3>
+                                    <span class="address-card__address">г. Москва, Ленинградский пр., д. 2, цоколь 1234</span>
+                                </span>
+                                <svg class="address-card__arrow"><use xlink:href="assets/images/icon.svg#icon_arrow"></use></svg>
+                            </span>
+                        </a>
+                        <a class="address-card" href="#" id="marker2">
+                            <span class="address-card__wrapper">
+                                <span class="address-card__content">
+                                    <h3 class="address-card__title">Цветной Москва</h3>
+                                    <span class="address-card__address">г. Москва, Ленинградский пр., д. 2, цоколь 1234</span>
+                                </span>
+                                <svg class="address-card__arrow"><use xlink:href="assets/images/icon.svg#icon_arrow"></use></svg>
+                            </span>
+                        </a>
+                        <a class="address-card" href="#" id="marker3">
+                            <span class="address-card__wrapper">
+                                <span class="address-card__content">
+                                    <h3 class="address-card__title">Цветной Москва</h3>
+                                    <span class="address-card__address">г. Москва, Ленинградский пр., д. 2, цоколь 1234</span>
+                                </span>
+                                <svg class="address-card__arrow"><use xlink:href="assets/images/icon.svg#icon_arrow"></use></svg>
+                            </span>
+                        </a>
+                        <a class="address-card" href="#" id="marker4">
+                            <span class="address-card__wrapper">
+                                <span class="address-card__content">
+                                    <h3 class="address-card__title">Цветной Москва</h3>
+                                    <span class="address-card__address">г. Москва, Ленинградский пр., д. 2, цоколь 1234</span>
+                                </span>
+                                <svg class="address-card__arrow"><use xlink:href="assets/images/icon.svg#icon_arrow"></use></svg>
+                            </span>
+                        </a>
+                        <a class="address-card" href="#" id="marker5">
+                            <span class="address-card__wrapper">
+                                <span class="address-card__content">
+                                    <h3 class="address-card__title">Цветной Москва</h3>
+                                    <span class="address-card__address">г. Москва, Ленинградский пр., д. 2, цоколь 1234</span>
+                                </span>
+                                <svg class="address-card__arrow"><use xlink:href="assets/images/icon.svg#icon_arrow"></use></svg>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="map" id="main-map"></div>
+        <section class="aboutcompany">
+            <div class="container">
+                <div class="section-head">
+                    <h3 class="section-head__subtitle">Компания Lantelia</h3>
+                    <h2 class="section-head__title">Информация</h2>
+                </div>
+                <div class="aboutcompany__content">
+                    <div class="aboutcompany__cell">
+                        <div class="news-card news-card_xl">
+                            <div class="news-card__wrapper">
+                                <div class="news-card__top">
+                                    <div class="news-card__type">О компании</div>
+                                    <div class="news-card__logo">Lantelia</div>
+                                </div>
+                                <div class="news-card__bottom">
+                                    <div class="news-card__text">Профессиональная косметика для волос премиум сегмента для самых искушенных</div>
+                                    <a class="news-card__link" href="#">Подробнее</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="aboutcompany__cell aboutcompany__cell_nested">
+                        <div class="news-card news-card_colored news-card_blue">
+                            <div class="news-card__wrapper">
+                                <div class="news-card__type">Новость</div>
+                                <div class="news-card__text">Еще один магазин Lantelia открылся в Варшаве. Подарки первым десяти покупателям Еще один магазин Lantelia открылся в Варшаве. Подарки первым десяти покупателям Еще один магазин Lantelia открылся в Варшаве. Подарки первым
+                                    десяти покупателям</div>
+                                <a class="news-card__link" href="#">Читать</a>
+                            </div>
+                        </div>
+                        <div class="news-card news-card_colored news-card_blue">
+                            <div class="news-card__wrapper">
+                                <div class="news-card__type">Новость</div>
+                                <div class="news-card__text">Еще один магазин Lantelia открылся в Варшаве. Подарки первым десяти покупателям Еще один магазин Lantelia открылся в Варшаве. Подарки первым десяти покупателям Еще один магазин Lantelia открылся в Варшаве. Подарки первым
+                                    десяти покупателям</div>
+                                <a class="news-card__link" href="#">Читать</a>
+                            </div>
+                        </div>
+                        <div class="news-card news-card_colored news-card_pink">
+                            <div class="news-card__wrapper">
+                                <div class="news-card__type">Новость</div>
+                                <div class="news-card__text">Еще один магазин Lantelia открылся в Варшаве. Подарки первым десяти покупателям Еще один магазин Lantelia открылся в Варшаве. Подарки первым десяти покупателям Еще один магазин Lantelia открылся в Варшаве. Подарки первым
+                                    десяти покупателям</div>
+                                <a class="news-card__link" href="#">Читать</a>
+                            </div>
+                        </div>
+                        <div class="news-card news-card_colored news-card_gray">
+                            <div class="news-card__wrapper">
+                                <div class="news-card__type">Новость</div>
+                                <div class="news-card__text">Еще один магазин Lantelia открылся в Варшаве. Подарки первым десяти покупателям Еще один магазин Lantelia открылся в Варшаве. Подарки первым десяти покупателям Еще один магазин Lantelia открылся в Варшаве. Подарки первым
+                                    десяти покупателям</div>
+                                <a class="news-card__link" href="#">Читать</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="footer">
+            <div class="container">
+                <div class="footer__wrapper">
+                    <div class="grid">
+                        <div class="grid__col grid__col_two">
+                            <div class="footer__logo">Lantelia</div>
+                        </div>
+                        <div class="grid__col grid__col_two">
+                            <div class="footer__descr">Профессиональная косметика для волос Lantelia</div>
+                            <ul class="social footer__social">
+                                <li class="social__item">
+                                    <a class="social__link social__link social__link_type_vk" href="#">
+                                        <svg class="social__icon"><use xlink:href="assets/images/icon.svg#icon_vk"></use></svg>
+                                    </a>
+                                </li>
+                                <li class="social__item">
+                                    <a class="social__link social__link social__link_type_f" href="#">
+                                        <svg class="social__icon"><use xlink:href="assets/images/icon.svg#icon_f"></use></svg>
+                                    </a>
+                                </li>
+                                <li class="social__item">
+                                    <a class="social__link social__link social__link_type_instagram" href="#">
+                                        <svg class="social__icon"><use xlink:href="assets/images/icon.svg#icon_instagram"></use></svg>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="grid__col grid__col_two grid__col_links">
+                            <div class="footer__links">
+                                <a class="footer__link" href="#">Продукция</a>
+                                <a class="footer__link" href="#">Где купить</a>
+                                <a class="footer__link" href="#">Обучение и новости</a>
+                                <a class="footer__link" href="#">О компании</a>
+                                <a class="footer__link" href="#">Контакты</a>
+                            </div>
+                        </div>
+                        <div class="grid__col grid__col_two grid__col_links">
+                            <div class="footer__links">
+                                <a class="footer__link" href="#">Публичная оферта</a>
+                                <a class="footer__link" href="#">Доставка и оплата</a>
+                            </div>
+                        </div>
+                        <div class="grid__col grid__col_two grid__col_right">
+                            <a class="button button_gradiented" href="#">
+                                <span class="button__text">НАЧАТЬ РАБОТАТЬ С LANTELIA</span>
+                            </a>
+                            <div class="footer__copyright">&#169; 2017 Lantelia. Все права защищены</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <div class="needHelp">
+        <div class="needHelp__wrapper">
+            <svg class="needHelp__icon"><use xlink:href="assets/images/icon.svg#icon_phone"></use></svg>
+            <svg class="needHelp__close"><use xlink:href="assets/images/icon.svg#icon_close"></use></svg>
+            <div class="needHelp__text">Нужна помощь</div>
+        </div>
+    </div>
+    <div class="needHelp-popup">
+        <div class="needHelp-popup__content">
+            <h3 class="needHelp-popup__heading">Нужна помощь?</h3>
+            <p class="needHelp-popup__text">Позвоните нам и наш менеджер ответит на Ваши вопросы</p>
+        </div>
+        <a class="needHelp-popup__phone" href="tel:8 800 870—0697">
+            <span class="needHelp-popup__num">8 800 870—0697</span>
+            <svg class="needHelp-popup__icon"><use xlink:href="assets/images/icon.svg#icon_phonecopy3"></use></svg>
+        </a>
+        <a class="needHelp-popup__phone" href="tel:8 495 700—0201">
+            <span class="needHelp-popup__num">8 495 700—0201</span>
+            <svg class="needHelp-popup__icon"><use xlink:href="assets/images/icon.svg#icon_phonecopy3"></use></svg>
+        </a>
+    </div>
+    <script src="assets/scripts/app.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js"></script>
+</body>
+
+</html>
