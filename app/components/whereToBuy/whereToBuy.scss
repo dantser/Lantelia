@@ -1,8 +1,11 @@
 .whereToBuy {
   display: block;
-  padding-left: 59px;
   // padding: 20px;
   // padding-bottom: 50px;
+
+  .container {
+    padding-right: 0;
+  }
 
   .address-container {
     position: relative;

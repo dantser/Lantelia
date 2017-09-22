@@ -1,5 +1,9 @@
 //- ._gradiented - градинтный border
+//- ._black
 
-mixin button(text)
+mixin button(text, icon)
   +b.A(href="#").button&attributes(attributes)
+    if icon
+      +icon(icon).icon
     +e.text= text
+    

@@ -17,8 +17,9 @@
     margin-right: 10px;
     font-size: 17px;
     letter-spacing: 8.5px;
-    color: $color-basic;
+    color: $color-white;
     text-transform: uppercase;
+    background-color: $color-basic;
 
     @include transited;
 
@@ -106,10 +107,6 @@
 
   &_main {
     background-color: $color-basic;
-
-    .header__logo {
-      color: $color-white;
-    }
 
     .header__link {
       color: $color-white;

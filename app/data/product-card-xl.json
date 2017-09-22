@@ -2,5 +2,6 @@
   "img": "assets/images/picProduct/triple.png",
   "line": "Professional botox therapy",
   "name": "Шампунь, реконструктор, Серум",
-  "volume": ["100 мл", "100 мл", "100 мл"]
+  "volume": ["100 мл", "100 мл", "100 мл"],
+  "price": "7 900 P"
 }

@@ -1,5 +1,7 @@
 .button {
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 20px 25px 18px;
   border: 1px solid $color-gray;
   box-sizing: border-box;
@@ -21,6 +23,24 @@
     letter-spacing: 1.4px;
     text-transform: uppercase;
     color: $color-basic;
+  }
+
+  &__icon {
+    width: 24px;
+    height: 24px;
+    fill: $color-basic;
+    margin-right: 12px;
+  }
+
+  &_black {
+
+    .button__text {
+      color: $color-white;
+    }
+
+    .button__icon {
+      fill: $color-white;
+    }
   }
 
   @media (max-width: 1024px) {

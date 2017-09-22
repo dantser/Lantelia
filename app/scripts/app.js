@@ -7,6 +7,8 @@ import map from '../components/map/map';
 import newsCard from '../blocks/news-card/news-card';
 import needHelp from '../components/needHelp/needHelp';
 import burger from '../blocks/burger/burger';
+import modal from '../blocks/modal/modal';
+import productPopup from '../components/product-popup/product-popup';
 
 const $ = window.$;
 
@@ -20,4 +22,6 @@ $(() => {
   newsCard();
   needHelp();
   burger();
+  modal();
+  productPopup();
 });

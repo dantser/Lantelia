@@ -6,4 +6,15 @@
   .product-card {
     display: inline-flex;
   }
+
+  &__line {
+    display: flex;
+  }
+
+  @media (max-width: 768px) {
+
+    &__line {
+      flex-flow: column nowrap;
+    }
+  }
 }

@@ -1,0 +1,25 @@
+include ../../blocks/product-card/product-card
+include ../../blocks/icon/icons
+include ../../blocks/button/button
+
+mixin product-popup(data)
+  +modal()#product-popup
+    +b.product-popup&attributes(attributes)
+      +e.wrapper
+        +product-card(data)
+        +e.info
+          +e.info-wrapper
+            +e.price-block
+              +e.SPAN.text Цена
+              +e.SPAN.price= data.price
+            +e.foot
+              +e.SPAN.text Количество
+              +e.dropdown
+                +e.SELECT.select
+                  option(value="1", selected) 1
+                  option(value='2') 2
+                  option(value='3') 3
+                  option(value='4') 4
+                  option(value='5') 5
+              +button('в корзину', 'shopping-cart')._gradiented._black
+        +icon('close').icon-close.modal__close

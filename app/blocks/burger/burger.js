@@ -5,6 +5,8 @@ export default () => {
   const burgerClass = '.js-burger';
   const activeBurgerClass = 'burger_active';
   const menu = $('.header__nav');
+  const needHelp = $('.needHelp');
+  const needHelpPopup = $('.needHelp-popup')
 
   $(burgerClass).on('click', (e) => {
     const burger = $(burgerClass);
@@ -12,6 +14,8 @@ export default () => {
     e.stopPropagation();
     burger.toggleClass(activeBurgerClass);
     menu.slideToggle();
+    needHelp.removeClass('needHelp_opened');
+    needHelpPopup.hide();
     if (burger.hasClass(activeBurgerClass)) {
       freeze();
     } else {

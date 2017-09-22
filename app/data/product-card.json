@@ -2,5 +2,6 @@
   "img": "assets/images/picProduct/botox_100ml_01@2x.png",
   "line": "Professional botox therapy",
   "name": "Шампунь",
-  "volume": ["250 мл"]
+  "volume": ["250 мл"],
+  "price": "7 900 P"
 }

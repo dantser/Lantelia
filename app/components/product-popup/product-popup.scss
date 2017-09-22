@@ -1,0 +1,167 @@
+.product-popup {
+
+  &__wrapper {
+    display: flex;
+    flex-flow: row nowrap;
+    position: relative;
+  }
+
+  &__info, .product-card {
+    width: 50%;
+  }
+
+  .product-card {
+    border: none;
+    cursor: default;
+
+    &:hover {
+
+      .product-card__cart {
+        display: none;
+      }
+    }
+  }
+
+  &__info {
+    background-color: $color-basic;
+    min-width: 361px;
+    position: relative;
+    padding: 50px 60px 60px;
+    box-sizing: border-box;
+
+    &-wrapper {
+      height: 100%;
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: space-between;
+    }
+  }
+
+  &__price {
+    font-size: 28px;
+    letter-spacing: .8px;
+    color: $color-white;
+  }
+
+  &__price-block {
+    display: flex;
+    flex-flow: column nowrap;
+  }
+
+  &__foot {
+    display: flex;
+    flex-flow: column nowrap;
+  }
+
+  &__text {
+    font-size: 13px;
+    color: $color-gray;
+    margin-bottom: 17px;
+  }
+
+  &__select, .list {
+    border-color: $color-gray;
+    border-radius: 0;
+    color: $color-white;
+    background-color: $color-basic;
+    width: 100%;
+  }
+
+  .list {
+    background-color: $color-main;
+  }
+
+  &__dropdown {
+    margin-bottom: 24px;
+  }
+
+  .nice-select {
+    height: 54px;
+    line-height: 52px;
+
+    &::after {
+      border: 4px solid transparent;
+      border-top: 7px solid $color-white;
+      height: auto;
+      width: auto;
+      transform: none;
+      transform-origin: 50% 25%;
+      transition: all .3s ease;
+    }
+
+    .option.focus, .option.selected.focus, .option:hover {
+      background-color: $color-gray;
+    }
+
+    &.open::after {
+      transform: rotate(180deg);
+    }
+  }
+
+  .button {
+    padding-top: 14px;
+    padding-bottom: 14px;
+
+    &__text {
+      font-size: 12px;
+      letter-spacing: 1.5;
+    }
+  }
+
+  &__icon-close {
+    width: 18px;
+    height: 18px;
+    fill: $color-gray;
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    cursor: pointer;
+
+    @include transited;
+
+    &:hover {
+      fill: $color-white;
+    }
+  }
+
+  @media (max-width: 768px) {
+
+    .list {
+      bottom: 100%;
+      top: auto;
+      margin-top: 0;
+      margin-bottom: 4px;
+    }
+
+    &__wrapper {
+      flex-flow: column nowrap;
+    }
+
+    .product-card, .product-popup__info {
+      width: 100%;
+      max-width: 100%;
+    }
+
+    .product-card {
+      height: 40%;
+
+      &__bottom {
+        display: none;
+      }
+
+      &__wrapper {
+        justify-content: space-around;
+      }
+
+      &__image {
+        width: 150px;
+        height: 150px;
+      }
+    }
+
+    .product-popup__info {
+      height: 60%;
+      padding: 33px 22px 22px;
+    }
+  }
+}

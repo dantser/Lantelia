@@ -26,5 +26,5 @@ export default () => {
 	// 	$(this).addClass('slider-pagination-switch-active')
   // })
 
-/* eslint-ensable */
 }
+/* eslint-enable */

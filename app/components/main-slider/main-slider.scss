@@ -153,4 +153,45 @@
       }
     }
   }
+
+  @media (max-width: 768px) {
+
+    &__title {
+      font-size: 18px;
+      letter-spacing: .5px;
+    }
+
+    .product-slide {
+
+      img {
+        height: 550px;
+        width: 100%;
+      }
+    }
+
+    .grid {
+      flex-flow: column;
+      padding: 40px 20px 0;
+
+      &:first-of-type {
+        margin: 0;
+      }
+
+      &__col {
+        padding: 0;
+
+        &_five {
+          width: 100%;
+        }
+
+        &_seven {
+          width: 100%;
+        }
+      }
+    }
+
+    &__bottom {
+      display: none;
+    }
+  }
 }
