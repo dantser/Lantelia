@@ -1,5 +1,6 @@
 .aboutcompany {
   display: block;
+  padding-bottom: 60px;
 
   &__content {
     display: flex;
@@ -67,6 +68,10 @@
         margin-right: 0;
       }
     }
+  }
+
+  @media (max-width: 768px) {
+    padding-bottom: 36px;
   }
 
   @media (max-width: 597px) {

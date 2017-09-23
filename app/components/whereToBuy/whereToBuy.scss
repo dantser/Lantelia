@@ -36,11 +36,22 @@
     }
   }
 
+  .button {
+    display: none;
+  }
+
   @media (max-width: 768px) {
+
+    padding-bottom: 36px;
+    border-bottom: 1px solid #ededed;
 
     .container {
       padding-left: 22px;
       padding-right: 22px;
+    }
+
+    .button {
+      display: block;
     }
 
     .address-container {
@@ -53,6 +64,10 @@
 
     .address-wrapper {
       display: block;
+    }
+
+    .button {
+      margin-top: 36px;
     }
   }
 }

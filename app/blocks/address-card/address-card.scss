@@ -76,6 +76,14 @@
       border-top: 1px solid #ededed;
     }
 
+    &:last-child {
+      border-bottom: 1px solid #ededed;
+    }
+
+    &__address {
+      font-size: 14px;
+    }
+
     &__content {
       max-width: 90%;
     }

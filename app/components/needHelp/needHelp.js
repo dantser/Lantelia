@@ -8,6 +8,9 @@ export default () => {
   const SHOW_ELEMENT_AT = $('.main-slider').offset().top;
   const grayscreen = $('#grayscreen');
   const popup = $('.needHelp-popup');
+  const burgerClass = '.js-burger';
+  const activeBurgerClass = 'burger_active';
+  const menu = $('.header__nav');
 
   if(!needHelp) {
     return
@@ -58,19 +61,36 @@ export default () => {
 
   $(document).on('click', '.needHelp', function (e) {
     e.preventDefault();
-    needHelp.toggleClass('needHelp_opened');
-
-    if ($(this).hasClass('needHelp_opened')) {
+    needHelp.addClass('needHelp_opened');
       freeze();
       if($(window).width() > 971) {
         grayscreen.fadeIn();
+      } else {
+        menu.slideUp();
       }
       popup.fadeIn();
-    } else {
-      unfreeze();
-      grayscreen.fadeOut();
-      popup.fadeOut();
-    }
+      $(burgerClass).removeClass(activeBurgerClass);
+
+    // }
+    // else {
+    //   unfreeze();
+    //   grayscreen.fadeOut();
+    //   popup.fadeOut();
+    // }
+  });
+
+
+  $('.needHelp__close').on('click', function (e) {
+    e.stopPropagation();
+    e.preventDefault();
+    needHelp.removeClass('needHelp_opened');
+    unfreeze();
+    popup.fadeOut();
+    grayscreen.fadeOut();
+  });
+
+  $('.needHelp-popup, .header__nav, .header__logo').on('click',function (e) {
+    e.stopPropagation();
   });
 
   $('html, body').on('click', function (e) {
