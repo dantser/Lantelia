@@ -65,7 +65,7 @@ export default () => {
       if($(window).width() > 971) {
         grayscreen.fadeIn();
       } else {
-        menu.slideUp();
+        menu.removeClass('header__nav_active');
       }
       popup.fadeIn();
       $(burgerClass).removeClass(activeBurgerClass);

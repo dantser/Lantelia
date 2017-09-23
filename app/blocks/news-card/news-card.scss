@@ -59,7 +59,6 @@
     background: $color-gray url('../images/picMainPage/aboutUs@2x.jpg');
     background-size: cover;
     background-position: center;
-    margin-bottom: 0;
 
     * {
       color: $color-white !important;
@@ -111,6 +110,14 @@
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
+  }
+
+  @media (max-width: 1024px) {
+    min-height: 240px;
+
+    &_xl {
+      background-position: 50% 26%;
+    }
   }
 
   @media (max-width: 768px) {

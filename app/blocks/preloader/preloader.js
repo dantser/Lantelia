@@ -1,35 +1,25 @@
 import $ from 'jquery';
-
 /* eslint-disable */
 export default () => {
-  const burgerClass = '.js-burger';
-  const activeBurgerClass = 'burger_active';
-  const menu = $('.header__nav');
-  const needHelp = $('.needHelp');
-  const needHelpPopup = $('.needHelp-popup')
+  const PRE = $('#preloader');
+  const TEXT = $('.preloader__text');
+  freeze();
 
-  $(burgerClass).on('click', (e) => {
-    const burger = $(burgerClass);
-    e.preventDefault();
-    e.stopPropagation();
-    burger.toggleClass(activeBurgerClass);
-    menu.toggleClass('header__nav_active');
-    needHelp.removeClass('needHelp_opened');
-    needHelpPopup.hide();
-    if (burger.hasClass(activeBurgerClass)) {
-      freeze();
-    } else {
+  setTimeout(function () {
+    TEXT.fadeIn(2500).addClass('animated');
+  }, 500);
+
+  $(document).ready(function () {
+    TEXT.fadeOut();
+    setTimeout(function () {
       unfreeze();
-    }
-  });
-
-  $('html, body').on('click', function (e) {
-    // menu.slideUp();
-    $(burgerClass).removeClass(activeBurgerClass);
-    unfreeze();
+      PRE.fadeOut();
+    }, 3000);
   });
 
 
+
+  // Freeze page content scrolling
   function freeze() {
       const { $ } = window;
       const h = $('html');
@@ -55,5 +45,5 @@ export default () => {
           h.css({ position: '', top: '', 'overflow-y': '' });
       }
   };
-};
+}
 /* eslint-enable */

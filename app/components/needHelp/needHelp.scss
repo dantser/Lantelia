@@ -41,7 +41,7 @@
   }
 
   &__wrapper {
-    padding: 15px 18px;
+    padding: 15px;
   }
 
   &__icon {
@@ -55,7 +55,10 @@
 
   &__close {
     width: 18px;
-    height: 23px;
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%);
     display: none;
     vertical-align: middle;
     fill: $color-white;

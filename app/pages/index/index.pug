@@ -8,11 +8,13 @@ include ../../components/aboutcompany/aboutcompany
 include ../../components/footer/footer
 include ../../components/needHelp/needHelp
 include ../../components/product-popup/product-popup
+include ../../blocks/preloader/preloader
 
 block head
   - var pageTitle = 'Versta Project Template'
 
 block content
+  +preloader()
   +b.index
     #grayscreen
     +header()._main

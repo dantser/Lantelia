@@ -9,6 +9,14 @@
     flex: 1 0 auto;
   }
 
+  .grid__col_six {
+    height: auto;
+
+    &_large {
+      flex: 1;
+    }
+  }
+
   &__cell {
     display: flex;
     flex-flow: column;
@@ -44,7 +52,6 @@
   }
 
   .news-card {
-    margin-right: 24px;
     margin-bottom: 24px;
 
     &_xl {
@@ -52,7 +59,7 @@
     }
   }
 
-  @media (max-width: 1000px) {
+  @media (max-width: 1024px) {
 
     .grid__col_six {
       width: 100%;

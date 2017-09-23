@@ -7,24 +7,24 @@ export default () => {
     wrapperClass: 'product-wrapper',
     slideClass: 'product-slide',
     pagination: '.main-slider__pagination',
-    // paginationElement: 'li',
+    paginationElement: 'li',
 
     paginationClickable: true,
-    // loop: true,
+    loop: true,
 
-    // bulletClass: 'slider-pagination-switch',
-    // bulletActiveClass: 'active',
+    bulletClass: 'slider-pagination-switch',
+    bulletActiveClass: 'active',
 
-    autoplay:2000,
+    autoplay: 5000,
     centeredSlides: true,
     autoplayDisableOnInteraction: false
 
   });
 
-  // $('.slider-pagination-switch').click(function(){
-  //   $('.slider-pagination-switch').removeClass('slider-pagination-switch-active');
-	// 	$(this).addClass('slider-pagination-switch-active')
-  // })
+  $('.slider-pagination-switch').click(function(){
+    $('.slider-pagination-switch').removeClass('active');
+		$(this).addClass('active');
+  });
 
 }
 /* eslint-enable */

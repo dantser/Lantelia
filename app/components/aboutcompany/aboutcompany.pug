@@ -6,9 +6,9 @@ mixin aboutcompany()
     .container
       +section-head('Компания Lantelia', 'Информация')
       +grid
-        +col(6)
+        +col(6).grid__col_six_large
           +news-card-large(getData('news-card-large'))
-        +col(6)._nested
+        +col(6)
           +grid
             +col(6)
               +news-card(getData('news-card'))._colored._blue

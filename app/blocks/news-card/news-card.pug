@@ -5,7 +5,7 @@ mixin news-card(data)
   +b.news-card&attributes(attributes)
     +e.wrapper
       +e.type= data.type
-      +e.text= data.text
+      +e.P.text= data.text
       +e.A(href="#").link= data.link
 
 mixin news-card-large(data)
@@ -15,5 +15,5 @@ mixin news-card-large(data)
         +e.type= data.type
         +e.logo Lantelia
       +e.bottom
-        +e.text= data.text
+        +e.P.text= data.text
         +e.A(href="#").link= data.link

@@ -17,13 +17,13 @@ mixin main-slider()
                 img(src="assets/images/picProduct/smooth_250ml_03(line)@2x.png")
               .product-slide
                 img(src="assets/images/picProduct/spa_250ml_03(line)@2x.png")
-            .main-slider__pagination
+            //- .main-slider__pagination
       +e.bottom
         +e.phones 
           span 8 800 870-0697
           span 8 495 700-0201
         +e.A(href="#").link Подробнее
-      //- +e.UL.pagination
-      //-   li.slider-pagination-switch.slider-pagination-switch-active
-      //-   li.slider-pagination-switch
-      //-   li.slider-pagination-switch
+        +e.UL.pagination
+          li.slider-pagination-switch.active
+          li.slider-pagination-switch
+          li.slider-pagination-switch

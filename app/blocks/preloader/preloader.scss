@@ -1,0 +1,33 @@
+.preloader {
+  display: block;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+  background-color: $color-main;
+  z-index: 100000;
+
+  &__wrapper {
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translateX(50%);
+  }
+
+  &__text {
+    color: $color-white;
+    display: none;
+    // transform: translate3d(50%, 0, 0);
+    font-size: 36px;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 8.5px;
+    transition: transform 5s ease;
+
+    &.animated {
+      transform: scale(.5);
+    }
+  }
+}
