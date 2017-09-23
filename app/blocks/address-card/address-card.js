@@ -16,6 +16,9 @@ export default () => {
   });
 
   CARD.on('click', function (e) {
+    if ($(window).width() < 768) {
+      return
+    }
     e.preventDefault();
     $(this).toggleClass(ACTIVE_CLASS).siblings().removeClass(ACTIVE_CLASS);
   });
