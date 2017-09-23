@@ -1,5 +1,67 @@
+$ui-kit-color-gray: #ccc;
+$ui-kit-color-text: #222;
+$ui-kit-color-darkbg: #111;
+
 .ui-kit {
   display: block;
+  color: $ui-kit-color-text;
+
+  &__navigation {
+    position: fixed;
+    right: 100%;
+    top: 0;
+    height: 100vh;
+    box-shadow: 0 0 30px rgba($color-basic, .15);
+    z-index: 10;
+    padding: 20px;
+    background-color: white;
+    transform: translate3d(15%, 0, 0);
+    width: 240px;
+    opacity: .5;
+    transition: opacity $ease-main, transform $ease-main;
+    overflow: auto;
+    box-sizing: border-box;
+
+    &-burger {
+      position: absolute;
+      width: 18px;
+      height: 14px;
+      box-sizing: border-box;
+      border-top: 2px solid $color-basic;
+      border-bottom: 2px solid $color-basic;
+      top: 9px;
+      right: 9px;
+      opacity: 1;
+      transition: opacity $ease-main;
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        margin: auto;
+        width: 100%;
+        height: 2px;
+        background-color: $color-basic;
+      }
+    }
+
+    &:hover {
+      transform: translate3d(100%, 0, 0);
+      opacity: 1;
+
+      .ui-kit__navigation-burger { opacity: 0; }
+    }
+
+    li {
+      @extend %text;
+
+      a { @extend %link; }
+
+      &:not(:last-child) { margin-bottom: 5px; }
+    }
+  }
 
   &__head {
     padding-top: 40px;
@@ -12,36 +74,53 @@
     line-height: 1.4;
   }
 
+  &__description {
+    font-size: 13px;
+    line-height: 1.4;
+
+    &:not(:first-child) { margin-top: 30px; }
+
+    &:not(:last-child) { margin-bottom: 10px; }
+  }
+
+  &__special {
+    padding: $grid-gap;
+    border: 1px solid $ui-kit-color-gray;
+  }
+
   &__logo {
-    font-size: 17px;
-    letter-spacing: 8.5px;
-    color: $color-white;
-    text-transform: uppercase;
-    background-color: $color-basic;
-    display: block;
+    max-height: 80px;
+    font-size: 20px;
+    text-align: left;
 
-    @include transited;
-
-    &:hover {
-      opacity: .7;
+    svg {
+      height: 100%;
     }
 
-    height: 80px; // Уберется с реальным логотипом
-    width: 250px; // Уберется с реальным логотипом
-    max-height: 80px;
-    max-width: 100%;
-    text-align: center;
-    line-height: 80px; // Уберется с реальным логотипом
-
     & + .ui-kit__name { margin-top: 20px; }
+  }
+
+  &__elements-list {
+    margin-top: -$grid-gap;
+    font-size: 0;
+
+    > * {
+      margin-right: $grid-gap;
+      margin-top: $grid-gap;
+    }
   }
 
   &__section {
     padding-top: 50px;
     padding-bottom: 50px;
 
+    &_dark {
+      background-color: $ui-kit-color-darkbg;
+      color: white;
+    }
+
     &:not(:last-child) {
-      border-bottom: 1px solid #ccc;
+      border-bottom: 1px solid $ui-kit-color-gray;
     }
 
     &-head {
@@ -52,7 +131,6 @@
         font-size: 30px;
         font-weight: 600;
         line-height: 1.4;
-        color: #222;
 
         &:not(:first-child) { margin-top: 20px; }
         &:not(:last-child) { margin-bottom: 20px; }
@@ -61,9 +139,8 @@
       p {
         font-size: 16px;
         line-height: 1.5;
-        color: #444;
 
-        &:not(:first-child) { margin-top: 10px; }
+        &:not(:last-child) { margin-bottom: 10px; }
       }
     }
 
@@ -75,12 +152,29 @@
       content: '';
       display: block;
       height: 40px;
-      background-color: #ccc;
+      background-color: $ui-kit-color-gray;
     }
   }
 
+  &__ui-popups {
+    margin-top: 30px;
+
+    .popup {
+      display: block !important;
+      border: 1px solid $color-border;
+
+      &:not(:first-child) { margin-top: 30px; }
+    }
+  }
+
+  &__scrolldemo {
+    border: 1px solid $color-border;
+    max-height: 400px;
+
+    &-block { height: 1000px; }
+  }
+
   &__color {
-    min-width: 100px;
     text-align: center;
     line-height: 20px;
     font-size: 14px;
@@ -88,10 +182,17 @@
     display: inline-block;
     vertical-align: top;
     box-shadow: inset 0 0 0 1px rgba(black, .1);
-    margin-bottom: 20px;
-
-    &:not(:last-child) { margin-right: 20px; }
 
     &_bg_dark { color: white; }
+
+    &_gradient {
+      &_main { @extend %gradient-main; }
+    }
+  }
+
+  &__custom-text {
+    &_style-1 { @extend %text; }
+
+    &:not(:last-child) { margin-bottom: 10px; }
   }
 }

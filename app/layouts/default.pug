@@ -1,10 +1,21 @@
 include ../../node_modules/bemto.pug/bemto
 include ../blocks/grid/grid
-
+include ../blocks/icon/icons
+include ../blocks/content-zone/content-zone
+include ../blocks/table/table
+include ../blocks/button/button
+include ../blocks/lists/lists
+include ../blocks/form-elements/form-elements
+include ../blocks/tabs/tabs
+include ../blocks/link/link
+include ../blocks/popups/popups
+include ../blocks/slider/slider
+//- include ../blocks/map/map
 doctype html
 html(lang='ru')
   include head
   body
     block content
     script(src='assets/scripts/app.min.js')
-    script(src="https://maps.googleapis.com/maps/api/js")
+    script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAxPYPIFoyo8a8749Pi9ooi_WBnXZKpBoA")
+    //-script(src="https://maps.googleapis.com/maps/api/js")

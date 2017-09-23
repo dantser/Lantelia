@@ -1,6 +1,5 @@
 /* eslint-disable */
 import $ from 'jquery';
-import 'jquery-ui-bundle';
 
 export default () => {
   const needHelp = $('.needHelp');

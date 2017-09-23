@@ -1,7 +1,9 @@
 .index {
   display: block;
+  background-color: rgba(216, 216, 216, 0);
 
   @media (max-width: 768px) {
+
     .map {
       display: none;
     }

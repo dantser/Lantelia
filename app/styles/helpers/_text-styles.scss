@@ -1,0 +1,52 @@
+// Текстовые стили, используемые на сайте
+
+%heading-1 {
+  font-size: 36px;
+  line-height: 1.39;
+  font-weight: 300;
+}
+
+%heading-2 {
+  font-size: 28px;
+  letter-spacing: .8px;
+  line-height: 1.39;
+  font-weight: 300;
+}
+
+%heading-3 {
+  font-size: 13px;
+  line-height: 1.62;
+  font-weight: 300;
+  color: #7c7c7c;
+}
+
+// %heading-4 {
+//   font-size: 20px;
+//   line-height: 1.5;
+//   font-weight: 400;
+// }
+//
+// %heading-5 {
+//   font-size: 18px;
+//   line-height: 1.5;
+//   font-weight: 400;
+// }
+//
+// %heading-6 {
+//   font-size: 16px;
+//   line-height: 1.6;
+//   font-weight: 400;
+// }
+
+%text {
+  font-size: 14px;
+  line-height: 1.86;
+  font-weight: 300;
+  color: $color-main;
+}
+
+%text-small {
+  font-size: 11px;
+  line-height: 1.65;
+  font-weight: 400;
+}

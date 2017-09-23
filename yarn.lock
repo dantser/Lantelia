@@ -2,6 +2,10 @@
 # yarn lockfile v1
 
 
+"@fancyapps/fancybox@^3.1.25":
+  version "3.1.25"
+  resolved "https://registry.yarnpkg.com/@fancyapps/fancybox/-/fancybox-3.1.25.tgz#c418d783ae0252c0f748efb0e828e487dfc7de2d"
+
 "@gulp-sourcemaps/identity-map@1.X":
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/@gulp-sourcemaps/identity-map/-/identity-map-1.0.1.tgz#cfa23bc5840f9104ce32a65e74db7e7a974bbee1"
@@ -70,6 +74,12 @@ acorn@^5.0.0, acorn@^5.0.1, acorn@^5.0.3:
 after@0.8.1:
   version "0.8.1"
   resolved "https://registry.yarnpkg.com/after/-/after-0.8.1.tgz#ab5d4fb883f596816d3515f8f791c0af486dd627"
+
+air-datepicker@^2.2.3:
+  version "2.2.3"
+  resolved "https://registry.yarnpkg.com/air-datepicker/-/air-datepicker-2.2.3.tgz#9dbb6bc6bc8c9d9db380475091370dad82c2f787"
+  dependencies:
+    jquery ">=2.0.0 <4.0.0"
 
 ajv-keywords@^1.0.0, ajv-keywords@^1.1.1:
   version "1.5.1"
@@ -1337,6 +1347,14 @@ cheerio@^0.22.0:
     lodash.reject "^4.4.0"
     lodash.some "^4.4.0"
 
+choices.js@^3.0.2:
+  version "3.0.2"
+  resolved "https://registry.yarnpkg.com/choices.js/-/choices.js-3.0.2.tgz#be1644712c243e2a30b803995d5711663b1c0349"
+  dependencies:
+    classnames "^2.2.5"
+    fuse.js "^2.2.2"
+    redux "^3.3.1"
+
 chokidar@1.7.0, chokidar@^1.0.0, chokidar@^1.6.1, chokidar@^1.7.0:
   version "1.7.0"
   resolved "https://registry.yarnpkg.com/chokidar/-/chokidar-1.7.0.tgz#798e689778151c8076b4b360e5edd28cda2bb468"
@@ -1368,6 +1386,10 @@ clap@^1.0.9:
   resolved "https://registry.yarnpkg.com/clap/-/clap-1.2.0.tgz#59c90fe3e137104746ff19469a27a634ff68c857"
   dependencies:
     chalk "^1.1.3"
+
+classnames@^2.2.5:
+  version "2.2.5"
+  resolved "https://registry.yarnpkg.com/classnames/-/classnames-2.2.5.tgz#fb3801d453467649ef3603c7d61a02bd129bde6d"
 
 clean-css@^3.3.0:
   version "3.4.28"
@@ -2883,6 +2905,10 @@ function-bind@^1.0.2:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/function-bind/-/function-bind-1.1.0.tgz#16176714c801798e4e8f2cf7f7529467bb4a5771"
 
+fuse.js@^2.2.2:
+  version "2.7.4"
+  resolved "https://registry.yarnpkg.com/fuse.js/-/fuse.js-2.7.4.tgz#96e420fde7ef011ac49c258a621314fe576536f9"
+
 gather-stream@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/gather-stream/-/gather-stream-1.0.0.tgz#b33994af457a8115700d410f317733cbe7a0904b"
@@ -3750,6 +3776,10 @@ ini@^1.3.4, ini@~1.3.0:
   version "1.3.4"
   resolved "https://registry.yarnpkg.com/ini/-/ini-1.3.4.tgz#0537cb79daf59b59a1a517dff706c86ec039162e"
 
+inputmask@^3.3.8:
+  version "3.3.8"
+  resolved "https://registry.yarnpkg.com/inputmask/-/inputmask-3.3.8.tgz#a29c6a24083ced712361be47a7d6c750efd2bb78"
+
 inquirer@^0.12.0:
   version "0.12.0"
   resolved "https://registry.yarnpkg.com/inquirer/-/inquirer-0.12.0.tgz#1ef2bfd63504df0bc75785fff8c2c41df12f077e"
@@ -4126,13 +4156,13 @@ jquery-nice-select@^1.1.0:
   dependencies:
     jquery "^2.2.3"
 
+"jquery@>=2.0.0 <4.0.0", jquery@^3.1.1, jquery@^3.2.1:
+  version "3.2.1"
+  resolved "https://registry.yarnpkg.com/jquery/-/jquery-3.2.1.tgz#5c4d9de652af6cd0a770154a631bba12b015c787"
+
 jquery@^2.2.3:
   version "2.2.4"
   resolved "https://registry.yarnpkg.com/jquery/-/jquery-2.2.4.tgz#2c89d6889b5eac522a7eea32c14521559c6cbf02"
-
-jquery@^3.1.1, jquery@^3.2.1:
-  version "3.2.1"
-  resolved "https://registry.yarnpkg.com/jquery/-/jquery-3.2.1.tgz#5c4d9de652af6cd0a770154a631bba12b015c787"
 
 js-base64@^2.1.8, js-base64@^2.1.9:
   version "2.1.9"
@@ -4389,6 +4419,10 @@ locate-path@^2.0.0:
     p-locate "^2.0.0"
     path-exists "^3.0.0"
 
+lodash-es@^4.2.1:
+  version "4.17.4"
+  resolved "https://registry.yarnpkg.com/lodash-es/-/lodash-es-4.17.4.tgz#dcc1d7552e150a0640073ba9cb31d70f032950e7"
+
 lodash._basecopy@^3.0.0:
   version "3.0.1"
   resolved "https://registry.yarnpkg.com/lodash._basecopy/-/lodash._basecopy-3.0.1.tgz#8da0e6a876cf344c0ad8a54882111dd3c5c7ca36"
@@ -4576,7 +4610,7 @@ lodash@^3.10.1:
   version "3.10.1"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-3.10.1.tgz#5bf45e8e49ba4189e17d482789dfd15bd140b7b6"
 
-lodash@^4.0.0, lodash@^4.1.0, lodash@^4.11.1, lodash@^4.14.0, lodash@^4.16.4, lodash@^4.17.4, lodash@^4.2.0, lodash@^4.3.0, lodash@~4.17.4:
+lodash@^4.0.0, lodash@^4.1.0, lodash@^4.11.1, lodash@^4.14.0, lodash@^4.16.4, lodash@^4.17.4, lodash@^4.2.0, lodash@^4.2.1, lodash@^4.3.0, lodash@~4.17.4:
   version "4.17.4"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.4.tgz#78203a4d1c328ae1d86dca6460e369b57f4055ae"
 
@@ -4608,7 +4642,7 @@ lookup-path@^0.3.1:
     debug "^2.2.0"
     is-absolute "^0.2.3"
 
-loose-envify@^1.0.0:
+loose-envify@^1.0.0, loose-envify@^1.1.0:
   version "1.3.1"
   resolved "https://registry.yarnpkg.com/loose-envify/-/loose-envify-1.3.1.tgz#d1a8ad33fa9ce0e713d65fdd0ac8b748d478c848"
   dependencies:
@@ -5069,6 +5103,10 @@ normalize-url@^1.4.0:
 normalize.css@^6.0.0:
   version "6.0.0"
   resolved "https://registry.yarnpkg.com/normalize.css/-/normalize.css-6.0.0.tgz#22188c2707c911fb3ad3c1aac0677ff68661bea8"
+
+nouislider@^10.1.0:
+  version "10.1.0"
+  resolved "https://registry.yarnpkg.com/nouislider/-/nouislider-10.1.0.tgz#7bdd0411fd62d4584bfe88cb92bb8d06e64c6b47"
 
 npm-run-path@^2.0.0:
   version "2.0.2"
@@ -6143,6 +6181,15 @@ reduce-function-call@^1.0.1:
   dependencies:
     balanced-match "^0.4.2"
 
+redux@^3.3.1:
+  version "3.7.2"
+  resolved "https://registry.yarnpkg.com/redux/-/redux-3.7.2.tgz#06b73123215901d25d065be342eb026bc1c8537b"
+  dependencies:
+    lodash "^4.2.1"
+    lodash-es "^4.2.1"
+    loose-envify "^1.1.0"
+    symbol-observable "^1.0.3"
+
 regenerate@^1.2.1:
   version "1.3.2"
   resolved "https://registry.yarnpkg.com/regenerate/-/regenerate-1.3.2.tgz#d1941c67bad437e1be76433add5b385f95b19260"
@@ -7011,6 +7058,10 @@ swiper@3.4.2:
   version "3.4.2"
   resolved "https://registry.yarnpkg.com/swiper/-/swiper-3.4.2.tgz#39d6b410b1a39833e1f72d3b72999df5f5e38392"
 
+symbol-observable@^1.0.3:
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/symbol-observable/-/symbol-observable-1.0.4.tgz#29bf615d4aa7121bdd898b22d4b3f9bc4e2aa03d"
+
 synesthesia@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/synesthesia/-/synesthesia-1.0.1.tgz#5ef95ea548c0d5c6e6f9bb4b0d0731dff864a777"
@@ -7194,6 +7245,10 @@ to-fast-properties@^1.0.1:
 token-stream@0.0.1:
   version "0.0.1"
   resolved "https://registry.yarnpkg.com/token-stream/-/token-stream-0.0.1.tgz#ceeefc717a76c4316f126d0b9dbaa55d7e7df01a"
+
+tooltipster@^4.2.5:
+  version "4.2.5"
+  resolved "https://registry.yarnpkg.com/tooltipster/-/tooltipster-4.2.5.tgz#e492fc3984576418f8c18b1aaee1456c1bd8b0a9"
 
 tough-cookie@~2.3.0:
   version "2.3.2"

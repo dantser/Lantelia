@@ -1,0 +1,11 @@
+.list {
+  @extend %list;
+}
+
+ul.list {
+  @extend %ullist;
+}
+
+ol.list {
+  @extend %ollist;
+}
