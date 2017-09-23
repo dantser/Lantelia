@@ -29,7 +29,7 @@
         <section class="ui-kit__head">
             <div class="container">
                 <div class="ui-kit__logo">Логотип</div>
-                <div class="ui-kit__name">Название проекта</div>
+                <div class="ui-kit__name">Lantelia</div>
             </div>
         </section>
         <section class="ui-kit__section ui-kit__section_grid">
@@ -40,8 +40,8 @@
                     <p>Ширина контейнера: 1920px ($container-width)</p>
                     <p>Ширина контейнера сетки: 100% ($grid-container-width)</p>
                     <p>Колонок: 12 ($grid-cols)</p>
-                    <p>Горизонтальное расстояние между колонками: 20px ($grid-gap)</p>
-                    <p>Вертикальное расстояние между колонками: 20px ($grid-gap-vertical)</p>
+                    <p>Горизонтальное расстояние между колонками: 24px ($grid-gap)</p>
+                    <p>Вертикальное расстояние между колонками: 24px ($grid-gap-vertical)</p>
                     <p>Переменные: styles/helpers/_variables.scss</p>
                     <p>Блок: blocks/grid/</p>
                 </div>
@@ -114,8 +114,7 @@
             <div class="ui-kit__section-head">
                 <div class="container">
                     <h2>Шрифты и контентная зона</h2>
-                    <p>Основной шрифт: Arial ($font-main), font-weight: 400, 600</p>
-                    <p>Дополнительный шрифт: Times New Roman ($font-second), font-weight: 400, 600</p>
+                    <p>Основной шрифт: GothamPro ($font-main), font-weight: 300, 400, 500</p>
                     <p>Переменные находятся в файле styles/helpers/_variables.scss</p>
                     <p>Шрифты подключены в styles/helpers/_fonts.scss</p>
                     <p>Контентная зона: blocks/content-zone</p>
@@ -130,15 +129,9 @@
                             <h1>Заголовок H1 (%heading-1)</h1>
                             <h2>Заголовок H2 (%heading-2)</h2>
                             <h3>Заголовок H3 (%heading-3)</h3>
-                            <h4>Заголовок H4 (%heading-4)</h4>
-                            <h5>Заголовок H5 (%heading-5)</h5>
-                            <h6>Заголовок H6 (%heading-6)</h6>
                             <p>Текст p (%text)
                                 <br> Цитата внутри текста p:
                                 <q>Цитата q</q>
-                            </p>
-                            <p>
-                                <small>Тег small внутри p (%text-small)</small>
                             </p>
                             <blockquote>
                                 <p>Демонстрация цитаты через тег blockquote</p>
@@ -222,9 +215,12 @@
                 <div class="container">
                     <div class="ui-kit__elements-list">
                         <a class="button" href="#">
-                            <span class="button__text"></span>
+                            <span class="button__text">button</span>
                         </a>
-                        <a class="button" href="#" disabled="disabled">
+                        <a class="button button_gradiented" href="#">
+                            <span class="button__text">button</span>
+                        </a>
+                        <a class="button button_black" href="#">
                             <span class="button__text">button</span>
                         </a>
                     </div>
@@ -241,43 +237,6 @@
                             <span class="button__text"></span>
                         </a>
                     </div>
-                </div>
-            </div>
-        </section>
-        <section class="ui-kit__section">
-            <div class="ui-kit__section-head">
-                <div class="container">
-                    <h2>Списки</h2>
-                    <p>Блок: blocks/lists</p>
-                    <p>По желанию можно доработать (для каких-то сложных списков). Добавить миксин +list-item и вписать туда шаблон для li</p>
-                </div>
-            </div>
-            <div class="ui-kit__section-content">
-                <div class="container">
-                    <p class="ui-kit__description">ul.list</p>
-                    <ul class="list">
-                        <li>Элемент списка
-                            <ul class="list">
-                                <li>Элемент списка</li>
-                                <li>Элемент списка</li>
-                                <li>Элемент списка</li>
-                            </ul>
-                        </li>
-                        <li>Элемент списка</li>
-                        <li>Элемент списка</li>
-                    </ul>
-                    <p class="ui-kit__description">ol.list</p>
-                    <ol class="list">
-                        <li>Элемент списка </li>
-                        <li>Элемент списка
-                            <ol class="list">
-                                <li>Элемент списка </li>
-                                <li>Элемент списка</li>
-                                <li>Элемент списка</li>
-                            </ol>
-                        </li>
-                        <li>Элемент списка</li>
-                    </ol>
                 </div>
             </div>
         </section>
