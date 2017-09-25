@@ -7,16 +7,15 @@ mixin aboutcompany()
       +section-head('Компания Lantelia', 'Информация')
       +grid
         +col(6).grid__col_six_large
-          +news-card-large(getData('news-card-large'))
+          +news-card-large('О компании', 'Профессиональная косметика для волос премиум сегмента для самых искушенных', 'Подробнее')
         +col(6)
           +grid
             +col(6)
-              +news-card(getData('news-card'))._colored._blue
+              +news-card('Новость', 'Еще один магазин Lantelia открылся в в Варшаве. Подарки первым десяти покупателям.', 'Читать')
             +col(6)
-              +news-card(getData('news-card'))._colored._blue
-          +grid
+              +news-card('Новость', 'Открыта вакансия менеджера в call-центре компании Lantelia', 'Читать')
             +col(6)
-              +news-card(getData('news-card'))._colored._pink
+              +news-card('Обучение', 'Обучающий Мастер-класс по применению линнии Professional Botox Therapy', 'Подробнее')._colored._pink
             +col(6)
-              +news-card(getData('news-card'))._colored._gray
+              +news-card('Обучение', 'Обучающий Мастер-класс по применению линнии Professional SPA Therapy', 'Подробнее')._colored._gray
           //- +news-card(getData('news-card'))._colored._green

@@ -15,7 +15,7 @@ export default () => {
     bulletClass: 'slider-pagination-switch',
     bulletActiveClass: 'active',
 
-    autoplay: 5000,
+    // autoplay: 5000,
     centeredSlides: true,
     autoplayDisableOnInteraction: false
 

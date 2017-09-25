@@ -11,7 +11,8 @@ export default () => {
       mainSlider = new Swiper('.address-container', {
         wrapperClass: 'address-wrapper',
         slideClass: 'address-card',
-        slidesPerView: 'auto'
+        slidesPerView: 'auto',
+        slidesOffsetBefore: '60'
       });
     } else if (screenWidth < 769 && mainSlider != undefined) {
         mainSlider.destroy();

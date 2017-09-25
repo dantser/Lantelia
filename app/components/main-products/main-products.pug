@@ -7,13 +7,12 @@ mixin main-products()
   +b.SECTION.main-products&attributes(attributes)
     .container
       +e.line
-        +product-card(getData('product-card'))(data-target-modal='#product-popup').js-open-modal
-        +product-card(getData('product-card-double'))(data-target-modal='#product-popup').js-open-modal
-        +product-card(getData('product-card-xl'))(data-target-modal='#product-popup')._xl.js-open-modal
-      +e.line
-        +product-card(getData('product-card-xl'))(data-target-modal='#product-popup')._xl.js-open-modal
-        +product-card(getData('product-card-double'))(data-target-modal='#product-popup').js-open-modal
-        +product-card(getData('product-card'))(data-target-modal='#product-popup').js-open-modal
+        +product-card('assets/images/picProduct/botox_100ml_01@2x.png')(data-target-modal='#product-popup').js-open-modal
+        +product-card('assets/images/picProduct/botox_100ml_01@2x.png')(data-target-modal='#product-popup').js-open-modal
+        +product-card('assets/images/picProduct/botox_100ml_01@2x.png')(data-target-modal='#product-popup')._xl.js-open-modal
+        +product-card('assets/images/picProduct/botox_100ml_01@2x.png')(data-target-modal='#product-popup')._xl.js-open-modal
+        +product-card('assets/images/picProduct/botox_100ml_01@2x.png')(data-target-modal='#product-popup').js-open-modal
+        +product-card('assets/images/picProduct/botox_100ml_01@2x.png')(data-target-modal='#product-popup').js-open-modal
 
     //- popups
     +product-popup(getData('product-card'))

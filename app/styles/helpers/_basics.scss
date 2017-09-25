@@ -58,6 +58,7 @@ body {
   font-family: $font-main; // Задаем основной шрифт
   font-size: 0; // Убираем проблему с отступами между inline-элементами
   color: $color-basic;
+  font-weight: 300;
 }
 
 img {
@@ -91,6 +92,10 @@ a, input, button, select, textarea {
   transition: color $ease-main, border-color $ease-main;
 }
 
+a {
+  text-decoration: none;
+}
+
 select, input, textarea, button {
   color: $color-input;
   margin: 0;
@@ -99,4 +104,8 @@ select, input, textarea, button {
   border-radius: 0; // Убираем авто-закругление углов на iOS
   background-color: transparent;
   font-family: $font-main;
+}
+
+section {
+  padding: 55px 0 0;
 }

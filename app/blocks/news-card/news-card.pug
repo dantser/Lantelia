@@ -1,19 +1,19 @@
 //- модификатор для цветных новостей ._colored
 //- ._blue, ._pink, ._gray, ._green
 
-mixin news-card(data)
+mixin news-card(type, text, link)
   +b.news-card&attributes(attributes)
     +e.wrapper
-      +e.type= data.type
-      +e.P.text= data.text
-      +e.A(href="#").link= data.link
+      +e.type= type
+      +e.P.text= text
+      +e.A(href="#").link= link
 
-mixin news-card-large(data)
+mixin news-card-large(type, text, link)
   +b.news-card._xl&attributes(attributes)
     +e.wrapper
       +e.top
-        +e.type= data.type
+        +e.type= type
         +e.logo Lantelia
       +e.bottom
-        +e.P.text= data.text
-        +e.A(href="#").link= data.link
+        +e.P.text= text
+        +e.A(href="#").link= link

@@ -2,21 +2,31 @@
 include ../../blocks/icon/icons
 include ../../blocks/modal/modal
 
-mixin product-card(data)
+mixin product-card(img)
   +b.product-card&attributes(attributes)
     +e.wrapper
       +e.top
-        +e.H3.line= data.line
-        +e.SPAN.name= data.name
+        +e.H3.line 
+          | Professional
+          br
+          | botox
+          br
+          | therapy
+        +e.UL
+          +e.LI.name Шампунь
+          +e.LI.name Реконструктор
+          +e.LI.name Реконструктор
       +e.image
-        img(src= data.img)
+        img(src= img)
       +e.bottom
-        each item in data.volume
-          +e.SPAN.volume= item
+        +e.volumes
+          +e.SPAN.volume 250 мл
+          +e.SPAN.volume 250 мл
+          +e.SPAN.volume 250 мл
         +e.A(href="#", title="Перейти к товару").arrow
           +e.null
           +icon('arrow')
         +e.A(href="#", title="Добавить в корзину").cart
-          +e.price 2199 P
+          +e.price 2 199 ₽
           +icon('shopping-cart')
       

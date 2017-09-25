@@ -22,6 +22,16 @@
     display: none;
   }
 
+  .gm-style {
+    div:nth-child(2) {
+      display: none;
+    }
+  }
+
+  .gmnoprint, .gm-style-cc {
+    display: none;
+  }
+
   p {
     color: $color-gray;
     font-size: 13px;

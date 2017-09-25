@@ -2,6 +2,10 @@
   display: block;
   padding-bottom: 60px;
 
+  .section-head {
+    margin-bottom: 30px;
+  }
+
   &__content {
     display: flex;
     flex-flow: row wrap;
@@ -52,7 +56,6 @@
   }
 
   .news-card {
-    margin-bottom: 24px;
 
     &_xl {
       margin-bottom: 0;

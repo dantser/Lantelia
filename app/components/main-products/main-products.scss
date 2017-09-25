@@ -2,15 +2,22 @@
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
+  padding-top: 0;
 
   .container {
     padding: 0;
   }
 
   .product-card {
-    display: inline-flex;
     width: 25%;
     max-width: none;
+    border: none;
+    border-right: 1px solid $color-border;
+    border-bottom: 1px solid $color-border;
+
+    &:last-child {
+      border: none;
+    }
 
     &_xl {
       width: 50%;
@@ -20,6 +27,7 @@
 
   &__line {
     display: flex;
+    flex-wrap: wrap;
     width: 100%;
   }
 

@@ -5,7 +5,7 @@ mixin main-slider()
     .container
       +grid
         +col(5)
-          +e.H1.title Проффесиональная косметика для волос Lantelia
+          +e.H1.title Професcиональная косметика для волос Lantelia
           +e.link-wrapper
             +e.A(href="#").link Начать работать с Lantelia
         +col(7)
@@ -20,10 +20,12 @@ mixin main-slider()
             //- .main-slider__pagination
       +e.bottom
         +e.phones 
-          span 8 800 870-0697
-          span 8 495 700-0201
+          span 8 800 870&mdash;0697
+          span 8 495 700&mdash;0201
         +e.A(href="#").link Подробнее
-        +e.UL.pagination
-          li.slider-pagination-switch.active
-          li.slider-pagination-switch
-          li.slider-pagination-switch
+        +e.pagination-block
+          +e.P.name Professional Clarifying Care
+          +e.UL.pagination
+            li.slider-pagination-switch.active
+            li.slider-pagination-switch
+            li.slider-pagination-switch

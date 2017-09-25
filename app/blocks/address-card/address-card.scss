@@ -2,13 +2,17 @@
   display: inline-block;
   vertical-align: middle;
   border: 1px solid #ededed;
-  padding: 30px 30px 36px;
+  padding: 33px 30px 37px;
   max-width: 376px;
   box-sizing: border-box;
   cursor: pointer;
   position: relative;
 
   @include transited;
+
+  &:hover {
+    opacity: .6;
+  }
 
   &_active {
     transform: scale(1.07);
