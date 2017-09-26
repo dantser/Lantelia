@@ -24,8 +24,6 @@
   &__link {
     font-size: 14px;
     letter-spacing: .053em;
-    color: $color-white;
-    text-transform: uppercase;
     position: relative;
   }
 
@@ -33,26 +31,6 @@
     display: flex;
     flex-flow: column;
     justify-content: center;
-
-    .main-slider__link {
-      display: inline-block;
-
-      &::after {
-        content: '';
-        display: block;
-        margin-top: 11px;
-        position: relative;
-        height: 2px;
-        width: 18%;
-        color: white;
-        background-image: linear-gradient(to left, #e2648c, #65a7e3);
-        transition: width .5s ease-in-out;
-      }
-
-      &:hover::after {
-        width: 100%;
-      }
-    }
   }
 
   .product-container {
@@ -101,17 +79,15 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
+    position: relative;
 
     .main-slider__link {
       font-size: 11px;
       letter-spacing: .127em;
-      margin-left: 123px;
-
-      @include transited;
-
-      &:hover {
-        opacity: .7;
-      }
+      position: absolute;
+      right: 50%;
+      bottom: 0;
+      transform: translateX(50%);
     }
   }
 
@@ -149,7 +125,7 @@
     height: 2px;
     flex-basis: 48px;
     background-color: rgba(255, 255, 255, .3);
-    transition: flex-basis .5s ease;
+    transition: flex-basis $ease-pagination_main;
     margin-right: 10px;
     will-change: flex-basis;
 
@@ -172,35 +148,35 @@
 
       &::before {
         transform: scale3d(1, 1, 1);
-        transition: transform 5s linear;
+        transition: transform $ease-pagination_linear;
       }
     }
   }
 
-  @media (max-width: 1280px) {
+  // @media (max-width: 1280px) {
+  //
+  //   &__phones {
+  //
+  //     span {
+  //       font-size: 10px;
+  //     }
+  //   }
+  //
+  //   &__link {
+  //     font-size: 10px;
+  //   }
+  //
+  //   .grid {
+  //     padding: 40px 60px 0;
+  //   }
+  //
+  //   &__title {
+  //     font-size: 24px;
+  //     letter-spacing: .021em;
+  //   }
+  // }
 
-    &__phones {
-
-      span {
-        font-size: 10px;
-      }
-    }
-
-    &__link {
-      font-size: 10px;
-    }
-
-    .grid {
-      padding: 40px 60px 0;
-    }
-
-    &__title {
-      font-size: 24px;
-      letter-spacing: .021em;
-    }
-  }
-
-  @media (max-width: 768px) {
+  @media (max-width: 1000px) {
 
     &__title {
       font-size: 18px;

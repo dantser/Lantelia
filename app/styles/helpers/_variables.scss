@@ -21,10 +21,14 @@ $color-input: black; // Основной цвет input, select и textarea
 $color-white: white;
 $color-gray: #7c7c7c;
 $color-border: #ededed;
+$color-border-popup: #ebebeb;
 // ##########
 // Transitions
 // ##########
 $ease-main: .3s ease;
+$ease-pagination: .5s ease-in-out;
+$ease-pagination_main: .5s ease;
+$ease-pagination_linear: 5s linear;
 
 // ##########
 // Шрифты

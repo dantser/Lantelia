@@ -1,6 +1,7 @@
 extends ../../layouts/default
 include ../../components/ui-kit/ui-kit
-
+include ../../blocks/section-head/section-head
+  
 block head
   - var pageTitle = 'Versta Project Template'
 
@@ -58,7 +59,8 @@ block content
           +ui-color('#777', '$color-placeholder', true)
           +ui-color('black', '$color-input', true)
           +ui-color('#ededed', '$color-border')
-
+          +ui-color('#ebebeb', '$color-border-popup')
+          
     //- Цвета
     +ui-section
       +ui-section-head
@@ -67,8 +69,13 @@ block content
         p Сами градиенты в styles/helpers/_gradients.scss
       +ui-section-content()
         +ui-elements-list()
-          +ui-gradient('%gradient-main', true)._gradient_main
-
+          +ui-gradient('%gradient-border')._gradient_border
+          +ui-gradient('%gradient-card_blue')._gradient_card_blue
+          +ui-gradient('%gradient-card_pink')._gradient_card_pink
+          +ui-gradient('%gradient-card_gray')._gradient_card_gray
+          +ui-gradient('%gradient-card_green')._gradient_card_green
+          +ui-gradient('%gradient-underline', true)._gradient_underline
+          +ui-gradient('%gradient-cart', true)._gradient_cart
     //- Шрифты и контентная зона
     +ui-section
       +ui-section-head
@@ -274,20 +281,42 @@ block content
       +ui-section-content()
         +ui-description .link
         +link()(href="#") Обычная ссылка
-        +ui-description .link._dashed
-        +link()(href="#")._dashed Пунктирная ссылка
-        +ui-description .link._icon
-        +link-icon('refresh')(href="#") Ссылка с иконкой
+        +ui-description .link._white
+        +link()(href="#")._white Белая ссылка на темном фоне
+        +ui-description .link._animated
+        +link()(href="#")._animated Ссылка с анимацией и градиентом
+        //- +ui-description .link._dashed
+        //- +link()(href="#")._dashed Пунктирная ссылка
+        //- +ui-description .link._icon
+        //- +link-icon('refresh')(href="#") Ссылка с иконкой
           
-    //- Скроллбар
+    //- //- Скроллбар
+    //- +ui-section
+    //-   +ui-section-head
+    //-     h2 Кастомный скроллбар
+    //-     p Блок: blocks/scrollbar/scrollbar
+    //-   +ui-section-content()
+    //-     +ui-description .js-scrollbar
+    //-     +e.scrolldemo.js-scrollbar
+    //-       +e.scrolldemo-block
+
+    //- Селект
     +ui-section
       +ui-section-head
-        h2 Кастомный скроллбар
-        p Блок: blocks/scrollbar/scrollbar
+        h2 Кастомный селект
       +ui-section-content()
-        +ui-description .js-scrollbar
-        +e.scrolldemo.js-scrollbar
-          +e.scrolldemo-block
+        +ui-description .js-select
+        +e.SELECT.select.js-select
+          option(value, selected) Все офисы продаж
+          option(value='moskow') Москва
+          option(value='spb') Санкт-Петербург
+          
+    //- Заголовок секции
+    +ui-section
+      +ui-section-head
+        h2 Заголовок секции
+      +ui-section-content()
+        +section-head('Компания Lantelia', 'Информация')
           
     //- Слайдер
     +ui-section

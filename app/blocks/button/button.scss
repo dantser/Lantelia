@@ -3,6 +3,7 @@
   border: 1px solid $color-gray;
   box-sizing: border-box;
   text-align: center;
+  display: inline-block;
 
   @include transited;
 
@@ -11,13 +12,12 @@
   }
 
   &_gradiented {
-    border-image-source: linear-gradient(to left, rgba(226, 100, 140, .5), rgba(101, 167, 227, .5));
-    border-image-slice: 1;
+    @extend %gradient-border;
   }
 
   &__text {
     font-size: 11px;
-    letter-spacing: 0.1em;
+    letter-spacing: .1em;
     text-transform: uppercase;
     color: $color-basic;
     font-weight: 300;
@@ -32,12 +32,12 @@
 
   &_black {
     background-color: $color-main;
-    padding: 25px 0;
+    // padding: 25px 0;
 
     .button__text {
       color: $color-white;
       font-size: 12px;
-      letter-spacing: 1.5px;
+      letter-spacing: .125em;
     }
 
     .button__icon {

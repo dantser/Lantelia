@@ -1,6 +1,6 @@
 .preloader {
   display: block;
-  position: fixed;
+  // position: fixed;
   left: 0;
   top: 0;
   right: 0;
@@ -23,8 +23,9 @@
     font-size: 36px;
     font-weight: 400;
     text-transform: uppercase;
-    letter-spacing: 8.5px;
-    transition: transform 5s ease;
+    letter-spacing: .236em;
+
+    @include preloader-transited;
 
     &.animated {
       transform: scale(.5);

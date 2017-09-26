@@ -26,7 +26,7 @@ export default () => {
   initSwiper();
 
   //Swiper plugin initialization on window resize
-  $(window).on('resize', function(){
+  $(window).on('resize', function() {
     initSwiper();
   });
 

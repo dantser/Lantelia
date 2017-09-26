@@ -1,5 +1,5 @@
 .product-card {
-  border: 1px solid #ededed;
+  border: 1px solid $color-border;
   max-width: 362px;
   box-sizing: border-box;
   position: relative;
@@ -11,7 +11,7 @@
     justify-content: space-between;
     min-height: 529px;
     width: 100%;
-    padding: 53px 55px 57px 60px;
+    padding: 53px 55px 57px $container-padding;
     box-sizing: border-box;
   }
 
@@ -48,7 +48,7 @@
 
   &__name, &__volume {
     font-size: 13px;
-    color: #7c7c7c;
+    color: $color-gray;
     font-weight: 300;
   }
 
@@ -148,7 +148,7 @@
 
   @media (max-width: 768px) {
     border: none;
-    border-bottom: 1px solid #ededed;
+    border-bottom: 1px solid $color-border;
     width: 100%;
 
     &__price {

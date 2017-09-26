@@ -1,12 +1,17 @@
 %link {
-  color: $color-main;
+  color: $color-gray;
   border: 0;
-  border-bottom: 1px solid;
   transition: opacity $ease-main;
+  text-transform: uppercase;
+  will-change: opacity;
 
-  &:hover { opacity: .5; }
+  &:hover { opacity: .7; }
 }
 
 %link-dashed {
   border-style: dashed;
+}
+
+%link-white {
+  color: $color-white;
 }

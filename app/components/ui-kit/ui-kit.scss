@@ -63,6 +63,10 @@ $ui-kit-color-darkbg: #111;
     }
   }
 
+  .link_white {
+    background-color: $color-main;
+  }
+
   &__head {
     padding-top: 40px;
     padding-bottom: 20px;
@@ -187,6 +191,13 @@ $ui-kit-color-darkbg: #111;
 
     &_gradient {
       &_main { @extend %gradient-main; }
+      &_border { @extend %gradient-border; }
+      &_card_blue { @extend %gradient-card_blue; }
+      &_card_pink { @extend %gradient-card_pink; }
+      &_card_gray { @extend %gradient-card_gray; }
+      &_card_green { @extend %gradient-card_green; }
+      &_underline { @extend %gradient-underline; }
+      &_cart { @extend %gradient-cart; }
     }
   }
 

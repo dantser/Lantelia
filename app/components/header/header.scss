@@ -100,30 +100,14 @@
   &__link {
     font-size: 12px;
     letter-spacing: .127em;
-    text-transform: uppercase;
-    color: $color-gray;
-
-    @include transited;
-
-    &:hover {
-      color: $color-basic;
-    }
-
-    &:last-child {
-      margin-right: 0;
-    }
   }
 
   // модификатор при черном фоне
 
   &_main {
 
-    .header__link {
+    .link__text {
       color: $color-white;
-
-      &:hover {
-        color: $color-gray;
-      }
     }
   }
 
@@ -146,7 +130,7 @@
   //   }
   // }
 
-  @media (max-width: 970px) {
+  @media (max-width: 1000px) {
 
     .container {
       padding: 0;
@@ -179,11 +163,13 @@
       z-index: 1000;
       width: 100%;
       margin: 0 auto;
+      pointer-events: none;
 
       @include transited;
 
       &_active {
         opacity: 1;
+        pointer-events: all;
       }
 
       &-wrapper {

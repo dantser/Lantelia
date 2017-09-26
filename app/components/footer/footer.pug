@@ -13,16 +13,23 @@ mixin footer()
             +e.descr Профессиональная косметика для волос Lantelia
             +social('vk', 'f', 'instagram').__social
           +col(2).grid__col_links
-            +e.links
-              +e.A(href="#").link Продукция
-              +e.A(href="#").link Где купить
-              +e.A(href="#").link Обучение и новости
-              +e.A(href="#").link О компании
-              +e.A(href="#").link Контакты
+            +e.UL.links
+              +e.LI.link
+                a(href="#") Продукция
+              +e.LI.link
+                a(href="#") Где купить
+              +e.LI.link
+                a(href="#") Обучение и новости
+              +e.LI.link
+                a(href="#") О компании
+              +e.LI.link
+                a(href="#") Контакты
           +col(2).grid__col_links
-            +e.links
-              +e.A(href="#").link Публичная оферта
-              +e.A(href="#").link Доставка и оплата
+            +e.UL.links
+              +e.LI.link
+                +e.A(href="#") Публичная оферта
+              +e.LI.link
+                +e.A(href="#") Доставка и оплата
           +col(2).grid__col_right
             +button('НАЧАТЬ РАБОТАТЬ С LANTELIA')._gradiented
             +e.copyright &#169; 2017 Lantelia. Все права защищены

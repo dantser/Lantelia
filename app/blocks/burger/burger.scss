@@ -23,7 +23,8 @@
     display: block;
     fill: $color-white;
     will-change: fill, stroke;
-    transition: fill .25s ease-in-out, stroke .25s ease-in-out;
+
+    @include transited;
 
     &:hover {
       opacity: .7;

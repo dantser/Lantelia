@@ -69,8 +69,9 @@
     height: 18px;
     fill: $color-gray;
     will-change: fill;
-    transition: fill .25s ease-in-out;
     cursor: pointer;
+
+    @include transited;
 
     &:hover {
       fill: darken($color-white, 10%);

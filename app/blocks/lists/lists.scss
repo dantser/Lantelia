@@ -1,7 +1,8 @@
+/* stylelint-disable */
 .list {
   @extend %list;
 }
-// stylelit-disabled
+
 ul.list {
   @extend %ullist;
 }
@@ -9,4 +10,4 @@ ul.list {
 ol.list {
   @extend %ollist;
 }
-// stylelit-enabled
+/* stylelint-enable */

@@ -1,5 +1,7 @@
 .link {
   display: inline-block;
+  cursor: pointer;
+  font-size: 13px;
 
   &__text {
     @extend %link;
@@ -7,6 +9,30 @@
 
   &_dashed &__text {
     @extend %link-dashed;
+  }
+
+  &_white &__text {
+    @extend %link-white;
+  }
+
+  &_animated {
+
+    &::after {
+      content: '';
+      display: block;
+      margin-top: 11px;
+      position: relative;
+      height: 2px;
+      width: 18%;
+      color: white;
+      transition: width $ease-pagination;
+
+      @extend %gradient-underline;
+    }
+
+    &:hover::after {
+      width: 100%;
+    }
   }
 
   &_icon {

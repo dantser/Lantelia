@@ -1,4 +1,5 @@
 include ../../blocks/grid/grid
+include ../../blocks/link/link
 
 mixin main-slider()
   +b.main-slider&attributes(attributes)
@@ -7,7 +8,7 @@ mixin main-slider()
         +col(5)
           +e.H1.title Професcиональная косметика для волос Lantelia
           +e.link-wrapper
-            +e.A(href="#").link Начать работать с Lantelia
+            +link()._white._animated.main-slider__link Начать работать с Lantelia
         +col(7)
           +e.slider.product-container
             .product-wrapper
@@ -22,7 +23,7 @@ mixin main-slider()
         +e.phones 
           span 8 800 870&mdash;0697
           span 8 495 700&mdash;0201
-        +e.A(href="#").link Подробнее
+        +link()._white.main-slider__link Подробнее
         +e.pagination-block
           +e.P.name Professional Clarifying Care
           +e.UL.pagination

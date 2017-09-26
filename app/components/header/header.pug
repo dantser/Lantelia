@@ -1,6 +1,7 @@
 //- модификатор при черном фоне +header()._main
 
 include ../../blocks/icon/icons
+include ../../blocks/link/link
 include ../../blocks/burger/burger
 include ../../components/social/social
 
@@ -20,19 +21,19 @@ mixin header()
               +social('vk', 'f', 'instagram').__social
             +e.UL.nav-group
               +e.LI.nav-item
-                +e.A(href="#").link Продукция
+                +link().header__link Продукция
                 +icon('arrow').nav-icon
               +e.LI.nav-item
-                +e.A(href="#").link Где купить
+                +link().header__link Где купить
                 +icon('arrow').nav-icon
             +e.UL.nav-group
               +e.LI.nav-item
-                +e.A(href="#").link Обучение и новости
+                +link().header__link Обучение и новости
                 +icon('arrow').nav-icon
               +e.LI.nav-item
-                +e.A(href="#").link О компании
+                +link().header__link О компании
                 +icon('arrow').nav-icon
               +e.LI.nav-item
-                +e.A(href="#").link Контакты
+                +link().header__link Контакты
                 +icon('arrow').nav-icon
               //- +e.A(href="#").link Еще пункт
