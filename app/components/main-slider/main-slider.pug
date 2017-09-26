@@ -3,21 +3,20 @@ include ../../blocks/link/link
 
 mixin main-slider()
   +b.main-slider&attributes(attributes)
+    +e.slider.product-container
+      .product-wrapper
+        .product-slide
+          img(src="assets/images/picMainPage/1@2x.jpg")
+        .product-slide 
+          img(src="assets/images/picMainPage/2@2x.jpg")
+        .product-slide
+          img(src="assets/images/picMainPage/3@2x.jpg")
     .container
-      +grid
-        +col(5)
-          +e.H1.title Професcиональная косметика для волос Lantelia
-          +e.link-wrapper
-            +link()._white._animated.main-slider__link Начать работать с Lantelia
-        +col(7)
-          +e.slider.product-container
-            .product-wrapper
-              .product-slide
-                img(src="assets/images/picProduct/clarify_250ml_03(line)@2x.png")
-              .product-slide 
-                img(src="assets/images/picProduct/smooth_250ml_03(line)@2x.png")
-              .product-slide
-                img(src="assets/images/picProduct/spa_250ml_03(line)@2x.png")
+      +e.heading
+        +e.H1.title Професcиональная косметика для волос Lantelia
+        +e.link-wrapper
+          +link()._white._animated.main-slider__link Начать работать с Lantelia
+          
             //- .main-slider__pagination
       +e.bottom
         +e.phones 

@@ -19,11 +19,12 @@
     display: none;
   }
 
-  @media (max-width: 768px) {
+  @include screen('temp', max) {
 
     .nice-select {
       display: block;
       margin-bottom: 20px;
+      background-color: transparent;
     }
 
     &__subtitle {

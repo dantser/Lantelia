@@ -21,6 +21,8 @@
     text-transform: uppercase;
     color: $color-basic;
     font-weight: 300;
+    display: inline-block;
+    vertical-align: middle;
   }
 
   &__icon {
@@ -28,10 +30,12 @@
     height: 24px;
     fill: $color-basic;
     margin-right: 12px;
+    display: inline-block;
+    vertical-align: middle;
   }
 
   &_black {
-    background-color: $color-main;
+    background-color: transparent;
     // padding: 25px 0;
 
     .button__text {
@@ -45,7 +49,7 @@
     }
   }
 
-  @media (max-width: 1024px) {
+  @include screen('temp', max) {
     padding: 10px 10px 8px;
 
     &_black {

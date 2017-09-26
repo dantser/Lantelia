@@ -14,7 +14,7 @@
   //   padding: 75px 15px;
   // }
   //
-  @media (max-width: 768px) {
+  @include screen('temp', max) {
     padding: 0;
   }
 
@@ -51,7 +51,7 @@
     background-color: $color-white;
     pointer-events: all;
 
-    @media (max-width: 768px) {
+    @include screen('temp', max) {
       width: 100%;
     }
   }
@@ -82,7 +82,7 @@
     display: block;
   }
 
-  @media (max-width: 768px) {
+  @include screen('temp', max) {
 
     &__wrapper, &__content, &__body, .product-popup, .product-popup__wrapper {
       height: 100%;

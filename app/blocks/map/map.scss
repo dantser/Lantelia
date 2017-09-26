@@ -24,21 +24,41 @@
 
 .leaflet-touch .leaflet-bar, .leaflet-touch .leaflet-control-layers {
   border: none;
-  box-shadow: 0 2px 4px rgba($color-basic, .2);
+}
+
+.leaflet-bar {
+  margin: 0 0 24px 24px !important;
+}
+
+.leaflet-touch .leaflet-control-zoom-in, .leaflet-touch .leaflet-control-zoom-out {
+  font-size: 0;
+}
+
+.leaflet-touch .leaflet-control-zoom-in {
+  background: $color-main url('../images/+add.svg') no-repeat center;
+}
+
+.leaflet-touch .leaflet-control-zoom-out {
+  background: $color-main url('../images/-.svg') no-repeat center;
 }
 
 .leaflet-bar a {
-  border-bottom: 1px solid $color-border;
-  transition: background-color $ease-main, color $ease-main;
-  color: $color-basic;
-
-  &:last-child {
-    border-bottom: none;
-  }
+  transition: opacity $ease-main;
+  color: $color-white;
+  border: none;
+  box-shadow: 0 12px 36px 0 rgba(0, 0, 0, 0.11);
+  background-color: $color-main;
+  font-size: 0;
 
   &:hover {
+    opacity: .7;
     background-color: $color-main;
-    color: white;
+    color: $color-white;
+    border: none;
+  }
+
+  &:not(:last-child) {
+    margin-bottom: 12px;
   }
 }
 

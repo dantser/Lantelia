@@ -84,7 +84,6 @@
     flex-grow: 1;
     margin-bottom: 5px;
     letter-spacing: .01em;
-    height: 300px;
     display: block;
   }
 
@@ -108,7 +107,7 @@
     justify-content: space-between;
   }
 
-  @media (max-width: 1024px) {
+  @include screen('temp', max) {
     min-height: 240px;
 
     &_xl {
@@ -116,7 +115,7 @@
     }
   }
 
-  @media (max-width: 768px) {
+  @include screen('tablet', max) {
 
     &_xl {
 
@@ -130,7 +129,7 @@
     }
   }
 
-  @media (max-width: 320px) {
+  @include screen('phone', max) {
     min-height: 276px;
   }
 }

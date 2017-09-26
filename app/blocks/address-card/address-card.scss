@@ -6,6 +6,7 @@
   box-sizing: border-box;
   cursor: pointer;
   position: relative;
+  z-index: 1;
 
   @include transited;
 
@@ -14,21 +15,42 @@
   }
 
   &_active {
-    transform: scale(1.07);
+    // transform: scale(1.04, 1.16);
     border: none;
-    background-color: $color-main;
     box-shadow: 0 4px 10px 0 rgba(0, 0, 0, .21);
 
     .address-card__wrapper {
-      transform: scale(.93);
+      // transform: scale(.96, .84);
+      padding-left: 30px;
     }
 
-    .address-card__title, .address-card__address {
+    .address-card__title {
       color: $color-white;
+      margin-bottom: 15px;
     }
 
     .address-card__arrow {
       fill: $color-white;
+      right: 20px;
+    }
+
+    .address-card__address {
+      font-size: 13px;
+      color: $color-gray;
+    }
+
+    &::after {
+      @include center-block;
+      content: '';
+      right: 0;
+      width: 104%;
+      height: 114%;
+      z-index: -1;
+      background-color: $color-main;
+    }
+
+    &:hover {
+      opacity: 1;
     }
   }
 
@@ -68,7 +90,7 @@
     transform: translateY(-50%);
   }
 
-  @media (max-width: 768px) {
+  @include screen('temp', max) {
     border: none;
     border-bottom: 1px solid #ededed;
     max-width: none;

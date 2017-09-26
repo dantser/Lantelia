@@ -9,10 +9,10 @@
     display: flex;
     flex-flow: column nowrap;
     justify-content: space-between;
-    min-height: 529px;
     width: 100%;
-    padding: 53px 55px 57px $container-padding;
+    padding: 52px 57px 57px $container-padding;
     box-sizing: border-box;
+    min-height: 528px;
   }
 
   &:hover {
@@ -26,7 +26,7 @@
     max-width: 722px;
 
     .product-card__volume:not(:last-child) {
-      margin-left: 74px;
+      margin-right: 74px;
     }
   }
 
@@ -34,9 +34,10 @@
     font-size: 16px;
     font-weight: 300;
     text-align: left;
-    line-height: 1.31;
+    line-height: 1.37;
     text-transform: capitalize;
     padding-right: 10px;
+    letter-spacing: .013em;
   }
 
   &__top {
@@ -64,26 +65,33 @@
   &__volumes {
     align-self: center;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     width: 100%;
     text-align: center;
   }
 
   &__volume {
     text-align: center;
+    width: 50%;
+
+    &:not(:last-child) {
+      margin-right: 24px;
+    }
   }
 
   &__image {
+    width: 100%;
+    height: 100%;
     max-width: 360px;
-    max-height: 300px;
+    max-height: 360px;
     align-self: center;
     position: absolute;
     margin: 0 auto;
-    top: 26%;
+    top: 20%;
 
     img {
-      width: 100%;
-      height: auto;
+
+      @include fill-img;
     }
   }
 
@@ -92,6 +100,7 @@
     display: flex;
     justify-content: space-between;
     width: 100%;
+    max-width: 360px;
   }
 
   &__cart {
@@ -146,7 +155,7 @@
   //   }
   // }
 
-  @media (max-width: 768px) {
+  @include screen('tablet', max) {
     border: none;
     border-bottom: 1px solid $color-border;
     width: 100%;

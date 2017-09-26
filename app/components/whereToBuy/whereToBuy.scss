@@ -35,7 +35,7 @@
     display: none;
   }
 
-  @media (max-width: 768px) {
+  @include screen('tablet', max) {
     padding-bottom: 36px;
     border-bottom: 1px solid $color-border;
 

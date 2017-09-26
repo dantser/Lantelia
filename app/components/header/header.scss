@@ -1,8 +1,9 @@
 .header {
   z-index: 2;
+  width: 100%;
 
   .container {
-    padding: 49px 60px 50px;
+    padding: 50px 60px 51px;
   }
 
   .burger {
@@ -67,8 +68,8 @@
       flex-flow: row nowrap;
       justify-content: space-between;
 
-      & + .header__nav-group {
-        margin-left: 109px;
+      &:not(:last-child) {
+        margin-right: 108px;
       }
     }
 
@@ -105,6 +106,9 @@
   // модификатор при черном фоне
 
   &_main {
+    position: absolute;
+    top: 0;
+    left: 0;
 
     .link__text {
       color: $color-white;
@@ -130,7 +134,7 @@
   //   }
   // }
 
-  @media (max-width: 1000px) {
+  @include screen('temp', max) {
 
     .container {
       padding: 0;
