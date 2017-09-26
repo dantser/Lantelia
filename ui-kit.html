@@ -21,6 +21,82 @@
 </head>
 
 <body>
+    <div class="preloader" id="preloader">
+        <div class="preloader__wrapper">
+            <div class="preloader__text">Lantelia</div>
+        </div>
+    </div>
+    <div class="header">
+        <div class="container">
+            <div class="header__wrapper">
+                <div class="burger js-burger js-burger_white">
+                    <svg class="burger__icon burger__icon_type_burger"><use xlink:href="assets/images/icon.svg#icon_burger"></use></svg>
+                    <svg class="burger__icon burger__icon_type_close"><use xlink:href="assets/images/icon.svg#icon_close"></use></svg>
+                </div>
+                <a class="header__logo" href="#">Lantelia</a>
+                <a class="header__call" href="#"></a>
+                <nav class="header__nav">
+                    <div class="header__nav-wrapper">
+                        <div class="header__nav-content">
+                            <span class="header__nav-name">Lantelia</span>
+                            <p class="header__nav-text">Профессиональная косметика для волос Lantelia</p>
+                            <ul class="social header__social">
+                                <li class="social__item">
+                                    <a class="social__link social__link social__link_type_vk" href="#">
+                                        <svg class="social__icon"><use xlink:href="assets/images/icon.svg#icon_vk"></use></svg>
+                                    </a>
+                                </li>
+                                <li class="social__item">
+                                    <a class="social__link social__link social__link_type_f" href="#">
+                                        <svg class="social__icon"><use xlink:href="assets/images/icon.svg#icon_f"></use></svg>
+                                    </a>
+                                </li>
+                                <li class="social__item">
+                                    <a class="social__link social__link social__link_type_instagram" href="#">
+                                        <svg class="social__icon"><use xlink:href="assets/images/icon.svg#icon_instagram"></use></svg>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <ul class="header__nav-group">
+                            <li class="header__nav-item">
+                                <a class="link header__link">
+                                    <span class="link__text">Продукция</span>
+                                </a>
+                                <svg class="header__nav-icon"><use xlink:href="assets/images/icon.svg#icon_arrow"></use></svg>
+                            </li>
+                            <li class="header__nav-item">
+                                <a class="link header__link">
+                                    <span class="link__text">Где купить</span>
+                                </a>
+                                <svg class="header__nav-icon"><use xlink:href="assets/images/icon.svg#icon_arrow"></use></svg>
+                            </li>
+                        </ul>
+                        <ul class="header__nav-group">
+                            <li class="header__nav-item">
+                                <a class="link header__link">
+                                    <span class="link__text">Обучение и новости</span>
+                                </a>
+                                <svg class="header__nav-icon"><use xlink:href="assets/images/icon.svg#icon_arrow"></use></svg>
+                            </li>
+                            <li class="header__nav-item">
+                                <a class="link header__link">
+                                    <span class="link__text">О компании</span>
+                                </a>
+                                <svg class="header__nav-icon"><use xlink:href="assets/images/icon.svg#icon_arrow"></use></svg>
+                            </li>
+                            <li class="header__nav-item">
+                                <a class="link header__link">
+                                    <span class="link__text">Контакты</span>
+                                </a>
+                                <svg class="header__nav-icon"><use xlink:href="assets/images/icon.svg#icon_arrow"></use></svg>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
     <div class="ui-kit">
         <div class="ui-kit__navigation">
             <div class="ui-kit__navigation-burger"></div>
@@ -90,6 +166,8 @@
                             <br>$color-input</div>
                         <div class="ui-kit__color" style="background-color: #ededed;">#ededed
                             <br>$color-border</div>
+                        <div class="ui-kit__color" style="background-color: #ebebeb;">#ebebeb
+                            <br>$color-border-popup</div>
                     </div>
                 </div>
             </div>
@@ -105,7 +183,13 @@
             <div class="ui-kit__section-content">
                 <div class="container">
                     <div class="ui-kit__elements-list">
-                        <div class="ui-kit__color ui-kit__color_bg_dark ui-kit__color_gradient_main" style="background: undefined;">%gradient-main</div>
+                        <div class="ui-kit__color ui-kit__color_gradient_border" style="background: undefined;">%gradient-border</div>
+                        <div class="ui-kit__color ui-kit__color_gradient_card_blue" style="background: undefined;">%gradient-card_blue</div>
+                        <div class="ui-kit__color ui-kit__color_gradient_card_pink" style="background: undefined;">%gradient-card_pink</div>
+                        <div class="ui-kit__color ui-kit__color_gradient_card_gray" style="background: undefined;">%gradient-card_gray</div>
+                        <div class="ui-kit__color ui-kit__color_gradient_card_green" style="background: undefined;">%gradient-card_green</div>
+                        <div class="ui-kit__color ui-kit__color_bg_dark ui-kit__color_gradient_underline" style="background: undefined;">%gradient-underline</div>
+                        <div class="ui-kit__color ui-kit__color_bg_dark ui-kit__color_gradient_cart" style="background: undefined;">%gradient-cart</div>
                     </div>
                 </div>
             </div>
@@ -409,14 +493,13 @@
                     <a class="link" href="#">
                         <span class="link__text">Обычная ссылка</span>
                     </a>
-                    <p class="ui-kit__description">.link._dashed</p>
-                    <a class="link link_dashed" href="#">
-                        <span class="link__text">Пунктирная ссылка</span>
+                    <p class="ui-kit__description">.link._white</p>
+                    <a class="link link_white" href="#">
+                        <span class="link__text">Белая ссылка на темном фоне</span>
                     </a>
-                    <p class="ui-kit__description">.link._icon</p>
-                    <a class="link link_icon" href="#">
-                        <svg class="link__icon"><use xlink:href="assets/images/icon.svg#icon_refresh"></use></svg>
-                        <span class="link__text">Ссылка с иконкой</span>
+                    <p class="ui-kit__description">.link._animated</p>
+                    <a class="link link_animated" href="#">
+                        <span class="link__text">Ссылка с анимацией и градиентом</span>
                     </a>
                 </div>
             </div>
@@ -424,15 +507,31 @@
         <section class="ui-kit__section">
             <div class="ui-kit__section-head">
                 <div class="container">
-                    <h2>Кастомный скроллбар</h2>
-                    <p>Блок: blocks/scrollbar/scrollbar</p>
+                    <h2>Кастомный селект</h2>
                 </div>
             </div>
             <div class="ui-kit__section-content">
                 <div class="container">
-                    <p class="ui-kit__description">.js-scrollbar</p>
-                    <div class="ui-kit__scrolldemo js-scrollbar">
-                        <div class="ui-kit__scrolldemo-block"></div>
+                    <p class="ui-kit__description">.js-select</p>
+                    <select class="ui-kit__select js-select">
+                        <option value selected>Все офисы продаж</option>
+                        <option value="moskow">Москва</option>
+                        <option value="spb">Санкт-Петербург</option>
+                    </select>
+                </div>
+            </div>
+        </section>
+        <section class="ui-kit__section">
+            <div class="ui-kit__section-head">
+                <div class="container">
+                    <h2>Заголовок секции</h2>
+                </div>
+            </div>
+            <div class="ui-kit__section-content">
+                <div class="container">
+                    <div class="section-head">
+                        <h3 class="section-head__subtitle">Компания Lantelia</h3>
+                        <h2 class="section-head__title">Информация</h2>
                     </div>
                 </div>
             </div>
@@ -502,6 +601,93 @@
             $(this).attr('id', id);
         });
     </script>
+    <div class="needHelp">
+        <div class="needHelp__wrapper">
+            <svg class="needHelp__icon"><use xlink:href="assets/images/icon.svg#icon_phone"></use></svg>
+            <svg class="needHelp__close"><use xlink:href="assets/images/icon.svg#icon_close"></use></svg>
+            <div class="needHelp__text">Нужна помощь</div>
+        </div>
+    </div>
+    <div class="needHelp-popup">
+        <div class="needHelp-popup__content">
+            <h3 class="needHelp-popup__heading">Нужна помощь?</h3>
+            <p class="needHelp-popup__text">Позвоните нам и наш менеджер ответит на Ваши вопросы</p>
+        </div>
+        <a class="needHelp-popup__phone" href="tel:8 800 870—0697">
+            <span class="needHelp-popup__num">8 800 870—0697</span>
+            <svg class="needHelp-popup__icon"><use xlink:href="assets/images/icon.svg#icon_phonecopy3"></use></svg>
+        </a>
+        <a class="needHelp-popup__phone" href="tel:8 495 700—0201">
+            <span class="needHelp-popup__num">8 495 700—0201</span>
+            <svg class="needHelp-popup__icon"><use xlink:href="assets/images/icon.svg#icon_phonecopy3"></use></svg>
+        </a>
+    </div>
+    <section class="footer">
+        <div class="container">
+            <div class="footer__wrapper">
+                <div class="grid">
+                    <div class="grid__col grid__col_two">
+                        <div class="footer__logo">Lantelia</div>
+                    </div>
+                    <div class="grid__col grid__col_two">
+                        <div class="footer__descr">Профессиональная косметика для волос Lantelia</div>
+                        <ul class="social footer__social">
+                            <li class="social__item">
+                                <a class="social__link social__link social__link_type_vk" href="#">
+                                    <svg class="social__icon"><use xlink:href="assets/images/icon.svg#icon_vk"></use></svg>
+                                </a>
+                            </li>
+                            <li class="social__item">
+                                <a class="social__link social__link social__link_type_f" href="#">
+                                    <svg class="social__icon"><use xlink:href="assets/images/icon.svg#icon_f"></use></svg>
+                                </a>
+                            </li>
+                            <li class="social__item">
+                                <a class="social__link social__link social__link_type_instagram" href="#">
+                                    <svg class="social__icon"><use xlink:href="assets/images/icon.svg#icon_instagram"></use></svg>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="grid__col grid__col_two grid__col_links">
+                        <ul class="footer__links">
+                            <li class="footer__link">
+                                <a href="#">Продукция</a>
+                            </li>
+                            <li class="footer__link">
+                                <a href="#">Где купить</a>
+                            </li>
+                            <li class="footer__link">
+                                <a href="#">Обучение и новости</a>
+                            </li>
+                            <li class="footer__link">
+                                <a href="#">О компании</a>
+                            </li>
+                            <li class="footer__link">
+                                <a href="#">Контакты</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="grid__col grid__col_two grid__col_links">
+                        <ul class="footer__links">
+                            <li class="footer__link">
+                                <a href="#">Публичная оферта</a>
+                            </li>
+                            <li class="footer__link">
+                                <a href="#">Доставка и оплата</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="grid__col grid__col_two grid__col_right">
+                        <a class="button button_gradiented" href="#">
+                            <span class="button__text">НАЧАТЬ РАБОТАТЬ С LANTELIA</span>
+                        </a>
+                        <div class="footer__copyright">&#169; 2017 Lantelia. Все права защищены</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     <script src="assets/scripts/app.min.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAxPYPIFoyo8a8749Pi9ooi_WBnXZKpBoA"></script>
 </body>
