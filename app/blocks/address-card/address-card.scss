@@ -41,6 +41,7 @@
 
     &::after {
       @include center-block;
+
       content: '';
       right: 0;
       width: 104%;
