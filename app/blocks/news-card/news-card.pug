@@ -10,6 +10,8 @@ mixin news-card(type, text, link)
 
 mixin news-card-large(type, text, link)
   +b.news-card._xl&attributes(attributes)
+    +e.image-wrapper
+      +e.IMG(src="assets/images/picMainPage/aboutUs@2x.jpg").image
     +e.wrapper
       +e.top
         +e.type= type

@@ -7,19 +7,50 @@
   min-height: 312px;
   padding: 34px 35px 32px;
   position: relative;
+  cursor: pointer;
+
+  &::after {
+    @include pseudo;
+
+    transition: background-color $ease-main;
+    right: 0;
+    top: 0;
+  }
 
   &_colored {
     border: none;
 
     &::after {
-      content: '';
-      position: absolute;
       top: -6px;
       left: 0;
       right: 0;
       width: 97%;
       height: 6px;
       margin: auto;
+    }
+  }
+
+  &_with-hover {
+    &:hover {
+      border: none;
+
+      &::after {
+        @include center-block;
+
+        right: 0;
+        width: 104%;
+        height: 104%;
+        z-index: -1;
+        background-color: $color-main;
+      }
+
+      .news-card__link {
+        color: $color-gray;
+      }
+
+      .news-card__text {
+        color: $color-white;
+      }
     }
   }
 
@@ -41,10 +72,8 @@
 
   &_xl {
     border: none;
-    background: $color-gray url('../images/picMainPage/aboutUs@2x.jpg');
-    background-size: cover;
-    background-position: center;
     min-height: 648px;
+    height: 100%;
     letter-spacing: .013em;
 
     * {
@@ -59,6 +88,24 @@
 
     .news-card__type {
       margin-bottom: 31px;
+    }
+  }
+
+  &__image {
+    @include fill-img;
+
+    width: 100%;
+    height: 100%;
+
+    &-wrapper {
+      width: 100%;
+      height: 100%;
+      max-width: 100%;
+      max-height: 100%;
+      z-index: -1;
+      position: absolute;
+      top: 0;
+      left: 0;
     }
   }
 
