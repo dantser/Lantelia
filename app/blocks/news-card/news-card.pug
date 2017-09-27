@@ -1,12 +1,13 @@
 //- модификатор для цветных новостей ._colored
 //- ._blue, ._pink, ._gray, ._green
+include ../../blocks/link/link
 
 mixin news-card(type, text, link)
   +b.news-card&attributes(attributes)
     +e.wrapper
       +e.type= type
       +e.P.text= text
-      +e.A(href="#").link= link
+      +link().news-card__link= link
 
 mixin news-card-large(type, text, link)
   +b.news-card._xl&attributes(attributes)
@@ -18,4 +19,4 @@ mixin news-card-large(type, text, link)
         +e.logo Lantelia
       +e.bottom
         +e.P.text= text
-        +e.A(href="#").link= link
+        +link().news-card__link= link

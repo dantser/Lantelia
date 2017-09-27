@@ -73,18 +73,14 @@
   }
 
   &__link {
-    font-size: 11px;
-    letter-spacing: .127em;
-    text-transform: uppercase;
     margin-bottom: 22px;
 
-    @include transited;
-
-    &:hover {
-      opacity: .7;
+    a {
+      font-size: 11px;
+      letter-spacing: .127em;
     }
 
-    a {
+    .link__text {
       color: $color-basic;
     }
 

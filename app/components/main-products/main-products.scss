@@ -29,6 +29,37 @@
     display: flex;
     flex-wrap: wrap;
     width: 100%;
+    position: relative;
+  }
+
+  &__helper {
+    position: absolute;
+    display: block;
+    background-color: white;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    z-index: 2;
+    box-shadow:
+      0 0 0 0 white,
+      0 3px 20px rgba(black, .3);
+    will-change: opacity, left, top, width, height, box-shadow; // Для производительности
+    transform: translate3d(0, 0, 0); // Для производительности
+    transition:
+      opacity $ease-main,
+      left $ease-main,
+      top $ease-main,
+      width $ease-main,
+      height $ease-main,
+      box-shadow $ease-main;
+    pointer-events: none;
+
+    &_active {
+      opacity: 1;
+      box-shadow:
+        0 0 0 6px white,
+        0 3px 20px 8px rgba(black, .2);
+    }
   }
 
   @include screen('tablet', max) {
@@ -39,6 +70,11 @@
 
     .product-card {
       width: 100%;
+      border-right: none;
+
+      &__volumes {
+        display: none;
+      }
     }
 
     .container {

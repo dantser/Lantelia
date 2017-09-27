@@ -1,11 +1,18 @@
 extends ../../layouts/default
 include ../../components/ui-kit/ui-kit
 include ../../blocks/section-head/section-head
-  
+include ../../blocks/address-card/address-card
+include ../../blocks/news-card/news-card
+include ../../components/header/header
+include ../../components/map/map
+include ../../blocks/product-card/product-card
+include ../../components/needHelp/needHelp
+
 block head
   - var pageTitle = 'Versta Project Template'
 
 block content
+  
   +ui-kit
     +e.navigation
       +e.navigation-burger
@@ -14,7 +21,13 @@ block content
     +ui-kit-head
       +e.logo Логотип
       +e.name Lantelia
-  
+    +ui-section
+      +ui-section-head
+        h2 header
+        p Блок: blocks/header/header
+        p .header_main
+      +ui-section-content()
+        +header()._main
     //- Сетка
     +ui-section._grid
       +ui-section-head
@@ -122,26 +135,26 @@ block content
         +ui-description Другие стили текстов:
         +ui-custom-text._style-1 Пример кастомного стиля на примере стандартного (%text)
           
-    //- Таблицы
-    +ui-section
-      +ui-section-head
-        h2 Таблицы
-        p Блок: blocks/table
-      +ui-section-content()
-        +table()
-          thead
-            tr
-              td Ячейка
-              td Ячейка
-              td Ячейка
-          tr
-            td Ячейка
-            td Ячейка
-            td Ячейка
-          tr
-            td Ячейка
-            td Ячейка
-            td Ячейка
+    //- //- Таблицы
+    //- +ui-section
+    //-   +ui-section-head
+    //-     h2 Таблицы
+    //-     p Блок: blocks/table
+    //-   +ui-section-content()
+    //-     +table()
+    //-       thead
+    //-         tr
+    //-           td Ячейка
+    //-           td Ячейка
+    //-           td Ячейка
+    //-       tr
+    //-         td Ячейка
+    //-         td Ячейка
+    //-         td Ячейка
+    //-       tr
+    //-         td Ячейка
+    //-         td Ячейка
+    //-         td Ячейка
 
     //- Кнопки
     +ui-section
@@ -187,74 +200,74 @@ block content
     //-           li Элемент списка
     //-       li Элемент списка
           
-    //- Табы
-    +ui-section
-      +ui-section-head
-        h2 Элементы форм
-        p Блок: blocks/form-elements
-      +ui-section-content()
-        +grid
-          +col(6)
-            +ui-description .input
-            +inputbox
-              +input(placeholder="Плейсхолдер")
-          +col(6)
-            +ui-description .select.js-select
-            +inputbox
-              +select
-                option(value="Опция 1") Опция 1
-                option(value="Опция 2") Опция 2
-                option(value="Опция 3") Опция 3
-          +col(6)
-            +ui-description .js-datepicker<br> Параметры задаются через дата-атрибуты
-            +inputbox()
-              +input()(placeholder="Выберите дату" readonly).js-datepicker
-          +col(6)
-            +ui-description Поле ввода номера телефона.<br> Маска определяется через атрибут data-type="tel"
-            +inputbox()
-              +input()(placeholder="+7 (___) ___-__-__" data-type="tel")
-          +col(6)
-            +ui-description Поле ввода e-mail.<br> Маска определяется через атрибут data-type="email"
-            +inputbox()
-              +input()(placeholder="E-mail" data-type="email")
-          +col(6)
-            +ui-description .js-number-input<br> Поле изменения количества
-            +inputbox()
-              +input-number()(placeholder="Количество товара")
-          +col(12)
-            +textarea(placeholder="Текстовое поле")
-          +col(6)
-            +ui-description .checkradio
-            +inputbox()
-              +checkbox('ui-checkbox', 'test', 'true') Чекбокс
-          +col(6)
-            +ui-description .checkradio
-            +inputbox()
-              +ui-elements-list
-                +radio('ui-radio', 'test', 'true') Радиокнопка
-                +radio('ui-radio', 'test-2') Радиокнопка
-          +col(6)
-            +ui-description .range.js-range<br> Все параметры задаются дата-атрибутами
-            +inputbox()
-              +range()(data-start='40', data-connect='[true, false]', data-min='0', data-max='100')
-      
-    //- Табы
-    +ui-section
-      +ui-section-head
-        h2 Табы
-        p Блок: blocks/tabs
-      +ui-section-content()
-        +tabs
-          +tab()(data-tab-target="tab1").active Информация
-          +tab()(data-tab-target="tab2") Контент
-          +tab()(data-tab-target="tab3") Тексты
-        +tabs-content
-          +tab-wrapper()(data-tab="tab1" data-tab-group="testtabs").active
-            p Это таб 1
-          +tab-wrapper()(data-tab="tab2" data-tab-group="testtabs")
-            p Это таб 2
-          +tab-wrapper()(data-tab="tab3" data-tab-group="testtabs")
-            p Это таб 3
+    //- //- Табы
+    //- +ui-section
+    //-   +ui-section-head
+    //-     h2 Элементы форм
+    //-     p Блок: blocks/form-elements
+    //-   +ui-section-content()
+    //-     +grid
+    //-       +col(6)
+    //-         +ui-description .input
+    //-         +inputbox
+    //-           +input(placeholder="Плейсхолдер")
+    //-       +col(6)
+    //-         +ui-description .select.js-select
+    //-         +inputbox
+    //-           +select
+    //-             option(value="Опция 1") Опция 1
+    //-             option(value="Опция 2") Опция 2
+    //-             option(value="Опция 3") Опция 3
+    //-       +col(6)
+    //-         +ui-description .js-datepicker<br> Параметры задаются через дата-атрибуты
+    //-         +inputbox()
+    //-           +input()(placeholder="Выберите дату" readonly).js-datepicker
+    //-       +col(6)
+    //-         +ui-description Поле ввода номера телефона.<br> Маска определяется через атрибут data-type="tel"
+    //-         +inputbox()
+    //-           +input()(placeholder="+7 (___) ___-__-__" data-type="tel")
+    //-       +col(6)
+    //-         +ui-description Поле ввода e-mail.<br> Маска определяется через атрибут data-type="email"
+    //-         +inputbox()
+    //-           +input()(placeholder="E-mail" data-type="email")
+    //-       +col(6)
+    //-         +ui-description .js-number-input<br> Поле изменения количества
+    //-         +inputbox()
+    //-           +input-number()(placeholder="Количество товара")
+    //-       +col(12)
+    //-         +textarea(placeholder="Текстовое поле")
+    //-       +col(6)
+    //-         +ui-description .checkradio
+    //-         +inputbox()
+    //-           +checkbox('ui-checkbox', 'test', 'true') Чекбокс
+    //-       +col(6)
+    //-         +ui-description .checkradio
+    //-         +inputbox()
+    //-           +ui-elements-list
+    //-             +radio('ui-radio', 'test', 'true') Радиокнопка
+    //-             +radio('ui-radio', 'test-2') Радиокнопка
+    //-       +col(6)
+    //-         +ui-description .range.js-range<br> Все параметры задаются дата-атрибутами
+    //-         +inputbox()
+    //-           +range()(data-start='40', data-connect='[true, false]', data-min='0', data-max='100')
+    //-   
+    //- //- Табы
+    //- +ui-section
+    //-   +ui-section-head
+    //-     h2 Табы
+    //-     p Блок: blocks/tabs
+    //-   +ui-section-content()
+    //-     +tabs
+    //-       +tab()(data-tab-target="tab1").active Информация
+    //-       +tab()(data-tab-target="tab2") Контент
+    //-       +tab()(data-tab-target="tab3") Тексты
+    //-     +tabs-content
+    //-       +tab-wrapper()(data-tab="tab1" data-tab-group="testtabs").active
+    //-         p Это таб 1
+    //-       +tab-wrapper()(data-tab="tab2" data-tab-group="testtabs")
+    //-         p Это таб 2
+    //-       +tab-wrapper()(data-tab="tab3" data-tab-group="testtabs")
+    //-         p Это таб 3
       
     //- Попапы
     +ui-section
@@ -322,32 +335,79 @@ block content
     +ui-section
       +ui-section-head
         h2 Слайдер
-        p Блок: blocks/slider/slider
       +ui-section-content()
-        +ui-description .js-slider
-        +slider(true, true)
-          +slide Привет
-          +slide Привет
-          +slide Привет
-          +slide Привет
+      .address-container
+        .address-wrapper
+          +address-card-linkedToMap('Цветной Москва', 'г. Москва, Ленинградский пр., д. 2, цоколь 1234', 'marker1')
+          +address-card-linkedToMap('Молен Руж', 'Санкт-Петербург, просп. Науки, 23а', 'marker2')
+          +address-card-linkedToMap('Петровский пассаж', 'Псков, Рижский пр-кт, д.16', 'marker3')
+          +address-card-linkedToMap('Райкин Плаза', 'Москва, Северный бульвар 3к2', 'marker4')
+          +address-card-linkedToMap('Цветной Москва', 'г. Москва, Ленинградский пр., д. 2, цоколь 1234', 'marker5')
 
-    //- Подсказки
+    //- Карточки адресов
     +ui-section
       +ui-section-head
-        h2 Подсказки
-        p Блок: blocks/tooltip/tooltip
+        h2 Карточки адресов
+        p Блок: blocks/address-card/address-card
       +ui-section-content()
-        +ui-description .js-tooltip
-        +button()(href="#" title="Пример подсказки").js-tooltip Пример подсказки
+        +address-card('Цветной Москва', 'г. Москва, Ленинградский пр., д. 2, цоколь 1234')
     
-    //- //- Карты
+    //- Карточки новостей
+    +ui-section
+      +ui-section-head
+        h2 Карточки новостей
+        p Блок: blocks/news-card/news-card
+      +ui-section-content()
+        +ui-description +news-card-large()
+        +news-card-large('О компании', 'Профессиональная косметика для волос премиум сегмента для самых искушенных', 'Подробнее')
+        +ui-description +news-card()._with-hover
+        +news-card('Новость', 'Еще один магазин Lantelia открылся в в Варшаве. Подарки первым десяти покупателям.', 'Читать')._with-hover
+        +ui-description +news-card()._colored._pink
+        +news-card('Обучение', 'Обучающий Мастер-класс по применению линнии Professional Botox Therapy', 'Подробнее')._colored._pink
+        +ui-description +news-card()._colored._gray
+        +news-card('Обучение', 'Обучающий Мастер-класс по применению линнии Professional SPA Therapy', 'Подробнее')._colored._gray
+    
+    //- Карточки товаров
+    +ui-section
+      +ui-section-head
+        h2 Карточки товаров
+        p Блок: blocks/product-card/product-card
+      +ui-section-content()
+        +ui-description стандартная карточка product-card
+        +product-card('assets/images/picProduct/botox_250ml_07 (line)@2x.png')
+        +ui-description большая карточка .product-card_xl
+        +product-card('assets/images/picProduct/smooth_100ml_05(procedure)@2x.png')._xl
+        
+    //- //- Подсказки
     //- +ui-section
     //-   +ui-section-head
-    //-     h2 Карты
-    //-     p Блок: blocks/map/map
+    //-     h2 Подсказки
+    //-     p Блок: blocks/tooltip/tooltip
     //-   +ui-section-content()
-    //-     +ui-description #map
-    //-     +map()#map
+    //-     +ui-description .js-tooltip
+    //-     +button()(href="#" title="Пример подсказки").js-tooltip Пример подсказки
+    
+    //- Нужна помощь
+    +ui-section
+      +ui-section-head
+        h2 Круглый блок - нужна помощь и корзина
+        p Блок: components/needHelp/needHelp
+      +ui-section-content()
+        +ui-description нужна помощь
+        .needHelp-ui
+          +needHelp()
+        +ui-description корзина
+        .needHelp-ui
+          +cart()
+        
+    //- Карты
+    +ui-section
+      +ui-section-head
+        h2 Карты
+        p Блок: components/map/map
+      +ui-section-content()
+        +ui-description #main-map
+        +map()#main-map
 
   script
     |

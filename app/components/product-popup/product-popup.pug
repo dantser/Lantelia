@@ -1,28 +1,28 @@
 include ../../blocks/product-card/product-card
 include ../../blocks/icon/icons
 include ../../blocks/button/button
+include ../../components/needHelp/needHelp
 
-mixin product-popup(data)
-  +modal()#product-popup
-    +b.A(href="#").cart
-      +icon('shopping-cart').icon
-      +e.SPAN.num 1
-    +b.product-popup&attributes(attributes)
-      +e.wrapper
-        +product-card(data)
-        +e.info
-          +e.info-wrapper
-            +e.price-block
-              +e.SPAN.text Цена
-              +e.SPAN.price= data.price
-            +e.foot
-              +e.SPAN.text Количество
-              +e.dropdown
-                +e.SELECT.select
-                  option(value="1", selected) 1
-                  option(value='2') 2
-                  option(value='3') 3
-                  option(value='4') 4
-                  option(value='5') 5
-              +button('в корзину', 'shopping-cart')._gradiented._black
-        +icon('close').icon-close.modal__close
+mixin product-popup(img, price, id)
+  +b.product-popup&attributes(attributes)
+    +popups.__ui-popups
+      +popup(id=id)
+        .product-popup__wrapper
+          +product-card(img)
+          .product-popup__info
+            .product-popup__info-wrapper
+              .product-popup__price-block
+                span.product-popup__text Цена
+                span.product-popup__price= price
+              .product-popup__foot
+                span.product-popup__text Количество
+                .product-popup__dropdown
+                  select.product-popup__select
+                    option(value="1", selected) 1
+                    option(value='2') 2
+                    option(value='3') 3
+                    option(value='4') 4
+                    option(value='5') 5
+                +button('в корзину', 'shopping-cart')._gradiented._black.product-popup__button
+          +icon('close').icon-close.modal__close.product-popup__icon-close
+        +cart()

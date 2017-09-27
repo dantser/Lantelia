@@ -35,7 +35,7 @@
     display: none;
   }
 
-  @include screen('tablet', max) {
+  @include screen('temp', max) {
     padding-bottom: 36px;
     border-bottom: 1px solid $color-border;
 
@@ -48,9 +48,9 @@
       display: block;
     }
 
-    .address-container {
-      overflow: auto;
-    }
+    // .address-container {
+    //   overflow: auto;
+    // }
 
     .address-card {
       margin-right: 0;

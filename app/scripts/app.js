@@ -8,9 +8,11 @@ import map from '../components/map/map';
 import newsCard from '../blocks/news-card/news-card';
 import needHelp from '../components/needHelp/needHelp';
 import burger from '../blocks/burger/burger';
-import modal from '../blocks/modal/modal';
+// import modal from '../blocks/modal/modal';
 import productPopup from '../components/product-popup/product-popup';
 import preloader from '../blocks/preloader/preloader';
+import popups from '../blocks/popups/popups';
+import mainProducts from '../components/main-products/main-products';
 
 const $ = window.$;
 
@@ -24,7 +26,9 @@ $(() => {
   newsCard();
   needHelp();
   burger();
-  modal();
+  // modal();
   productPopup();
   preloader();
+  popups();
+  mainProducts();
 });

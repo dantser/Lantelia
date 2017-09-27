@@ -7,13 +7,26 @@
   background-color: $color-basic;
   cursor: pointer;
   z-index: 10000;
+  min-width: 0;
+  width: 54px;
+  height: 54px;
+
+  transition: min-width $ease-pagination, border-radius $ease-pagination;
+
+  &:hover {
+    min-width: 200.16px;
+    border-radius: 27px;
+
+    .needHelp__text {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
 
   &_opened {
     width: 54px;
     height: 54px;
     border-radius: 50%;
-
-    @include transited;
 
     .needHelp__icon {
       display: none;
@@ -26,18 +39,39 @@
     .needHelp__text {
       display: none !important;
     }
+
+    &:hover {
+      width: 54px;
+      height: 54px;
+      min-width: 0;
+    }
   }
 
-  &:hover {
-    border-radius: 27px;
+  @keyframes first {
+    from {
+      right: 102px;
+    }
+    to {
+      right: 23px;
+    }
+  }
 
-    .needHelp__text {
-      display: inline-block;
+  animation: first 1s;
+
+  &_animated {
+    @keyframes gogo {
+      from {
+        right: 23px;
+      }
+      to {
+        right: 102px;
+      }
     }
 
-    .needHelp__icon {
-      margin-right: 15px;
-    }
+    right: 102px;
+    transition: all $ease-main;
+
+    animation: gogo 1s;
   }
 
   &__wrapper {
@@ -57,9 +91,8 @@
     width: 18px;
     height: 13px;
     position: absolute;
-    top: 50%;
-    right: 50%;
-    transform: translate(50%, -50%);
+
+    @include center-block;
     display: none;
     vertical-align: middle;
     fill: $color-white;
@@ -67,13 +100,19 @@
   }
 
   &__text {
-    display: none;
+    opacity: 0;
+    visibility: hidden;
+    @include center-block;
+    left: 58%;
+    width: 132.16px;
+    display: inline-block;
     vertical-align: middle;
     letter-spacing: .125em;
     font-size: 12px;
     font-weight: 300;
     color: $color-white;
     text-transform: uppercase;
+    transition: opacity $ease-pagination, visibility $ease-pagination;
   }
 
   &-popup {
@@ -129,14 +168,19 @@
   @include screen('temp', max) {
     border-radius: 0;
     position: absolute;
-    top: 0;
+    top: 8px;
     right: 0;
     display: block !important;
     width: 54px;
     height: 54px;
 
+    &_main {
+      display: none !important;
+    }
+
     &:hover {
       border-radius: 0;
+      min-width: 0;
 
       .needHelp__text {
         display: none;
@@ -145,6 +189,10 @@
       .needHelp__icon {
         margin-right: 0;
       }
+    }
+
+    &__text {
+      display: none;
     }
 
     &-popup {

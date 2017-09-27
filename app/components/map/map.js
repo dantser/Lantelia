@@ -6,6 +6,10 @@ import 'leaflet.markercluster';
 
 export default () => {
 
+  if(!$('.map') || mymap) {
+    return
+  }
+
   var mymap = L.map('main-map').setView([55.7788008, 37.5821708], 15);
   var roads = L.gridLayer.googleMutant({
     type: 'roadmap',
@@ -20,6 +24,9 @@ export default () => {
           popupAnchor:  [-3, -76]
       }
   });
+  if(!markers) {
+    return
+  }
   var markers = L.markerClusterGroup();;
 
   var tsetnoyMsk = new LeafIcon({iconUrl: 'assets/images/pin.svg'});

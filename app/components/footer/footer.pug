@@ -1,6 +1,7 @@
 include ../../blocks/grid/grid
 include ../../blocks/button/button
 include ../../components/social/social
+include ../../blocks/link/link
 
 mixin footer()
   +b.SECTION.footer&attributes(attributes)
@@ -15,21 +16,21 @@ mixin footer()
           +col(2).grid__col_links
             +e.UL.links
               +e.LI.link
-                a(href="#") Продукция
+                +link() Продукция
               +e.LI.link
-                a(href="#") Где купить
+                +link() Где купить
               +e.LI.link
-                a(href="#") Обучение и новости
+                +link() Обучение и новости
               +e.LI.link
-                a(href="#") О компании
+                +link() О компании
               +e.LI.link
-                a(href="#") Контакты
+                +link() Контакты
           +col(2).grid__col_links
             +e.UL.links
               +e.LI.link
-                +e.A(href="#") Публичная оферта
+                +link() Публичная оферта
               +e.LI.link
-                +e.A(href="#") Доставка и оплата
+                +link() Доставка и оплата
           +col(2).grid__col_right
             +button('НАЧАТЬ РАБОТАТЬ С LANTELIA')._gradiented
             +e.copyright &#169; 2017 Lantelia. Все права защищены

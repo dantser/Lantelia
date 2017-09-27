@@ -8,5 +8,37 @@ export default () => {
     return
   };
 
+  const span = $('.main-products__helper');
+  const section = $('.main-products__line');
+  const doc = $(document);
+  const ACTIVE_CLASS = 'main-products__helper_active';
+
+  function cardsHover(ACTIVE_CLASS) {
+    PRODUCT.hover(function () {
+      let el = $(this);
+      let offset = el.position();
+
+      span.addClass(ACTIVE_CLASS);
+
+      span.css({
+        left: offset.left,
+        top: offset.top,
+        width: el.outerWidth(),
+        height: el.outerHeight()
+      });
+    }, function () {
+      span.removeClass(ACTIVE_CLASS);
+    });
+  };
+
+  if ($(window).width() > 999) {
+    cardsHover(ACTIVE_CLASS);
+  };
+
+  $(window).resize(function () {
+    if ($(window).width() > 999) {
+      cardsHover(ACTIVE_CLASS)
+    };
+  });
 }
 /* eslint-enable */

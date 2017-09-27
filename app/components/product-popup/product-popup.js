@@ -1,16 +1,19 @@
 /* eslint-disable */
 import $ from 'jquery';
+// import '@fancyapps/fancybox';
 
 export default () => {
 
-  $('.product-popup').find('.product-card').on('click', function (e) {
-    e.preventDefault();
-    return
-  });
-
-  // $('.product-popup').on('click', function (e) {
-  //   e.stopPropagation();
+  // $('.product-popup').find('.product-card').on('click', function (e) {
+  //   e.preventDefault();
+  //   return
   // });
+
+  // $('.product-card').on('click', function (e) {
+  //   $('.needHelp').addClass('needHelp_animated');
+  // });
+
+
   // if(!CLOSE) {
   //   return;
   // };

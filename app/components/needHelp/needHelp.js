@@ -5,16 +5,17 @@ import {freeze, unfreeze} from '../../blocks/js-functions/freeze';
 export default () => {
   const needHelp = $('.needHelp');
   const w = $(window);
-  const SHOW_ELEMENT_AT = $('.main-slider').offset().top;
+  const SLIDER = $('.main-slider');
+  if(!SLIDER) {
+    return;
+  }
+  const SHOW_ELEMENT_AT = SLIDER.offset().top;
   const grayscreen = $('#grayscreen');
   const popup = $('.needHelp-popup');
   const burgerClass = '.js-burger';
   const activeBurgerClass = 'burger_active';
   const menu = $('.header__nav');
 
-  if(!needHelp) {
-    return
-  };
 
   if(w.width > 971) {
     w.on('scroll', function (e) { // eslint-disable-line
@@ -48,7 +49,6 @@ export default () => {
     //   popup.fadeOut();
     // }
   });
-
 
   $('.needHelp__close').on('click', function (e) {
     e.stopPropagation();

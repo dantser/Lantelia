@@ -176,50 +176,64 @@
 
   @include screen('temp', max) {
 
+    padding-top: 54px;
+    min-height: 568px;
+
+    &__heading {
+      padding: 0;
+      width: 100%;
+      padding-top: 35px;
+    }
+
     &__title {
       font-size: 18px;
       letter-spacing: .028em;
+      line-height: 1.67;
+      margin-bottom: 26px;
     }
 
-    .grid {
-      flex-flow: column;
-      padding: 40px 20px 0;
+    &__link {
+      font-size: 12px;
+      letter-spacing: .111em;
 
-      &:first-of-type {
-        margin: 0;
-      }
-
-      &__col {
-        padding: 0;
-
-        &_five {
-          width: 100%;
-        }
-
-        &_seven {
-          width: 100%;
-        }
+      &::after {
+        margin-top: 12px;
+        width: 20.6%;
       }
     }
 
-    &__phones, &__bottom .main-slider__link {
+    &__phones, &__bottom .main-slider__link, &__name {
       display: none;
     }
 
     &__bottom {
       justify-content: center;
+      position: absolute;
+      bottom: 30px;
+      left: 0;
+      width: 100%;
     }
 
     &__pagination {
-      flex-basis: 50%;
       justify-content: center;
+      width: 100%;
+
+      &-block {
+        flex-basis: 41%;
+        transform: none;
+      }
     }
 
     .slider-pagination-switch {
       flex-basis: 30%;
+      transition: none;
 
       &.active {
         flex-basis: 30%;
+        &::before {
+          transform: none;
+          transition: none;
+        }
       }
     }
   }
