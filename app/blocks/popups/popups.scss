@@ -4,12 +4,31 @@
   display: none;
 }
 
-.fancybox-close-small:focus::after { outline: none; }
+.fancybox-close-small:focus::after {
+  outline: none;
+}
 
-.fancybox-enabled { overflow: initial; }
+.fancybox-enabled {
+  overflow: initial;
+}
 
-.fancybox-bg { background: $color-main; }
-.fancybox-is-open .fancybox-bg { opacity: .5 }
-.fancybox-slide>div { padding: 0; overflow: visible; }
-.fancybox-close-small { display: none; }
-.fancybox-enabled body { overflow: hidden; }
+.fancybox-bg {
+  background: $color-main;
+}
+
+.fancybox-is-open .fancybox-bg {
+  opacity: .5;
+}
+
+.fancybox-slide > div {
+  padding: 0;
+  overflow: visible;
+}
+
+.fancybox-close-small {
+  display: none;
+}
+
+.fancybox-enabled body {
+  overflow: hidden;
+}

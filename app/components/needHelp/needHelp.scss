@@ -10,7 +10,6 @@
   min-width: 0;
   width: 54px;
   height: 54px;
-
   transition: min-width $ease-pagination, border-radius $ease-pagination;
 
   &:hover {
@@ -48,9 +47,11 @@
   }
 
   @keyframes first {
+
     from {
       right: 102px;
     }
+
     to {
       right: 23px;
     }
@@ -60,9 +61,11 @@
 
   &_animated {
     @keyframes gogo {
+
       from {
         right: 23px;
       }
+
       to {
         right: 102px;
       }
@@ -70,7 +73,6 @@
 
     right: 102px;
     transition: all $ease-main;
-
     animation: gogo 1s;
   }
 
@@ -91,18 +93,19 @@
     width: 18px;
     height: 13px;
     position: absolute;
-
-    @include center-block;
     display: none;
     vertical-align: middle;
     fill: $color-white;
     margin: auto;
+
+    @include center-block;
   }
 
   &__text {
+    @include center-block;
+
     opacity: 0;
     visibility: hidden;
-    @include center-block;
     left: 58%;
     width: 132.16px;
     display: inline-block;

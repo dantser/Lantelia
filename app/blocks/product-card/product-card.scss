@@ -5,7 +5,6 @@
   position: relative;
   cursor: pointer;
 
-
   &__wrapper {
     display: flex;
     flex-flow: column nowrap;
@@ -17,6 +16,7 @@
   }
 
   &:hover {
+
     .product-card__cart {
       display: flex;
     }

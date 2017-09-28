@@ -173,7 +173,9 @@
   }
 }
 
+/* stylelint-disable */
 @include screen('tablet', max) {
+
   #product1 {
     position: fixed;
     top: 0;
@@ -238,6 +240,7 @@
     display: none;
   }
 }
+/* stylelint-enable */
 
 .cart {
   padding: 15px;
@@ -249,16 +252,17 @@
   cursor: pointer;
 
   @keyframes go-left-right {
+
     from {
       right: -23px;
     }
+
     to {
       right: 23px;
     }
   }
 
   animation: go-left-right 1s;
-
   transition: all $ease-main;
 
   @extend %gradient-cart;
@@ -284,6 +288,4 @@
     fill: $color-white;
     display: inline-block;
   }
-
-
 }
