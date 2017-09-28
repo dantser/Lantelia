@@ -1,0 +1,6 @@
+include ../../blocks/section-head/section-head
+
+mixin cart()
+  +b.cart&attributes(attributes)
+    .container
+      +section-head('Покупки', 'Ваша корзина', true)

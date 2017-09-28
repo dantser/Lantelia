@@ -1,5 +1,9 @@
-mixin inputbox()
+mixin inputbox(label, required)
   .inputbox&attributes(attributes)
+    if required
+      span.input__label.input__label_required= label
+    else
+      span.input__label= label
     block
 
 mixin input()

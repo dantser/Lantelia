@@ -1,0 +1,156 @@
+include ../../blocks/section-head/section-head
+include ../../blocks/form-elements/form-elements
+include ../../blocks/tabs/tabs
+include ../../blocks/grid/grid
+include ../../blocks/button/button
+
+mixin order()
+  +b.SECTION.order&attributes(attributes)
+    .container
+      +section-head('Покупки', 'Оформление заказа')
+      +e.FORM(action="#").form
+        +e.wrapper._contacts
+          +e.H3.title Контактная информация
+          +e.input-block
+            +inputbox('Имя', true)
+              +input()
+            +inputbox('Фамилия', true)
+              +input()
+            +inputbox('Телефон', true)
+              +input()
+            +inputbox('E-mail', true)
+              +input()
+            +inputbox('Город/Населенный пункт', true)
+              +input()
+            +inputbox('Индекс')
+              +input()
+            +inputbox('Адрес доставки', true).inputbox_large
+              +input()
+        +e.wrapper._shipping
+          +e.H3.title Доставка
+          +e.tabs
+            +tabs
+              +tab()(data-tab-target="tab1").active Москва
+              +tab()(data-tab-target="tab2") Московская обл
+              +tab()(data-tab-target="tab3") Россия
+          +tabs-content
+            +tab-wrapper()(data-tab="tab1" data-tab-group="shipping").active
+              +grid
+                +col(4)
+                  +inputbox().js-slide-el.js-slide-el_active
+                    +radio('shipping', 'msk-courier', 'true')
+                        p.rule Курьерская доставка (в пределах МКАД)
+                        p Бесплатная доставка от 3 000 руб.
+                        p Курьер LANTELIA (по Москве): Доставка осуществляется на следующий день.
+                        p Стоимость: 250 руб.
+                        p Способ оплаты: Наличными
+                +col(4)
+                  +inputbox().js-slide-el
+                    +radio('shipping', 'msk-tk')
+                      p.rule Самовывоз
+                      p.mb
+                        | Адрес: ул. Ярославская 8 к.5
+                        br
+                        | Режим работы: пн.-пт. c 10:00 – 18:00
+                      p Стоимость: 0 руб.
+                      p Оплата заказа в пункте самовывоза осуществляется только НАЛИЧНЫМИ
+                      
+                +col(4)
+                  +inputbox()
+                    //- +radio('shipping', 'tk')
+                    .checkradio__content.checkradio__content_miss.checkradio__content_bordered
+                      p При себе иметь паспорт или иной документ подтверждающий личность - для входа на территорию бизнес-центра.
+            +tab-wrapper()(data-tab="tab2" data-tab-group="shipping")
+              +grid
+                +col(4)
+                  +inputbox().js-slide-el.js-slide-el_active
+                    +radio('shipping', 'mo-courier')
+                        p.rule Курьерская доставка
+                        p Бесплатная доставка от 7 000 руб.
+                        p Курьер LANTELIA: Доставка осуществляется на следующий день.
+                        p Доставка в ближайшее Подмосковье (до ~10 км от МКАД: Митино, Мытищи, Балашиха, Реутов, Люберцы, Видное, Одинцово, Красногорск, Химки и др.)
+                        p Стоимость: 400 руб.
+                +col(4)
+                  +inputbox().js-slide-el
+                    +radio('shipping', 'mo-tk')
+                      p.rule Доставка Транспортными Компаниями
+                      p 
+                        | СДЭК:
+                        br
+                        | Экспресс лайт дверь-дверь, после 100% оплаты!
+                        br
+                        | Стоимость: 250 руб.
+                      p
+                        | ПОЧТА РОССИИ:
+                        br
+                        | Забор заказа в почтовом отделении по месту жительства, после 100% оплаты!
+                        br
+                        | Стоимость: 250 руб.
+                +col(4)
+                  +inputbox()
+                    //- +radio('shipping', 'tk')
+                    .checkradio__content.checkradio__content_miss.checkradio__content_bordered
+                      p Способ оплаты: Наличными, Банковская карта, Robokassa, извещением для банка
+            +tab-wrapper()(data-tab="tab3" data-tab-group="shipping")
+              +grid
+                +col(4)
+                  +inputbox().js-slide-el.js-slide-el_active
+                    +radio('shipping', 'russia')
+                        p.rule Доставка по России
+                        p Мы отправляем заказы по всей России. Срок оформления заказа составляет 1 рабочий день, после оплаты заказ отправляется в соответствующую службу доставки.
+                        p ДОСТАВКА ЗАКАЗА ОСУЩЕСТВЛЯЕТСЯ, ТОЛЬКО при 100% ПРЕДОПЛАТЕ!
+                        p Способ оплаты: Банковская карта, Robokassa, извещением для банка
+                
+                +col(4)
+                  +inputbox()
+                    .checkradio__content.checkradio__content_miss
+                      p.rule Доставка Транспортными Компаниями:
+                      p 
+                        | СДЭК:
+                        br
+                        | Экспресс лайт дверь-дверь, после 100% оплаты!
+                        br
+                        | Стоимость: 350 руб.
+                      p
+                        | ПОЧТА РОССИИ:
+                        br
+                        | Забор заказа в почтовом отделении по месту жительства, после 100% оплаты!
+                        br
+                        | Стоимость: 350 руб.
+                +col(4)
+                  +inputbox().js-slide-el
+                  +radio('shipping', 'other')
+                    p.rule Другой способ доставки
+                    p Если вас интересует любая другая служба доставка, просьба уточнять стоимость доставки по телефонам: 
+                    p 
+                      | Бесплатно для звонков по России
+                      br
+                      | Тел.: 8 800 894 24 40
+        +e.wrapper._payment
+          +e.H3.title Оплата
+          +grid
+            +col(4)
+              +inputbox()
+                +radio('payment', 'online', 'true')
+                  p Онлайн оплата
+            +col(4)
+              +inputbox()
+                +radio('payment', 'offline')
+                  p Оплата наличными при получении
+        +e.wrapper._foot
+          +grid
+            +col(5)
+              .checkradio__content
+                .order__price-block
+                  span.order__price-text Стоимость заказа
+                  span.order__price 29 990 ₽
+                .order__price-block
+                  span.order__price-text Доставка
+                  span.order__price 250 ₽
+            +col(4)
+              .checkradio__content
+                .order__price-block
+                  span.order__price-text Итого к оплате
+                  span.order__price 30 240 ₽
+            +col(3)
+              +button('Продолжить оформление заказа')(type="submit")._white._fill-black.order__button

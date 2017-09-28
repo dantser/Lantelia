@@ -98,6 +98,14 @@
     padding-right: 0;
     padding-left: 0;
 
+    &__wrapper {
+      padding: 33px 20px 36px 0;
+    }
+
+    &__title {
+      margin-bottom: 13px;
+    }
+
     &:first-child {
       border-top: 1px solid #ededed;
     }
@@ -112,6 +120,10 @@
 
     &__content {
       max-width: 90%;
+    }
+
+    &__arrow {
+      right: -4px;
     }
   }
 }

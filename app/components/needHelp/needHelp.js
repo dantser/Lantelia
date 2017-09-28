@@ -6,9 +6,11 @@ export default () => {
   const needHelp = $('.needHelp');
   const w = $(window);
   const SLIDER = $('.main-slider');
-  if(!SLIDER) {
+
+  if(!$('.main-slider') || !SHOW_ELEMENT_AT) {
     return;
   }
+
   const SHOW_ELEMENT_AT = SLIDER.offset().top;
   const grayscreen = $('#grayscreen');
   const popup = $('.needHelp-popup');

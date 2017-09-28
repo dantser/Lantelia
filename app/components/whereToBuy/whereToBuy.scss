@@ -46,6 +46,7 @@
 
     .button {
       display: block;
+      padding: 23px 23px 22px 24px;
     }
 
     // .address-container {
@@ -58,6 +59,11 @@
 
     .address-wrapper {
       display: block;
+    }
+
+    .address-container {
+      padding: 0 22px;
+      width: auto;
     }
 
     .button {

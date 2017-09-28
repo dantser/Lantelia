@@ -8,23 +8,22 @@
 
 %heading-2 {
   font-size: 28px;
-  letter-spacing: .8px;
-  line-height: 1.39;
+  letter-spacing: .023em;
+  text-transform: uppercase;
   font-weight: 300;
 }
 
 %heading-3 {
-  font-size: 13px;
-  line-height: 1.62;
+  font-size: 20px;
   font-weight: 300;
-  color: #7c7c7c;
+  color: $color-main;
 }
 
-// %heading-4 {
-//   font-size: 20px;
-//   line-height: 1.5;
-//   font-weight: 400;
-// }
+%heading-4 {
+  font-size: 13px;
+  font-weight: 300;
+  color: $color-gray;
+}
 //
 // %heading-5 {
 //   font-size: 18px;
@@ -43,6 +42,12 @@
   line-height: 1.86;
   font-weight: 300;
   color: $color-main;
+}
+
+%text-label {
+  font-size: 13px;
+  line-height: 1.77;
+  color: $color-gray;
 }
 
 %text-name {

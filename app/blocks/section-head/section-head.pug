@@ -1,6 +1,6 @@
 mixin section-head(subtitle, title, dropdown)
   +b.section-head&attributes(attributes)
-    +e.H3.subtitle= subtitle
+    +e.H4.subtitle= subtitle
     +e.H2.title= title
     if dropdown
       +e.SELECT.select.js-select

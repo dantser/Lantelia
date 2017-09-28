@@ -7,7 +7,6 @@ const $ = window.$;
 
 export default function maps() {
   const map = L.map('map').setView([59.934, 30.335], 13);
-
   L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
     maxZoom: 18,
     id: 'mapbox.streets',

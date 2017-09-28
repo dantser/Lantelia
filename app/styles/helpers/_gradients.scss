@@ -4,6 +4,12 @@
   border-image-slice: 1 !important;
 }
 
+%gradient-border-bottom {
+  border-bottom: 2px solid $color-gray;
+  border-image-source: linear-gradient(270deg, rgba(226, 100, 140, .5), rgba(101, 167, 227, .5)) !important;
+  border-image-slice: 1 !important;
+}
+
 %gradient-card_blue {
   background: linear-gradient(315deg, rgba(179, 195, 233, .5), rgba(211, 223, 243, .5));
 

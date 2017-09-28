@@ -34,8 +34,7 @@
     vertical-align: middle;
   }
 
-  &_black {
-    background-color: transparent;
+  &_white {
     // padding: 25px 0;
 
     .button__text {
@@ -47,6 +46,10 @@
     .button__icon {
       fill: $color-white;
     }
+  }
+
+  &_fill-black {
+    background-color: $color-main;
   }
 
   @include screen('temp', max) {

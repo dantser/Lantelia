@@ -200,74 +200,74 @@ block content
     //-           li Элемент списка
     //-       li Элемент списка
           
-    //- //- Табы
-    //- +ui-section
-    //-   +ui-section-head
-    //-     h2 Элементы форм
-    //-     p Блок: blocks/form-elements
-    //-   +ui-section-content()
-    //-     +grid
-    //-       +col(6)
-    //-         +ui-description .input
-    //-         +inputbox
-    //-           +input(placeholder="Плейсхолдер")
-    //-       +col(6)
-    //-         +ui-description .select.js-select
-    //-         +inputbox
-    //-           +select
-    //-             option(value="Опция 1") Опция 1
-    //-             option(value="Опция 2") Опция 2
-    //-             option(value="Опция 3") Опция 3
-    //-       +col(6)
-    //-         +ui-description .js-datepicker<br> Параметры задаются через дата-атрибуты
-    //-         +inputbox()
-    //-           +input()(placeholder="Выберите дату" readonly).js-datepicker
-    //-       +col(6)
-    //-         +ui-description Поле ввода номера телефона.<br> Маска определяется через атрибут data-type="tel"
-    //-         +inputbox()
-    //-           +input()(placeholder="+7 (___) ___-__-__" data-type="tel")
-    //-       +col(6)
-    //-         +ui-description Поле ввода e-mail.<br> Маска определяется через атрибут data-type="email"
-    //-         +inputbox()
-    //-           +input()(placeholder="E-mail" data-type="email")
-    //-       +col(6)
-    //-         +ui-description .js-number-input<br> Поле изменения количества
-    //-         +inputbox()
-    //-           +input-number()(placeholder="Количество товара")
-    //-       +col(12)
-    //-         +textarea(placeholder="Текстовое поле")
-    //-       +col(6)
-    //-         +ui-description .checkradio
-    //-         +inputbox()
-    //-           +checkbox('ui-checkbox', 'test', 'true') Чекбокс
-    //-       +col(6)
-    //-         +ui-description .checkradio
-    //-         +inputbox()
-    //-           +ui-elements-list
-    //-             +radio('ui-radio', 'test', 'true') Радиокнопка
-    //-             +radio('ui-radio', 'test-2') Радиокнопка
-    //-       +col(6)
-    //-         +ui-description .range.js-range<br> Все параметры задаются дата-атрибутами
-    //-         +inputbox()
-    //-           +range()(data-start='40', data-connect='[true, false]', data-min='0', data-max='100')
-    //-   
-    //- //- Табы
-    //- +ui-section
-    //-   +ui-section-head
-    //-     h2 Табы
-    //-     p Блок: blocks/tabs
-    //-   +ui-section-content()
-    //-     +tabs
-    //-       +tab()(data-tab-target="tab1").active Информация
-    //-       +tab()(data-tab-target="tab2") Контент
-    //-       +tab()(data-tab-target="tab3") Тексты
-    //-     +tabs-content
-    //-       +tab-wrapper()(data-tab="tab1" data-tab-group="testtabs").active
-    //-         p Это таб 1
-    //-       +tab-wrapper()(data-tab="tab2" data-tab-group="testtabs")
-    //-         p Это таб 2
-    //-       +tab-wrapper()(data-tab="tab3" data-tab-group="testtabs")
-    //-         p Это таб 3
+    //- Табы
+    +ui-section
+      +ui-section-head
+        h2 Элементы форм
+        p Блок: blocks/form-elements
+      +ui-section-content()
+        +grid
+          +col(6)
+            +ui-description .input
+            +inputbox
+              +input('Имя', true)
+          +col(6)
+            +ui-description .select.js-select
+            +inputbox
+              +select
+                option(value="Опция 1") Опция 1
+                option(value="Опция 2") Опция 2
+                option(value="Опция 3") Опция 3
+          +col(6)
+            +ui-description .js-datepicker<br> Параметры задаются через дата-атрибуты
+            +inputbox()
+              +input()(placeholder="Выберите дату" readonly).js-datepicker
+          +col(6)
+            +ui-description Поле ввода номера телефона.<br> Маска определяется через атрибут data-type="tel"
+            +inputbox()
+              +input()(placeholder="+7 (___) ___-__-__" data-type="tel")
+          +col(6)
+            +ui-description Поле ввода e-mail.<br> Маска определяется через атрибут data-type="email"
+            +inputbox()
+              +input()(placeholder="E-mail" data-type="email")
+          +col(6)
+            +ui-description .js-number-input<br> Поле изменения количества
+            +inputbox()
+              +input-number()(placeholder="Количество товара")
+          +col(12)
+            +textarea(placeholder="Текстовое поле")
+          +col(6)
+            +ui-description .checkradio
+            +inputbox()
+              +checkbox('ui-checkbox', 'test', 'true') Чекбокс
+          +col(6)
+            +ui-description .checkradio
+            +inputbox()
+              +ui-elements-list
+                +radio('ui-radio', 'test', 'true') Радиокнопка
+                +radio('ui-radio', 'test-2') Радиокнопка
+          +col(6)
+            +ui-description .range.js-range<br> Все параметры задаются дата-атрибутами
+            +inputbox()
+              +range()(data-start='40', data-connect='[true, false]', data-min='0', data-max='100')
+      
+    //- Табы
+    +ui-section
+      +ui-section-head
+        h2 Табы
+        p Блок: blocks/tabs
+      +ui-section-content()
+        +tabs
+          +tab()(data-tab-target="tab1").active Информация
+          +tab()(data-tab-target="tab2") Контент
+          +tab()(data-tab-target="tab3") Тексты
+        +tabs-content
+          +tab-wrapper()(data-tab="tab1" data-tab-group="testtabs").active
+            p Это таб 1
+          +tab-wrapper()(data-tab="tab2" data-tab-group="testtabs")
+            p Это таб 2
+          +tab-wrapper()(data-tab="tab3" data-tab-group="testtabs")
+            p Это таб 3
       
     //- Попапы
     +ui-section

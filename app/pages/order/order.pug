@@ -1,0 +1,13 @@
+extends ../../layouts/default
+include ../../components/order/order
+include ../../components/main-slider/main-slider
+include ../../components/whereToBuy/whereToBuy
+include ../../components/aboutcompany/aboutcompany
+include ../../components/product-popup/product-popup
+
+block head
+  - var pageTitle = 'Оформление заказа'
+
+block content
+  +b.order
+    +order()

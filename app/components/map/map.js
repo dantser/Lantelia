@@ -6,7 +6,7 @@ import 'leaflet.markercluster';
 
 export default () => {
 
-  if(!$('.map') || mymap) {
+  if(!$('.map') || $('#main-map')) {
     return
   }
 
