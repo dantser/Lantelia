@@ -375,6 +375,142 @@
         <section class="ui-kit__section">
             <div class="ui-kit__section-head">
                 <div class="container">
+                    <h2>Элементы форм</h2>
+                    <p>Блок: blocks/form-elements</p>
+                </div>
+            </div>
+            <div class="ui-kit__section-content">
+                <div class="container">
+                    <div class="grid">
+                        <div class="grid__col grid__col_six">
+                            <p class="ui-kit__description">.input</p>
+                            <div class="inputbox">
+                                <span class="input__label"></span>
+                                <input class="input" />
+                            </div>
+                        </div>
+                        <div class="grid__col grid__col_six">
+                            <p class="ui-kit__description">.select.js-select</p>
+                            <div class="inputbox">
+                                <span class="input__label"></span>
+                                <select class="select js-select">
+                                    <option value="Опция 1">Опция 1</option>
+                                    <option value="Опция 2">Опция 2</option>
+                                    <option value="Опция 3">Опция 3</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="grid__col grid__col_six">
+                            <p class="ui-kit__description">.js-datepicker
+                                <br> Параметры задаются через дата-атрибуты</p>
+                            <div class="inputbox">
+                                <span class="input__label"></span>
+                                <input class="input js-datepicker" placeholder="Выберите дату" readonly="readonly" />
+                            </div>
+                        </div>
+                        <div class="grid__col grid__col_six">
+                            <p class="ui-kit__description">Поле ввода номера телефона.
+                                <br> Маска определяется через атрибут data-type="tel"</p>
+                            <div class="inputbox">
+                                <span class="input__label"></span>
+                                <input class="input" placeholder="+7 (___) ___-__-__" data-type="tel" />
+                            </div>
+                        </div>
+                        <div class="grid__col grid__col_six">
+                            <p class="ui-kit__description">Поле ввода e-mail.
+                                <br> Маска определяется через атрибут data-type="email"</p>
+                            <div class="inputbox">
+                                <span class="input__label"></span>
+                                <input class="input" placeholder="E-mail" data-type="email" />
+                            </div>
+                        </div>
+                        <div class="grid__col grid__col_six">
+                            <p class="ui-kit__description">.js-number-input
+                                <br> Поле изменения количества</p>
+                            <div class="inputbox">
+                                <span class="input__label"></span>
+                                <div class="input-numberbox">
+                                    <span class="input-numberbox__button js-numberbox-minus"></span>
+                                    <input class="input input-numberbox__input js-numberbox-input" placeholder="Количество товара" />
+                                    <span class="input-numberbox__button js-numberbox-plus"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid__col grid__col_twelve">
+                            <textarea class="textarea" placeholder="Текстовое поле"></textarea>
+                        </div>
+                        <div class="grid__col grid__col_six">
+                            <p class="ui-kit__description">.checkradio</p>
+                            <div class="inputbox">
+                                <span class="input__label"></span>
+                                <label class="checkradio">
+                                    <input class="checkradio__input" name="ui-checkbox" value="test" check="check" type="checkbox" />
+                                    <span class="checkradio__box"></span>
+                                    <span class="checkradio__content">Чекбокс</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="grid__col grid__col_six">
+                            <p class="ui-kit__description">.checkradio</p>
+                            <div class="inputbox">
+                                <span class="input__label"></span>
+                                <div class="ui-kit__elements-list">
+                                    <label class="checkradio">
+                                        <input class="checkradio__input" name="ui-radio" value="test" checked="true" type="radio" />
+                                        <span class="checkradio__box"></span>
+                                        <span class="checkradio__content">Радиокнопка</span>
+                                    </label>
+                                    <label class="checkradio">
+                                        <input class="checkradio__input" name="ui-radio" value="test-2" type="radio" />
+                                        <span class="checkradio__box"></span>
+                                        <span class="checkradio__content">Радиокнопка</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid__col grid__col_six">
+                            <p class="ui-kit__description">.range.js-range
+                                <br> Все параметры задаются дата-атрибутами</p>
+                            <div class="inputbox">
+                                <span class="input__label"></span>
+                                <div class="range js-range" data-start="40" data-connect="[true, false]" data-min="0" data-max="100"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="ui-kit__section">
+            <div class="ui-kit__section-head">
+                <div class="container">
+                    <h2>Табы</h2>
+                    <p>Блок: blocks/tabs</p>
+                </div>
+            </div>
+            <div class="ui-kit__section-content">
+                <div class="container">
+                    <ul class="tabs">
+                        <li class="tabs__tab active" data-tab-target="tab1">Информация</li>
+                        <li class="tabs__tab" data-tab-target="tab2">Контент</li>
+                        <li class="tabs__tab" data-tab-target="tab3">Тексты</li>
+                    </ul>
+                    <div class="tabs-content">
+                        <div class="tabs-content__wrapper active" data-tab="tab1" data-tab-group="testtabs">
+                            <p>Это таб 1</p>
+                        </div>
+                        <div class="tabs-content__wrapper" data-tab="tab2" data-tab-group="testtabs">
+                            <p>Это таб 2</p>
+                        </div>
+                        <div class="tabs-content__wrapper" data-tab="tab3" data-tab-group="testtabs">
+                            <p>Это таб 3</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="ui-kit__section">
+            <div class="ui-kit__section-head">
+                <div class="container">
                     <h2>Попапы</h2>
                     <p>Блок: blocks/popups</p>
                 </div>
@@ -451,7 +587,7 @@
             <div class="ui-kit__section-content">
                 <div class="container">
                     <div class="section-head">
-                        <h3 class="section-head__subtitle">Компания Lantelia</h3>
+                        <h4 class="section-head__subtitle">Компания Lantelia</h4>
                         <h2 class="section-head__title">Информация</h2>
                     </div>
                 </div>
@@ -832,11 +968,6 @@
             </div>
         </div>
     </section>
-    <div class="preloader" id="preloader">
-        <div class="preloader__wrapper">
-            <div class="preloader__text">Lantelia</div>
-        </div>
-    </div>
     <script src="assets/scripts/app.min.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAxPYPIFoyo8a8749Pi9ooi_WBnXZKpBoA"></script>
 </body>
