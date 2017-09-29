@@ -27,14 +27,14 @@
     @extend %heading-3;
   }
 
-  // h4 {
-  //
-  //   &:not(:last-child) {
-  //     margin-bottom: 10px;
-  //   }
-  //
-  //   @extend %heading-4;
-  // }
+  h4 {
+
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+
+    @extend %heading-4;
+  }
   //
   // h5 {
   //

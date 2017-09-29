@@ -12,16 +12,9 @@
     }
   }
 
-  &_white {
-
-    &__icon {
-      fill: $color-white;
-    }
-  }
-
   &__icon {
     display: block;
-    fill: $color-white;
+    fill: $color-main;
     will-change: fill, stroke;
 
     @include transited;

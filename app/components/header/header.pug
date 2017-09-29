@@ -10,15 +10,15 @@ mixin header()
     .container
       +e.wrapper
         +burger()._white
-        +e.A(href="#").logo Lantelia
-        //- +icon('Lantelia_logo').logo
+        //- +e.A(href="#").logo Lantelia
+        +icon('lantelia').logo
         +e.A(href="#").call
         +e.NAV.nav
           +e.nav-wrapper
             +e.nav-content
               +e.SPAN.nav-name Lantelia
               +e.P.nav-text Профессиональная косметика для волос Lantelia
-              +social('vk', 'f', 'instagram').__social
+              +social('vk', 'f', 'twitter').__social
             +e.UL.nav-group
               +e.LI.nav-item
                 +link().header__link Продукция

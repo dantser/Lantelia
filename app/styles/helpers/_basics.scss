@@ -109,3 +109,8 @@ select, input, textarea, button {
 section {
   padding: 58px 0 0;
 }
+
+
+input::-ms-clear {
+  display: none;
+}

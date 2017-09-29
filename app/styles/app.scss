@@ -31,6 +31,8 @@
 #grayscreen {
   display: none;
   position: fixed;
+  top: 0;
+  left: 0;
   background-color: rgba(37, 37, 37, .6);
   width: 100vw;
   height: 1000vh;

@@ -13,19 +13,19 @@ mixin order()
           +e.H3.title Контактная информация
           +e.input-block
             +inputbox('Имя', true)
-              +input()
+              +input()(type="text", name="name")
             +inputbox('Фамилия', true)
-              +input()
+              +input()(type="text", name="surname")
             +inputbox('Телефон', true)
-              +input()
+              +input()(type="tel", name="phone")
             +inputbox('E-mail', true)
-              +input()
+              +input()(type="email", name="email")
             +inputbox('Город/Населенный пункт', true)
-              +input()
+              +input()(type="text", name="city")
             +inputbox('Индекс')
-              +input()
+              +input()(type="text", name="index")
             +inputbox('Адрес доставки', true).inputbox_large
-              +input()
+              +input()(type="text", name="address")
         +e.wrapper._shipping
           +e.H3.title Доставка
           +e.tabs

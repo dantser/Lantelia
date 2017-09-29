@@ -1,6 +1,6 @@
 .preloader {
   display: block;
-  // position: fixed;
+  position: fixed;
   left: 0;
   top: 0;
   right: 0;
@@ -16,8 +16,8 @@
     transform: translateX(50%);
   }
 
-  &__text {
-    color: $color-white;
+  &__logo {
+    fill: $color-white;
     display: none;
     // transform: translate3d(50%, 0, 0);
     font-size: 36px;

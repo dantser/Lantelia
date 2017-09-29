@@ -5,13 +5,9 @@ import {freeze, unfreeze} from '../../blocks/js-functions/freeze';
 export default () => {
   const needHelp = $('.needHelp');
   const w = $(window);
-  const SLIDER = $('.main-slider');
-
-  if(!$('.main-slider') || !SHOW_ELEMENT_AT) {
-    return;
-  }
-
-  const SHOW_ELEMENT_AT = SLIDER.offset().top;
+  // const SLIDER = $('.main-slider');
+  // const SHOW_ELEMENT_AT = SLIDER.offset().top;
+  const SHOW_ELEMENT_AT = 700;
   const grayscreen = $('#grayscreen');
   const popup = $('.needHelp-popup');
   const burgerClass = '.js-burger';
@@ -19,7 +15,7 @@ export default () => {
   const menu = $('.header__nav');
 
 
-  if(w.width > 971) {
+  if(w.width > 1000) {
     w.on('scroll', function (e) { // eslint-disable-line
       const scrollTop = w.scrollTop();
       // eslint-disable-next-line
@@ -36,11 +32,10 @@ export default () => {
     e.preventDefault();
     needHelp.addClass('needHelp_opened');
       freeze();
-      if($(window).width() > 971) {
-        grayscreen.fadeIn();
-      } else {
+      if($(window).width() < 999) {
         menu.removeClass('header__nav_active');
       }
+      grayscreen.fadeIn();
       popup.fadeIn();
       $(burgerClass).removeClass(activeBurgerClass);
 

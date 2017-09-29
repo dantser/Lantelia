@@ -4,7 +4,7 @@ import { freeze, unfreeze } from '../../blocks/js-functions/freeze';
 /* eslint-disable */
 export default () => {
   const PRE = $('#preloader');
-  const TEXT = $('.preloader__text');
+  const TEXT = $('.preloader__logo');
   freeze();
 
   setTimeout(function () {

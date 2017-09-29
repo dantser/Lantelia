@@ -6,11 +6,12 @@
   border-radius: 50%;
   background-color: $color-basic;
   cursor: pointer;
-  z-index: 10000;
+  z-index: 100;
   min-width: 0;
   width: 54px;
   height: 54px;
   transition: min-width $ease-pagination, border-radius $ease-pagination;
+  display: none;
 
   &:hover {
     min-width: 200.16px;
@@ -171,14 +172,20 @@
   @include screen('temp', max) {
     border-radius: 0;
     position: absolute;
-    top: 8px;
+    top: 0;
     right: 0;
     display: block !important;
     width: 54px;
     height: 54px;
+    background-color: transparent;
+    box-shadow: none;
 
     &_main {
       display: none !important;
+    }
+
+    &__wrapper {
+      padding: 16px;
     }
 
     &:hover {
@@ -194,6 +201,16 @@
       }
     }
 
+    &__icon {
+      fill: $color-main;
+    }
+
+    &__close {
+      fill: $color-basic;
+      width: 20px;
+      height: 15px;
+    }
+
     &__text {
       display: none;
     }
@@ -202,11 +219,11 @@
       width: 100%;
       max-width: none;
       right: 0;
-      top: 60px;
+      top: 56px;
+      bottom: auto;
 
       &__content {
-        padding: 30px 75px 0 22px;
-        margin-bottom: 26px;
+        padding: 30px 75px 32px 22px;
       }
     }
   }

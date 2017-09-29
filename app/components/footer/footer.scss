@@ -23,7 +23,7 @@
         padding-top: 29px;
 
         &:nth-child(1) {
-          padding-top: 24px;
+          padding-top: 27px;
         }
 
         &:nth-child(2) {
@@ -53,10 +53,9 @@
   }
 
   &__logo {
-    font-size: 17px;
-    font-weight: 500;
-    letter-spacing: .5em;
-    text-transform: uppercase;
+    width: 149px;
+    height: 17px;
+    fill: $color-basic;
   }
 
   &__descr {
@@ -155,8 +154,13 @@
       }
     }
 
+    .social__icon {
+      width: 24px;
+      height: 20px;
+    }
+
     &__descr {
-      margin-bottom: 15px;
+      padding-bottom: 23px;
     }
 
     .button {
@@ -170,7 +174,7 @@
     }
 
     .social__item:not(:last-child) {
-      margin-right: 29px;
+      margin-right: 24px;
     }
 
     &__copyright {

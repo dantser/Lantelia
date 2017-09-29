@@ -1,7 +1,8 @@
 .header {
-  z-index: 2;
+  z-index: 100;
   width: 100%;
   border-bottom: 1px solid $color-border;
+  background-color: transparent;
 
   .burger {
     display: none;
@@ -20,18 +21,15 @@
   }
 
   &__logo {
-    font-size: 17px;
-    letter-spacing: .5em;
-    color: $color-white;
-    background-color: $color-main;
-    text-transform: uppercase;
     display: block;
-    padding: 50px 54px 51px 60px;
+    padding: 53px 60px 55px;
     position: absolute;
     top: 0;
     left: 0;
+    height: 12px;
+    width: 150px;
     fill: $color-white;
-    stroke: $color-white;
+    background-color: $color-main;
 
     @include transited;
 
@@ -41,7 +39,7 @@
   }
 
   &__nav {
-    padding: 52px 60px 53px 0;
+    padding: 53px 60px 53px 0;
 
     &-wrapper {
       display: flex;
@@ -65,7 +63,9 @@
       color: $color-white;
       font-size: 13px;
       line-height: 1.77;
-      margin-bottom: 9px;
+      width: 75%;
+      letter-spacing: .005em;
+      margin-bottom: 23px;
     }
 
     &-group {
@@ -96,7 +96,6 @@
   }
 
   .header__social {
-    margin-bottom: 25px;
 
     .social__icon {
       fill: $color-white;
@@ -122,12 +121,19 @@
     }
 
     .header__logo {
-      color: $color-white;
+      fill: $color-white;
       background-color: transparent;
     }
 
     .header__nav {
-      padding: 50px 60px 51px 0;
+      padding: 53px 60px 51px 0;
+    }
+
+    .burger {
+
+      &__icon {
+        fill: $color-white;
+      }
     }
   }
 
@@ -151,22 +157,60 @@
   // }
 
   @include screen('temp', max) {
+    background-color: $color-white;
+    position: absolute;
+    top: 0;
+    left: 0;
 
     .container {
       padding: 0;
     }
 
-    &__wrapper {
-      padding: 26px 0 8px;
-      display: block;
+    .header__wrapper {
+      padding: 18px 0;
+    }
 
-      @include clearfix;
+    &_main {
+      background-color: transparent;
+      border-bottom: 0;
+
+      &__wrapper {
+        padding: 26px 0 8px;
+        display: block;
+
+        @include clearfix;
+      }
+
+      .header__logo {
+        fill: $color-white;
+        padding-right: 16px;
+        position: relative;
+        float: right;
+        display: inline-block;
+        vertical-align: middle;
+        top: auto;
+        left: auto;
+        transform: none;
+      }
+
+      .header__call {
+        display: none;
+      }
+
+      .header__nav {
+        padding: 30px 0 0;
+      }
     }
 
     .burger {
       display: inline-block;
       vertical-align: middle;
-      padding-left: 22px;
+      padding-left: 25px;
+
+      &__icon_type_close {
+        width: 14px;
+        height: 19px;
+      }
     }
 
     &__call {
@@ -174,12 +218,23 @@
     }
 
     &__logo {
+      @include center-block;
+      fill: $color-main;
+      background-color: transparent;
       padding: 0;
-      position: relative;
-      float: right;
-      display: inline-block;
-      vertical-align: middle;
-      padding-right: 16px;
+    }
+
+    .header__social .social__icon {
+      fill: $color-basic;
+    }
+
+    .social__item:not(:last-child) {
+      margin-right: 29px;
+    }
+
+    .link__text {
+      color: $color-basic;
+      letter-spacing: .142em;
     }
 
     &__nav {
@@ -188,11 +243,11 @@
       top: 100%;
       left: 0;
       padding: 30px 0 0;
-      background-color: $color-basic;
-      z-index: 1000;
+      background-color: $color-white;
       width: 100%;
       margin: 0 auto;
       pointer-events: none;
+      border-top: 1px solid $color-border;
 
       @include transited;
 
@@ -215,9 +270,17 @@
         }
       }
 
+      &-name {
+        color: $color-basic;
+      }
+
+      &-text {
+        color: $color-main;
+      }
+
       &-content {
         display: block;
-        padding: 0 22px;
+        padding: 0 22px 39px;
       }
 
       &-item {
@@ -226,12 +289,13 @@
         align-items: center;
         justify-content: space-between;
         margin-right: 0;
-        padding: 22px;
-        border-top: 1px solid $color-white;
+        padding: 15px 15px 14px 22px;
+        border-top: 1px solid $color-border-popup;
       }
 
       &-icon {
         display: inline-flex;
+        fill: $color-basic;
       }
     }
   }

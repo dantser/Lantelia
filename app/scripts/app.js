@@ -14,7 +14,6 @@ import preloader from '../blocks/preloader/preloader';
 import popups from '../blocks/popups/popups';
 import mainProducts from '../components/main-products/main-products';
 import tabs from '../blocks/tabs/tabs';
-import dragscroll from '../blocks/drag-scroll/drag-scroll';
 import order from '../components/order/order';
 
 const $ = window.$;
@@ -35,6 +34,5 @@ $(() => {
   popups();
   mainProducts();
   tabs();
-  dragscroll();
   order();
 });
