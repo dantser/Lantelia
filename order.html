@@ -28,7 +28,7 @@
                     <svg class="burger__icon burger__icon_type_burger"><use xlink:href="assets/images/icon.svg#icon_burger"></use></svg>
                     <svg class="burger__icon burger__icon_type_close"><use xlink:href="assets/images/icon.svg#icon_close"></use></svg>
                 </div>
-                <a class="header__logo" href="#">Lantelia</a>
+                <svg class="header__logo"><use xlink:href="assets/images/icon.svg#icon_lantelia"></use></svg>
                 <a class="header__call" href="#"></a>
                 <nav class="header__nav">
                     <div class="header__nav-wrapper">
@@ -47,8 +47,8 @@
                                     </a>
                                 </li>
                                 <li class="social__item">
-                                    <a class="social__link social__link social__link_type_instagram" href="#">
-                                        <svg class="social__icon"><use xlink:href="assets/images/icon.svg#icon_instagram"></use></svg>
+                                    <a class="social__link social__link social__link_type_twitter" href="#">
+                                        <svg class="social__icon"><use xlink:href="assets/images/icon.svg#icon_twitter"></use></svg>
                                     </a>
                                 </li>
                             </ul>
@@ -94,42 +94,46 @@
     </div>
     <div class="order">
         <section class="order">
+            <div id="error-message">
+                <div class="error__text"></div>
+                <svg class="order__error-close"><use xlink:href="assets/images/icon.svg#icon_close"></use></svg>
+            </div>
             <div class="container">
                 <div class="section-head">
                     <h4 class="section-head__subtitle">Покупки</h4>
                     <h2 class="section-head__title">Оформление заказа</h2>
                 </div>
-                <form class="order__form" action="#">
+                <form class="order__form" action="" method="get" id="orderForm">
                     <div class="order__wrapper order__wrapper_contacts">
                         <h3 class="order__title">Контактная информация</h3>
                         <div class="order__input-block">
                             <div class="inputbox">
                                 <span class="input__label input__label_required">Имя</span>
-                                <input class="input" />
+                                <input class="input" type="text" name="name" required="required" />
                             </div>
                             <div class="inputbox">
                                 <span class="input__label input__label_required">Фамилия</span>
-                                <input class="input" />
+                                <input class="input" type="text" name="surname" required="required" />
                             </div>
                             <div class="inputbox">
                                 <span class="input__label input__label_required">Телефон</span>
-                                <input class="input" />
+                                <input class="input" type="tel" name="phone" data-type="tel" required="required" />
                             </div>
                             <div class="inputbox">
                                 <span class="input__label input__label_required">E-mail</span>
-                                <input class="input" />
+                                <input class="input" type="email" name="email" data-type="email" required="required" />
                             </div>
                             <div class="inputbox">
                                 <span class="input__label input__label_required">Город/Населенный пункт</span>
-                                <input class="input" />
+                                <input class="input" type="text" name="city" required="required" />
                             </div>
                             <div class="inputbox">
                                 <span class="input__label">Индекс</span>
-                                <input class="input" />
+                                <input class="input" type="text" name="index" />
                             </div>
                             <div class="inputbox inputbox_large">
                                 <span class="input__label input__label_required">Адрес доставки</span>
-                                <input class="input" />
+                                <input class="input" type="text" name="address" required="required" />
                             </div>
                         </div>
                     </div>
@@ -335,9 +339,9 @@
                                 </div>
                             </div>
                             <div class="grid__col grid__col_three">
-                                <a class="button button_white button_fill-black order__button" href="#" type="submit">
-                                    <span class="button__text">Продолжить оформление заказа</span>
-                                </a>
+                                <button class="button button_white button_fill-black order__button" type="submit" value="Отправить">
+                                    <div class="button__text">Продолжить оформление заказа</div>
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -371,7 +375,7 @@
             <div class="footer__wrapper">
                 <div class="grid">
                     <div class="grid__col grid__col_two">
-                        <div class="footer__logo">Lantelia</div>
+                        <svg class="footer__logo"><use xlink:href="assets/images/icon.svg#icon_lantelia"></use></svg>
                     </div>
                     <div class="grid__col grid__col_two">
                         <div class="footer__descr">Профессиональная косметика для волос Lantelia</div>
@@ -437,15 +441,17 @@
                         </ul>
                     </div>
                     <div class="grid__col grid__col_two grid__col_right">
-                        <a class="button button_gradiented" href="#">
-                            <span class="button__text">НАЧАТЬ РАБОТАТЬ С LANTELIA</span>
-                        </a>
+                        <button class="button button_gradiented">
+                            <svg class="button__icon"><use xlink:href="assets/images/icon.svg#icon_НАЧАТЬ РАБОТАТЬ С LANTELIA"></use></svg>
+                            <div class="button__text"></div>
+                        </button>
                         <div class="footer__copyright">&#169; 2017 Lantelia. Все права защищены</div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+    <div id="grayscreen"></div>
     <script src="assets/scripts/app.min.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAxPYPIFoyo8a8749Pi9ooi_WBnXZKpBoA"></script>
 </body>
