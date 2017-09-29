@@ -6,26 +6,29 @@ include ../../blocks/button/button
 
 mixin order()
   +b.SECTION.order&attributes(attributes)
+    #error-message
+      .error__text
+      +icon('close').error-close
     .container
       +section-head('Покупки', 'Оформление заказа')
-      +e.FORM(action="#").form
+      +e.FORM(action="", method="get" id="orderForm").form
         +e.wrapper._contacts
           +e.H3.title Контактная информация
           +e.input-block
             +inputbox('Имя', true)
-              +input()(type="text", name="name")
+              +input()(type="text", name="name", required)
             +inputbox('Фамилия', true)
-              +input()(type="text", name="surname")
+              +input()(type="text", name="surname", required)
             +inputbox('Телефон', true)
-              +input()(type="tel", name="phone")
+              +input()(type="tel", name="phone", data-type="tel", required)
             +inputbox('E-mail', true)
-              +input()(type="email", name="email")
+              +input()(type="email", name="email", data-type="email", required)
             +inputbox('Город/Населенный пункт', true)
-              +input()(type="text", name="city")
+              +input()(type="text", name="city", required)
             +inputbox('Индекс')
               +input()(type="text", name="index")
             +inputbox('Адрес доставки', true).inputbox_large
-              +input()(type="text", name="address")
+              +input()(type="text", name="address", required)
         +e.wrapper._shipping
           +e.H3.title Доставка
           +e.tabs
@@ -153,4 +156,4 @@ mixin order()
                   span.order__price-text Итого к оплате
                   span.order__price 30 240 ₽
             +col(3)
-              +button('Продолжить оформление заказа')(type="submit")._white._fill-black.order__button
+              +button(false, true)(type="submit", value="Отправить")._white._fill-black.order__button Продолжить оформление заказа

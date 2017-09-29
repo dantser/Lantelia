@@ -219,6 +219,7 @@
 
     &__logo {
       @include center-block;
+
       fill: $color-main;
       background-color: transparent;
       padding: 0;

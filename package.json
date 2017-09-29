@@ -61,6 +61,7 @@
     "jade-get-data": "^1.0.1",
     "jquery": "^3.2.1",
     "jquery-nice-select": "^1.1.0",
+    "jquery-validation": "^1.17.0",
     "jquery.dotdotdot": "^3.0.2",
     "leaflet": "^1.2.0",
     "leaflet.gridlayer.googlemutant": "^0.6.4",

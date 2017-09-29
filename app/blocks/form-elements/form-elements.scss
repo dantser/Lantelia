@@ -11,6 +11,10 @@
   padding-bottom: 19px;
   margin-top: 11px;
 
+  &.errorHighlight {
+    border-color: $color-error;
+  }
+
   &:active, &:focus {
     @extend %gradient-border-bottom;
   }
@@ -20,6 +24,10 @@
     letter-spacing: .122em;
     text-transform: uppercase;
     color: $color-gray;
+
+    &_error {
+      color: $color-error;
+    }
 
     &_required {
 
