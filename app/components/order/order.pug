@@ -3,6 +3,7 @@ include ../../blocks/form-elements/form-elements
 include ../../blocks/tabs/tabs
 include ../../blocks/grid/grid
 include ../../blocks/button/button
+include ../../blocks/order-price/order-price
 
 mixin order()
   +b.SECTION.order&attributes(attributes)
@@ -144,16 +145,10 @@ mixin order()
           +grid
             +col(5)
               .checkradio__content
-                .order__price-block
-                  span.order__price-text Стоимость заказа
-                  span.order__price 29 990 ₽
-                .order__price-block
-                  span.order__price-text Доставка
-                  span.order__price 250 ₽
+                +order-price('Стоимость заказа', '29 990 ₽')
+                +order-price('Доставка', '250 ₽')
             +col(4)
               .checkradio__content
-                .order__price-block
-                  span.order__price-text Итого к оплате
-                  span.order__price 30 240 ₽
+                +order-price('Итого к оплате', '30 240 ₽')
             +col(3)
               +button(false, true)(type="submit", value="Отправить")._white._fill-black.order__button Продолжить оформление заказа

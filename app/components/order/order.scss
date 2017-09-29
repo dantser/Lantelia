@@ -165,30 +165,12 @@
     margin-top: 30px;
   }
 
-  &__price {
-    display: block;
-    font-size: 28px;
-    color: $color-main;
-    line-height: 1.39;
-    font-weight: 400;
-    letter-spacing: .029em;
+  .order-price {
+    display: inline-block;
+    vertical-align: middle;
 
-    &-block {
-      display: inline-block;
-      vertical-align: middle;
-
-      &:not(:last-child) {
-        margin-right: 68px;
-      }
-    }
-
-    &-text {
-      @extend %text-label;
-
-      letter-spacing: .008em;
-      display: inline-block;
-      vertical-align: middle;
-      margin-bottom: 9px;
+    &:not(:last-child) {
+      margin-right: 68px;
     }
   }
 
@@ -357,21 +339,18 @@
       line-height: 1.78;
     }
 
-    .order__price {
+    .order-price {
 
-      &-block {
+      &:nth-child(2) {
 
-        &:nth-child(2) {
-
-          .order__price-text {
-            text-align: right;
-            display: block;
-          }
+        .order-price__text {
+          text-align: right;
+          display: block;
         }
+      }
 
-        &:not(:last-child) {
-          margin-right: 5px;
-        }
+      &:not(:last-child) {
+        margin-right: 5px;
       }
     }
 

@@ -1,3 +1,23 @@
 .cart {
-  display: block;
+  padding-top: 54px;
+
+  &__foot {
+    display: flex;
+    padding: 52px 0;
+  }
+
+  .order-price {
+    display: inline-block;
+    vertical-align: middle;
+
+    &:not(:last-child) {
+      margin-right: 72px;;
+    }
+  }
+
+  &__button {
+    flex: 1;
+    text-align: right;
+    align-self: center;
+  }
 }

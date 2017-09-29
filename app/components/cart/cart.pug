@@ -1,6 +1,18 @@
 include ../../blocks/section-head/section-head
+include ../../blocks/product-card/product-card
+include ../../blocks/order-price/order-price
 
 mixin cart()
   +b.cart&attributes(attributes)
     .container
-      +section-head('Покупки', 'Ваша корзина', true)
+      +section-head('Покупки', 'Ваша корзина')
+      +e.wrapper
+        +product-card-cart('assets/images/picProduct/smooth_100ml_05(procedure)@2x.png')
+        +product-card-cart('assets/images/picProduct/triple.png')
+      +e.foot
+        +e.stats
+          +order-price('Позиции', '3')
+          +order-price('Стоимость заказа', '29 990 ₽')
+        +e.button
+          +button(false, true)(type="submit", value="Отправить")._white._fill-black К оформлению заказа
+    

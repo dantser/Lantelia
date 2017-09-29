@@ -28,4 +28,25 @@ mixin product-card(img)
         +e.A(href="#", title="Добавить в корзину").cart
           +e.price 2 199 ₽
           +icon('shopping-cart')
-      
+
+mixin product-card-cart(img)
+  +b.product-card._cart&attributes(attributes)
+    +e.wrapper
+      +e.top
+        +e.image
+          img(src= img)
+        +e.H3.line 
+          | Professional
+          br
+          | botox
+          br
+          | therapy
+        +e.UL
+          +e.LI.name Кондиционер 250 мл,
+          +e.LI.name Шампунь 250 мл
+        +order-price('Цена', '7 990 ₽')
+      +e.bottom
+        +e.select
+        +order-price('Итого', '7 990 ₽')
+      +e.delete
+        +icon('close').icon.cart__delete

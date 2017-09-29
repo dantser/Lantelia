@@ -1,0 +1,20 @@
+.order-price {
+
+  &__price {
+    display: block;
+    font-size: 28px;
+    color: $color-main;
+    line-height: 1.39;
+    font-weight: 400;
+    letter-spacing: .029em;
+  }
+
+  &__text {
+    @extend %text-label;
+
+    letter-spacing: .008em;
+    display: inline-block;
+    vertical-align: middle;
+    margin-bottom: 9px;
+  }
+}

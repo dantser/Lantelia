@@ -62,6 +62,11 @@
 
     img {
       @include fill-img;
+      display: block;
+
+      &:last-child {
+        display: none;
+      }
     }
   }
 
@@ -203,6 +208,17 @@
 
     &__phones, &__bottom .main-slider__link, &__name {
       display: none;
+    }
+
+    .product-slide {
+
+      img {
+        display: none;
+
+        &:last-child {
+          display: block;
+        }
+      }
     }
 
     &__bottom {

@@ -1,8 +1,9 @@
 extends ../../layouts/default
-include ../../components/order/order
+include ../../components/cart/cart
+include ../../components/product-popup/product-popup
 
 block head
   - var pageTitle = 'Оформление заказа'
 
 block content
-  +order()
+  +cart()

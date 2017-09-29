@@ -60,10 +60,6 @@ export default () => {
     mask: '+7 (999) 999-99-99',
   }).mask('input[data-type="tel"]');
 
-  Inputmask({
-    alias: 'email',
-  }).mask('input[data-type="email"]');
-
   function slide() {
     $('.order__form').on('change', '.checkradio__input', function () {
       if (this.checked) {
