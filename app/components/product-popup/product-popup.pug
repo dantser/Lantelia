@@ -2,6 +2,7 @@ include ../../blocks/product-card/product-card
 include ../../blocks/icon/icons
 include ../../blocks/button/button
 include ../../components/needHelp/needHelp
+include ../../blocks/form-elements/form-elements
 
 mixin product-popup(img, price, id)
   +b.product-popup&attributes(attributes)
@@ -17,7 +18,7 @@ mixin product-popup(img, price, id)
               .product-popup__foot
                 span.product-popup__text Количество
                 .product-popup__dropdown
-                  select.product-popup__select
+                  +select().product-popup__select
                     option(value="1", selected) 1
                     option(value='2') 2
                     option(value='3') 3

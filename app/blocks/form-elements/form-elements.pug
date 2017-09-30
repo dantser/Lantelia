@@ -19,9 +19,11 @@ mixin textarea()
   textarea.textarea&attributes(attributes)
     block
 
+//- ._black
 mixin select()
-  select.select&attributes(attributes).js-select
+  select.select&attributes(attributes)
     block
+
 
 mixin checkbox(name, value, checked)
   +b.LABEL.checkradio&attributes(attributes)

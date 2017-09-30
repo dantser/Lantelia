@@ -2,6 +2,7 @@
 include ../../blocks/icon/icons
 include ../../blocks/modal/modal
 include ../../blocks/popups/popups
+include ../../blocks/form-elements/form-elements
 
 mixin product-card(img)
   +b.product-card&attributes(attributes)
@@ -42,11 +43,14 @@ mixin product-card-cart(img)
           br
           | therapy
         +e.UL
-          +e.LI.name Кондиционер 250 мл,
+          +e.LI.name Кондиционер 250 мл
           +e.LI.name Шампунь 250 мл
         +order-price('Цена', '7 990 ₽')
+        +select().select_black
+          option 1
+          option 2
+          option 3
       +e.bottom
-        +e.select
         +order-price('Итого', '7 990 ₽')
       +e.delete
         +icon('close').icon.cart__delete

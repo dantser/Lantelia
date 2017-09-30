@@ -62,6 +62,7 @@
 
     img {
       @include fill-img;
+
       display: block;
 
       &:last-child {

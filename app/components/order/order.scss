@@ -168,6 +168,7 @@
   .order-price {
     display: inline-block;
     vertical-align: middle;
+    margin-right: 5px;
 
     &:not(:last-child) {
       margin-right: 68px;

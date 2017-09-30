@@ -138,6 +138,8 @@
     display: none;
   }
 
+  // Карточка в корзине
+
   &_cart {
     width: 100%;
     max-width: none;
@@ -146,6 +148,7 @@
     border-bottom: 1px solid $color-border;
 
     &:hover {
+
       .product-card__delete {
         opacity: 1;
         visibility: visible;
@@ -158,7 +161,7 @@
     }
 
     .product-card__wrapper {
-      padding: 27px 0;
+      padding: 27px 94px 0 27px;
       flex-flow: row nowrap;
       min-height: 0;
     }
@@ -199,11 +202,20 @@
       flex-flow: row nowrap;
       align-items: center;
       margin-bottom: 0;
+      flex-basis: 62%;
+
+      .order-price:not(:last-child) {
+        margin: 0;
+      }
+
+      .select {
+        width: 110px;
+      }
     }
 
     .product-card__bottom {
       flex-flow: row nowrap;
-      justify-content: space-between;
+      justify-content: flex-end;
       align-items: center;
     }
   }
