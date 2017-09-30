@@ -6,8 +6,8 @@ const changed = require('gulp-changed');
 
 gulp.task('images', () => (
   gulp.src('app/static/images/**/*')
-    .pipe(plumber({ errorHandler: errorHandler('Error in icons task') }))
+    .pipe(plumber({ errorHandler: errorHandler('Error in images task') }))
     .pipe(changed('dist/assets/images'))
-    .pipe(imagemin())
+    //.pipe(imagemin())
     .pipe(gulp.dest('dist/assets/images'))
 ));

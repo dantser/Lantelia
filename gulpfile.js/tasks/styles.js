@@ -17,21 +17,18 @@ const isDebug = process.env.NODE_ENV !== 'production';
 gulp.task('styles', () => {
   gulp.src('app/styles/*.scss')
   .pipe(plumber({ errorHandler: errorHandler('Error in styles task') }))
-    .pipe(gulpIf(isDebug, sourcemaps.init()))
     .pipe(bulkSass())
     .pipe(sass())
     .pipe(postcss([
       require('autoprefixer'),
       require('postcss-discard-comments'),
-      //require('css-mqpacker'),
     ]))
     .pipe(cssimport())
     .pipe(cssnano({ zIndex: false }))
-    .pipe(gulpIf(isDebug, sourcemaps.write()))
     .pipe(rename({ suffix: '.min' }))
     .pipe(gulp.dest('dist/assets/styles'));
 
-  gulp.start('styles:lint');
+  //gulp.start('styles:lint');
 });
 
 gulp.task('styles:lint', () => (
