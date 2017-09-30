@@ -98,12 +98,15 @@
                 <div class="product-wrapper">
                     <div class="product-slide">
                         <img src="assets/images/picMainPage/1@2x.jpg" />
+                        <img src="assets/images/picMainPage/M_bg_1@2x.jpg" />
                     </div>
                     <div class="product-slide">
                         <img src="assets/images/picMainPage/2@2x.jpg" />
+                        <img src="assets/images/picMainPage/M_bg_2@2x.jpg" />
                     </div>
                     <div class="product-slide">
                         <img src="assets/images/picMainPage/3@2x.jpg" />
+                        <img src="assets/images/picMainPage/M_bg_3@2x.jpg" />
                     </div>
                 </div>
             </div>
@@ -139,9 +142,9 @@
             <div class="container">
                 <div class="main-products__line">
                     <span class="main-products__helper"></span>
-                    <div class="product-card js-fancybox">
-                        <div class="product-card__wrapper">
-                            <div class="product-card__top">
+                    <a class="product-card js-fancybox" href="#product1">
+                        <span class="product-card__wrapper">
+                            <span class="product-card__top">
                                 <h3 class="product-card__line"> Professional
                                     <br/>botox
                                     <br/>therapy</h3>
@@ -149,15 +152,15 @@
                                     <li class="product-card__name">Шампунь</li>
                                     <li class="product-card__name">Кератин</li>
                                 </ul>
-                            </div>
-                            <div class="product-card__image">
+                            </span>
+                            <span class="product-card__image">
                                 <img src="assets/images/picProduct/botox_250ml_07 (line)@2x.png" />
-                            </div>
-                            <div class="product-card__bottom">
-                                <div class="product-card__volumes">
+                            </span>
+                            <span class="product-card__bottom">
+                                <span class="product-card__volumes">
                                     <span class="product-card__volume">250 мл</span>
                                     <span class="product-card__volume">250 мл</span>
-                                </div>
+                                </span>
                                 <a class="product-card__arrow" href="#" title="Перейти к товару">
                                     <span class="product-card__null"></span>
                                     <svg><use xlink:href="assets/images/icon.svg#icon_arrow"></use></svg>
@@ -166,9 +169,9 @@
                                     <span class="product-card__price">2 199 ₽</span>
                                     <svg><use xlink:href="assets/images/icon.svg#icon_shopping-cart"></use></svg>
                                 </a>
-                            </div>
-                        </div>
-                    </div>
+                            </span>
+                        </span>
+                    </a>
                     <a class="product-card js-fancybox" href="#product2">
                         <span class="product-card__wrapper">
                             <span class="product-card__top">
@@ -364,7 +367,7 @@
                                     <div class="product-popup__foot">
                                         <span class="product-popup__text">Количество</span>
                                         <div class="product-popup__dropdown">
-                                            <select class="product-popup__select">
+                                            <select class="select product-popup__select">
                                                 <option value="1" selected="selected">1</option>
                                                 <option value="2">2</option>
                                                 <option value="3">3</option>
@@ -372,17 +375,18 @@
                                                 <option value="5">5</option>
                                             </select>
                                         </div>
-                                        <button class="button button_gradiented button_white product-popup__button" type="submit">
-                                            <div class="button__text"></div>
+                                        <button class="button button_gradiented button_white product-popup__button">
+                                            <svg class="button__icon"><use xlink:href="assets/images/icon.svg#icon_shopping-cart"></use></svg>
+                                            <div class="button__text">в корзину</div>
                                         </button>
                                     </div>
                                 </div>
                             </div>
                             <svg class="popup__icon-close modal__close product-popup__icon-close"><use xlink:href="assets/images/icon.svg#icon_close"></use></svg>
                         </div>
-                        <a class="cart" href="#">
-                            <svg class="cart__icon"><use xlink:href="assets/images/icon.svg#icon_shopping-cart"></use></svg>
-                            <span class="cart__num">1</span>
+                        <a class="addcart" href="#">
+                            <svg class="addcart__icon"><use xlink:href="assets/images/icon.svg#icon_shopping-cart"></use></svg>
+                            <span class="addcart__num">1</span>
                         </a>
                     </div>
                 </div>
@@ -430,7 +434,7 @@
                                     <div class="product-popup__foot">
                                         <span class="product-popup__text">Количество</span>
                                         <div class="product-popup__dropdown">
-                                            <select class="product-popup__select">
+                                            <select class="select product-popup__select">
                                                 <option value="1" selected="selected">1</option>
                                                 <option value="2">2</option>
                                                 <option value="3">3</option>
@@ -438,17 +442,18 @@
                                                 <option value="5">5</option>
                                             </select>
                                         </div>
-                                        <button class="button button_gradiented button_white product-popup__button" type="submit">
-                                            <div class="button__text"></div>
+                                        <button class="button button_gradiented button_white product-popup__button">
+                                            <svg class="button__icon"><use xlink:href="assets/images/icon.svg#icon_shopping-cart"></use></svg>
+                                            <div class="button__text">в корзину</div>
                                         </button>
                                     </div>
                                 </div>
                             </div>
                             <svg class="popup__icon-close modal__close product-popup__icon-close"><use xlink:href="assets/images/icon.svg#icon_close"></use></svg>
                         </div>
-                        <a class="cart" href="#">
-                            <svg class="cart__icon"><use xlink:href="assets/images/icon.svg#icon_shopping-cart"></use></svg>
-                            <span class="cart__num">1</span>
+                        <a class="addcart" href="#">
+                            <svg class="addcart__icon"><use xlink:href="assets/images/icon.svg#icon_shopping-cart"></use></svg>
+                            <span class="addcart__num">1</span>
                         </a>
                     </div>
                 </div>
@@ -496,7 +501,7 @@
                                     <div class="product-popup__foot">
                                         <span class="product-popup__text">Количество</span>
                                         <div class="product-popup__dropdown">
-                                            <select class="product-popup__select">
+                                            <select class="select product-popup__select">
                                                 <option value="1" selected="selected">1</option>
                                                 <option value="2">2</option>
                                                 <option value="3">3</option>
@@ -504,17 +509,18 @@
                                                 <option value="5">5</option>
                                             </select>
                                         </div>
-                                        <button class="button button_gradiented button_white product-popup__button" type="submit">
-                                            <div class="button__text"></div>
+                                        <button class="button button_gradiented button_white product-popup__button">
+                                            <svg class="button__icon"><use xlink:href="assets/images/icon.svg#icon_shopping-cart"></use></svg>
+                                            <div class="button__text">в корзину</div>
                                         </button>
                                     </div>
                                 </div>
                             </div>
                             <svg class="popup__icon-close modal__close product-popup__icon-close"><use xlink:href="assets/images/icon.svg#icon_close"></use></svg>
                         </div>
-                        <a class="cart" href="#">
-                            <svg class="cart__icon"><use xlink:href="assets/images/icon.svg#icon_shopping-cart"></use></svg>
-                            <span class="cart__num">1</span>
+                        <a class="addcart" href="#">
+                            <svg class="addcart__icon"><use xlink:href="assets/images/icon.svg#icon_shopping-cart"></use></svg>
+                            <span class="addcart__num">1</span>
                         </a>
                     </div>
                 </div>
@@ -562,7 +568,7 @@
                                     <div class="product-popup__foot">
                                         <span class="product-popup__text">Количество</span>
                                         <div class="product-popup__dropdown">
-                                            <select class="product-popup__select">
+                                            <select class="select product-popup__select">
                                                 <option value="1" selected="selected">1</option>
                                                 <option value="2">2</option>
                                                 <option value="3">3</option>
@@ -570,17 +576,18 @@
                                                 <option value="5">5</option>
                                             </select>
                                         </div>
-                                        <button class="button button_gradiented button_white product-popup__button" type="submit">
-                                            <div class="button__text"></div>
+                                        <button class="button button_gradiented button_white product-popup__button">
+                                            <svg class="button__icon"><use xlink:href="assets/images/icon.svg#icon_shopping-cart"></use></svg>
+                                            <div class="button__text">в корзину</div>
                                         </button>
                                     </div>
                                 </div>
                             </div>
                             <svg class="popup__icon-close modal__close product-popup__icon-close"><use xlink:href="assets/images/icon.svg#icon_close"></use></svg>
                         </div>
-                        <a class="cart" href="#">
-                            <svg class="cart__icon"><use xlink:href="assets/images/icon.svg#icon_shopping-cart"></use></svg>
-                            <span class="cart__num">1</span>
+                        <a class="addcart" href="#">
+                            <svg class="addcart__icon"><use xlink:href="assets/images/icon.svg#icon_shopping-cart"></use></svg>
+                            <span class="addcart__num">1</span>
                         </a>
                     </div>
                 </div>
@@ -628,7 +635,7 @@
                                     <div class="product-popup__foot">
                                         <span class="product-popup__text">Количество</span>
                                         <div class="product-popup__dropdown">
-                                            <select class="product-popup__select">
+                                            <select class="select product-popup__select">
                                                 <option value="1" selected="selected">1</option>
                                                 <option value="2">2</option>
                                                 <option value="3">3</option>
@@ -636,17 +643,18 @@
                                                 <option value="5">5</option>
                                             </select>
                                         </div>
-                                        <button class="button button_gradiented button_white product-popup__button" type="submit">
-                                            <div class="button__text"></div>
+                                        <button class="button button_gradiented button_white product-popup__button">
+                                            <svg class="button__icon"><use xlink:href="assets/images/icon.svg#icon_shopping-cart"></use></svg>
+                                            <div class="button__text">в корзину</div>
                                         </button>
                                     </div>
                                 </div>
                             </div>
                             <svg class="popup__icon-close modal__close product-popup__icon-close"><use xlink:href="assets/images/icon.svg#icon_close"></use></svg>
                         </div>
-                        <a class="cart" href="#">
-                            <svg class="cart__icon"><use xlink:href="assets/images/icon.svg#icon_shopping-cart"></use></svg>
-                            <span class="cart__num">1</span>
+                        <a class="addcart" href="#">
+                            <svg class="addcart__icon"><use xlink:href="assets/images/icon.svg#icon_shopping-cart"></use></svg>
+                            <span class="addcart__num">1</span>
                         </a>
                     </div>
                 </div>
@@ -694,7 +702,7 @@
                                     <div class="product-popup__foot">
                                         <span class="product-popup__text">Количество</span>
                                         <div class="product-popup__dropdown">
-                                            <select class="product-popup__select">
+                                            <select class="select product-popup__select">
                                                 <option value="1" selected="selected">1</option>
                                                 <option value="2">2</option>
                                                 <option value="3">3</option>
@@ -702,17 +710,18 @@
                                                 <option value="5">5</option>
                                             </select>
                                         </div>
-                                        <button class="button button_gradiented button_white product-popup__button" type="submit">
-                                            <div class="button__text"></div>
+                                        <button class="button button_gradiented button_white product-popup__button">
+                                            <svg class="button__icon"><use xlink:href="assets/images/icon.svg#icon_shopping-cart"></use></svg>
+                                            <div class="button__text">в корзину</div>
                                         </button>
                                     </div>
                                 </div>
                             </div>
                             <svg class="popup__icon-close modal__close product-popup__icon-close"><use xlink:href="assets/images/icon.svg#icon_close"></use></svg>
                         </div>
-                        <a class="cart" href="#">
-                            <svg class="cart__icon"><use xlink:href="assets/images/icon.svg#icon_shopping-cart"></use></svg>
-                            <span class="cart__num">1</span>
+                        <a class="addcart" href="#">
+                            <svg class="addcart__icon"><use xlink:href="assets/images/icon.svg#icon_shopping-cart"></use></svg>
+                            <span class="addcart__num">1</span>
                         </a>
                     </div>
                 </div>
@@ -768,8 +777,7 @@
                         </a>
                     </div>
                     <button class="button button_fill-black button_white">
-                        <svg class="button__icon"><use xlink:href="assets/images/icon.svg#icon_показать все"></use></svg>
-                        <div class="button__text"></div>
+                        <div class="button__text">показать все</div>
                     </button>
                 </div>
             </div>
@@ -946,8 +954,7 @@
                     </div>
                     <div class="grid__col grid__col_two grid__col_right">
                         <button class="button button_gradiented">
-                            <svg class="button__icon"><use xlink:href="assets/images/icon.svg#icon_НАЧАТЬ РАБОТАТЬ С LANTELIA"></use></svg>
-                            <div class="button__text"></div>
+                            <div class="button__text">НАЧАТЬ РАБОТАТЬ С LANTELIA</div>
                         </button>
                         <div class="footer__copyright">&#169; 2017 Lantelia. Все права защищены</div>
                     </div>

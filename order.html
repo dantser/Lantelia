@@ -92,263 +92,261 @@
             </div>
         </div>
     </div>
-    <div class="order">
-        <section class="order">
-            <div id="error-message">
-                <div class="error__text"></div>
-                <svg class="order__error-close"><use xlink:href="assets/images/icon.svg#icon_close"></use></svg>
+    <section class="order">
+        <div id="error-message">
+            <div class="error__text"></div>
+            <svg class="order__error-close"><use xlink:href="assets/images/icon.svg#icon_close"></use></svg>
+        </div>
+        <div class="container">
+            <div class="section-head">
+                <h4 class="section-head__subtitle">Покупки</h4>
+                <h2 class="section-head__title">Оформление заказа</h2>
             </div>
-            <div class="container">
-                <div class="section-head">
-                    <h4 class="section-head__subtitle">Покупки</h4>
-                    <h2 class="section-head__title">Оформление заказа</h2>
-                </div>
-                <form class="order__form" action="" method="get" id="orderForm">
-                    <div class="order__wrapper order__wrapper_contacts">
-                        <h3 class="order__title">Контактная информация</h3>
-                        <div class="order__input-block">
-                            <div class="inputbox">
-                                <span class="input__label input__label_required">Имя</span>
-                                <input class="input" type="text" name="name" required="required" />
-                            </div>
-                            <div class="inputbox">
-                                <span class="input__label input__label_required">Фамилия</span>
-                                <input class="input" type="text" name="surname" required="required" />
-                            </div>
-                            <div class="inputbox">
-                                <span class="input__label input__label_required">Телефон</span>
-                                <input class="input" type="tel" name="phone" data-type="tel" required="required" />
-                            </div>
-                            <div class="inputbox">
-                                <span class="input__label input__label_required">E-mail</span>
-                                <input class="input" type="email" name="email" data-type="email" required="required" />
-                            </div>
-                            <div class="inputbox">
-                                <span class="input__label input__label_required">Город/Населенный пункт</span>
-                                <input class="input" type="text" name="city" required="required" />
-                            </div>
-                            <div class="inputbox">
-                                <span class="input__label">Индекс</span>
-                                <input class="input" type="text" name="index" />
-                            </div>
-                            <div class="inputbox inputbox_large">
-                                <span class="input__label input__label_required">Адрес доставки</span>
-                                <input class="input" type="text" name="address" required="required" />
-                            </div>
+            <form class="order__form" action="" method="get" id="orderForm">
+                <div class="order__wrapper order__wrapper_contacts">
+                    <h3 class="order__title">Контактная информация</h3>
+                    <div class="order__input-block">
+                        <div class="inputbox">
+                            <span class="input__label input__label_required">Имя</span>
+                            <input class="input" type="text" name="name" required="required" />
+                        </div>
+                        <div class="inputbox">
+                            <span class="input__label input__label_required">Фамилия</span>
+                            <input class="input" type="text" name="surname" required="required" />
+                        </div>
+                        <div class="inputbox">
+                            <span class="input__label input__label_required">Телефон</span>
+                            <input class="input" type="tel" name="phone" data-type="tel" required="required" />
+                        </div>
+                        <div class="inputbox">
+                            <span class="input__label input__label_required">E-mail</span>
+                            <input class="input" type="email" name="email" data-type="email" required="required" />
+                        </div>
+                        <div class="inputbox">
+                            <span class="input__label input__label_required">Город/Населенный пункт</span>
+                            <input class="input" type="text" name="city" required="required" />
+                        </div>
+                        <div class="inputbox">
+                            <span class="input__label">Индекс</span>
+                            <input class="input" type="text" name="index" />
+                        </div>
+                        <div class="inputbox inputbox_large">
+                            <span class="input__label input__label_required">Адрес доставки</span>
+                            <input class="input" type="text" name="address" required="required" />
                         </div>
                     </div>
-                    <div class="order__wrapper order__wrapper_shipping">
-                        <h3 class="order__title">Доставка</h3>
-                        <div class="order__tabs">
-                            <ul class="tabs">
-                                <li class="tabs__tab active" data-tab-target="tab1">Москва</li>
-                                <li class="tabs__tab" data-tab-target="tab2">Московская обл</li>
-                                <li class="tabs__tab" data-tab-target="tab3">Россия</li>
-                            </ul>
-                        </div>
-                        <div class="tabs-content">
-                            <div class="tabs-content__wrapper active" data-tab="tab1" data-tab-group="shipping">
-                                <div class="grid">
-                                    <div class="grid__col grid__col_four">
-                                        <div class="inputbox js-slide-el js-slide-el_active">
-                                            <span class="input__label"></span>
-                                            <label class="checkradio">
-                                                <input class="checkradio__input" name="shipping" value="msk-courier" checked="true" type="radio" />
-                                                <span class="checkradio__box"></span>
-                                                <span class="checkradio__content">
-                                                    <p class="rule">Курьерская доставка (в пределах МКАД)</p>
-                                                    <p>Бесплатная доставка от 3 000 руб.</p>
-                                                    <p>Курьер LANTELIA (по Москве): Доставка осуществляется на следующий день.</p>
-                                                    <p>Стоимость: 250 руб.</p>
-                                                    <p>Способ оплаты: Наличными</p>
-                                                </span>
-                                            </label>
-                                        </div>
-                                    </div>
-                                    <div class="grid__col grid__col_four">
-                                        <div class="inputbox js-slide-el">
-                                            <span class="input__label"></span>
-                                            <label class="checkradio">
-                                                <input class="checkradio__input" name="shipping" value="msk-tk" type="radio" />
-                                                <span class="checkradio__box"></span>
-                                                <span class="checkradio__content">
-                                                    <p class="rule">Самовывоз</p>
-                                                    <p class="mb">Адрес: ул. Ярославская 8 к.5
-                                                        <br/>Режим работы: пн.-пт. c 10:00 – 18:00</p>
-                                                    <p>Стоимость: 0 руб.</p>
-                                                    <p>Оплата заказа в пункте самовывоза осуществляется только НАЛИЧНЫМИ</p>
-                                                </span>
-                                            </label>
-                                        </div>
-                                    </div>
-                                    <div class="grid__col grid__col_four">
-                                        <div class="inputbox">
-                                            <span class="input__label"></span>
-                                            <div class="checkradio__content checkradio__content_miss checkradio__content_bordered">
-                                                <p>При себе иметь паспорт или иной документ подтверждающий личность - для входа на территорию бизнес-центра.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="tabs-content__wrapper" data-tab="tab2" data-tab-group="shipping">
-                                <div class="grid">
-                                    <div class="grid__col grid__col_four">
-                                        <div class="inputbox js-slide-el js-slide-el_active">
-                                            <span class="input__label"></span>
-                                            <label class="checkradio">
-                                                <input class="checkradio__input" name="shipping" value="mo-courier" type="radio" />
-                                                <span class="checkradio__box"></span>
-                                                <span class="checkradio__content">
-                                                    <p class="rule">Курьерская доставка</p>
-                                                    <p>Бесплатная доставка от 7 000 руб.</p>
-                                                    <p>Курьер LANTELIA: Доставка осуществляется на следующий день.</p>
-                                                    <p>Доставка в ближайшее Подмосковье (до ~10 км от МКАД: Митино, Мытищи, Балашиха, Реутов, Люберцы, Видное, Одинцово, Красногорск, Химки и др.)</p>
-                                                    <p>Стоимость: 400 руб.</p>
-                                                </span>
-                                            </label>
-                                        </div>
-                                    </div>
-                                    <div class="grid__col grid__col_four">
-                                        <div class="inputbox js-slide-el">
-                                            <span class="input__label"></span>
-                                            <label class="checkradio">
-                                                <input class="checkradio__input" name="shipping" value="mo-tk" type="radio" />
-                                                <span class="checkradio__box"></span>
-                                                <span class="checkradio__content">
-                                                    <p class="rule">Доставка Транспортными Компаниями</p>
-                                                    <p> СДЭК:
-                                                        <br/>Экспресс лайт дверь-дверь, после 100% оплаты!
-                                                        <br/>Стоимость: 250 руб.</p>
-                                                    <p>ПОЧТА РОССИИ:
-                                                        <br/>Забор заказа в почтовом отделении по месту жительства, после 100% оплаты!
-                                                        <br/>Стоимость: 250 руб.</p>
-                                                </span>
-                                            </label>
-                                        </div>
-                                    </div>
-                                    <div class="grid__col grid__col_four">
-                                        <div class="inputbox">
-                                            <span class="input__label"></span>
-                                            <div class="checkradio__content checkradio__content_miss checkradio__content_bordered">
-                                                <p>Способ оплаты: Наличными, Банковская карта, Robokassa, извещением для банка</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="tabs-content__wrapper" data-tab="tab3" data-tab-group="shipping">
-                                <div class="grid">
-                                    <div class="grid__col grid__col_four">
-                                        <div class="inputbox js-slide-el js-slide-el_active">
-                                            <span class="input__label"></span>
-                                            <label class="checkradio">
-                                                <input class="checkradio__input" name="shipping" value="russia" type="radio" />
-                                                <span class="checkradio__box"></span>
-                                                <span class="checkradio__content">
-                                                    <p class="rule">Доставка по России</p>
-                                                    <p>Мы отправляем заказы по всей России. Срок оформления заказа составляет 1 рабочий день, после оплаты заказ отправляется в соответствующую службу доставки.</p>
-                                                    <p>ДОСТАВКА ЗАКАЗА ОСУЩЕСТВЛЯЕТСЯ, ТОЛЬКО при 100% ПРЕДОПЛАТЕ!</p>
-                                                    <p>Способ оплаты: Банковская карта, Robokassa, извещением для банка</p>
-                                                </span>
-                                            </label>
-                                        </div>
-                                    </div>
-                                    <div class="grid__col grid__col_four">
-                                        <div class="inputbox">
-                                            <span class="input__label"></span>
-                                            <div class="checkradio__content checkradio__content_miss">
-                                                <p class="rule">Доставка Транспортными Компаниями:</p>
-                                                <p> СДЭК:
-                                                    <br/>Экспресс лайт дверь-дверь, после 100% оплаты!
-                                                    <br/>Стоимость: 350 руб.</p>
-                                                <p>ПОЧТА РОССИИ:
-                                                    <br/>Забор заказа в почтовом отделении по месту жительства, после 100% оплаты!
-                                                    <br/>Стоимость: 350 руб.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="grid__col grid__col_four">
-                                        <div class="inputbox js-slide-el">
-                                            <span class="input__label"></span>
-                                        </div>
+                </div>
+                <div class="order__wrapper order__wrapper_shipping">
+                    <h3 class="order__title">Доставка</h3>
+                    <div class="order__tabs">
+                        <ul class="tabs">
+                            <li class="tabs__tab active" data-tab-target="tab1">Москва</li>
+                            <li class="tabs__tab" data-tab-target="tab2">Московская обл</li>
+                            <li class="tabs__tab" data-tab-target="tab3">Россия</li>
+                        </ul>
+                    </div>
+                    <div class="tabs-content">
+                        <div class="tabs-content__wrapper active" data-tab="tab1" data-tab-group="shipping">
+                            <div class="grid">
+                                <div class="grid__col grid__col_four">
+                                    <div class="inputbox js-slide-el js-slide-el_active">
+                                        <span class="input__label"></span>
                                         <label class="checkradio">
-                                            <input class="checkradio__input" name="shipping" value="other" type="radio" />
+                                            <input class="checkradio__input" name="shipping" value="msk-courier" checked="true" type="radio" />
                                             <span class="checkradio__box"></span>
                                             <span class="checkradio__content">
-                                                <p class="rule">Другой способ доставки</p>
-                                                <p>Если вас интересует любая другая служба доставка, просьба уточнять стоимость доставки по телефонам: </p>
-                                                <p> Бесплатно для звонков по России
-                                                    <br/>Тел.: 8 800 894 24 40</p>
+                                                <p class="rule">Курьерская доставка (в пределах МКАД)</p>
+                                                <p>Бесплатная доставка от 3 000 руб.</p>
+                                                <p>Курьер LANTELIA (по Москве): Доставка осуществляется на следующий день.</p>
+                                                <p>Стоимость: 250 руб.</p>
+                                                <p>Способ оплаты: Наличными</p>
                                             </span>
                                         </label>
                                     </div>
                                 </div>
+                                <div class="grid__col grid__col_four">
+                                    <div class="inputbox js-slide-el">
+                                        <span class="input__label"></span>
+                                        <label class="checkradio">
+                                            <input class="checkradio__input" name="shipping" value="msk-tk" type="radio" />
+                                            <span class="checkradio__box"></span>
+                                            <span class="checkradio__content">
+                                                <p class="rule">Самовывоз</p>
+                                                <p class="mb">Адрес: ул. Ярославская 8 к.5
+                                                    <br/>Режим работы: пн.-пт. c 10:00 – 18:00</p>
+                                                <p>Стоимость: 0 руб.</p>
+                                                <p>Оплата заказа в пункте самовывоза осуществляется только НАЛИЧНЫМИ</p>
+                                            </span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="grid__col grid__col_four">
+                                    <div class="inputbox">
+                                        <span class="input__label"></span>
+                                        <div class="checkradio__content checkradio__content_miss checkradio__content_bordered">
+                                            <p>При себе иметь паспорт или иной документ подтверждающий личность - для входа на территорию бизнес-центра.</p>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="order__wrapper order__wrapper_payment">
-                        <h3 class="order__title">Оплата</h3>
-                        <div class="grid">
-                            <div class="grid__col grid__col_four">
-                                <div class="inputbox">
-                                    <span class="input__label"></span>
+                        <div class="tabs-content__wrapper" data-tab="tab2" data-tab-group="shipping">
+                            <div class="grid">
+                                <div class="grid__col grid__col_four">
+                                    <div class="inputbox js-slide-el js-slide-el_active">
+                                        <span class="input__label"></span>
+                                        <label class="checkradio">
+                                            <input class="checkradio__input" name="shipping" value="mo-courier" type="radio" />
+                                            <span class="checkradio__box"></span>
+                                            <span class="checkradio__content">
+                                                <p class="rule">Курьерская доставка</p>
+                                                <p>Бесплатная доставка от 7 000 руб.</p>
+                                                <p>Курьер LANTELIA: Доставка осуществляется на следующий день.</p>
+                                                <p>Доставка в ближайшее Подмосковье (до ~10 км от МКАД: Митино, Мытищи, Балашиха, Реутов, Люберцы, Видное, Одинцово, Красногорск, Химки и др.)</p>
+                                                <p>Стоимость: 400 руб.</p>
+                                            </span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="grid__col grid__col_four">
+                                    <div class="inputbox js-slide-el">
+                                        <span class="input__label"></span>
+                                        <label class="checkradio">
+                                            <input class="checkradio__input" name="shipping" value="mo-tk" type="radio" />
+                                            <span class="checkradio__box"></span>
+                                            <span class="checkradio__content">
+                                                <p class="rule">Доставка Транспортными Компаниями</p>
+                                                <p> СДЭК:
+                                                    <br/>Экспресс лайт дверь-дверь, после 100% оплаты!
+                                                    <br/>Стоимость: 250 руб.</p>
+                                                <p>ПОЧТА РОССИИ:
+                                                    <br/>Забор заказа в почтовом отделении по месту жительства, после 100% оплаты!
+                                                    <br/>Стоимость: 250 руб.</p>
+                                            </span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="grid__col grid__col_four">
+                                    <div class="inputbox">
+                                        <span class="input__label"></span>
+                                        <div class="checkradio__content checkradio__content_miss checkradio__content_bordered">
+                                            <p>Способ оплаты: Наличными, Банковская карта, Robokassa, извещением для банка</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tabs-content__wrapper" data-tab="tab3" data-tab-group="shipping">
+                            <div class="grid">
+                                <div class="grid__col grid__col_four">
+                                    <div class="inputbox js-slide-el js-slide-el_active">
+                                        <span class="input__label"></span>
+                                        <label class="checkradio">
+                                            <input class="checkradio__input" name="shipping" value="russia" type="radio" />
+                                            <span class="checkradio__box"></span>
+                                            <span class="checkradio__content">
+                                                <p class="rule">Доставка по России</p>
+                                                <p>Мы отправляем заказы по всей России. Срок оформления заказа составляет 1 рабочий день, после оплаты заказ отправляется в соответствующую службу доставки.</p>
+                                                <p>ДОСТАВКА ЗАКАЗА ОСУЩЕСТВЛЯЕТСЯ, ТОЛЬКО при 100% ПРЕДОПЛАТЕ!</p>
+                                                <p>Способ оплаты: Банковская карта, Robokassa, извещением для банка</p>
+                                            </span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="grid__col grid__col_four">
+                                    <div class="inputbox">
+                                        <span class="input__label"></span>
+                                        <div class="checkradio__content checkradio__content_miss">
+                                            <p class="rule">Доставка Транспортными Компаниями:</p>
+                                            <p> СДЭК:
+                                                <br/>Экспресс лайт дверь-дверь, после 100% оплаты!
+                                                <br/>Стоимость: 350 руб.</p>
+                                            <p>ПОЧТА РОССИИ:
+                                                <br/>Забор заказа в почтовом отделении по месту жительства, после 100% оплаты!
+                                                <br/>Стоимость: 350 руб.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="grid__col grid__col_four">
+                                    <div class="inputbox js-slide-el">
+                                        <span class="input__label"></span>
+                                    </div>
                                     <label class="checkradio">
-                                        <input class="checkradio__input" name="payment" value="online" checked="true" type="radio" />
+                                        <input class="checkradio__input" name="shipping" value="other" type="radio" />
                                         <span class="checkradio__box"></span>
                                         <span class="checkradio__content">
-                                            <p>Онлайн оплата</p>
+                                            <p class="rule">Другой способ доставки</p>
+                                            <p>Если вас интересует любая другая служба доставка, просьба уточнять стоимость доставки по телефонам: </p>
+                                            <p> Бесплатно для звонков по России
+                                                <br/>Тел.: 8 800 894 24 40</p>
                                         </span>
                                     </label>
                                 </div>
                             </div>
-                            <div class="grid__col grid__col_four">
-                                <div class="inputbox">
-                                    <span class="input__label"></span>
-                                    <label class="checkradio">
-                                        <input class="checkradio__input" name="payment" value="offline" type="radio" />
-                                        <span class="checkradio__box"></span>
-                                        <span class="checkradio__content">
-                                            <p>Оплата наличными при получении</p>
-                                        </span>
-                                    </label>
-                                </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="order__wrapper order__wrapper_payment">
+                    <h3 class="order__title">Оплата</h3>
+                    <div class="grid">
+                        <div class="grid__col grid__col_four">
+                            <div class="inputbox">
+                                <span class="input__label"></span>
+                                <label class="checkradio">
+                                    <input class="checkradio__input" name="payment" value="online" checked="true" type="radio" />
+                                    <span class="checkradio__box"></span>
+                                    <span class="checkradio__content">
+                                        <p>Онлайн оплата</p>
+                                    </span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="grid__col grid__col_four">
+                            <div class="inputbox">
+                                <span class="input__label"></span>
+                                <label class="checkradio">
+                                    <input class="checkradio__input" name="payment" value="offline" type="radio" />
+                                    <span class="checkradio__box"></span>
+                                    <span class="checkradio__content">
+                                        <p>Оплата наличными при получении</p>
+                                    </span>
+                                </label>
                             </div>
                         </div>
                     </div>
-                    <div class="order__wrapper order__wrapper_foot">
-                        <div class="grid">
-                            <div class="grid__col grid__col_five">
-                                <div class="checkradio__content">
-                                    <div class="order__price-block">
-                                        <span class="order__price-text">Стоимость заказа</span>
-                                        <span class="order__price">29 990 ₽</span>
-                                    </div>
-                                    <div class="order__price-block">
-                                        <span class="order__price-text">Доставка</span>
-                                        <span class="order__price">250 ₽</span>
-                                    </div>
+                </div>
+                <div class="order__wrapper order__wrapper_foot">
+                    <div class="grid">
+                        <div class="grid__col grid__col_five">
+                            <div class="checkradio__content">
+                                <div class="order-price">
+                                    <span class="order-price__text">Стоимость заказа</span>
+                                    <span class="order-price__price">29 990 ₽</span>
                                 </div>
-                            </div>
-                            <div class="grid__col grid__col_four">
-                                <div class="checkradio__content">
-                                    <div class="order__price-block">
-                                        <span class="order__price-text">Итого к оплате</span>
-                                        <span class="order__price">30 240 ₽</span>
-                                    </div>
+                                <div class="order-price">
+                                    <span class="order-price__text">Доставка</span>
+                                    <span class="order-price__price">250 ₽</span>
                                 </div>
-                            </div>
-                            <div class="grid__col grid__col_three">
-                                <button class="button button_white button_fill-black order__button" type="submit" value="Отправить">
-                                    <div class="button__text">Продолжить оформление заказа</div>
-                                </button>
                             </div>
                         </div>
+                        <div class="grid__col grid__col_four">
+                            <div class="checkradio__content">
+                                <div class="order-price">
+                                    <span class="order-price__text">Итого к оплате</span>
+                                    <span class="order-price__price">30 240 ₽</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid__col grid__col_three">
+                            <button class="button button_white button_fill-black order__button" type="submit" value="Отправить">
+                                <div class="button__text">Продолжить оформление заказа</div>
+                            </button>
+                        </div>
                     </div>
-                </form>
-            </div>
-        </section>
-    </div>
+                </div>
+            </form>
+        </div>
+    </section>
     <div class="needHelp">
         <div class="needHelp__wrapper">
             <svg class="needHelp__icon"><use xlink:href="assets/images/icon.svg#icon_phone"></use></svg>
@@ -442,8 +440,7 @@
                     </div>
                     <div class="grid__col grid__col_two grid__col_right">
                         <button class="button button_gradiented">
-                            <svg class="button__icon"><use xlink:href="assets/images/icon.svg#icon_НАЧАТЬ РАБОТАТЬ С LANTELIA"></use></svg>
-                            <div class="button__text"></div>
+                            <div class="button__text">НАЧАТЬ РАБОТАТЬ С LANTELIA</div>
                         </button>
                         <div class="footer__copyright">&#169; 2017 Lantelia. Все права защищены</div>
                     </div>

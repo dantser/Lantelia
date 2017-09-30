@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimal-ui">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Versta Project Template</title>
+    <title>Оформление заказа</title>
     <meta name="description" content="">
     <meta name="keywords" content="">
     <meta name="msapplication-config" content="/assets/images/favicons/browserconfig.xml">
@@ -92,15 +92,98 @@
             </div>
         </div>
     </div>
-    <div class="sitemap">
+    <div class="cart">
         <div class="container">
-            <div class="sitemap__list">
-                <a class="link" href="ui-kit.html">
-                    <span class="link__text">UI-kit (ui-kit.html)</span>
-                </a>
-                <a class="link" href="index.html">
-                    <span class="link__text">Главная (index.html)</span>
-                </a>
+            <div class="section-head">
+                <h4 class="section-head__subtitle">Покупки</h4>
+                <h2 class="section-head__title">Ваша корзина</h2>
+            </div>
+            <div class="cart__wrapper">
+                <div class="product-card product-card_cart">
+                    <div class="product-card__wrapper">
+                        <div class="product-card__top">
+                            <div class="product-card__image">
+                                <img src="assets/images/picProduct/smooth_100ml_05(procedure)@2x.png" />
+                            </div>
+                            <h3 class="product-card__line"> Professional
+                                <br/>botox
+                                <br/>therapy</h3>
+                            <ul>
+                                <li class="product-card__name">Кондиционер 250 мл</li>
+                                <li class="product-card__name">Шампунь 250 мл</li>
+                            </ul>
+                            <div class="order-price">
+                                <span class="order-price__text">Цена</span>
+                                <span class="order-price__price">7 990 ₽</span>
+                            </div>
+                            <select class="select select_black">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                            </select>
+                        </div>
+                        <div class="product-card__bottom">
+                            <div class="order-price">
+                                <span class="order-price__text">Итого</span>
+                                <span class="order-price__price">7 990 ₽</span>
+                            </div>
+                        </div>
+                        <div class="product-card__delete">
+                            <svg class="product-card__icon cart__delete"><use xlink:href="assets/images/icon.svg#icon_close"></use></svg>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card product-card_cart">
+                    <div class="product-card__wrapper">
+                        <div class="product-card__top">
+                            <div class="product-card__image">
+                                <img src="assets/images/picProduct/triple.png" />
+                            </div>
+                            <h3 class="product-card__line"> Professional
+                                <br/>botox
+                                <br/>therapy</h3>
+                            <ul>
+                                <li class="product-card__name">Кондиционер 250 мл</li>
+                                <li class="product-card__name">Шампунь 250 мл</li>
+                            </ul>
+                            <div class="order-price">
+                                <span class="order-price__text">Цена</span>
+                                <span class="order-price__price">7 990 ₽</span>
+                            </div>
+                            <select class="select select_black">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                            </select>
+                        </div>
+                        <div class="product-card__bottom">
+                            <div class="order-price">
+                                <span class="order-price__text">Итого</span>
+                                <span class="order-price__price">7 990 ₽</span>
+                            </div>
+                        </div>
+                        <div class="product-card__delete">
+                            <svg class="product-card__icon cart__delete"><use xlink:href="assets/images/icon.svg#icon_close"></use></svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cart__foot">
+                <div class="cart__stats">
+                    <div class="order-price">
+                        <span class="order-price__text">Позиции</span>
+                        <span class="order-price__price">3</span>
+                    </div>
+                    <div class="order-price">
+                        <span class="order-price__text">Стоимость заказа</span>
+                        <span class="order-price__price">29 990 ₽</span>
+                    </div>
+                </div>
+                <div class="cart__button">
+                    <button class="button button_white button_fill-black" type="submit" value="Отправить">
+                        <div class="button__text">К оформлению заказа</div>
+                    </button>
+                </div>
             </div>
         </div>
     </div>
