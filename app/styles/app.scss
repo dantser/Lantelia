@@ -28,6 +28,11 @@
 }
 
 /* stylelint-disable */
+
+select {
+  display: none;
+}
+
 #grayscreen {
   display: none;
   position: fixed;

@@ -1,9 +1,9 @@
 .cart {
-  padding-top: 54px;
+  padding-top: 58px;
 
   &__foot {
     display: flex;
-    padding: 52px 0;
+    padding: 53px 0 51px;
   }
 
   .order-price {
@@ -19,5 +19,9 @@
     flex: 1;
     text-align: right;
     align-self: center;
+  }
+
+  .button {
+    padding: 18px 41px 18px 40px;
   }
 }

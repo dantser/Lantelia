@@ -15,6 +15,7 @@ import popups from '../blocks/popups/popups';
 import mainProducts from '../components/main-products/main-products';
 import tabs from '../blocks/tabs/tabs';
 import order from '../components/order/order';
+import cart from '../components/cart/cart';
 
 const $ = window.$;
 
@@ -35,4 +36,5 @@ $(() => {
   mainProducts();
   tabs();
   order();
+  cart();
 });

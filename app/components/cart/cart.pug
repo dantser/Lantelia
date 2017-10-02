@@ -11,7 +11,7 @@ mixin cart()
         +product-card-cart('assets/images/picProduct/triple.png')
       +e.foot
         +e.stats
-          +order-price('Позиции', '3')
+          +order-price('Позиции', '3').js-num-goods
           +order-price('Стоимость заказа', '29 990 ₽')
         +e.button
           +button(false, true)(type="submit", value="Отправить")._white._fill-black К оформлению заказа

@@ -58,7 +58,8 @@
   }
 
   &__name {
-    line-height: 1.77;
+    @extend %text-label;
+
     text-transform: capitalize;
 
     &:not(:last-child)::after {
@@ -161,17 +162,41 @@
     }
 
     .product-card__wrapper {
-      padding: 27px 94px 0 27px;
-      flex-flow: row nowrap;
+      padding: 39px 106px 37px 0;
       min-height: 0;
+      display: block;
+    }
+
+    .product-card__line {
+      @extend %text-label;
+
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: 6px;
+      padding-right: 0;
+    }
+
+    .product-card__left {
+      float: left;
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+    .product-card__right {
+      float: right;
+      display: inline-block;
+      vertical-align: middle;
     }
 
     .product-card__image {
       position: relative;
       width: 92px;
-      height: 92px;
-      margin: 0;
+      height: auto;
+      margin: 0 auto;
       top: auto;
+      margin-right: 24px;
+      display: inline-block;
+      vertical-align: middle;
 
       img {
         min-height: inherit;
@@ -198,11 +223,25 @@
       }
     }
 
+    .product-card__names {
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+    .product-card__name {
+      text-align: left;
+      line-height: 1.7;
+    }
+
     .product-card__top {
-      flex-flow: row nowrap;
-      align-items: center;
       margin-bottom: 0;
-      flex-basis: 62%;
+      width: 66.9%;
+      z-index: auto;
+      display: inline-block;
+      vertical-align: middle;
+      text-align: center;
+
+      @include clearfix;
 
       .order-price:not(:last-child) {
         margin: 0;
@@ -210,13 +249,17 @@
 
       .select {
         width: 110px;
+        float: right;
+        margin-left: 40px;
+        margin-top: 8px;
       }
     }
 
     .product-card__bottom {
-      flex-flow: row nowrap;
-      justify-content: flex-end;
-      align-items: center;
+      float: right;
+      width: auto;
+      display: inline-block;
+      vertical-align: middle;
     }
   }
 
