@@ -1,4 +1,4 @@
-.main-products {
+.products {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
@@ -41,7 +41,7 @@
     opacity: 0;
     z-index: 2;
     box-shadow:
-      0 0 0 0 white,
+      0 0 0 6px white,
       0 3px 20px rgba(black, .3);
     will-change: opacity, left, top, width, height, box-shadow; // Для производительности
     transform: translate3d(0, 0, 0); // Для производительности
@@ -54,11 +54,9 @@
       box-shadow $ease-main;
     pointer-events: none;
 
-    &_active {
+    &.active {
       opacity: 1;
-      box-shadow:
-        0 0 0 6px white,
-        0 3px 20px 8px rgba(black, .2);
+      box-shadow: 0 8px 36px 6px rgba(0, 0, 0, 0.09);
     }
   }
 

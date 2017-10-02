@@ -1,0 +1,46 @@
+.filter {
+  display: block;
+
+  &__wrapper {
+    display: flex;
+  }
+
+  &__item {
+
+    &.active {
+
+      .filter__text {
+        color: $color-main;
+        font-weight: 500;
+      }
+
+      .filter__image {
+        opacity: 1;
+      }
+    }
+  }
+
+  // &__checkbox {
+  //   display: inline-block;
+  //   vertical-align: middle;
+  // }
+
+  &__image {
+    min-height: 100%;
+    width: 92px;
+    height: 92px;
+    opacity: .5;
+    display: inline-block;
+    vertical-align: middle;
+    transition: opacity $ease-main;
+    will-change: opacity;
+  }
+
+  &__text {
+    @extend %text-line;
+
+    color: $color-gray;
+    display: inline-block;
+    vertical-align: middle;
+  }
+}

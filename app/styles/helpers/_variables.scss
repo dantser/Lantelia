@@ -16,8 +16,7 @@ $grid-col-width: $grid-container-width/$grid-cols; // Ширина одной к
 $color-basic: black; // Основной цвет текста (применяется к body)
 $color-main: #252525; // Основной фирменный цвет
 
-$color-placeholder: #777; // Основной цвет для placeholder
-$color-input: black; // Основной цвет input, select и textarea
+$color-input: $color-basic; // Основной цвет input, select и textarea
 $color-white: white;
 $color-gray: #7c7c7c;
 $color-border: #ededed;
@@ -30,7 +29,7 @@ $color-error: #e2507c;
 $ease-main: .25s ease;
 $ease-pagination: .5s ease-in-out;
 $ease-pagination_main: .5s ease;
-$ease-pagination_linear: 5s linear;
+$ease-pagination_linear: 5.5s linear;
 
 // ##########
 // Шрифты

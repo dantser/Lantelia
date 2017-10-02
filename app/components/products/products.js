@@ -8,10 +8,10 @@ export default () => {
     return
   };
 
-  const span = $('.main-products__helper');
-  const section = $('.main-products__line');
+  const span = $('.products__helper');
+  const section = $('.products__line');
   const doc = $(document);
-  const ACTIVE_CLASS = 'main-products__helper_active';
+  const ACTIVE_CLASS = 'active';
 
   function cardsHover(ACTIVE_CLASS) {
     PRODUCT.hover(function () {

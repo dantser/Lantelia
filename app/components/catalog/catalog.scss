@@ -1,0 +1,13 @@
+.catalog {
+  display: block;
+
+  .section-head {
+    @include clearfix;
+  }
+
+  .filter {
+    display: inline-block;
+    vertical-align: middle;
+    float: right;
+  }
+}

@@ -1,0 +1,14 @@
+include ../../blocks/section-head/section-head
+include ../../components/extra-products/extra-products
+
+mixin orderdone()
+  +b.orderdone&attributes(attributes)
+    +e.top
+      +e.image-wrapper
+        img(src="assets/images/pic company/order done@2x.jpg")
+      .container
+        +e.content
+          +e.H4.subtitle Позравляем!
+          +e.H2.title Заявка успешно оформлена
+          +e.P.text В самое ближайшее время с Вами свяжется наш менеджер для уточнения деталей заказа
+    +extra-products()

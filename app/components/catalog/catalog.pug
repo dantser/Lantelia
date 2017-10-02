@@ -1,0 +1,8 @@
+include ../../blocks/section-head/section-head
+include ../../components/filter/filter
+
+mixin catalog()
+  +b.SECTION.catalog.section&attributes(attributes)
+    .container
+      +section-head('Каталог', 'Наша продукция')
+        +filter()

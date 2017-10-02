@@ -1,0 +1,8 @@
+.orderdone {
+  display: block;
+  margin-top: -2px;
+
+  @include screen('temp', max) {
+    margin-top: 56px;
+  }
+}

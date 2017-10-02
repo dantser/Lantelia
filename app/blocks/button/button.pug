@@ -12,3 +12,8 @@ mixin button(icon, isSubmit)
         +icon(icon).icon
       +e.text
         block
+
+mixin round(icon)
+  +b.BUTTON.button._round&attributes(attributes)
+    +icon(icon).icon
+    block

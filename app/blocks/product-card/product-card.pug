@@ -4,9 +4,9 @@ include ../../blocks/modal/modal
 include ../../blocks/popups/popups
 include ../../blocks/form-elements/form-elements
 
-mixin product-card(img)
+mixin product-card(img, link)
   +b.product-card&attributes(attributes)
-    +e.wrapper
+    +e.A(href=link).wrapper
       +e.top
         +e.H3.line 
           | Professional

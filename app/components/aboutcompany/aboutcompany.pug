@@ -2,7 +2,7 @@ include ../../blocks/section-head/section-head
 include ../../blocks/news-card/news-card
 
 mixin aboutcompany()
-  +b.SECTION.aboutcompany&attributes(attributes)
+  +b.SECTION.aboutcompany.section&attributes(attributes)
     .container
       +section-head('Компания Lantelia', 'Информация')
       +grid

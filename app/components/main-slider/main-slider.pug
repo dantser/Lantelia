@@ -18,14 +18,13 @@ mixin main-slider()
       +e.heading
         +e.H1.title Професcиональная косметика для волос Lantelia
         +e.link-wrapper
-          +link()._white._animated.main-slider__link Начать работать с Lantelia
-          
-            //- .main-slider__pagination
+          +link()._white._big._animated.main-slider__link Начать работать с Lantelia
+
       +e.bottom
-        +e.phones 
-          span 8 800 870&mdash;0697
-          span 8 495 700&mdash;0201
-        +link()._white.main-slider__link Подробнее
+        +e.phones
+          +link()(href="tel:88008700897")._small.main-slider__phone 8 800 870&mdash;0697
+          +link()(href="tel:84957000201")._small.main-slider__phone 8 495 700&mdash;0201
+        +link()(href="#").main-slider__link Подробнее
         +e.pagination-block
           +e.P.name Professional Clarifying Care
           +e.UL.pagination

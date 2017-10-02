@@ -1,0 +1,38 @@
+include ../../blocks/form-elements/form-elements
+
+mixin filter()
+  +b.filter&attributes(attributes)
+    +checkbox().filter__checkbox
+    +e.wrapper
+      +e.item.active
+        +e.IMG(src="assets/images/picProduct/botox_250ml_05@2x.png").image
+        +e.text 
+          | Professional
+          br
+          | Bottox
+          br
+          | Therapy
+      +e.item
+        +e.IMG(src="assets/images/picProduct/clarify_250ml_01@2x.png").image
+        +e.text
+          | Professional
+          br
+          | Clarifying
+          br
+          | Care
+      +e.item
+        +e.IMG(src="assets/images/picProduct/smooth_250ml_01@2x.png").image
+        +e.text
+          | Professional
+          br
+          | Smoothing
+          br
+          | Therapy
+      +e.item
+        +e.IMG(src="assets/images/picProduct/spa_250ml_02@2x.png").image
+        +e.text
+          | Professional
+          br
+          | Clarifying
+          br
+          | Care

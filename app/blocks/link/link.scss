@@ -2,9 +2,12 @@
   display: inline-block;
   cursor: pointer;
   font-size: 13px;
+  color: inherit;
 
   &__text {
     @extend %link;
+
+    color: inherit;
   }
 
   &_dashed &__text {
@@ -15,23 +18,33 @@
     @extend %link-white;
   }
 
+  &_small {
+    font-size: 12px;
+  }
+
+  &_big {
+    font-size: 14px;
+  }
+
   &_animated {
+    position: relative;
 
     &::after {
-      content: '';
-      display: block;
+      @include pseudo;
+      top: 100%;
       margin-top: 11px;
-      position: relative;
+      left: 0;
       height: 2px;
-      width: 18%;
+      width: 100%;
       color: white;
-      transition: width $ease-pagination;
+      transition: transform $ease-main;
 
+      transform: scale3d(.18, 1 ,1) translate3d(0, 0, 0);
       @extend %gradient-underline;
     }
 
     &:hover::after {
-      width: 100%;
+      transform: scale3d(1, 1, 1) translate3d(1, 1, 1);
     }
   }
 

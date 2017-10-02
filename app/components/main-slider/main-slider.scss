@@ -1,19 +1,41 @@
 .main-slider {
   display: block;
-  background-color: #2c2c2c;
+  background-color: #1e1e1e;
   padding-bottom: 52px;
-  margin-top: -120px;
-  padding-top: 120px;
   position: relative;
   min-height: 900px;
   box-sizing: border-box;
+  color: $color-white;
+
+  &::before, &::after {
+    @include pseudo;
+    top: 0;
+    height: 100%;
+    z-index: -1;
+  }
+
+  &::after {
+    left: 0;
+    background: linear-gradient(to right, #1e1e1e, transparent);
+  }
+
+  &::before {
+    right: 0;
+    background: linear-gradient(to left, #1e1e1e, transparent);
+  }
 
   &__heading {
-    padding: 255px 0 207px 73px;
+    padding: 0 0 0 73px;
     display: flex;
     flex-flow: column;
     justify-content: center;
     width: 50%;
+    box-sizing: border-box;
+    min-height: 733px;
+  }
+
+  .container {
+    z-index: 5;
   }
 
   &__title {
@@ -23,25 +45,25 @@
     font-weight: 300;
     line-height: 1.39;
     text-align: left;
-    color: $color-white;
     letter-spacing: .025em;
     position: relative;
   }
 
   &__link {
-    font-size: 14px;
     letter-spacing: .053em;
-    position: relative;
   }
 
   .product-container {
     position: absolute;
     top: 0;
     right: 0;
+    left: 0;
+    margin: 0 auto;
     overflow: hidden;
     z-index: 0;
     width: 100%;
     height: 100%;
+    max-width: $container-width;
   }
 
   .product-wrapper {
@@ -74,7 +96,6 @@
   &__name {
     @extend %text-name;
 
-    color: $color-white;
     letter-spacing: .006em;
     margin-bottom: 21px;
   }
@@ -98,17 +119,15 @@
   &__phones {
     display: flex;
     justify-content: space-between;
+  }
 
-    span {
-      font-size: 12px;
-      color: $color-white;
-      margin-right: 47px;
-      display: inline-flex;
-      letter-spacing: .135em;
+  &__phone {
+    font-size: 12px;
+    margin-right: 47px;
+    letter-spacing: .135em;
 
-      &:last-child {
-        margin-right: 0;
-      }
+    &:last-child {
+      margin-right: 0;
     }
   }
 
@@ -129,7 +148,7 @@
     height: 2px;
     flex-basis: 48px;
     background-color: rgba(255, 255, 255, .3);
-    transition: flex-basis $ease-pagination_main;
+    transition: flex $ease-pagination_main;
     margin-right: 10px;
     will-change: flex-basis;
 
@@ -148,7 +167,7 @@
     }
 
     &.active {
-      flex-basis: 100%;
+      flex: 1;
 
       &::before {
         transform: scale3d(1, 1, 1);

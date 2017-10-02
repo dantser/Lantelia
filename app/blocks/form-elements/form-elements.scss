@@ -71,7 +71,7 @@
     &:checked {
 
       & + .checkradio__box {
-        border: none;
+        border-color: $color-basic;
         &::before { opacity: 1; }
 
         background-color: $color-basic;

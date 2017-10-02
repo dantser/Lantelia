@@ -26,15 +26,18 @@
     position: absolute;
     top: 0;
     left: 0;
-    height: 12px;
-    width: 150px;
-    fill: $color-white;
     background-color: $color-main;
 
     @include transited;
 
     &:hover {
       opacity: .7;
+    }
+
+    svg {
+      height: 12px;
+      width: 150px;
+      fill: $color-white;
     }
   }
 
@@ -103,13 +106,12 @@
   }
 
   &__link {
-    font-size: 12px;
     letter-spacing: .127em;
   }
 
   // модификатор при черном фоне
 
-  &_main {
+  &_top {
     position: absolute;
     top: 0;
     left: 0;
@@ -121,12 +123,15 @@
     }
 
     .header__logo {
-      fill: $color-white;
       background-color: transparent;
+
+      svg {
+        fill: $color-white;
+      }
     }
 
     .header__nav {
-      padding: 53px 60px 51px 0;
+      padding: 53px 60px 51px 20px;
     }
 
     .burger {
@@ -161,6 +166,7 @@
     position: absolute;
     top: 0;
     left: 0;
+    border-bottom: 0;
 
     .container {
       padding: 0;
@@ -170,7 +176,7 @@
       padding: 18px 0;
     }
 
-    &_main {
+    &_top {
       background-color: transparent;
       border-bottom: 0;
 
@@ -182,7 +188,6 @@
       }
 
       .header__logo {
-        fill: $color-white;
         padding-right: 16px;
         position: relative;
         float: right;
@@ -191,6 +196,10 @@
         top: auto;
         left: auto;
         transform: none;
+
+        svg {
+          fill: $color-white;
+        }
       }
 
       .header__call {
@@ -220,9 +229,12 @@
     &__logo {
       @include center-block;
 
-      fill: $color-main;
       background-color: transparent;
       padding: 0;
+
+      svg {
+        fill: $color-main;
+      }
     }
 
     .header__social .social__icon {

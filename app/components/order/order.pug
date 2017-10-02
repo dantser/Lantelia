@@ -6,7 +6,7 @@ include ../../blocks/button/button
 include ../../blocks/order-price/order-price
 
 mixin order()
-  +b.SECTION.order&attributes(attributes)
+  +b.SECTION.order.section&attributes(attributes)
     #error-message
       .error__text
       +icon('close').error-close

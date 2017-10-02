@@ -1,0 +1,41 @@
+.extra-products {
+  display: block;
+
+  .swiper-slide {
+    width: 25%;
+    border: 1px solid $color-border;
+    border-right: 0;
+
+    &:nth-child(1) {
+      width: 50%;
+    }
+
+    &:last-child {
+      border-right: 1px solid $color-border;
+    }
+  }
+
+  .container_slider {
+    padding-right: 0;
+    position: relative;
+  }
+
+  @include screen('temp', max) {
+    .swiper-wrapper {
+      display: block;
+    }
+    .swiper-slide {
+      width: 100%;
+      border: 1px solid $color-border;
+      border-right: 0;
+
+      &:nth-child(1) {
+        width: 100%;
+      }
+
+      &:last-child {
+        border-right: 1px solid $color-border;
+      }
+    }
+  }
+}

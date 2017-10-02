@@ -10,8 +10,8 @@ mixin header()
     .container
       +e.wrapper
         +burger()._white
-        //- +e.A(href="#").logo Lantelia
-        +icon('lantelia').logo
+        +e.A(href="index.html", title="Lantelia").logo
+          +icon('lantelia')
         +e.A(href="#").call
         +e.NAV.nav
           +e.nav-wrapper
@@ -21,19 +21,19 @@ mixin header()
               +social('vk', 'f', 'twitter').__social
             +e.UL.nav-group
               +e.LI.nav-item
-                +link().header__link Продукция
+                +link()._small.header__link Продукция
                 +icon('arrow').nav-icon
               +e.LI.nav-item
-                +link().header__link Где купить
+                +link()._small.header__link Где купить
                 +icon('arrow').nav-icon
             +e.UL.nav-group
               +e.LI.nav-item
-                +link().header__link Обучение и новости
+                +link()._small.header__link Обучение и новости
                 +icon('arrow').nav-icon
               +e.LI.nav-item
-                +link().header__link О компании
+                +link()._small.header__link О компании
                 +icon('arrow').nav-icon
               +e.LI.nav-item
-                +link().header__link Контакты
+                +link()._small.header__link Контакты
                 +icon('arrow').nav-icon
               //- +e.A(href="#").link Еще пункт
