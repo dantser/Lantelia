@@ -7,6 +7,7 @@ import Inputmask from 'inputmask';
 export default () => {
   const SLIDE_EL = '.js-slide-el';
   const BUTTON = $('.order__button .button__text');
+  const MESSAGE_BOX = $('#error-messages');
 
   $('#orderForm').validate({
     // invalidHandler: function(form, validator) {
@@ -19,10 +20,16 @@ export default () => {
     //   }
     // },
     errorPlacement: function (error, element) {
-      $("#error-message .error__text").html(error)
+      MESSAGE_BOX.find('.error__text').html(error)
     },
+    errorContainer: MESSAGE_BOX,
+    errorLabelContainer: $('#error-messages ul'),
+    wrapper: 'li',
     highlight: function (element, errorClass, validClass) {
-      $('#error-message').slideDown(300); //animation
+      MESSAGE_BOX.fadeIn().addClass('active'); //animation
+      setTimeout(function () {
+        MESSAGE_BOX.fadeOut().removeClass('active'); //animation
+      }, 10000);
       $(element).addClass("errorHighlight");
       $(element).siblings('.input__label').addClass('input__label_error')
     },
@@ -53,7 +60,7 @@ export default () => {
   });
 
   $('.order__error-close').on('click', () => {
-    $('#error-message').slideUp(300);
+    MESSAGE_BOX.fadeOut().removeClass('active');
   });
 
   Inputmask({

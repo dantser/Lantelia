@@ -40,11 +40,12 @@
       transition: transform $ease-main;
 
       transform: scale3d(.18, 1 ,1) translate3d(0, 0, 0);
+      transform-origin: left;
       @extend %gradient-underline;
     }
 
     &:hover::after {
-      transform: scale3d(1, 1, 1) translate3d(1, 1, 1);
+      transform: scale3d(1, 1, 1) translate3d(0, 0, 0);
     }
   }
 

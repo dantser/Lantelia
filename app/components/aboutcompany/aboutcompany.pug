@@ -4,10 +4,11 @@ include ../../blocks/news-card/news-card
 mixin aboutcompany()
   +b.SECTION.aboutcompany.section&attributes(attributes)
     .container
-      +section-head('Компания Lantelia', 'Информация')
+      .section__head
+        +section-head('Компания Lantelia', 'Информация')
       +grid
         +col(6).grid__col_six_large
-          +news-card-large('О компании', 'Профессиональная косметика для волос премиум сегмента для самых искушенных', 'Подробнее')
+          +news-card-large('О компании', 'Профессиональная косметика для волос премиум сегмента для самых искушенных', 'Подробнее')._scale
         +col(6)
           +grid
             +col(6)

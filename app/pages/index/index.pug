@@ -7,11 +7,11 @@ include ../../components/aboutcompany/aboutcompany
 include ../../components/product-popup/product-popup
 
 block head
-  - var pageTitle = 'Versta Project Template'
+  - var pageTitle = 'Главная - Lantelia'
 
 block content
   +b.index
-    +main-slider()
+    +main-slider().js-parallax
     +products()
     +whereToBuy()
     +map()

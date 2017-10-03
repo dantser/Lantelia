@@ -12,16 +12,17 @@
     margin-top: $tab-gap;
     border-bottom: 1px solid transparent;
     transition: border-color $ease-main, border-image $ease-main, opacity $ease-main;
-    padding-bottom: 19px;
+    padding-bottom: 21px;
     cursor: pointer;
     opacity: .5;
     font-size: 11px;
     letter-spacing: .127em;
+    transform: translateY(1px);
 
     @extend %link;
 
     &.active {
-      @extend %gradient-border-bottom;
+      @extend %gradient-border-tabs;
 
       opacity: 1;
       color: $color-main;

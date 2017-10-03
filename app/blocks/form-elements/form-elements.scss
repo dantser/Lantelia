@@ -9,15 +9,20 @@
   min-height: 0;
   border-bottom: 1px solid $color-border-input;
   padding-bottom: 19px;
-  margin-top: 11px;
+  margin-top: 12px;
+  transition: border $ease-main;
 
   &.errorHighlight {
     border-color: $color-error;
   }
 
   &:active, &:focus {
-    @extend %gradient-border-bottom;
+    @extend %gradient-border-tabs;
   }
+}
+
+.inputbox {
+  display: block;
 
   &__label {
     font-size: 11px;
@@ -39,10 +44,6 @@
   }
 }
 
-.inputbox {
-  display: block;
-}
-
 .textarea {
   @extend .input;
 
@@ -54,7 +55,7 @@
 
 .checkradio {
   position: relative;
-  padding-left: 41px;
+  padding-left: 40px;
   display: inline-block;
   cursor: pointer;
 
@@ -89,13 +90,14 @@
 
   &__box {
     position: absolute;
-    width: 23px;
-    height: 23px;
+    width: 22px;
+    height: 22px;
     background-color: transparent;
     border-radius: 50%;
     border: 1px solid $color-border-input;
     left: 0;
-    top: 1px;
+    top: 2px;
+    transition: all $ease-main;
 
     &::before {
       content: '';
@@ -105,16 +107,17 @@
       background-color: $color-white;
       display: block;
       opacity: 0;
-      transition: opacity $ease-main;
 
       @include center-image;
     }
   }
 
   &__content {
-    font-size: 14px;
-    line-height: 1.64;
-    color: $color-gray;
+    @extend %text-line;
+
+    p {
+      color: $color-gray !important;
+    }
   }
 }
 

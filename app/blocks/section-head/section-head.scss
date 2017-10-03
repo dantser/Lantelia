@@ -1,11 +1,10 @@
 .section-head {
-  margin: 0 0 54px;
 
   &__subtitle {
     @extend %heading-4;
     display: inline-block;
 
-    margin-bottom: 27px;
+    margin-bottom: 20px;
   }
 
   &__wrapper {
@@ -17,28 +16,27 @@
     @extend %heading-2;
   }
 
-  .nice-select {
+  &__select {
     display: none;
   }
 
   @include screen('temp', max) {
 
-    .nice-select {
-      display: block;
-      margin-bottom: 23px;
-      background-color: transparent;
-      font-size: 16px;
-    }
-
     &__subtitle {
-      margin: 30px 0 13px;
+      margin: 0 0 13px;
     }
 
     &__title {
       font-size: 18px;
       letter-spacing: .02em;
       color: $color-main;
-      margin-bottom: 23px;
+    }
+
+    &__select {
+      margin-top: 18px;
+      display: block;
+      background-color: transparent;
+      font-size: 16px;
     }
   }
 }

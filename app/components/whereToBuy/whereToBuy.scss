@@ -3,28 +3,23 @@
   // padding: 20px;
   // padding-bottom: 50px;
 
-  .address-wrapper {
-    position: relative;
-    width: 100%;
-    z-index: 1;
-    display: flex;
-    box-sizing: border-box;
+  .section__head {
+    margin-bottom: 47px;
   }
 
   .address-card {
-    flex-shrink: 0;
     width: 100%;
-    height: 100%;
     position: relative;
+  }
+
+  .swiper-container {
+    overflow: visible;
   }
 
   .swiper-slide {
     width: 376px;
     box-sizing: border-box;
-
-    &:last-child {
-      margin-right: 60px;
-    }
+    margin-right: $grid-gap;
   }
 
   .button {
@@ -32,7 +27,6 @@
   }
 
   @include screen('temp', max) {
-    padding-bottom: 36px;
     border-bottom: 1px solid $color-border;
 
     .container {
@@ -40,27 +34,40 @@
       padding-right: 22px;
     }
 
+    .section__head {
+      margin-bottom: 23px;
+    }
+
     .button {
       display: block;
       width: 100%;
-      padding: 23px 23px 22px 24px;
+      padding: 21px 23px 24px 24px;
     }
 
     // .address-container {
     //   overflow: auto;
     // }
 
-    .address-card {
+    .swiper-slide {
       margin-right: 0;
+      width: 100%;
+      border-bottom: 1px solid $color-border;
+
+      &:first-child {
+        border-top: 1px solid $color-border;
+      }
     }
 
-    .address-wrapper {
+    .swiper-container {
+      padding: 0 22px;
+    }
+
+    .swiper-wrapper {
       display: block;
     }
 
-    .address-container {
-      padding: 0 22px;
-      width: auto;
+    .address-card {
+      border: none;
     }
 
     .button {

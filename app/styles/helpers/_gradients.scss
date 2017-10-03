@@ -10,6 +10,12 @@
   border-image-slice: 1 !important;
 }
 
+%gradient-border-tabs {
+  border-bottom: 2px solid $color-gray;
+  border-image-source: linear-gradient(to left, #e2648c, #65a7e3) !important;
+  border-image-slice: 1 !important;
+}
+
 %gradient-card_blue {
   background: linear-gradient(315deg, rgba(179, 195, 233, .5), rgba(211, 223, 243, .5));
 

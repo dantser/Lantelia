@@ -8,12 +8,12 @@ mixin footer()
     .container
       +e.wrapper
         +grid
-          +col(2)
+          +col(2).footer__col_logo
             +icon('lantelia').logo
-          +col(2)
+          +col(2).footer__col_social
             +e.descr Профессиональная косметика для волос Lantelia
             +social('vk', 'f', 'instagram').__social
-          +col(2).grid__col_links
+          +col(2).footer__col_links
             +e.UL.links
               +e.LI.link
                 +link() Продукция
@@ -25,12 +25,12 @@ mixin footer()
                 +link() О компании
               +e.LI.link
                 +link() Контакты
-          +col(2).grid__col_links
+          +col(2).footer__col_links
             +e.UL.links
               +e.LI.link
                 +link() Публичная оферта
               +e.LI.link
                 +link() Доставка и оплата
-          +col(2).grid__col_right
+          +col(2).footer__col_right
             +button()._gradiented НАЧАТЬ РАБОТАТЬ С LANTELIA
             +e.copyright &#169; 2017 Lantelia. Все права защищены

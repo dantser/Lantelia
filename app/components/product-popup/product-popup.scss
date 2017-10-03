@@ -76,6 +76,10 @@
     width: 100%;
   }
 
+  &__select {
+    border-color: rgba(255, 255, 255, .09);
+  }
+
   &__dropdown {
     margin-bottom: 24px;
   }

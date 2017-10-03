@@ -2,7 +2,7 @@
   display: block;
 
   &__top {
-    min-height: 450px;
+    min-height: 449px;
     position: relative;
   }
 
@@ -50,10 +50,6 @@
     @extend %text;
     opacity: .6;
     color: $color-white;
-  }
-
-  .extra-products {
-    margin-top: 57px;
   }
 
   margin-bottom: $container-padding;

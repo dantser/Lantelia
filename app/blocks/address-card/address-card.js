@@ -20,7 +20,7 @@ export default () => {
       return
     }
     e.preventDefault();
-    $(this).toggleClass(ACTIVE_CLASS).siblings().removeClass(ACTIVE_CLASS);
+    $(this).toggleClass(ACTIVE_CLASS).parents('.swiper-slide').siblings().find('.address-card').removeClass(ACTIVE_CLASS);
   });
 };
 

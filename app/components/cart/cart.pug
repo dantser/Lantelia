@@ -3,9 +3,10 @@ include ../../blocks/product-card/product-card
 include ../../blocks/order-price/order-price
 
 mixin cart()
-  +b.cart&attributes(attributes)
+  +b.SECTION.cart.section&attributes(attributes)
     .container
-      +section-head('Покупки', 'Ваша корзина')
+      .section__head
+        +section-head('Покупки', 'Ваша корзина')
       +e.wrapper
         +product-card-cart('assets/images/picProduct/smooth_100ml_05(procedure)@2x.png')
         +product-card-cart('assets/images/picProduct/triple.png')

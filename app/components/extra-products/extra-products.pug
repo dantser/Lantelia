@@ -4,9 +4,10 @@ include ../../blocks/product-card/product-card
 include ../../blocks/button/button
 
 mixin extra-products()
-  +b.extra-products&attributes(attributes)
+  +b.SECTION.extra-products.section&attributes(attributes)
     .container
-      +section-head('Другая продукция Lantelia', 'Попробуйте, Вам может понравится')
+      .section__head
+        +section-head('Другая продукция Lantelia', 'Попробуйте, Вам может понравится')
     +slider(false, true)
       +slide()._big
         +product-card('assets/images/picProduct/triple.png')(href="#product3")._xl.js-fancybox

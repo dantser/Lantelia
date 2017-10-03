@@ -2,8 +2,8 @@
   display: block;
   padding-bottom: 60px;
 
-  .section-head {
-    margin-bottom: 30px;
+  .section__head {
+    margin-bottom: 23px;
   }
 
   &__content {
@@ -62,7 +62,14 @@
     }
   }
 
-  @include screen('tablet', max) {
+
+  @include screen('temp', max) {
+    padding-top: 40px;
+    padding-bottom: 36px;
+
+    .section__head {
+      margin-bottom: 7px;
+    }
 
     .grid__col_six {
       width: 100%;
@@ -72,16 +79,6 @@
       width: 100%;
       margin-right: 0;
     }
-
-    // .news-card {
-    //   @media (max-width: 597px) {
-    //     margin-right: 0;
-    //   }
-    // }
-  }
-
-  @include screen('tablet', max) {
-    padding-bottom: 36px;
   }
 
   // @media (max-width: 597px) {

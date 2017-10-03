@@ -2,7 +2,8 @@
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
-  padding-top: 0;
+  padding: 0;
+  background-color: $color-white;
 
   .container {
     padding: 0;
@@ -15,7 +16,7 @@
     border-right: 1px solid $color-border;
     border-bottom: 1px solid $color-border;
 
-    &:last-child {
+    &:nth-of-type(3n) {
       border-right: none;
     }
 
@@ -41,7 +42,7 @@
     opacity: 0;
     z-index: 2;
     box-shadow:
-      0 0 0 6px white,
+      0 0 0 0 $color-white,
       0 3px 20px rgba(black, .3);
     will-change: opacity, left, top, width, height, box-shadow; // Для производительности
     transform: translate3d(0, 0, 0); // Для производительности
@@ -56,11 +57,15 @@
 
     &.active {
       opacity: 1;
-      box-shadow: 0 8px 36px 6px rgba(0, 0, 0, 0.09);
+      box-shadow:
+        0 0 0 10px $color-white,
+        0 8px 36px 0 rgba(0, 0, 0, 0.09);
     }
   }
 
   @include screen('tablet', max) {
+
+    border-bottom: 1px solid $color-border;
 
     &__line {
       flex-flow: column nowrap;
@@ -70,8 +75,8 @@
       width: 100%;
       border-right: none;
 
-      &__volumes {
-        display: none;
+      &:last-child {
+        border: none;
       }
     }
 

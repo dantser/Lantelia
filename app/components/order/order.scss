@@ -1,18 +1,37 @@
-#error-message {
+#error-messages {
   position: fixed;
   max-width: 1920px;
-  display: none;
   top: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  transform: translateY(-200%);
+  will-change: transform, opacity;
   background-color: #cc3c63;
   box-shadow: 0 12px 36px 0 rgba(0, 0, 0, .11);
   z-index: 101;
-  width: 100%;
-  padding: 22px 0;
+  width: auto;
+  padding: 22px $container-padding;
   text-align: center;
+  transition: transform $ease-pagination;
+  z-index: 101;
 
-  .error__text {
+  li {
     font-size: 14px;
     color: $color-white;
+    margin-bottom: 10px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &.active {
+    transform: none;
+  }
+
+  @include screen('temp', max) {
+    padding: $container-padding-mobile;
   }
 }
 
@@ -26,47 +45,38 @@
     fill: $color-white;
     width: 12px;
     height: 12px;
+    cursor: pointer;
+
+    &:hover {
+      opacity: .7;
+    }
   }
 
-  .section-head {
-    margin-bottom: 55px;
+  .section__head {
+    margin-bottom: 47px;
   }
 
   &__wrapper {
-    padding: 56px 72px $container-padding;
+    padding: 56px 72px 37px;
     border-top: 1px solid $color-border;
 
     &_contacts {
 
-      .inputbox {
-        margin-right: 25px;
-        width: 23.4%;
-        margin-bottom: 60px;
-
-        &:nth-child(4) {
-          margin-right: 0;
-        }
-
-        &:nth-child(n+5) {
-          margin-bottom: 0;
-        }
-
-        &:last-child {
-          margin-right: 0;
-        }
-
-        &_large {
-          width: calc(46.8% + 25px);
-        }
+      .grid__col {
+        padding-bottom: 23px;
       }
     }
 
     &_shipping {
       padding-bottom: 56px;
+
+      .order__title {
+        margin-bottom: 51px;
+      }
     }
 
     &_payment {
-      padding-bottom: 56px;
+      padding-bottom: 57px;
 
       .order__title {
         margin-bottom: 33px;
@@ -90,7 +100,7 @@
 
       .button {
         margin-top: 7px;
-        padding: 20px 27px 19px;
+        padding: 19px 28px 21px;
         font-size: 12px;
       }
     }
@@ -99,13 +109,7 @@
   &__title {
     @extend %heading-3;
 
-    margin-bottom: 53px;
-  }
-
-  &__input-block {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
+    margin-bottom: 40px;
   }
 
   .checkradio__content {
@@ -114,25 +118,11 @@
     // justify-content: space-between;
     // min-height: 249px;
 
-    &_miss {
-      margin-top: 43px;
-      padding-left: 39px;
-
-      p {
-        line-height: 1.77;
-        font-size: 13px;
-        letter-spacing: .004em;
-      }
-    }
-
-    &_bordered {
-      border-left: 1px solid $color-border-input;
-    }
-
     p {
       @extend %text;
 
       margin-bottom: 17px;
+      color: $color-main !important;
 
       &:not(:first-child) {
         letter-spacing: .003em;
@@ -163,6 +153,26 @@
 
   .tabs-content {
     margin-top: 30px;
+
+    &__text {
+
+      p {
+        @extend %text-label;
+
+        color: $color-main;
+        letter-spacing: .004em;
+        margin-top: 43px;
+        padding-left: 39px;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    &_bordered {
+      border-left: 1px solid $color-border-input;
+    }
   }
 
   .order-price {
@@ -201,7 +211,12 @@
   @include screen('temp', max) {
     padding-top: 48px;
 
-    .section-head {
+    &__error-close {
+      top: 12px;
+      right: 12px;
+    }
+
+    .section__head {
       margin-bottom: 36px;
 
       &__title {

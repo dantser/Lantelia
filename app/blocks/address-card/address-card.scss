@@ -36,7 +36,6 @@
 
     .address-card__address {
       font-size: 13px;
-      color: $color-gray;
     }
 
     &::after {
@@ -79,14 +78,14 @@
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    color: $color-basic;
+    color: $color-gray;
     letter-spacing: .007em;
   }
 
   &__arrow {
     fill: $color-basic;
     height: 24px;
-    width: 25px;
+    width: 24px;
     position: absolute;
     top: 50%;
     right: 30px;

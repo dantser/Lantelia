@@ -84,6 +84,15 @@ span {
   font-weight: inherit;
 }
 
+.section {
+  padding: 59px 0;
+  position: relative;
+
+  @include screen('temp', max) {
+    padding: 33px 0 36px;
+  }
+}
+
 /* ##########
 Сброс стилей для активных элементов, добавляем стандарнтый transition
 ########## */
@@ -104,10 +113,6 @@ select, input, textarea, button {
   border-radius: 0; // Убираем авто-закругление углов на iOS
   background-color: transparent;
   font-family: $font-main;
-}
-
-.section {
-  padding: 58px 0 0;
 }
 
 input::-ms-clear {

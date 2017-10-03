@@ -6,7 +6,8 @@ include ../../blocks/slider/slider
 mixin whereToBuy()
   +b.SECTION.whereToBuy.section&attributes(attributes)
     .container
-      +section-head('Где купить', 'Офисы продаж', true)
+      .section__head
+        +section-head('Где купить', 'Офисы продаж', true)
     +slider()
       +slide()
         +address-card-linkedToMap('Цветной Москва', 'г. Москва, Ленинградский пр., д. 2, цоколь 1234', 'marker1')

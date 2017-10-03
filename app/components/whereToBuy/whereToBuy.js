@@ -9,6 +9,7 @@ export default () => {
     $('select').niceSelect();
   });
 
-  mySlider.params.slidesPerView = 5;
+
+  // mySlider.params.slidesPerView = 5;
   /* eslint-ensable */
 }

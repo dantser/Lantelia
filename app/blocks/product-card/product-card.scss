@@ -5,12 +5,21 @@
   position: relative;
   cursor: pointer;
 
+  &__link {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 10;
+  }
+
   &__wrapper {
     display: flex;
     flex-flow: column nowrap;
     justify-content: space-between;
     width: 100%;
-    padding: 52px 57px 57px $container-padding;
+    padding: 52px 57px 53px $container-padding;
     box-sizing: border-box;
     min-height: 528px;
   }
@@ -18,7 +27,8 @@
   &:hover {
 
     .product-card__cart {
-      display: flex;
+      opacity: 1;
+      visibility: visible;
     }
   }
 
@@ -36,7 +46,7 @@
     text-align: left;
     line-height: 1.37;
     text-transform: capitalize;
-    padding-right: 10px;
+    margin-right: $grid-gap;
     letter-spacing: .013em;
     color: $color-basic;
     z-index: 3;
@@ -46,21 +56,20 @@
     display: flex;
     width: 100%;
     justify-content: space-between;
-    margin-bottom: 10px;
     z-index: 3;
   }
 
   &__name, &__volume {
-    font-size: 13px;
-    color: $color-gray;
-    font-weight: 300;
+    @extend %text-label;
+
     z-index: 3;
   }
 
   &__name {
-    @extend %text-label;
-
     text-transform: capitalize;
+    flex-basis: 50%;
+
+    @include ellipsis(100%);
 
     &:not(:last-child)::after {
       content: ',';
@@ -86,14 +95,19 @@
   }
 
   &__image {
-    min-width: 360px;
-    min-height: 360px;
+    height: 360px;
     align-self: center;
     z-index: 3;
+    position: relative;
+    margin-top: -11px;
+    margin-bottom: -12px;
 
     img {
+      position: absolute;
+      top: 0;
       max-height: 100%;
-      max-width: 100%;
+      left: 50%;
+      transform: translateX(-50.5%);
     }
   }
 
@@ -107,9 +121,11 @@
 
   &__cart {
     position: absolute;
-    display: none;
-    bottom: 0;
-    right: 0;
+    visibility: hidden;
+    display: flex;
+    opacity: 0;
+    bottom: -6px;
+    right: -6px;
     align-items: center;
     justify-content: space-between;
     color: $color-white;
@@ -119,6 +135,7 @@
     letter-spacing: .126em;
     font-size: 12px;
     z-index: 3;
+    transition: opacity $ease-pagination;
 
     svg {
       width: 24px;
@@ -160,28 +177,25 @@
     .product-card__wrapper {
       padding: 39px 106px 37px 0;
       min-height: 0;
-      display: block;
+      display: flex;
+
+      justify-content: flex-start;
     }
 
     .product-card__line {
       @extend %text-label;
 
-      display: inline-block;
-      vertical-align: middle;
+
       margin-right: 6px;
       padding-right: 0;
     }
 
     .product-card__left {
-      float: left;
-      display: inline-block;
-      vertical-align: middle;
+
     }
 
     .product-card__right {
-      float: right;
-      display: inline-block;
-      vertical-align: middle;
+
     }
 
     .product-card__image {
@@ -283,19 +297,23 @@
   // }
 
   @include screen('temp', max) {
-    border: none;
-    border-bottom: 1px solid $color-border;
+    border-right: none;
     width: 100%;
 
-    &__price {
+    &__volumes, &__link, &__price {
       display: none;
     }
 
     &__wrapper {
-      padding: 25px 0;
+      padding: 40px 40px 39px 116px;
       flex-flow: row;
       justify-content: space-between;
       min-height: 0;
+      align-items: flex-start;
+    }
+
+    &__name {
+      flex-basis: auto;
     }
 
     &_xl {
@@ -304,37 +322,38 @@
 
     &__image {
       order: 1;
-      margin: 0;
-      position: relative;
-      top: -30px;
+      position: absolute;
+      top: 39px;
+      left: 0;
+      height: 92px;
+      align-self: flex-start;
 
       img {
-        min-width: 92px;
-        min-height: 92px;
         position: relative;
+        left: auto;
+        transform: none;
       }
     }
 
     &__line {
       line-height: 1.5;
-      margin-bottom: 5px;
+      margin-right: 0;
+      margin-bottom: 8px;
     }
 
     &__top {
-      flex-flow: column;
+      flex-flow: column wrap;
       padding: 0;
       order: 2;
-      margin-left: 24px;
-      margin-right: 24px;
     }
 
     &__bottom {
       order: 3;
-      display: flex;
-      flex-flow: column;
       padding: 0;
-      justify-content: space-between;
-      align-self: auto;
+      right: 0;
+      top: 35px;
+      flex-flow: column;
+      width: auto;
     }
 
     &__volume {
@@ -342,8 +361,13 @@
     }
 
     &__cart {
-      display: block;
-      position: relative;
+      display: inline-block;
+      vertical-align: middle;
+      visibility: visible;
+      opacity: 1;
+      position: absolute;
+      bottom: 40px;
+      right: -2px;
       background: none;
       padding: 0;
       width: auto;
@@ -354,7 +378,11 @@
     }
 
     &__arrow {
-      display: block;
+      position: absolute;
+      right: -4px;
+      top: 38px;
+      display: inline-block;
+      vertical-align: middle;
 
       svg {
         height: 24px;

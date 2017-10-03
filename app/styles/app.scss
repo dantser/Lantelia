@@ -33,7 +33,11 @@ select {
   display: none;
 }
 
-#grayscreen {
+.js-parallax {
+  z-index: 0;
+}
+
+#overlay {
   display: none;
   position: fixed;
   top: 0;

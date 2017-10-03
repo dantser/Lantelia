@@ -7,29 +7,38 @@ include ../../blocks/order-price/order-price
 
 mixin order()
   +b.SECTION.order.section&attributes(attributes)
-    #error-message
-      .error__text
+    #error-messages
+      ul
       +icon('close').error-close
     .container
-      +section-head('Покупки', 'Оформление заказа')
+      .section__head
+        +section-head('Покупки', 'Оформление заказа')
       +e.FORM(action="", method="get" id="orderForm").form
         +e.wrapper._contacts
           +e.H3.title Контактная информация
           +e.input-block
-            +inputbox('Имя', true)
-              +input()(type="text", name="name", required)
-            +inputbox('Фамилия', true)
-              +input()(type="text", name="surname", required)
-            +inputbox('Телефон', true)
-              +input()(type="tel", name="phone", data-type="tel", required)
-            +inputbox('E-mail', true)
-              +input()(type="email", name="email", data-type="email", required)
-            +inputbox('Город/Населенный пункт', true)
-              +input()(type="text", name="city", required)
-            +inputbox('Индекс')
-              +input()(type="text", name="index")
-            +inputbox('Адрес доставки', true).inputbox_large
-              +input()(type="text", name="address", required)
+            +grid
+              +col(3)
+                +inputbox('Имя', true)
+                  +input()(type="text", name="name", required)
+              +col(3)
+                +inputbox('Фамилия', true)
+                  +input()(type="text", name="surname", required)
+              +col(3)
+                +inputbox('Телефон', true)
+                  +input()(type="tel", name="phone", data-type="tel", required)
+              +col(3)
+                +inputbox('E-mail', true)
+                  +input()(type="email", name="email", data-type="email", required)
+              +col(3)
+                +inputbox('Город/Населенный пункт', true)
+                  +input()(type="text", name="city", required)
+              +col(3)
+                +inputbox('Индекс')
+                  +input()(type="text", name="index")
+              +col(6)
+                +inputbox('Адрес доставки', true).inputbox_large
+                  +input()(type="text", name="address", required)
         +e.wrapper._shipping
           +e.H3.title Доставка
           +e.tabs
@@ -62,7 +71,7 @@ mixin order()
                 +col(4)
                   +inputbox()
                     //- +radio('shipping', 'tk')
-                    .checkradio__content.checkradio__content_miss.checkradio__content_bordered
+                    .tabs-content__text.tabs-content_bordered
                       p При себе иметь паспорт или иной документ подтверждающий личность - для входа на территорию бизнес-центра.
             +tab-wrapper()(data-tab="tab2" data-tab-group="shipping")
               +grid
@@ -93,7 +102,7 @@ mixin order()
                 +col(4)
                   +inputbox()
                     //- +radio('shipping', 'tk')
-                    .checkradio__content.checkradio__content_miss.checkradio__content_bordered
+                    .tabs-content__text.tabs-content_bordered
                       p Способ оплаты: Наличными, Банковская карта, Robokassa, извещением для банка
             +tab-wrapper()(data-tab="tab3" data-tab-group="shipping")
               +grid
@@ -107,7 +116,7 @@ mixin order()
                 
                 +col(4)
                   +inputbox()
-                    .checkradio__content.checkradio__content_miss
+                    .tabs-content__text
                       p.rule Доставка Транспортными Компаниями:
                       p 
                         | СДЭК:

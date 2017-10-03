@@ -1,7 +1,6 @@
 .header {
   z-index: 100;
   width: 100%;
-  border-bottom: 1px solid $color-border;
   background-color: transparent;
 
   .burger {
@@ -18,6 +17,7 @@
     flex-flow: row nowrap;
     align-items: center;
     position: relative;
+    border-bottom: 1px solid $color-border;
   }
 
   &__logo {
@@ -116,7 +116,6 @@
     top: 0;
     left: 0;
     background-color: transparent;
-    border-bottom: 0;
 
     .link__text {
       color: $color-white;
@@ -128,6 +127,10 @@
       svg {
         fill: $color-white;
       }
+    }
+
+    .header__wrapper {
+      border: 0;
     }
 
     .header__nav {
@@ -166,7 +169,6 @@
     position: absolute;
     top: 0;
     left: 0;
-    border-bottom: 0;
 
     .container {
       padding: 0;
@@ -174,13 +176,14 @@
 
     .header__wrapper {
       padding: 18px 0;
+      border: 0;
     }
 
     &_top {
       background-color: transparent;
       border-bottom: 0;
 
-      &__wrapper {
+      .header__wrapper {
         padding: 26px 0 8px;
         display: block;
 
@@ -188,7 +191,8 @@
       }
 
       .header__logo {
-        padding-right: 16px;
+        padding-right: 23px;
+        line-height: 31px;
         position: relative;
         float: right;
         display: inline-block;
@@ -214,7 +218,7 @@
     .burger {
       display: inline-block;
       vertical-align: middle;
-      padding-left: 25px;
+      padding-left: 22px;
 
       &__icon_type_close {
         width: 14px;
