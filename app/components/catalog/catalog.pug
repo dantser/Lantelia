@@ -1,8 +1,24 @@
 include ../../blocks/section-head/section-head
 include ../../components/filter/filter
+include ../../components/products/products
 
 mixin catalog()
   +b.SECTION.catalog.section&attributes(attributes)
     .container
       +section-head('Каталог', 'Наша продукция')
         +filter()
+    +products()
+      +product-card('assets/images/picProduct/triple.png', '#product1')(data-line='bottox')._xl
+      +product-card('assets/images/picProduct/botox_250ml_05@2x.png', '#product2')(data-line='bottox')
+      +product-card('assets/images/picProduct/botox_250ml_06@2x.png', '#product3')(data-line='bottox')
+      +product-card('assets/images/picProduct/botox_250ml_07 (line)@2x.png', '#product4')(data-line='bottox')
+      +product-card('assets/images/picProduct/clarify_250ml_01@2x.png', '#product5')(data-line='clarify')
+      +product-card('assets/images/picProduct/clarify_250ml_02@2x.png', '#product6')(data-line='clarify')
+      +product-card('assets/images/picProduct/clarify_250ml_03(line)@2x.png', '#product7')(data-line='clarify')
+      +product-card('assets/images/picProduct/smooth_100ml_05(procedure)@2x.png', '#product8')(data-line='smooth')._xl
+      +product-card('assets/images/picProduct/smooth_250ml_01@2x.png', '#product9')(data-line='smooth')
+      +product-card('assets/images/picProduct/smooth_250ml_02@2x.png', '#product10')(data-line='smooth')
+      +product-card('assets/images/picProduct/smooth_250ml_03(line)@2x.png', '#product11')(data-line='smooth')
+      +product-card('assets/images/picProduct/spa_250ml_02@2x.png', '#product12')(data-line='spa')
+      +product-card('assets/images/picProduct/spa_250ml_01@2x.png', '#product13')(data-line='spa')
+      +product-card('assets/images/picProduct/spa_250ml_03(line)@2x.png', '#product14')(data-line='spa')

@@ -29,6 +29,7 @@
     flex-flow: column nowrap;
     width: 24%;
     padding-top: 122px;
+    min-height: 286px;
   }
 
   &__subtitle {
@@ -52,8 +53,6 @@
     color: $color-white;
   }
 
-  margin-bottom: $container-padding;
-
   @include screen('temp', max) {
 
     &__top {
@@ -76,7 +75,7 @@
     }
 
     .extra-products {
-      margin-top: 40px;
+      padding-top: 40px;
     }
   }
 }

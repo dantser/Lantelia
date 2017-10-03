@@ -63,7 +63,7 @@
     }
   }
 
-  @include screen('tablet', max) {
+  @include screen('temp', max) {
 
     border-bottom: 1px solid $color-border;
 

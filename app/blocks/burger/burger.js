@@ -8,7 +8,7 @@ export default () => {
   const menu = $('.header__nav');
   const needHelp = $('.needHelp');
   const needHelpPopup = $('.needHelp-popup');
-  const grayscreen = $('#grayscreen');
+  const grayscreen = $('#overlay');
 
   $(burgerClass).on('click', (e) => {
     const burger = $(burgerClass);

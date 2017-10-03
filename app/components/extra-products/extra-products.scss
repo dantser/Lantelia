@@ -16,7 +16,7 @@
   }
 
   .section__head {
-    margin-bottom: 47px;
+    margin-bottom: 31px;
   }
 
   .container_slider {
@@ -25,20 +25,27 @@
   }
 
   @include screen('temp', max) {
+    padding-bottom: 0;
+
+    .container_slider {
+      padding-right: 22px;
+    }
+
     .swiper-wrapper {
       display: block;
     }
+
     .swiper-slide {
       width: 100%;
-      border: 1px solid $color-border;
-      border-right: 0;
+      border: 0;
 
-      &:nth-child(1) {
-        width: 100%;
+      &:not(:last-child) {
+        border-bottom: 1px solid $color-border;
       }
 
-      &:last-child {
-        border-right: 1px solid $color-border;
+      &:first-child {
+        width: 100%;
+        border-top: 1px solid $color-border;
       }
     }
   }

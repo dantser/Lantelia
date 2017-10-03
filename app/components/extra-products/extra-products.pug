@@ -8,16 +8,17 @@ mixin extra-products()
     .container
       .section__head
         +section-head('Другая продукция Lantelia', 'Попробуйте, Вам может понравится')
-    +slider(false, true)
-      +slide()._big
-        +product-card('assets/images/picProduct/triple.png')(href="#product3")._xl.js-fancybox
-      +slide()
-        +product-card('assets/images/picProduct/botox_250ml_05@2x.png')(href="#product2").js-fancybox
-      +slide()
-        +product-card('assets/images/picProduct/botox_100ml_03@2x.png')(href="#product4").js-fancybox
-      +slide()
-        +product-card('assets/images/picProduct/botox_250ml_05@2x.png')(href="#product1").js-fancybox
-      +slide()
-        +product-card('assets/images/picProduct/botox_100ml_01@2x.png')(href="#product5").js-fancybox
-      +slide()
-        +product-card('assets/images/picProduct/clarify_250ml_01@2x.png')(href="#product6").js-fancybox
+    .container.container_slider
+      +slider(false, true)
+        +slide()._big
+          +product-card('assets/images/picProduct/triple.png')(href="#product3")._xl.js-fancybox
+        +slide()
+          +product-card('assets/images/picProduct/botox_250ml_05@2x.png')(href="#product2").js-fancybox
+        +slide()
+          +product-card('assets/images/picProduct/botox_100ml_03@2x.png')(href="#product4").js-fancybox
+        +slide()
+          +product-card('assets/images/picProduct/botox_250ml_05@2x.png')(href="#product1").js-fancybox
+        +slide()
+          +product-card('assets/images/picProduct/botox_100ml_01@2x.png')(href="#product5").js-fancybox
+        +slide()
+          +product-card('assets/images/picProduct/clarify_250ml_01@2x.png')(href="#product6").js-fancybox

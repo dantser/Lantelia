@@ -2,37 +2,41 @@ include ../../blocks/form-elements/form-elements
 
 mixin filter()
   +b.filter&attributes(attributes)
-    +checkbox().filter__checkbox
+    +checkbox().filter__checkbox Все
     +e.wrapper
       +e.item.active
-        +e.IMG(src="assets/images/picProduct/botox_250ml_05@2x.png").image
+        +e.image
+          img(src="assets/images/picProduct/botox_250ml_05@2x.png")
         +e.text 
-          | Professional
+          | Professional 
           br
-          | Bottox
+          | Bottox 
           br
           | Therapy
       +e.item
-        +e.IMG(src="assets/images/picProduct/clarify_250ml_01@2x.png").image
+        +e.image
+          img(src="assets/images/picProduct/clarify_250ml_01@2x.png")
         +e.text
-          | Professional
+          | Professional 
           br
-          | Clarifying
+          | Clarifying 
           br
           | Care
       +e.item
-        +e.IMG(src="assets/images/picProduct/smooth_250ml_01@2x.png").image
+        +e.image
+          img(src="assets/images/picProduct/smooth_250ml_01@2x.png")
         +e.text
-          | Professional
+          | Professional 
           br
-          | Smoothing
+          | Smoothing 
           br
           | Therapy
       +e.item
-        +e.IMG(src="assets/images/picProduct/spa_250ml_02@2x.png").image
+        +e.image
+          img(src="assets/images/picProduct/spa_250ml_02@2x.png")
         +e.text
-          | Professional
+          | Professional 
           br
-          | Clarifying
+          | Clarifying 
           br
           | Care

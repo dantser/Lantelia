@@ -2,12 +2,19 @@
   display: block;
 
   .section-head {
-    @include clearfix;
+    display: flex;
+    justify-content: space-between;
   }
 
   .filter {
-    display: inline-block;
-    vertical-align: middle;
-    float: right;
+    margin-top: -9px;
+  }
+
+  .products {
+    padding-top: $container-padding;
+
+    &__line {
+      border-top: 1px solid $color-border;
+    }
   }
 }

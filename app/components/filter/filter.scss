@@ -1,11 +1,34 @@
 .filter {
-  display: block;
+  display: flex;
+  flex-flow: row;
 
   &__wrapper {
     display: flex;
   }
 
+  &__checkbox {
+    margin-right: 48px;
+    padding: 0;
+    padding-top: 12px;
+
+    .checkradio__box {
+      top: auto;
+      left: 2px;
+      bottom: 10px;
+    }
+  }
+
   &__item {
+    cursor: pointer;
+    transition: opacity $ease-main;
+
+    &:hover {
+      opacity: .7;
+    }
+
+    &:not(:last-child) {
+      margin-right: 36px;
+    }
 
     &.active {
 
@@ -26,14 +49,21 @@
   // }
 
   &__image {
-    min-height: 100%;
-    width: 92px;
     height: 92px;
+    width: 92px;
     opacity: .5;
     display: inline-block;
     vertical-align: middle;
     transition: opacity $ease-main;
     will-change: opacity;
+    position: relative;
+
+    img {
+      max-height: 100%;
+      position: absolute;
+      top: 0;
+      margin: auto;
+    }
   }
 
   &__text {
