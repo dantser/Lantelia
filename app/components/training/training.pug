@@ -1,0 +1,12 @@
+include ../../blocks/section-head/section-head
+include ../../blocks/news-card/news-card
+include ../../blocks/grid/grid
+
+mixin training(subtitle, title)
+  +b.SECTION.training.section&attributes(attributes)
+    .section__head
+      +section-head(subtitle, title)
+    +grid
+      block
+        
+      

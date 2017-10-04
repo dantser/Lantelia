@@ -1,0 +1,11 @@
+include ../../blocks/section-head/section-head
+include ../../blocks/news-card/news-card
+
+mixin news(subtitle, title)
+  +b.SECTION.news.section&attributes(attributes)
+    .section__head
+      +section-head(subtitle, title)
+    +grid
+      block
+        
+          

@@ -1,0 +1,9 @@
+.news, .training {
+  display: block;
+
+  @include screen('temp', max) {
+    .grid__col {
+      width: 100%;
+    }
+  }
+}

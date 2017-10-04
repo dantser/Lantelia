@@ -20,6 +20,7 @@ import order from '../components/order/order';
 import cart from '../components/cart/cart';
 import filter from '../components/filter/filter';
 import extraProducts from '../components/extra-products/extra-products';
+import newsTraining from '../components/newsTraining/newsTraining';
 
 const $ = window.$;
 
@@ -45,4 +46,5 @@ $(() => {
   order();
   cart();
   filter();
+  newsTraining();
 });

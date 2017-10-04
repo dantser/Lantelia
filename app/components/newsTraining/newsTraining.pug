@@ -1,0 +1,38 @@
+include ../../components/news/news
+include ../../components/training/training
+include ../../blocks/tabs/tabs
+
+mixin newsTraining()
+  +b.newsTraining&attributes(attributes)
+    .container
+      .section__head.section__head_mobile
+        +section-head('Полезная информация', 'Обучение и новости')
+      +e.tabs
+        +tabs
+          +tab()(data-tab-target="tab1").active Обучение
+          +tab()(data-tab-target="tab2") Новости
+      +tabs-content
+        +tab-wrapper()(data-tab="tab1" data-tab-group="newsTraining").active
+          +training('Полезная информация', 'Обучение')
+            +col(3)
+              +news-card('Обучение', 'Обучающий Мастер-класс по применению процедуры Professional Botox Therapy', 'Подробнее')._colored._blue
+            +col(3)
+              +news-card('Обучение', 'Обучающий Мастер-класс по применению процедуры Professional Botox Therapy', 'Подробнее')._colored._blue
+            +col(3)
+              +news-card('Обучение', 'Обучающий Мастер-класс по применению линнии Professional SPA Therapy', 'Подробнее')._colored._pink
+            +col(3)
+              +news-card('Обучение', 'Обучающий Мастер-класс по применению линнии Professional Сlarifying Сare', 'Подробнее')._colored._green
+            +col(3)
+              +news-card('Обучение', 'Обучающий Мастер-класс по применению процедуры Professional Smoothing Thrapy', 'Подробнее')._colored._gray
+            +col(3)
+              +news-card('Обучение', 'Обучающий Мастер-класс по применению линнии Professional Smoothing Thrapy', 'Подробнее')._colored._gray
+        +tab-wrapper()(data-tab="tab2" data-tab-group="newsTraining").active
+          +news('Обучение и новости', 'Новости')
+            +col(3)
+              +news-card('Новость', 'Еще один магазин Lantelia открылся в в Варшаве. Подарки первым десяти покупателям.', 'Читать')._with-hover
+            +col(3)
+              +news-card('Новость', 'Открыта вакансия менеджера в call-центре компании Lantelia', 'Читать')._with-hover
+            +col(3)
+              +news-card('Новость', 'За кулисами Dior Makeup: эксклюзивные материалы с показов мод', 'Читать')._with-hover
+    
+        
