@@ -20,7 +20,12 @@
     display: none;
   }
 
+  &__filter {
+    margin-top: -9px;
+  }
+
   @include screen('temp', max) {
+    display: block !important;
 
     &__subtitle {
       margin: 0 0 13px;
@@ -37,6 +42,10 @@
       display: block;
       background-color: transparent;
       font-size: 16px;
+    }
+
+    &__filter {
+      margin-top: 31px;
     }
   }
 }

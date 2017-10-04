@@ -30,11 +30,9 @@
   }
 
   &__title {
+    @extend %heading-1;
+
     margin-bottom: 43px;
-    font-size: 36px;
-    text-transform: uppercase;
-    font-weight: 300;
-    line-height: 1.39;
     text-align: left;
     letter-spacing: .025em;
     position: relative;

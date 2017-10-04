@@ -3,11 +3,11 @@ include ../../blocks/slider/slider
 include ../../blocks/product-card/product-card
 include ../../blocks/button/button
 
-mixin extra-products()
+mixin extra-products(subtitle, title)
   +b.SECTION.extra-products.section&attributes(attributes)
     .container
       .section__head
-        +section-head('Другая продукция Lantelia', 'Попробуйте, Вам может понравится')
+        +section-head(subtitle, title)
     .container.container_slider
       +slider(false, true)
         +slide()._big
@@ -20,5 +20,3 @@ mixin extra-products()
           +product-card('assets/images/picProduct/botox_250ml_05@2x.png')(href="#product1").js-fancybox
         +slide()
           +product-card('assets/images/picProduct/botox_100ml_01@2x.png')(href="#product5").js-fancybox
-        +slide()
-          +product-card('assets/images/picProduct/clarify_250ml_01@2x.png')(href="#product6").js-fancybox

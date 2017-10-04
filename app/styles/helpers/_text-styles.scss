@@ -27,6 +27,13 @@
   color: $color-gray;
   letter-spacing: .003em;
 }
+
+%heading-5 {
+  font-size: 14px;
+  font-weight: 500;
+  color: $color-main;
+  line-height: 1.64;
+}
 //
 // %heading-5 {
 //   font-size: 18px;
@@ -55,6 +62,12 @@
 %text-name {
   font-size: 16px;
   line-height: 1.31;
+}
+
+%text-sub {
+  opacity: .5;
+  font-size: 16px;
+  line-height: 1.44;
 }
 
 %text-line {

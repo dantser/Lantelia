@@ -6,7 +6,7 @@
     border: 1px solid $color-border;
     border-right: 0;
 
-    &:nth-child(1) {
+    &:first-child {
       width: 50%;
     }
 
@@ -21,6 +21,7 @@
 
   .container_slider {
     padding-right: 0;
+    padding-left: 0;
     position: relative;
   }
 
@@ -29,6 +30,7 @@
 
     .container_slider {
       padding-right: 22px;
+      padding-left: 22px;
     }
 
     .swiper-wrapper {
@@ -46,6 +48,10 @@
       &:first-child {
         width: 100%;
         border-top: 1px solid $color-border;
+      }
+
+      &:last-child {
+        border-right: 0;
       }
     }
   }

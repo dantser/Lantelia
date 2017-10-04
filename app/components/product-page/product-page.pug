@@ -1,0 +1,86 @@
+include ../../blocks/button/button
+include ../../blocks/grid/grid
+include ../../components/extra-products/extra-products
+
+mixin product-page()
+  +b.product-page&attributes(attributes)
+    +masthead()
+    +product-content()
+    +extra-products('Все продукты линии', 'Professional Botox Therapy').product-page__slider
+
+mixin masthead()
+  +b.SECTION.masthead.section&attributes(attributes)
+    +e.image-wrapper
+      img(src="assets/images/picMainPage/1@2x.jpg")
+      img(src="assets/images/picMainPage/M_bg_1@2x.jpg")
+    .container
+      +e.wrapper
+        +e.H4.subtitle Покупки
+        +e.H1.title Professional Botox Therapy
+        +e.P.text Шампунь 250мл и Кондиционер 250мл
+        +e.buttons
+          +button('shopping-cart')._white.masthead__button_cart в корзину
+          +button()._white.masthead__button_price 4 990 ₽
+
+
+mixin product-content()
+  +b.SECTION.product-content.section&attributes(attributes)
+    .container
+      +e.wrapper
+        +grid
+          +col(7).product-content__col
+            .product-content__col-wrapper
+              +e.H3.title Омолаживающий Шампунь 250мл и Кондиционер 250мл домашний уход
+              +e.H5.subtitle Описание
+              +e.P.text Омолаживающий шампунь рекомендуется как уход для поддержания эффекта после процедуры омолаживания волос. Благодаря комплексу активных компонентов последнего поколения, которые обеспечивают эффективное омоложение волоса, шампунь способствует удержанию влаги, очищает и укрепляет капиллярное волокно волоса.
+              +e.H5.subtitle Применение
+              +e.P.text Нанесите шампунь на мокрые волосы, массируйте их до появления обильной пены, ополосните и, при необходимости, повторите процедуру.
+          +col(5).product-content__col
+            .product-content__col-wrapper
+              +e.H3.title Доставка и оплата
+              +e.tabs
+                +tabs
+                  +tab()(data-tab-target="tab1").active Москва
+                  +tab()(data-tab-target="tab2") Московская обл
+                  +tab()(data-tab-target="tab3") Россия
+              +tabs-content
+                +tab-wrapper()(data-tab="tab1" data-tab-group="shipping").active
+                  .tabs-content__text
+                    +e.H5.subtitle Доставка и оплата по Москве (в пределах МКАД)
+                    p Бесплатная доставка от 3 000 руб.
+                    p Курьер LANTELIA: Доставка осуществляется на следующий день.
+                    p Стоимость: 250 руб.
+                    p 
+                      | Самовывоз: Адрес: ул. Ярославская 8 к.5
+                      br
+                      | Режим работы: пн.-пт. c 10:00 – 18:00
+                    p Способ оплаты: Наличными, по Карте
+                +tab-wrapper()(data-tab="tab2" data-tab-group="shipping")
+                  .tabs-content__text
+                    +e.H5.subtitle Доставка и оплата по Московской области
+                    p Курьер LANTELIA: Доставка осуществляется на следующий день.
+                    p Стоимость: 400 руб.
+                    p Доставка Транспортными Компаниями:
+                    p 
+                      | СДЭК:
+                      br
+                      | Стоимость: 250 руб.
+                    p
+                      | ПОЧТА РОССИИ:
+                      br
+                      | Стоимость: 250 руб.
+                    p Способ оплаты: Наличными, Банковская карта, Robokassa, извещением для банка
+                +tab-wrapper()(data-tab="tab3" data-tab-group="shipping")
+                  .tabs-content__text
+                    +e.H5.subtitle Доставка по всей России
+                    p Срок оформления заказа составляет 1 рабочий день, после оплаты заказ отправляется в соответствующую службу доставки.
+                    p Доставка Транспортными Компаниями:
+                    p 
+                      | СДЭК:
+                      br
+                      | Стоимость: 350 руб.
+                    p
+                      | ПОЧТА РОССИИ:
+                      br
+                      | Стоимость: 350 руб.
+                    p Способ оплаты: Банковская карта, Robokassa, извещением для банка

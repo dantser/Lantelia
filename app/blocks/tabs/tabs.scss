@@ -49,5 +49,33 @@
         transform: translate3d(0, 0, 0);
       }
     }
+
+    &__text {
+
+      p {
+        @extend %text;
+
+        margin-bottom: 17px;
+        color: $color-main !important;
+
+        &:not(:first-child) {
+          letter-spacing: .003em;
+          margin-bottom: 26px;
+        }
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+
+        &.mb {
+          margin-bottom: 52px;
+        }
+      }
+    }
+
+
+    &_bordered {
+      border-left: 1px solid $color-border-input;
+    }
   }
 }

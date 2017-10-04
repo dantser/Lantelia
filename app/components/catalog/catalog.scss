@@ -6,8 +6,8 @@
     justify-content: space-between;
   }
 
-  .filter {
-    margin-top: -9px;
+  .container_slider {
+    padding-right: 48px;
   }
 
   .products {
@@ -15,6 +15,24 @@
 
     &__line {
       border-top: 1px solid $color-border;
+    }
+  }
+
+  @include screen('temp', max) {
+    padding-top: 95px;
+    padding-bottom: 0;
+
+    .container_slider {
+      padding-right: 0;
+    }
+
+    .section-head__wrapper {
+      padding-right: 22px;
+    }
+
+    .products {
+      padding-top: 28px;
+      border-bottom: 0;
     }
   }
 }

@@ -4,9 +4,10 @@ include ../../components/products/products
 
 mixin catalog()
   +b.SECTION.catalog.section&attributes(attributes)
-    .container
-      +section-head('Каталог', 'Наша продукция')
-        +filter()
+    .container.container_slider
+      .section__head
+        +section-head('Каталог', 'Наша продукция')
+          +filter().section-head__filter
     +products()
       +product-card('assets/images/picProduct/triple.png', '#product1')(data-line='bottox')._xl
       +product-card('assets/images/picProduct/botox_250ml_05@2x.png', '#product2')(data-line='bottox')

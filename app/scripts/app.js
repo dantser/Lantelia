@@ -18,6 +18,8 @@ import products from '../components/products/products';
 import tabs from '../blocks/tabs/tabs';
 import order from '../components/order/order';
 import cart from '../components/cart/cart';
+import filter from '../components/filter/filter';
+import extraProducts from '../components/extra-products/extra-products';
 
 const $ = window.$;
 
@@ -34,6 +36,7 @@ $(() => {
   burger();
   slider();
   // modal();
+  extraProducts();
   productPopup();
   preloader();
   popups();
@@ -41,4 +44,5 @@ $(() => {
   tabs();
   order();
   cart();
+  filter();
 });

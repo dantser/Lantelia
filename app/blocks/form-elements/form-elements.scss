@@ -86,6 +86,39 @@
         }
       }
     }
+
+    &[type="checkbox"] {
+
+      & + .checkradio__box {
+
+        &::before {
+          content: '';
+          width: 7px;
+          height: 14px;
+          border-right: 1px solid $color-main;
+          border-bottom: 1px solid $color-main;
+          background-color: transparent;
+          border-radius: 0;
+          position: absolute;
+          bottom: 6px;
+          left: auto;
+          top: auto;
+          right: 5px;
+
+          transform: rotate(45deg);
+        }
+      }
+
+      &:checked {
+
+        & + .checkradio__box {
+          border-color: $color-border-input;
+          &::before { opacity: 1; }
+
+          background-color: transparent;
+        }
+      }
+    }
   }
 
   &__box {

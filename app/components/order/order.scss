@@ -169,10 +169,6 @@
         }
       }
     }
-
-    &_bordered {
-      border-left: 1px solid $color-border-input;
-    }
   }
 
   .order-price {
@@ -209,7 +205,7 @@
   }
 
   @include screen('temp', max) {
-    padding-top: 48px;
+    padding-top: 94px;
 
     &__error-close {
       top: 12px;
@@ -217,7 +213,7 @@
     }
 
     .section__head {
-      margin-bottom: 36px;
+      margin-bottom: 32px;
 
       &__title {
         margin-bottom: 0;

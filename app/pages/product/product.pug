@@ -1,0 +1,8 @@
+extends ../../layouts/main
+include ../../components/product-page/product-page
+
+block head
+  - var pageTitle = 'Страница товара'
+
+block content
+  +product-page()

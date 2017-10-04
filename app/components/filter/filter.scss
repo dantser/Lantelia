@@ -7,7 +7,6 @@
   }
 
   &__checkbox {
-    margin-right: 48px;
     padding: 0;
     padding-top: 12px;
 
@@ -21,18 +20,25 @@
   &__item {
     cursor: pointer;
     transition: opacity $ease-main;
+    min-width: 182px;
 
     &:hover {
       opacity: .7;
     }
 
     &:not(:last-child) {
-      margin-right: 36px;
+      margin-right: 37px;
+    }
+
+    &_checkbox {
+      display: flex;
+      margin-right: 49px !important;
+      min-width: 26.4px;
     }
 
     &.active {
 
-      .filter__text {
+      .filter__text, .checkradio__content {
         color: $color-main;
         font-weight: 500;
       }
@@ -72,5 +78,29 @@
     color: $color-gray;
     display: inline-block;
     vertical-align: middle;
+    transition: all $ease-main;
+  }
+
+  @include screen('temp', max) {
+    border-top: 1px solid $color-border;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    width: 100%;
+    padding: 28px 0 18px;
+    margin-bottom: -18px;
+
+    &__item {
+      min-width: 182px;
+      margin-right: 22px;
+
+      &_checkbox {
+        min-width: 30px;
+        margin-right: -5px !important;
+      }
+
+      &:not(:last-child) {
+        margin-right: -11px;
+      }
+    }
   }
 }
