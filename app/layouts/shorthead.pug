@@ -19,11 +19,10 @@ doctype html
 html(lang='ru')
   include head
   body
-    +header()._short._top
+    +header()._short
     block content
     +needHelp()._main
     +footer()
     #overlay
-    +preloader()
     script(src='assets/scripts/app.min.js')
     script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAxPYPIFoyo8a8749Pi9ooi_WBnXZKpBoA")

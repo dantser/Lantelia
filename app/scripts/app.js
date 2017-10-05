@@ -21,6 +21,7 @@ import cart from '../components/cart/cart';
 import filter from '../components/filter/filter';
 import extraProducts from '../components/extra-products/extra-products';
 import newsTraining from '../components/newsTraining/newsTraining';
+import video from '../blocks/video/video';
 
 const $ = window.$;
 
@@ -47,4 +48,5 @@ $(() => {
   cart();
   filter();
   newsTraining();
+  video();
 });

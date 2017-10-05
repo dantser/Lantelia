@@ -1,0 +1,34 @@
+include ../../blocks/video/video
+include ../../components/training/training
+
+mixin training-page()
+  +b.training-page&attributes(attributes)
+    +banner()
+    +e.content
+      .container
+        +e.wrapper
+          +video('assets/images/video@2x.jpg', 'https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1&amp;rel=0&amp;showinfo=0').training-page__video
+          +e.text-block
+            +e.H3.title Заголовок первого уровня
+            +e.H5.subtitle Заголовок второго уровня
+            +e.P.text Основной текст. Омолаживающий шампунь рекомендуется как уход для поддержания эффекта после процедуры омолаживания волос. Благодаря комплексу активных компонентов последнего поколения, которые обеспечивают эффективное омоложение волоса, шампунь способствует удержанию влаги, очищает и укрепляет капиллярное волокно волоса.
+            +e.H5.subtitle Применение
+            +e.P.text Нанесите шампунь на мокрые волосы, массируйте их до появления обильной пены, ополосните и, при необходимости, повторите процедуру.
+    +training('Обучение', 'Другие обучающие материалы', true)
+      +col(3).news-card_one
+        +news-card('Обучение', 'Обучающий Мастер-класс по применению линнии Professional Botox Therapy', 'Подробнее')._colored._blue
+      +col(3).news-card_two
+        +news-card('Обучение', 'Обучающий Мастер-класс по применению линнии Professional SPA Therapy', 'Подробнее')._colored._pink
+      +col(3).news-card_three
+        +news-card('Обучение', 'Обучающий Мастер-класс по применению линнии Professional Сlarifying Сare', 'Подробнее')._colored._green
+      +col(3).news-card_four
+        +news-card('Обучение', 'Обучающий Мастер-класс по применению процедуры Professional Smoothing Thrapy', 'Подробнее')._colored._gray
+mixin banner()
+  +b.SECTION.banner.section&attributes(attributes)
+    .container
+      +e.wrapper
+        +e.heading
+          +e.H3.subtitle Обучение
+          +e.H2.title Обучающий Мастер-класс по применению процедуры Professional Botox Therapy
+        +e.image
+          img(src='assets/images/picProduct/spa_250ml_03(line)@2x.png')

@@ -1,0 +1,8 @@
+include ../../blocks/icon/icons
+
+mixin video(image, video)
+  +b.video&attributes(attributes)
+    +e.icon
+      +icon('play')
+    +e.IMG(src=image data-video=video).image
+      

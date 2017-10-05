@@ -1,0 +1,165 @@
+.training-page {
+  display: block;
+
+  &__wrapper {
+    padding: 96px 272px 91px;
+    border-bottom: 1px solid $color-border;
+  }
+
+  &__text-block {
+    padding: 52px 0 0;
+  }
+
+  &__title {
+    @extend %heading-3;
+
+    line-height: 1.5;
+    color: $color-basic;
+    margin-bottom: 44px;
+  }
+
+  &__subtitle {
+    @extend %heading-5;
+
+    margin-bottom: 20px;
+  }
+
+  &__text {
+    @extend %text;
+
+    &:not(:last-child) {
+      margin-bottom: 19px;
+    }
+  }
+
+  .training {
+    padding-top: 57px;
+
+    .section__head {
+      margin-bottom: 29px;
+    }
+  }
+
+  @include screen('temp', max) {
+
+    &__content {
+      border-bottom: 1px solid $color-border;
+    }
+
+    &__wrapper {
+      padding: 42px 0 31px;
+      border: 0;
+    }
+
+    &__text-block {
+      padding: 31px 0 0;
+    }
+
+    &__title {
+      font-size: 16px;
+      margin-bottom: 24px;
+    }
+
+    &__text {
+      &:not(:last-child) {
+        margin-bottom: 23px;
+      }
+    }
+
+    .training {
+      padding-top: 35px;
+
+      .section__head {
+        margin-bottom: 7px;
+      }
+
+      .grid__col {
+        padding-top: 30px;
+      }
+
+      .news-card {
+
+        &_one, &_two {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+
+.banner {
+  padding: 17px 0;
+  border-bottom: 1px solid $color-border;
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 72px;
+  }
+
+  &__heading {
+    padding-right: $grid-gap;
+  }
+
+  &__title {
+    @extend %heading-21;
+
+    color: $color-basic;
+    width: 61%;
+    letter-spacing: .001em;
+    line-height: 1.4;
+  }
+
+  &__subtitle {
+    @extend %text-sub;
+
+    font-weight: 300;
+    margin-bottom: 20px;
+  }
+
+  &__image {
+    height: 495px;
+
+    img {
+      max-height: 100%;
+    }
+  }
+
+  @include screen('temp', max) {
+    padding-top: 91px;
+    padding-bottom: 3px;
+
+    &__wrapper {
+      padding: 0;
+      display: block;
+    }
+
+    &__heading {
+      margin-bottom: 16px;
+      padding: 0;
+    }
+
+    &__title {
+      font-size: 16px;
+      line-height: 1.5;
+      width: 100%;
+    }
+
+    &__subtitle {
+      font-size: 13px;
+      color: $color-main;
+      margin-bottom: 12px;
+    }
+
+    &__image {
+      height: 283px;
+      text-align: center;
+
+      img {
+        max-height: 100%;
+      }
+    }
+  }
+}

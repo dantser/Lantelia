@@ -1,0 +1,11 @@
+extends ../../layouts/shorthead
+include ../../components/training-page/training-page
+
+block head
+  - var pageTitle = 'Обучение'
+
+block content
+  +training-page()
+
+
+  script(src="https://www.youtube.com/iframe_api")

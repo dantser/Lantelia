@@ -2,11 +2,17 @@ include ../../blocks/section-head/section-head
 include ../../blocks/news-card/news-card
 include ../../blocks/grid/grid
 
-mixin training(subtitle, title)
+mixin training(subtitle, title, container)
   +b.SECTION.training.section&attributes(attributes)
-    .section__head
-      +section-head(subtitle, title)
-    +grid
-      block
-        
+    if container
+      .container
+        .section__head
+          +section-head(subtitle, title)
+        +grid
+          block
+    else
+      .section__head
+        +section-head(subtitle, title)
+      +grid
+        block
       

@@ -1,0 +1,55 @@
+.video {
+  position: relative;
+  overflow: hidden;
+
+  &__icon {
+    @include center-block;
+
+    width: 54px;
+    height: 54px;
+    border-radius: 100px;
+    z-index: 2;
+    background-color: $color-main;
+    box-shadow: 0 12px 36px 0 rgba(0, 0, 0, .11);
+
+    svg {
+      fill: $color-white;
+      width: 24px;
+      height: 24px;
+      @include center-block;
+    }
+  }
+
+  &__image {
+    max-width: 100%;
+  }
+
+  &__container {
+    float: none;
+    clear: both;
+    width: 100%;
+    position: relative;
+    padding-bottom: 56.187%;
+    height: 0;
+  }
+
+  &__player {
+    // max-width: 100%;
+    position: absolute;
+  	top: 0;
+  	left: 0;
+  	width: 100%;
+  	height: 100%;
+  }
+
+//    iframe,
+//  object,
+//
+// embed {
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     width: 100%;
+//     height: 100%;
+// }
+}
