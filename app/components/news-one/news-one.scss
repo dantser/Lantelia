@@ -1,0 +1,166 @@
+.news-one {
+  display: block;
+
+  .container {
+    padding-top: 89px;
+  }
+
+  &__heading {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 82px;
+    padding: 0 72px;
+  }
+
+  &__type {
+    @extend %text-sub;
+    line-height: 1.77;
+  }
+
+  &__date {
+    @extend %text-label;
+  }
+
+  &__content {
+    border-bottom: 1px solid $color-border;
+  }
+
+  &__wrapper {
+    padding: 0 272px 92px;
+  }
+
+  &__caption {
+    @extend %heading-21;
+
+    width: 65%;
+    letter-spacing: 0em;
+    line-height: 1.41;
+    margin-bottom: 88px;
+  }
+
+  &__subtitle {
+    @extend %heading-5;
+
+    margin: 0 0 19px;
+
+    &:not(:first-child):not(:last-child) {
+      margin:20px 0 19px;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__title {
+    @extend %heading-3;
+
+    color: $color-basic;
+    margin: 0 0 42px;
+
+    &:not(:first-child):not(:last-child) {
+      margin: 42px 0;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__text {
+    @extend %text;
+  }
+
+  &__image {
+    margin: 0 0 52px;
+
+    &:not(:first-child):not(:last-child) {
+      margin: 54px 0 52px;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    img {
+      max-width: 100%;
+    }
+  }
+
+  .news {
+    padding-top: 58px;
+
+    .section__head {
+      margin-bottom: 23px;
+    }
+  }
+
+  @include screen('temp', max) {
+
+    .container {
+      padding-top: 90px;
+    }
+
+    &__heading {
+      padding: 0;
+      display: block;
+      margin-bottom: 14px;
+    }
+
+    &__date {
+      line-height: 1.5;
+    }
+
+    &__type {
+      display: none;
+    }
+
+    &__wrapper {
+      padding: 0 0 27px;
+    }
+
+    &__caption {
+      width: 100%;
+      font-size: 16px;
+      margin-bottom: 24px;
+    }
+
+    &__title {
+      font-size: 16px;
+      margin: 0 0 26px;
+
+      &:not(:first-child):not(:last-child) {
+        margin: 26px 0 25px;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    &__subtitle {
+
+      &:not(:first-child):not(:last-child) {
+        margin-top: 23px;
+      }
+    }
+
+    &__image {
+      margin: 0 0 29px;
+
+      &:not(:first-child):not(:last-child) {
+        margin: 32px 0 29px;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+
+
+    .news {
+      display: none;
+    }
+  }
+}

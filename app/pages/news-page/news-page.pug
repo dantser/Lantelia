@@ -1,0 +1,8 @@
+extends ../../layouts/shorthead
+include ../../components/news-one/news-one
+
+block head
+  - var pageTitle = 'Новость'
+
+block content
+  +news-one()
