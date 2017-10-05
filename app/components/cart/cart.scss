@@ -1,5 +1,6 @@
 .cart {
   padding-top: 58px;
+  padding-bottom: 0;
 
   &__foot {
     display: flex;
@@ -27,5 +28,23 @@
 
   .button {
     padding: 18px 41px 18px 40px;
+  }
+
+  .js-num-goods {
+    .order-price__rouble {
+      display: none;
+    }
+  }
+
+  @include screen('temp', max) {
+    padding-top: 98px;
+
+    &__foot, &__button {
+      display: block;
+    }
+
+    &__stats {
+      margin-bottom: $grid-gap;
+    }
   }
 }

@@ -31,12 +31,12 @@ export default () => {
     });
   };
 
-  if ($(window).width() > 999) {
+  if ($(window).width() > 1399) {
     cardsHover(ACTIVE_CLASS);
   };
 
   $(window).resize(function () {
-    if ($(window).width() > 999) {
+    if ($(window).width() > 1399) {
       cardsHover(ACTIVE_CLASS)
     };
   });

@@ -1,4 +1,6 @@
 mixin order-price(text, price)
   +b.order-price&attributes(attributes)
     +e.SPAN.text= text
-    +e.SPAN.price= price
+    +e.price-block
+      +e.SPAN(data-total=price).price= price
+      +e.SPAN.rouble ₽

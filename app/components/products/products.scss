@@ -56,13 +56,16 @@
       opacity: 1;
       box-shadow:
         0 0 0 10px $color-white,
-        0 8px 36px 0 rgba(0, 0, 0, 0.09);
+        0 8px 36px 0 rgba(0, 0, 0, .09);
     }
   }
 
   @include screen('temp', max) {
-
     border-bottom: 1px solid $color-border;
+
+    &__helper {
+      display: none;
+    }
 
     &__line {
       flex-flow: column nowrap;

@@ -32,29 +32,33 @@ mixin product-card(img, link)
           +e.price 2 199 ₽
           +icon('shopping-cart')
 
-mixin product-card-cart(img)
+mixin product-card-cart(img, price)
   +b.product-card._cart&attributes(attributes)
     +e.wrapper
-      +e.left
+      +e.col.__left
         +e.image
           img(src= img)
-        +e.H3.line 
+        +e.H3.__line 
           | Professional
           br
           | botox
           br
           | therapy
-      +e.UL.names
+        +e.UL.names._mobile
+          +e.LI.name Шампунь 250 мл
+          +e.LI.name Реконструктор 250 мл
+          +e.LI.name Серум 250 мл
+      +e.UL.col.__names
         +e.LI.name Шампунь 250 мл
         +e.LI.name Реконструктор 250 мл
         +e.LI.name Серум 250 мл
-      +e.right
-        +order-price('Цена', '7 990 ₽').js-price
-        +select().select_black
+      +e.col.__right
+        +order-price('Цена', price).js-price
+        +e.SELECT.select.select._bordered._triangle
           option(value=1, selected) 1
           option(value=2) 2
           option(value=3) 3
-      +e.bottom
-        +order-price('Итого', '7 990 ₽')
+      +e.col.__bottom
+        +order-price('Итого', price).__total
       +e.delete
         +icon('close').icon.cart__delete

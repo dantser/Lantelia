@@ -1,11 +1,12 @@
 .order-price {
   text-align: left;
 
-  &__price {
+  &__price-block {
+    position: relative;
     display: block;
-    font-size: 28px;
+    @extend %heading-21;
+
     color: $color-main;
-    line-height: 1.39;
     font-weight: 400;
     letter-spacing: .029em;
   }
