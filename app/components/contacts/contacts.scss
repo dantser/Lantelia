@@ -1,5 +1,10 @@
 .contacts {
   display: block;
+  padding-bottom: 0;
+
+  .section__head {
+    margin-bottom: 53px;
+  }
 
 
   @include screen('temp', max) {
@@ -9,6 +14,10 @@
     .section__head {
       display: block;
       margin-bottom: 35px;
+    }
+    .map {
+      display: block;
+      height: 100vh;
     }
 
     .filter {

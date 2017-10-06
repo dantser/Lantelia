@@ -1,5 +1,6 @@
 include ../../blocks/section-head/section-head
 include ../../components/filter/filter-contacts
+include ../../components/map/map
 
 mixin contacts()
   +b.SECTION.section.contacts&attributes(attributes)
@@ -7,3 +8,4 @@ mixin contacts()
       .section__head.section__head_flex
         +section-head('Контакты', 'Контактная информация')
         +filter-contacts('Показать списком', 'sales-offices.html')
+    +map()

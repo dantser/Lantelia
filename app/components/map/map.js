@@ -77,7 +77,13 @@ export default () => {
   }).addTo(mymap);
 
   function clickZoom(e) {
-	   mymap.setView(e.target.getLatLng(), 15);
+    e.stopPropagation;
+    mymap.setView(e.target.getLatLng(), 15);
+    for (var i in markers) {
+     markers[i].setIcon(iconInactive);
+    }
+
+    e.target.setIcon(iconActive);
   };
 
   $('.address-card').click(function(){

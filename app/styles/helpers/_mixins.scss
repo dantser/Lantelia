@@ -50,9 +50,9 @@ div::after {
   @include vendor(transition, unquote(inspect($args)));
 }
 
-@mixin preloader-transited($args: 'transform 5s ease') {
-  @include vendor(transition, unquote(inspect($args)));
-}
+// @mixin preloader-transited($args: 'transform 2s ease') {
+//   @include vendor(transition, unquote(inspect($args)));
+// }
 
 /*
 Миксин для треугольников, сделанных через :before и :after

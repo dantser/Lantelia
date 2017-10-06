@@ -8,7 +8,7 @@ export default () => {
   freeze();
 
   setTimeout(function () {
-    TEXT.fadeIn(2500).addClass('animated');
+    TEXT.fadeIn(1500).addClass('animated');
   }, 500);
 
   $(document).ready(function () {
