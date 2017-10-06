@@ -81,5 +81,8 @@
 
   border-radius: 100px !important;
 }
+.leaflet-bar a.leaflet-disabled {
+  background-color: $color-gray;
+}
 
 .leaflet-container .leaflet-control-attribution { display: none; }
