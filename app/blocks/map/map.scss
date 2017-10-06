@@ -73,4 +73,13 @@
   @extend %text;
 }
 
+
+.leaflet-touch .leaflet-bar a {
+  width: 54px;
+  height: 54px;
+  line-height: 54px;
+
+  border-radius: 100px !important;
+}
+
 .leaflet-container .leaflet-control-attribution { display: none; }

@@ -1,0 +1,9 @@
+include ../../blocks/section-head/section-head
+include ../../components/filter/filter-contacts
+
+mixin contacts()
+  +b.SECTION.section.contacts&attributes(attributes)
+    .container
+      .section__head.section__head_flex
+        +section-head('Контакты', 'Контактная информация')
+        +filter-contacts('Показать списком', 'sales-offices.html')

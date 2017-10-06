@@ -1,0 +1,19 @@
+.contacts {
+  display: block;
+
+
+  @include screen('temp', max) {
+    padding-top: 89px;
+    padding-bottom: 0;
+
+    .section__head {
+      display: block;
+      margin-bottom: 35px;
+    }
+
+    .filter {
+      transform: none;
+      padding: 0;
+    }
+  }
+}

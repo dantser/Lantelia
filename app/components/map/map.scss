@@ -10,6 +10,10 @@
     box-shadow: none;
   }
 
+  .leaflet-control-container .leaflet-top.leaflet-left {
+    display: none;
+  }
+
   .leaflet-popup-content {
     margin: 35px 36px;
   }
@@ -56,10 +60,6 @@
 
   @include screen('tablet', max) {
     display: none;
-  }
-
-  .leaflet-top {
-    bottom: 0;
   }
 
   .leaflet-touch .leaflet-bar a {

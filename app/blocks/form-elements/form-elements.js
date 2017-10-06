@@ -13,12 +13,13 @@ import Inputmask from 'inputmask';
 const $ = window.$;
 
 export function selects() {
-  /* eslint-disable no-unused-vars */
+  /* eslint-disable */
   const choices = new Choices('.js-select', {
     searchEnabled: false,
     itemSelectText: '',
+
   });
-  /* eslint-enable no-unused-vars */
+  /* eslint-enable */
 }
 
 export function sliders() {

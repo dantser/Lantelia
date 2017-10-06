@@ -29,12 +29,14 @@
 
 /* stylelint-disable */
 
-select {
-  display: none;
-}
-
 .js-parallax {
   z-index: 0;
+}
+
+.section__head_flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 #overlay {

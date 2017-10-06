@@ -1,6 +1,7 @@
 .filter {
   display: flex;
   flex-flow: row;
+  z-index: 2;
 
   &__wrapper {
     display: flex;
@@ -81,6 +82,93 @@
     transition: all $ease-main;
   }
 
+  &__button {
+    padding: 20px 40px;
+  }
+
+
+  .choices {
+    margin-right: $grid-gap;
+    letter-spacing: .125em;
+    min-width: 243px;
+    border: 1px solid $color-border-input;
+
+    &__list {
+
+      &--dropdown {
+        margin-top: 13px;
+        text-transform: uppercase;
+
+        .choices__item {
+          padding-left: 21px;
+          line-height: 55px;
+          letter-spacing: .125em;
+
+          &.is-highlighted::after {
+            top: 39%;
+            width: 6px;
+            height: 9px;
+          }
+        }
+      }
+
+      &--single {
+
+        .choices__item {
+          letter-spacing: .125em;
+          text-transform: uppercase;
+        }
+      }
+    }
+
+    &[data-type*=select-one] .choices__inner {
+      padding-left: 19px;
+    }
+
+
+    &::after {
+      right: 22px;
+    }
+
+    @include screen('temp', max) {
+      display: block;
+      border: 0;
+      overflow: inherit;
+      margin-bottom: 0;
+      padding: 0;
+      margin-right: 0;
+
+      &[data-type*=select-one] .choices__inner {
+        padding-left: 0;
+      }
+
+      // .choices {
+      //   border: 0;
+      //   min-width: 0;
+      //   margin: 0;
+      //   padding-left: 0;
+      //   display: inline-block;
+      //   font-size: 16px;
+      //   letter-spacing: normal;
+      //   padding-right: 45px;
+      //   line-height: 1.31;
+      //   height: auto;
+      // }
+
+      // .current {
+      //   text-transform: capitalize;
+      // }
+      //
+      // .list {
+      //   margin-top: 4px;
+      // }
+      //
+      // .option {
+      //   text-transform: capitalize;
+      // }
+    }
+  }
+
   @include screen('temp', max) {
     border-top: 1px solid $color-border;
     overflow-x: scroll;
@@ -100,6 +188,19 @@
 
       &:not(:last-child) {
         margin-right: -11px;
+      }
+    }
+
+    &__button {
+      display: none;
+    }
+
+    &_contacts {
+      overflow: inherit;
+      border-top: 0;
+
+      .choices__list--single .choices__item {
+        text-transform: none;
       }
     }
   }

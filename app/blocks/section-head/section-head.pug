@@ -5,7 +5,7 @@ mixin section-head(subtitle, title, dropdown)
       +e.H2.title= title
       if dropdown
         +e.SELECT.select.select.js-select
-          option(value, selected) Все офисы продаж
-          option(value='moskow') Москва
+          option(value="all", selected) Все офисы продаж
+          option(value='msk') Москва
           option(value='spb') Санкт-Петербург
     block

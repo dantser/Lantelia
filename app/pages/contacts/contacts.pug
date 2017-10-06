@@ -1,0 +1,8 @@
+extends ../../layouts/default
+include ../../components/contacts/contacts
+
+block head
+  - var pageTitle = 'Контактная информация'
+
+block content
+  +contacts()

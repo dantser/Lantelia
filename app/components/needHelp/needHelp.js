@@ -32,10 +32,10 @@ export default () => {
     e.preventDefault();
     needHelp.addClass('needHelp_opened');
       freeze();
-      if($(window).width() < 999) {
+      if($(window).width() < 1400) {
         menu.removeClass('header__nav_active');
       }
-      grayscreen.fadeIn();
+      grayscreen.fadeIn('fast');
       popup.fadeIn();
       $(burgerClass).removeClass(activeBurgerClass);
 

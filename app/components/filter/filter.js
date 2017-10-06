@@ -1,3 +1,4 @@
+
 const $ = window.$;
 /* eslint-disable */
 export default () => {
@@ -24,6 +25,20 @@ export default () => {
       CARD.hide();
       $('.product-card[data-line="'+lFilter+'"]').fadeIn(250);
     }
+  });
+
+  const FILTER_CONTACTS = $('.js-select');
+
+  FILTER_CONTACTS.on('change', function () {
+    const ADDRESS_CARD = $('.address-card');
+    const mFilter = $(this).val();
+    if (mFilter === 'all') {
+      ADDRESS_CARD.show();
+    } else {
+      ADDRESS_CARD.hide();
+      $('[data-city="'+mFilter+'"]').show();
+    }
+    // $('select').niceSelect('update');
   });
 };
 

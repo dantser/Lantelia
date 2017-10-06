@@ -1,13 +1,13 @@
 //- ._gradiented - градинтный border
 //- ._black
 
-mixin button(icon, isSubmit)
+mixin button(icon, isSubmit, link)
   if (isSubmit)
     +b.BUTTON(type='submit').button&attributes(attributes)
       +e.text
         block
   else
-    +b.BUTTON.button&attributes(attributes)
+    +b.A(href=link).button&attributes(attributes)
       if icon
         +icon(icon).icon
       +e.text

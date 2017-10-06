@@ -178,6 +178,7 @@
     height: 54px;
     background-color: transparent;
     box-shadow: none;
+    animation: none;
 
     &_main {
       display: none !important;
@@ -218,8 +219,9 @@
       width: 100%;
       max-width: none;
       right: 0;
-      top: 56px;
+      top: 55px;
       bottom: auto;
+      box-shadow: 0 8px 36px 0 rgba(0, 0, 0, .09);
 
       &__content {
         padding: 30px 75px 32px 22px;

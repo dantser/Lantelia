@@ -1,0 +1,57 @@
+.sales-offices {
+  padding-bottom: 36px;
+
+  .section__head {
+    margin-bottom: 46px;
+  }
+
+  .filter {
+    align-self: flex-end;
+    transform: translateY(-4px);
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-flow: row wrap;
+    margin-right: -24px;
+  }
+
+  .address-card {
+    min-width: 424px;
+    margin-bottom: $grid-gap;
+    margin-right: $grid-gap;
+  }
+
+  @include screen('temp', max) {
+    padding-top: 89px;
+    padding-bottom: 0;
+
+    .section-head {
+      margin-bottom: 12px;
+    }
+
+    .section__head {
+      display: block;
+      margin-bottom: 35px;
+    }
+
+    .filter {
+      transform: none;
+      padding: 0;
+    }
+
+    &__wrapper {
+      margin: 0;
+    }
+
+    .address-card {
+      width: 100%;
+      min-width: 0;
+      margin: 0;
+
+      &:last-child {
+        border-bottom: 0;
+      }
+    }
+  }
+}

@@ -1,0 +1,9 @@
+include ../../blocks/button/button
+
+mixin filter-contacts(text, link)
+  +b.filter._contacts&attributes(attributes)
+    +e.SELECT.select.js-select
+      option(selected, value="all") Вся Россиия
+      option(value="spb") Санкт-Петербург
+      option(value="msk") Москва
+    +button(false, false, link)._white._fill-black.filter__button= text
