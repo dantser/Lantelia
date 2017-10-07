@@ -1,0 +1,89 @@
+.shippingAndPayment {
+  padding: 59px 0 4px;
+
+  .section__head {
+    margin-bottom: 46px;
+  }
+
+  &__content {
+    border-top: 1px solid $color-border;
+  }
+
+  &__item {
+    padding: 56px 0 54px;
+
+    &:not(:last-child) {
+      border-bottom: 1px solid $color-border;
+    }
+  }
+
+  &__wrapper {
+    padding: 0 72px;
+  }
+
+  .grid {
+    margin-left: -45px;
+    margin-right: -45px;
+
+    &__col {
+      padding: $grid-gap 45px 0;
+
+      &_seven {
+        width: 57.9%;
+        padding-left: 34px;
+        padding-right: 80px;
+      }
+
+      &_three {
+        padding-left: 0;
+        padding-right: 39px;
+      }
+    }
+  }
+
+  &__map {
+    margin-bottom: 29px;
+  }
+
+
+  &__title {
+    @extend %heading-3;
+
+    margin: 0 0 45px;
+
+    &:not(:first-child):not(:last-child) {
+      margin: 53px 0 45px;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__text {
+    @extend %text;
+
+    &:not(:last-child) {
+      margin-bottom: 26px;
+    }
+  }
+
+  &__label {
+    @extend %text-label;
+
+    color: $color-main;
+  }
+
+  &__label2 {
+    @extend %text-label;
+
+    color: $color-gray;
+    margin-top: 19px;
+    line-height: 2;
+    letter-spacing: .05em;
+  }
+
+  .map {
+    height: 396px;
+  }
+}

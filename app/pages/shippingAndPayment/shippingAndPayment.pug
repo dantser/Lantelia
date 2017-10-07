@@ -1,0 +1,8 @@
+extends ../../layouts/default
+include ../../components/shippingAndPayment/shippingAndPayment
+
+block head
+  - var pageTitle = 'Доставка и оплата'
+
+block content
+  +shippingAndPayment()

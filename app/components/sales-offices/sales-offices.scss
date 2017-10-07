@@ -11,9 +11,35 @@
   }
 
   &__wrapper {
-    display: flex;
-    flex-flow: row wrap;
+    // display: flex;
+    // flex-flow: row wrap;
     margin-right: -24px;
+  }
+
+  &__map {
+    margin-left: -$container-padding;
+    margin-right: -$container-padding;
+    position: relative;
+    display: none;
+  }
+
+  &__map-close {
+    width: 54px;
+    height: 54px;
+    border-radius: 100px;
+    background-color: #252525;
+    box-shadow: 0 12px 36px 0 rgba(0, 0, 0, .11);
+    position: absolute;
+    top: $grid-gap;
+    right: $grid-gap*2;
+    z-index: 2;
+
+    svg {
+      @include center-block;
+      fill: $color-white;
+      width: 12px;
+      height: 12px;
+    }
   }
 
   .address-card {

@@ -23,6 +23,7 @@ import filter from '../components/filter/filter';
 import extraProducts from '../components/extra-products/extra-products';
 import newsTraining from '../components/newsTraining/newsTraining';
 import video from '../blocks/video/video';
+import salesOffices from '../components/sales-offices/sales-offices';
 
 const $ = window.$;
 
@@ -51,4 +52,5 @@ $(() => {
   filter();
   newsTraining();
   video();
+  salesOffices();
 });

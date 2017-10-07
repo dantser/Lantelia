@@ -5,11 +5,14 @@ import 'leaflet.gridlayer.googlemutant';
 import 'leaflet.markercluster';
 
 export default () => {
-  const map = $('#map');
-
-  if(!map) {
+  const map = $('#map'),
+        shippingMap = $('#shippingMap');
+  console.log(shippingMap.lenght);
+  if (map.length == 0 || shippingMap.length == 0) {
     return
-  }
+  };
+
+  var shippingMaps = L.map('shippingMap').setView([55.81663, 37.64863], 15);
 
   var mymap = L.map('map').setView([55.7788008, 37.5821708], 15);
 
@@ -17,6 +20,9 @@ export default () => {
     type: 'roadmap',
     styles: [{"featureType":"all","elementType":"labels.text.fill","stylers":[{"saturation":36},{"color":"#000000"},{"lightness":40}]},{"featureType":"all","elementType":"labels.text.stroke","stylers":[{"visibility":"on"},{"color":"#000000"},{"lightness":16}]},{"featureType":"all","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"administrative","elementType":"geometry.fill","stylers":[{"color":"#000000"},{"lightness":20}]},{"featureType":"administrative","elementType":"geometry.stroke","stylers":[{"color":"#000000"},{"lightness":17},{"weight":1.2}]},{"featureType":"administrative","elementType":"labels","stylers":[{"visibility":"on"}]},{"featureType":"landscape","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":20}]},{"featureType":"poi","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":21}]},{"featureType":"road.highway","elementType":"geometry.fill","stylers":[{"color":"#000000"},{"lightness":17}]},{"featureType":"road.highway","elementType":"geometry.stroke","stylers":[{"color":"#000000"},{"lightness":29},{"weight":0.2}]},{"featureType":"road.arterial","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":18}]},{"featureType":"road.local","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":16}]},{"featureType":"transit","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":19}]},{"featureType":"water","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":17},{"gamma":"0.97"}]}]
   }).addTo(mymap);
+
+  roads.addTo(shippingMaps)
+
   var LeafIcon = L.Icon.extend({
       options: {
           iconSize:     [38, 95],
@@ -50,10 +56,21 @@ export default () => {
                       .setContent("<h3>Петровский Пассаж</h3> <p>г. Псков, Рижский пр-кт, д.16</p><h3>Контакты</h3> <p>Тел.: 79269464613<br>Эл. почта: msk.bel@cdek.ru</p> <p>Пн-Пт – с 10:00 до 20:00<br>Сб, Вс – с 10:00 до 16:00</p>")).on('click', clickZoom);
 
 
-  markers["marker5"] = L.marker([57.234123, 28.314583], {icon: iconInactive}, {title: marker5}).addTo(mymap)
+  markers["marker5"] = L.marker([57.231244, 28.314583], {icon: iconInactive}, {title: marker5}).addTo(mymap)
                       .bindPopup(L.popup({maxWidth:201})
                       .setContent("<h3>Петровский Пассаж</h3> <p>г. Псков, Рижский пр-кт, д.16</p><h3>Контакты</h3> <p>Тел.: 79269464613<br>Эл. почта: msk.bel@cdek.ru</p> <p>Пн-Пт – с 10:00 до 20:00<br>Сб, Вс – с 10:00 до 16:00</p>")).on('click', clickZoom);
 
+  markers["marker6"] = L.marker([57.455676, 28.314583], {icon: iconInactive}, {title: marker6}).addTo(mymap)
+                      .bindPopup(L.popup({maxWidth:201})
+                      .setContent("<h3>Петровский Пассаж</h3> <p>г. Псков, Рижский пр-кт, д.16</p><h3>Контакты</h3> <p>Тел.: 79269464613<br>Эл. почта: msk.bel@cdek.ru</p> <p>Пн-Пт – с 10:00 до 20:00<br>Сб, Вс – с 10:00 до 16:00</p>")).on('click', clickZoom);
+
+  markers["marker7"] = L.marker([57.753355, 28.314583], {icon: iconInactive}, {title: marker7}).addTo(mymap)
+                      .bindPopup(L.popup({maxWidth:201})
+                      .setContent("<h3>Петровский Пассаж</h3> <p>г. Псков, Рижский пр-кт, д.16</p><h3>Контакты</h3> <p>Тел.: 79269464613<br>Эл. почта: msk.bel@cdek.ru</p> <p>Пн-Пт – с 10:00 до 20:00<br>Сб, Вс – с 10:00 до 16:00</p>")).on('click', clickZoom);
+
+  markers["marker8"] = L.marker([57.679006, 28.314583], {icon: iconInactive}, {title: marker8}).addTo(mymap)
+                      .bindPopup(L.popup({maxWidth:201})
+                      .setContent("<h3>Петровский Пассаж</h3> <p>г. Псков, Рижский пр-кт, д.16</p><h3>Контакты</h3> <p>Тел.: 79269464613<br>Эл. почта: msk.bel@cdek.ru</p> <p>Пн-Пт – с 10:00 до 20:00<br>Сб, Вс – с 10:00 до 16:00</p>")).on('click', clickZoom);
   // var greenIcon = new LeafIcon({iconUrl: 'assets/images/pin.svg'});
   // L.marker([55.7788008, 37.5821708], {icon: greenIcon}).addTo(mymap).bindPopup(L.popup({maxWidth:201}).setContent("<h3>Цветной Москва</h3> <p>г. Москва, Ленинградский проспект, д. 2, цокольный этаж, оф. №1</p><h3>Контакты</h3> <p>Тел.: 79269464613<br>Эл. почта: msk.bel@cdek.ru</p> <p>Пн-Пт – с 10:00 до 20:00<br>Сб, Вс – с 10:00 до 16:00</p>"));
   // var greenIcon = new LeafIcon({iconUrl: 'assets/images/pin.svg'});

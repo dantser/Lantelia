@@ -9,18 +9,18 @@
   z-index: 100;
   min-width: 0;
   width: 54px;
-  height: 54px;
-  transition: min-width $ease-pagination, border-radius $ease-pagination;
+  overflow: hidden;
+  // transition: min-width $ease-pagination, border-radius $ease-pagination;
 
-  &:hover {
-    min-width: 200.16px;
-    border-radius: 27px;
-
-    .needHelp__text {
-      visibility: visible;
-      opacity: 1;
-    }
-  }
+  // &:hover {
+  //   min-width: 200.16px;
+  //   border-radius: 27px;
+  //
+  //   .needHelp__text {
+  //     visibility: visible;
+  //     opacity: 1;
+  //   }
+  // }
 
   &_opened {
     width: 54px;
@@ -39,25 +39,25 @@
       display: none !important;
     }
 
-    &:hover {
-      width: 54px;
-      height: 54px;
-      min-width: 0;
-    }
+    // &:hover {
+    //   width: 54px;
+    //   height: 54px;
+    //   min-width: 0;
+    // }
   }
 
-  @keyframes first {
-
-    from {
-      right: 102px;
-    }
-
-    to {
-      right: 23px;
-    }
-  }
-
-  animation: first 1s;
+  // @keyframes first {
+  //
+  //   from {
+  //     right: 102px;
+  //   }
+  //
+  //   to {
+  //     right: 23px;
+  //   }
+  // }
+  //
+  // animation: first 1s;
 
   &_animated {
     @keyframes gogo {
@@ -104,18 +104,17 @@
   &__text {
     @include center-block;
 
-    display: none;
     white-space: nowrap;
     display: inline-block;
     vertical-align: middle;
     letter-spacing: .125em;
     line-height: 54px;
-    height: 54px;
+
     font-size: 12px;
     font-weight: 300;
     color: $color-white;
     text-transform: uppercase;
-    transition: opacity $ease-pagination, visibility $ease-pagination;
+    // transition: opacity $ease-pagination, visibility $ease-pagination;
   }
 
   &-popup {
