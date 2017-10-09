@@ -1,0 +1,33 @@
+include ../../components/map/map
+include ../../blocks/button/button
+
+mixin partnership()
+  +b.partnership&attributes(attributes)  
+    +grid.grid_large.partnership__grid
+      +col(8)
+        +e.wrapper
+          +e.H2.title Партнерство
+          +button()._gradiented.partnership__button НАЧАТЬ РАБОТАТЬ С LANTELIA
+          +grid.grid_large.partnership__grid_inner
+            +col(6)
+              +e.P.text 
+                | По всем вопросам обращаться:
+                br
+                | ООО «Шарм Рус Дистрибьюшн»
+                | ОГРН: 1137746862483
+              +e.P.text 
+                | Режим работы: пн.- пт. с 9:30 до 18:30
+                br
+                | Адрес: 107113, Moсква,
+                br
+                | ул. Маленковская 32, стр.2А
+            +col(6)
+              +e.phones
+                +e.A(href="tel:+74957486360").phone +7 (495) 748-63-60
+                +e.A(href="tel:88007070537").phone 8 (800) 707-05-37
+                +e.SPAN.text._gray (бесплатно по России)
+              +e.A(href="fax:+74957486359").fax Факс: +7 (495) 748-63-59
+              +e.A(href="tel:84954020013").email E-mail: info@charmd.ru
+            
+      +col(4).partnership__map
+        +map()#shippingMap

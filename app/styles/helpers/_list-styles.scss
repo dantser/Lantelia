@@ -7,7 +7,7 @@
   }
 
   li {
-    padding-left: 20px;
+    padding-left: 75px;
     position: relative;
   }
 }
@@ -26,13 +26,15 @@
   counter-reset: list1;
 
   li {
+    counter-increment: list1;
 
     &::before {
+      font-size: 28px;
+      line-height: 1.39;
       position: absolute;
       left: 0;
       top: 0;
-      counter-increment: list1;
-      content: counter(list1) '.';
+      content: counter(list1, decimal-leading-zero);
     }
   }
 }

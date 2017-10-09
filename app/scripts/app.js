@@ -25,6 +25,7 @@ import newsTraining from '../components/newsTraining/newsTraining';
 import video from '../blocks/video/video';
 import salesOffices from '../components/sales-offices/sales-offices';
 import shippingAndPayment from '../components/shippingAndPayment/shippingAndPayment';
+import partnership from '../components/partnership/partnership';
 
 const $ = window.$;
 
@@ -55,4 +56,5 @@ $(() => {
   video();
   salesOffices();
   shippingAndPayment();
+  partnership();
 });

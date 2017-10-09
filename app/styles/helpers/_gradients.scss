@@ -16,6 +16,12 @@
   border-image-slice: 1 !important;
 }
 
+%gradient-border-card {
+  border: 1px solid $color-border;
+  border-image-source: linear-gradient(to left, rgba(226, 100, 140, .2), rgba(101, 167, 227, .2));
+  border-image-slice: 1;
+}
+
 %gradient-card_blue {
   background: linear-gradient(315deg, rgba(179, 195, 233, .5), rgba(211, 223, 243, .5));
 

@@ -1,3 +1,194 @@
-.about {
+.about-page {
   display: block;
+
+  &__top {
+    padding-bottom: 74px;
+  }
+
+  &__content {
+    padding-top: 88px;
+    padding-bottom: 59px;
+  }
+
+  &__head-text {
+    margin-bottom: 58px;
+  }
+
+  &__wrapper {
+    padding-left: 100px;
+    padding-right: 59px;
+  }
+
+  &__col {
+
+    &_right {
+      margin-top: -8px;
+      vertical-align: top;
+    }
+
+    &_image {
+      margin-top: 8px;
+    }
+  }
+
+  .grid__col {
+
+    &_eight {
+      width: 62.9%;
+    }
+
+    &_four {
+      width: 37.1%;
+    }
+  }
+
+  &__head-text {
+    @extend %text-big;
+  }
+
+  &__image {
+    max-width: 100%;
+  }
+
+  &__list {
+    @extend %list;
+    list-style: none;
+    margin-top: -3px;
+    padding-left: 0;
+
+    @extend %ollist;
+
+    li {
+
+      &:not(:last-child) {
+        margin-bottom: 26px;
+      }
+    }
+  }
+
+  &__title {
+    @extend %heading-3;
+
+    line-height: 1.5;
+    margin-bottom: 27px;
+  }
+
+  &__text {
+    @extend %text;
+
+    color: $color-gray;
+  }
+
+  &__phones, &__text {
+
+    &:not(:last-child) {
+      margin-bottom: 26px;
+    }
+  }
+
+  &__phone {
+    @extend %text;
+
+    display: block;
+    color: $color-main;
+  }
+
+  &__button {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    padding-left: 56px;
+    padding-right: 59px;
+  }
+
+  @include screen('temp', max) {
+
+    .container_large {
+      padding-left: 22px;
+      padding-right: 22px;
+    }
+
+    &__content {
+      padding-top: 31px;
+      padding-bottom: 27px;
+    }
+
+    &__wrapper {
+      padding: 0;
+    }
+
+    &__top {
+      padding-bottom: 32px;
+      border-bottom: 1px solid $color-border;
+    }
+
+    .grid {
+      margin: 0;
+
+      &__col {
+        width: 100%;
+        padding: 0;
+      }
+    }
+
+    &__col {
+
+      &_head {
+        margin-bottom: 36px;
+        order: 1;
+      }
+
+      &_list {
+        margin-bottom: 32px;
+        order: 2;
+      }
+
+      &_right {
+        order: 4;
+      }
+
+      &_image {
+        order: 3;
+        margin-bottom: 39px;
+        margin-top: 0;
+
+        .about-page__image {
+          width: 100%;
+          height: 276px;
+        }
+      }
+    }
+
+    &__list {
+      margin-bottom: 0;
+    }
+
+    &__head-text {
+      font-size: 16px;
+      margin-bottom: 32px;
+    }
+
+    &__image {
+      min-height: 276px;
+      object-fit: cover;
+    }
+
+    &__list {
+
+      li {
+        padding-left: 61px;
+      }
+    }
+
+    &__title {
+      font-size: 16px;
+      margin-bottom: 22px;
+    }
+
+    &__button {
+      margin-top: 1px;
+      padding: 17px 0;
+      width: 100%;
+      margin-bottom: 29px;
+    }
+  }
 }

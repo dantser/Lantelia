@@ -21,7 +21,19 @@ mixin masthead()
         +e.buttons
           +button('shopping-cart')._white.masthead__button_cart в корзину
           +button()._white.masthead__button_price 4 990 ₽
-
+          
+mixin masthead-about()
+  +b.SECTION.masthead._about.section&attributes(attributes)
+    +e.image-wrapper
+      img(src="assets/images/pic company/company 1@2x.jpg")
+      img(src="assets/images/pic company/company 1@2x.jpg")
+    .container
+      +e.wrapper
+        +e.H4.subtitle О компании
+        +e.H1.title 
+          | Компания
+          br
+          | Lantelia
 
 mixin product-content()
   +b.SECTION.product-content.section&attributes(attributes)

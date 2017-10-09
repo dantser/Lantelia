@@ -1,3 +1,37 @@
-mixin about()
-  +b.about&attributes(attributes)
-    block
+include ../../components/product-page/product-page
+include ../../blocks/button/button
+include ../../components/partnership/partnership
+
+mixin about-page()
+  +b.about-page&attributes(attributes)
+    +masthead-about()
+    +e.content
+      +e.top
+        .container.container_large
+          +grid.grid_large
+            +col(8).about-page__col_head
+              +e.wrapper
+                +e.P.head-text Компания Lantelia специализируется на производстве профессиональной косметики для волос. Мы предлагаем качественную сертифицированную продукцию оптом, не имеющую аналогов на рынке России.
+              +e.IMG(src="assets/images/pic company/company 2@2x.jpg").image
+            +col(4).about-page__col_image
+              +e.IMG(src="assets/images/pic company/company 3@2x.jpg").image
+            +col(8).about-page__col_list
+              +e.wrapper
+                +e.OL.list
+                  li Натуральный состав. Благодаря безопасным и экологически чистым ингредиентам, салонная продукция Lantelia подходит для ежедневного использования в домашних условиях.
+                  li В ассортименте 4 линии профессиональной косметики. У вас будет отличная возможность охватить широкий круг клиентов с различными запросами и потребностями.
+                  li Продукция Lantelia и салонные процедуры для домашнего использования гарантированно привлекут внимание и вызовут интерес у женщин.
+                  li Товар в наличии на складе. Вам не придется неделями ждать доставку. Формируем и отправляем заказы в день поступления.
+                  li Высокая маржинальность. Лояльная ценовая политика нашей компании позволит устанавливать наценку на товар.
+            +col(4).about-page__col_right
+              +e.H3.title У вас есть вопросы?
+              +e.P.text Чтобы уточнить цены и оформить доставку в ваш регион, позвоните по телефону:
+              +e.phones
+                +e.A(href="tel:88004492031").phone 8 800 4492—031
+                +e.A(href="tel:84954020013").phone 8 495 4020—013
+              +e.P.text или оставьте заявку на обратный звонок.
+              +button()._gradiented.about-page__button Обратный звонок
+              +e.P.text Наш менеджер перезвонит вам в течение 15 минут.
+      +e.partnership
+        .container.container_large
+          +partnership()

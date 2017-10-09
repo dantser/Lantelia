@@ -5,6 +5,24 @@
   padding-top: 117px;
   padding-bottom: 0;
 
+  &_about {
+
+    .masthead__subtitle {
+      display: block;
+
+      @extend %text-sub;
+    }
+
+    .masthead__wrapper {
+      padding-top: 139px;
+    }
+
+    .masthead__title {
+      margin-bottom: 0;
+      margin-top: 18px;
+    }
+  }
+
   &__image-wrapper {
     position: absolute;
     top: 0;
@@ -88,63 +106,83 @@
   }
 
   @include screen('temp', max) {
+    min-height: 503px;
+    padding-top: 65px;
 
-    .masthead {
-      min-height: 503px;
-      padding-top: 65px;
+    .container {
+      padding-top: 30px;
+    }
+
+    &__wrapper {
+      min-height: 0;
+      padding-top: 0;
+      width: 100%;
+      padding-left: 0;
+    }
+
+    &__image-wrapper {
+
+      img {
+        display: none;
+
+        &:last-child {
+          display: block;
+        }
+      }
+    }
+
+    &__subtitle {
+      display: block;
+      margin-bottom: 11px;
+    }
+
+    &__title {
+      font-size: 18px;
+      width: 60%;
+      line-height: 1.67;
+      min-height: 358px;
+    }
+
+    &__text {
+      display: none;
+    }
+
+    &__buttons {
+      width: 100%;
+    }
+
+    &__button {
+      padding: 14px 0;
+
+      &_cart {
+        width: 61.9%;
+      }
+
+      &_price {
+        width: 38.1%;
+      }
+    }
+
+    &_about {
+      min-height: 568px;
+      padding-top: 0;
 
       .container {
-        padding-top: 30px;
+        padding-top: 26px;
       }
 
-      &__wrapper {
-        min-height: 0;
-        padding-top: 0;
-        width: 100%;
+      .masthead__subtitle {
+        font-size: 13px;
+        margin-bottom: 10px;
+      }
+
+      .masthead__title {
+        margin-top: 0;
+      }
+
+      .masthead__wrapper {
         padding-left: 0;
-      }
-
-      &__image-wrapper {
-
-        img {
-          display: none;
-
-          &:last-child {
-            display: block;
-          }
-        }
-      }
-
-      &__subtitle {
-        display: block;
-        margin-bottom: 11px;
-      }
-
-      &__title {
-        font-size: 18px;
-        width: 60%;
-        line-height: 1.67;
-        min-height: 358px;
-      }
-
-      &__text {
-        display: none;
-      }
-
-      &__buttons {
-        width: 100%;
-      }
-
-      &__button {
-        padding: 14px 0;
-
-        &_cart {
-          width: 61.9%;
-        }
-
-        &_price {
-          width: 38.1%;
-        }
+        padding-top: 66px;
       }
     }
   }

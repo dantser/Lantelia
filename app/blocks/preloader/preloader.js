@@ -3,6 +3,11 @@ import { freeze, unfreeze } from '../../blocks/js-functions/freeze';
 
 /* eslint-disable */
 export default () => {
+  if ($('.index').length == 0) {
+    $('#preloader').hide();
+    return
+  };
+
   const PRE = $('#preloader');
   const TEXT = $('.preloader__logo');
   freeze();

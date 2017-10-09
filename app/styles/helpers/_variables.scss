@@ -9,6 +9,7 @@ $container-padding-mobile: 22px;
 $grid-container-width: 100%; // Ширина контейнера сетки
 $grid-cols: 12; // Количество колонок в сетке
 $grid-gap: 24px; // Расстояние между колонками
+$grid-gap-large: 96px;
 $grid-col-width: $grid-container-width/$grid-cols; // Ширина одной колонки
 
 // ##########

@@ -30,4 +30,15 @@
     &_fourteen { width: 14 * $grid-col-width; }
     &_fifteen { width: 15 * $grid-col-width; }
   }
+
+  &_large {
+    margin-left: -$grid-gap-large/2;
+    margin-right: -$grid-gap-large/2;
+
+    &:first-of-type { margin-top: -$grid-gap-large; }
+
+    .grid__col {
+      padding: $grid-gap-large $grid-gap-large/2 0;
+    }
+  }
 }

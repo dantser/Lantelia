@@ -1,0 +1,105 @@
+.partnership {
+  @extend %gradient-border-card;
+
+  &__wrapper {
+    padding: 87px 0 95px 100px;
+  }
+
+  &__title {
+    @extend %heading-21;
+
+    text-transform: uppercase;
+    margin-bottom: 58px;
+  }
+
+  &__button {
+    padding: 19px 28px 20px;
+    margin-bottom: 60px;
+
+    .button__text {
+      font-size: 12px;
+    }
+  }
+
+  &__grid {
+    margin-left: -48px;
+
+    &_inner {
+
+      .grid__col {
+        padding-right: 24px;
+      }
+    }
+  }
+
+  .map {
+    height: 100%;
+  }
+
+  .leaflet-control-zoom {
+    display: none;
+  }
+
+  &__text {
+    @extend %text;
+
+    &:not(:last-child) {
+      margin-bottom: 27px;
+    }
+
+    &_gray {
+      color: $color-gray;
+    }
+  }
+
+  &__phones {
+    margin-bottom: 27px;
+  }
+
+  &__phone, &__email, &__fax {
+    @extend %text;
+
+    display: block;
+    color: $color-main;
+  }
+
+  @include screen('temp', max) {
+    border: 0;
+    padding-top: 31px;
+
+    &__wrapper {
+      padding: 0;
+    }
+
+    &__title {
+      font-size: 18px;
+      line-height: 1.67;
+      margin-bottom: 30px;
+    }
+
+    &__button {
+      width: 100%;
+      margin-bottom: 60px;
+      padding: 17px 0;
+      margin-bottom: 29px;
+
+      .button__text {
+        font-size: 11px;
+      }
+    }
+
+    &__grid_inner {
+      .grid__col {
+        padding: 0;
+
+        &:not(:last-child) {
+          margin-bottom: 23px;
+        }
+      }
+    }
+
+    &__map {
+      display: none;
+    }
+  }
+}

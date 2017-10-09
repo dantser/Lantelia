@@ -1,7 +1,8 @@
-extends ../../layouts/default
+extends ../../layouts/main
+include ../../components/about/about
 
 block head
-- var pageTitle = 'Versta Project Template'
+  - var pageTitle = 'О компании'
 
 block content
-  +b.about
+  +about-page()

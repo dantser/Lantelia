@@ -4,12 +4,12 @@ import 'leaflet';
 import 'leaflet.gridlayer.googlemutant';
 
 export default () => {
-  const map = $('#shippingMaps');
+  const map = $('#shippingMap');
   // if (map.length == 0 || shippingMaps.length == 0) {
   //   return
   // };
 
-  if (!map) {
+  if (map.length == 0) {
     return
   }
 
@@ -47,17 +47,19 @@ export default () => {
     L.control.zoom({
        position:'bottomleft'
     }).addTo(shippingMaps);
-    shippingMaps.redraw();
+    return;
+
   };
 
-  $(window).resize(function () {
-    if ($(window).width() > 1399) {
-      L.control.zoom({
-         position:'bottomleft'
-      }).addTo(shippingMaps);
-      shippingMaps.redraw();
-    };
-  })
+  // $(window).resize(function () {
+  //   if ($(window).width() > 1399) {
+  //     L.control.zoom({
+  //        position:'bottomleft'
+  //     }).addTo(shippingMaps);
+  //     return;
+  //
+  //   };
+  // })
 
 
 
