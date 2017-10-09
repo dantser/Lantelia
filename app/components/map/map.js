@@ -5,14 +5,12 @@ import 'leaflet.gridlayer.googlemutant';
 import 'leaflet.markercluster';
 
 export default () => {
-  const map = $('#map'),
-        shippingMap = $('#shippingMap');
-  console.log(shippingMap.lenght);
-  if (map.length == 0 || shippingMap.length == 0) {
+  const map = $('#map');
+
+  if(map.length == 0) {
     return
   };
 
-  var shippingMaps = L.map('shippingMap').setView([55.81663, 37.64863], 15);
 
   var mymap = L.map('map').setView([55.7788008, 37.5821708], 15);
 
@@ -21,7 +19,6 @@ export default () => {
     styles: [{"featureType":"all","elementType":"labels.text.fill","stylers":[{"saturation":36},{"color":"#000000"},{"lightness":40}]},{"featureType":"all","elementType":"labels.text.stroke","stylers":[{"visibility":"on"},{"color":"#000000"},{"lightness":16}]},{"featureType":"all","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"administrative","elementType":"geometry.fill","stylers":[{"color":"#000000"},{"lightness":20}]},{"featureType":"administrative","elementType":"geometry.stroke","stylers":[{"color":"#000000"},{"lightness":17},{"weight":1.2}]},{"featureType":"administrative","elementType":"labels","stylers":[{"visibility":"on"}]},{"featureType":"landscape","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":20}]},{"featureType":"poi","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":21}]},{"featureType":"road.highway","elementType":"geometry.fill","stylers":[{"color":"#000000"},{"lightness":17}]},{"featureType":"road.highway","elementType":"geometry.stroke","stylers":[{"color":"#000000"},{"lightness":29},{"weight":0.2}]},{"featureType":"road.arterial","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":18}]},{"featureType":"road.local","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":16}]},{"featureType":"transit","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":19}]},{"featureType":"water","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":17},{"gamma":"0.97"}]}]
   }).addTo(mymap);
 
-  roads.addTo(shippingMaps)
 
   var LeafIcon = L.Icon.extend({
       options: {

@@ -50,6 +50,7 @@
     @extend %heading-3;
 
     margin: 0 0 45px;
+    position: relative;
 
     &:not(:first-child):not(:last-child) {
       margin: 53px 0 45px;
@@ -57,6 +58,23 @@
 
     &:last-child {
       margin-bottom: 0;
+    }
+  }
+
+  .js-label {
+
+    &::after {
+      @include pseudo;
+
+      display: none;
+      border-right: 1px solid $color-main;
+      border-bottom: 1px solid $color-main;
+      width: 8px;
+      height: 8px;
+      top: 38%;
+      right: 1px;
+      transform: rotate(225deg) translate(0, -50%);
+      transition: transform $ease-main;
     }
   }
 
@@ -85,5 +103,86 @@
 
   .map {
     height: 396px;
+  }
+
+  @include screen('temp', max) {
+    padding-top: 95px;
+
+    .section__head {
+      margin-bottom: 31px;
+    }
+
+    &__wrapper {
+      padding: 0;
+    }
+
+    .grid {
+      margin: 0;
+
+      &__col {
+
+        &_two {
+          display: none;
+        }
+
+        &_three {
+          width: 100%;
+          padding: 0;
+        }
+
+        &_seven {
+          width: 100%;
+          padding: 0;
+        }
+      }
+    }
+
+    .map {
+      display: block;
+      height: auto;
+      min-height: 149px;
+      max-width: 100%;
+      margin-top: 32px;
+      margin-bottom: 9px;
+    }
+
+    &__item {
+      padding: 31px 0;
+    }
+
+    &__title {
+      font-size: 16px;
+      line-height: 1.5;
+      padding-right: $grid-gap;
+      margin: 0 0 22px;
+
+      &:not(:first-child):not(:last-child) {
+        margin: 45px 0 22px;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+    }
+
+    .js-label {
+
+      &::after {
+        display: block;
+      }
+
+      &.active {
+        margin-bottom: 0;
+
+        &::after {
+          transform: rotate(45deg);
+        }
+      }
+    }
+
+    &__label, &__label2 {
+      display: none;
+    }
   }
 }
