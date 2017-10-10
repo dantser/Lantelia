@@ -26,7 +26,7 @@ export default () => {
     el.css({
       position: 'absolute',
       visibility: 'hidden',
-      display: 'block',
+      display: 'inline-block',
     });
 
     size = {
@@ -52,7 +52,7 @@ export default () => {
         toggleYClass = 'toggled-y',
         easing = options.easing || 'swing',
         timing = options.timing || 500,
-        type = options.display || 'block', // Display 'block' by default
+        type = options.display || 'inline-block', // Display 'block' by default
         param = dimension || 'height', // Animate height by default
         size = el.actualSize(),
         toggledX = el.hasClass(toggleXClass),
@@ -84,6 +84,7 @@ export default () => {
       duration: timing,
       easing: easing,
       complete: animEnd,
+      display: 'inline-block',
     });
 
     !toggledX && isWidth ? el.addClass(toggleXClass) : el.removeClass(toggleXClass);
@@ -103,10 +104,12 @@ export default () => {
       }
     });
   }
-  // needHelp.click( function (e) {
-  //   $(this).smartToggle('width', { easing: 'ease', timing: 2000 });
-  //   e.preventDefault();
-  // });
+
+  needHelp.hover( function (e) {
+    e.preventDefault();
+    $(this).find('.needHelp__text').smartToggle('width', { easing: 'ease', timing: 1000 });
+  });
+
   $(document).on('click', '.needHelp', function (e) {
     e.preventDefault();
     needHelp.addClass('needHelp_opened');

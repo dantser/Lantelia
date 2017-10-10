@@ -10,11 +10,7 @@
 
   @include transited;
 
-  &:hover {
-    opacity: .6;
-  }
-
-  &_active {
+  &_active, &:hover {
     // transform: scale(1.04, 1.16);
     border: none;
     box-shadow: 0 4px 10px 0 rgba(0, 0, 0, .21);
@@ -48,10 +44,10 @@
       z-index: -1;
       background-color: $color-main;
     }
+  }
 
-    &:hover {
-      opacity: 1;
-    }
+  &:hover {
+    opacity: .7;
   }
 
   &__wrapper {

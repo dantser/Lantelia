@@ -4,8 +4,7 @@ import 'jquery.dotdotdot';
 export default () => {
   $('.news-card__text').dotdotdot({
     truncate: 'letter',
-    watch: 'window',
-    height: 30,
+    fallbackToLetter: true,
   });
 
   // function overflowDotts(size, element) {

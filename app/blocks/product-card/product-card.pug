@@ -1,6 +1,5 @@
 //- ._xl - для тройной карточки
 include ../../blocks/icon/icons
-include ../../blocks/modal/modal
 include ../../blocks/popups/popups
 include ../../blocks/form-elements/form-elements
 
@@ -54,7 +53,7 @@ mixin product-card-cart(img, price)
         +e.LI.name Серум 250 мл
       +e.col.__right
         +order-price('Цена', price).js-price
-        +e.SELECT.select.select._bordered._triangle
+        +e.SELECT.select.select._bordered._triangle.js-select
           option(value=1, selected) 1
           option(value=2) 2
           option(value=3) 3

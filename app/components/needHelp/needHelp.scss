@@ -3,13 +3,14 @@
   bottom: 24px;
   right: 23px;
   box-shadow: 0 12px 36px 0 rgba(0, 0, 0, .11);
-  border-radius: 50%;
+  border-radius: 100px;
   background-color: $color-basic;
   cursor: pointer;
   z-index: 100;
   min-width: 0;
-  width: 54px;
   overflow: hidden;
+  min-width: 54px;
+  min-height: 54px;
   // transition: min-width $ease-pagination, border-radius $ease-pagination;
 
   // &:hover {
@@ -81,11 +82,11 @@
   }
 
   &__icon {
+    display: inline-block;
+    vertical-align: middle;
     width: 23px;
     height: 23px;
     fill: $color-white;
-    display: inline-block;
-    vertical-align: middle;
     margin-right: 0;
   }
 
@@ -102,19 +103,19 @@
   }
 
   &__text {
-    @include center-block;
-
     white-space: nowrap;
-    display: inline-block;
-    vertical-align: middle;
-    letter-spacing: .125em;
-    line-height: 54px;
-
+    display: none;
+    letter-spacing: .15em;
     font-size: 12px;
     font-weight: 300;
     color: $color-white;
     text-transform: uppercase;
+    vertical-align: middle;
+
     // transition: opacity $ease-pagination, visibility $ease-pagination;
+    p {
+      padding-left: 14px;
+    }
   }
 
   &-popup {

@@ -18,7 +18,6 @@ export function selects() {
     const choices = new Choices('.js-select', {
       searchEnabled: false,
       itemSelectText: '',
-
     });
   }
 
