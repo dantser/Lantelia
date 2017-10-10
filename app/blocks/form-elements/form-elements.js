@@ -10,6 +10,8 @@ import 'air-datepicker';
 // https://github.com/RobinHerbots/Inputmask
 import Inputmask from 'inputmask';
 
+import autosize from 'autosize';
+
 const $ = window.$;
 
 export function selects() {
@@ -19,6 +21,14 @@ export function selects() {
       searchEnabled: false,
       itemSelectText: '',
     });
+  }
+  /* eslint-enable */
+}
+
+export function textarea() {
+  /* eslint-disable */
+  if($('.textarea').length) {
+    autosize($('.textarea'));
   }
 
   /* eslint-enable */

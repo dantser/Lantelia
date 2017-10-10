@@ -1,21 +1,62 @@
 .about-popup {
   position: relative;
 
+  &__wrapper {
+    display: flex;
+    flex-flow: row nowrap;
+  }
+
   &__content {
-    width: 65%;
-    display: inline-block;
-    vertical-align: middle;
+    max-width: 696px;
+    box-sizing: border-box;
+
+    &-wrapper {
+      padding: 58px $container-padding $container-padding;
+    }
   }
 
   &__image {
-    width: 35%;
     position: relative;
-    display: inline-block;
-    vertical-align: middle;
+    min-width: 380px;
+    overflow: hidden;
+    height: 789px;
 
     img {
-      // @include fill-img;
+      @include fill-img;
     }
+  }
+
+  &__head {
+    margin-bottom: 50px;
+
+    span {
+      font-size: 13px;
+      display: block;
+      color: $color-basic;
+      margin-bottom: 24px;
+    }
+  }
+
+  &__title {
+    color: $color-basic;
+    text-transform: uppercase;
+    @extend %heading-21;
+  }
+
+  .inputbox {
+
+    &:not(:last-child) {
+      margin-bottom: 58px;
+    }
+  }
+
+  .grid {
+    margin-bottom: 61px;
+  }
+
+  &__button {
+    width: calc(50% - 12px);
+    padding-bottom: 21px;
   }
 
   &__icon-close {
@@ -39,18 +80,27 @@
     margin: 0 !important;
 
     &__wrapper {
-      padding-left: 22px;
-      padding-right: 22px;
+      flex-flow: column;
     }
 
     &__content, &__image {
-      display: block;
       width: 100%;
+      min-width: inherit;
+    }
+
+    &__content {
+      padding-left: 22px;
+      padding-right: 22px;
+
+      &-wrapper {
+        padding: 41px 0 0;
+      }
     }
 
     &__image {
       padding-bottom: 100%;
       overflow: hidden;
+      height: auto;
 
       img {
         @include fill-img;
@@ -60,6 +110,16 @@
 
     &__head {
       border-bottom: 1px solid $color-border;
+      padding-bottom: 33px;
+      margin-bottom: 37px;
+
+      span {
+        margin-bottom: 16px;
+      }
+    }
+
+    &__title {
+      font-size: 18px;
     }
 
     .grid {
@@ -72,8 +132,18 @@
       }
     }
 
+    .inputbox {
+      margin-bottom: 46px;
+    }
+
+    .textarea {
+      min-height: 40px;
+      height: auto;
+    }
+
     &__button {
       width: 100%;
+      margin-bottom: 34px;
     }
 
     &__icon-close {

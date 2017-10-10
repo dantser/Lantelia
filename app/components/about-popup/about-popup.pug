@@ -6,29 +6,30 @@ include ../../blocks/icon/icons
 mixin about-popup()
   +b.about-popup&attributes(attributes)
     +popups
-      +popup()#about-popup.about-popup
+      +popup()#about-popup.about-popup.js-freeze
         .about-popup__wrapper.js-freeze
           .about-popup__content
-            .about-popup__head
-              span Хочу работать с
-              h2.about-popup__title Lantelia
-            form.about-popup__form
-            +grid()
-              +col(6)
-                +inputbox('Название салона', true)
-                  +input()(type="text", name="name", required)
-                +inputbox('Город', true)
-                  +input()(type="text", name="city", required)
-                +inputbox('ФИО', true)
-                  +input()(type="text", name="fio", required)
-                +inputbox('Телефон', true)
-                  +input()(type="text", name="phone", required)
-              +col(6)
-                +inputbox('EMAIL', true)
-                  +input()(type="text", name="email", required)
-                +inputbox('Сообщение', true)
-                  +textarea()(name="message", required)
-            +button(false, true)(type="submit", value="Отправить")._white._fill-black.about-popup__button отправить
-        .about-popup__image
-          img(src="assets/images/form@2x.jpg")
+            .about-popup__content-wrapper
+              .about-popup__head
+                span Начать работать с
+                h2.about-popup__title Lantelia
+              form(action="#", method="post").about-popup__form
+                +grid()
+                  +col(6)
+                    +inputbox('Название салона', true)
+                      +input()(type="text", name="name", required)
+                    +inputbox('Город', true)
+                      +input()(type="text", name="city", required)
+                    +inputbox('ФИО', true)
+                      +input()(type="text", name="fio", required)
+                    +inputbox('Телефон', true)
+                      +input()(type="text", name="phone", required)
+                  +col(6)
+                    +inputbox('EMAIL', true)
+                      +input()(type="text", name="email", required)
+                    +inputbox('Сообщение', true)
+                      +textarea()(name="message", required)
+                +button(false, true)(type="submit", value="Отправить")._white._fill-black.about-popup__button отправить
+          .about-popup__image
+            img(src="assets/images/form@2x.jpg")
         +icon('close')(data-fancybox-close).icon-close.modal__close.about-popup__icon-close

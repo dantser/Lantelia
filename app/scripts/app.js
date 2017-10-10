@@ -10,7 +10,7 @@ import map from '../components/map/map';
 import newsCard from '../blocks/news-card/news-card';
 import needHelp from '../components/needHelp/needHelp';
 import burger from '../blocks/burger/burger';
-import { selects } from '../blocks/form-elements/form-elements';
+import { selects, textarea } from '../blocks/form-elements/form-elements';
 // import modal from '../blocks/modal/modal';
 import slider from '../blocks/slider/slider';
 import productPopup from '../components/product-popup/product-popup';
@@ -35,6 +35,7 @@ $(() => {
   objectFitImages();
   freezebuttons();
   selects();
+  textarea();
   parallax();
   mainSlider();
   addressCard();
