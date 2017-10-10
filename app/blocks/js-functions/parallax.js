@@ -12,7 +12,6 @@ export default () => {
       const el = $(this);
 
       if (!el.attr('data-top')) el.attr('data-top', el.offset().top);
-
       const thistop = +el.attr('data-top');
       const next = el.next() || false;
 

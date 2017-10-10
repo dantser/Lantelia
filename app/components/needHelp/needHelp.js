@@ -92,11 +92,14 @@ export default () => {
   }
 
 
-  if(w.width > 1000) {
+  if(w.width() > 1399) {
+
     w.on('scroll', function (e) { // eslint-disable-line
       const scrollTop = w.scrollTop();
       // eslint-disable-next-line
-
+      if (needHelp.hasClass('needHelp_opened')) {
+        return
+      }
       if (scrollTop > SHOW_ELEMENT_AT) {
         needHelp.fadeIn();
       } else {

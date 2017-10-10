@@ -2,6 +2,7 @@
   display: block;
   height: 541px;
   box-sizing: border-box;
+  background-color: $color-gray;
 
   .leaflet-popup-content-wrapper {
     background-color: $color-main;
@@ -55,8 +56,6 @@
     line-height: 1.31;
     margin-bottom: 7px;
   }
-
-  background-color: rgba(216, 216, 216, 0);
 
   @include screen('tablet', max) {
     display: none;

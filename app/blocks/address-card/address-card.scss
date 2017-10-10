@@ -12,27 +12,27 @@
 
   &_active, &:hover {
     // transform: scale(1.04, 1.16);
-    border: none;
+    border-color: transparent;
     box-shadow: 0 4px 10px 0 rgba(0, 0, 0, .21);
 
-    .address-card__wrapper {
-      // transform: scale(.96, .84);
-      padding-left: 30px;
-    }
+    // .address-card__wrapper {
+    //   // transform: scale(.96, .84);
+    //   padding-left: 30px;
+    // }
 
     .address-card__title {
       color: $color-white;
-      margin-bottom: 15px;
+      // margin-bottom: 15px;
     }
 
     .address-card__arrow {
       fill: $color-white;
-      right: 20px;
+      // right: 20px;
     }
 
-    .address-card__address {
-      font-size: 13px;
-    }
+    // .address-card__address {
+    //   font-size: 13px;
+    // }
 
     &::after {
       @include center-block;

@@ -1,5 +1,5 @@
 import $ from 'jquery';
-import { freeze, unfreeze } from '../../blocks/js-functions/freeze';
+// import { freeze, unfreeze } from '../../blocks/js-functions/freeze';
 
 /* eslint-disable */
 export default () => {
@@ -10,11 +10,9 @@ export default () => {
 
   const PRE = $('#preloader');
   const TEXT = $('.preloader__logo');
-  freeze();
 
   PRE.on('click', function (e) {
     e.preventDefault();
-    freeze();
   })
 
   setTimeout(function () {
@@ -23,7 +21,6 @@ export default () => {
 
   TEXT.fadeOut();
   setTimeout(function () {
-    unfreeze();
     PRE.fadeOut();
   }, 3000);
 
