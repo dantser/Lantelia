@@ -1,0 +1,83 @@
+.about-popup {
+  position: relative;
+
+  &__content {
+    width: 65%;
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  &__image {
+    width: 35%;
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+
+    img {
+      // @include fill-img;
+    }
+  }
+
+  &__icon-close {
+    width: 13px;
+    height: 13px;
+    fill: $color-white;
+    position: absolute;
+    top: 24px;
+    right: 23px;
+    cursor: pointer;
+    z-index: 1;
+
+    @include transited;
+
+    &:hover {
+      opacity: .7;
+    }
+  }
+
+  @include screen('temp', max) {
+    margin: 0 !important;
+
+    &__wrapper {
+      padding-left: 22px;
+      padding-right: 22px;
+    }
+
+    &__content, &__image {
+      display: block;
+      width: 100%;
+    }
+
+    &__image {
+      padding-bottom: 100%;
+      overflow: hidden;
+
+      img {
+        @include fill-img;
+        bottom: auto;
+      }
+    }
+
+    &__head {
+      border-bottom: 1px solid $color-border;
+    }
+
+    .grid {
+      margin: 0;
+
+      &__col {
+        width: 100%;
+        padding: 0;
+        display: block;
+      }
+    }
+
+    &__button {
+      width: 100%;
+    }
+
+    &__icon-close {
+      fill: $color-main;
+    }
+  }
+}

@@ -238,6 +238,12 @@
 
       img {
         display: none;
+        min-width: 0;
+        max-height: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: auto;
+        right: auto;
 
         &:last-child {
           display: block;

@@ -2,6 +2,7 @@ import svg4everybody from 'svg4everybody';
 import 'babel-polyfill';
 import objectFitImages from 'object-fit-images';
 import parallax from '../blocks/js-functions/parallax';
+import { freezebuttons } from '../blocks/js-functions/freeze';
 import mainSlider from '../components/main-slider/main-slider';
 import addressCard from '../blocks/address-card/address-card';
 import whereToBuy from '../components/whereToBuy/whereToBuy';
@@ -32,6 +33,7 @@ const $ = window.$;
 $(() => {
   svg4everybody();
   objectFitImages();
+  freezebuttons();
   selects();
   parallax();
   mainSlider();

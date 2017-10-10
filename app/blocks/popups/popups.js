@@ -14,8 +14,8 @@ $(document).on('click', '.popup__icon-close', () => {
 
 export default function popups() {
   $('.js-fancybox').fancybox({
-    // afterLoad: freeze,
-    // afterClose: unfreeze
+    afterLoad: freeze,
+    afterClose: unfreeze
   });
 }
 

@@ -116,6 +116,10 @@ select, input, textarea, button {
   font-family: $font-main;
 }
 
+textarea {
+  resize: none;
+}
+
 input::-ms-clear {
   display: none;
 }

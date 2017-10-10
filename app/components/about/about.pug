@@ -1,6 +1,7 @@
 include ../../components/product-page/product-page
 include ../../blocks/button/button
 include ../../components/partnership/partnership
+include ../../components/about-popup/about-popup
 
 mixin about-page()
   +b.about-page&attributes(attributes)
@@ -12,9 +13,11 @@ mixin about-page()
             +col(8).about-page__col_head
               +e.wrapper
                 +e.P.head-text Компания Lantelia специализируется на производстве профессиональной косметики для волос. Мы предлагаем качественную сертифицированную продукцию оптом, не имеющую аналогов на рынке России.
-              +e.IMG(src="assets/images/pic company/company 2@2x.jpg").image
+              +e.image
+                img(src="assets/images/pic company/company 2@2x.jpg")
             +col(4).about-page__col_image
-              +e.IMG(src="assets/images/pic company/company 3@2x.jpg").image
+              +e.image
+                img(src="assets/images/pic company/company 3@2x.jpg")
             +col(8).about-page__col_list
               +e.wrapper
                 +e.OL.list
@@ -35,3 +38,4 @@ mixin about-page()
       +e.partnership
         .container.container_large
           +partnership()
+    +about-popup()
