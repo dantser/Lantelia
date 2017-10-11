@@ -43,7 +43,7 @@
 
   &__logo {
     width: 149px;
-    height: 17px;
+    height: 18px;
     fill: $color-basic;
   }
 
@@ -85,11 +85,6 @@
     text-align: right;
     margin-top: $grid-gap;
     margin-bottom: -5px;
-    letter-spacing: .012em;
-  }
-
-  .button {
-    padding: 17px 28px 17px 24px;
   }
 
   // @include screen('tablet-wide', max) {

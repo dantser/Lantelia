@@ -26,31 +26,43 @@
 */
 
 @font-face {
-  font-family: 'GothamPro';
-  font-style: normal;
-  font-weight: 500;
-  src: url('../fonts/GothamProMedium/GothaProMed.otf');
-  src: url('../fonts/GothamProMedium/GothaProMed.otf') format('otf');
-  src: url('../fonts/GothamProMedium/GothaProMed.eot') format('eot');
-  src: url('../fonts/GothamProMedium/GothaProMed.woff') format('woff');
-}
-
-@font-face {
-  font-family: 'GothamPro';
+  font-family: 'Gotham Pro';
   font-style: normal;
   font-weight: 300;
-  src: url('../fonts/GothamProLight/GothaProLight.otf');
-  src: url('../fonts/GothamProLight/GothaProLight.otf') format('otf');
-  src: url('../fonts/GothamProLight/GothaProLight.eot') format('eot');
-  src: url('../fonts/GothamProLight/GothaProLight.woff') format('woff');
+  src: url('../fonts/GothaProLight.eot');
+  src:
+    url('../fonts/GothaProLight.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/GothaProLight.woff2') format('woff2'),
+    url('../fonts/GothaProLight.woff') format('woff'),
+    url('../fonts/GothaProLight.otf') format('opentype'),
+    url('../fonts/GothaProLight.ttf') format('truetype'),
+    url('../fonts/GothaProLight.svg#GothaProLight') format('svg');
 }
 
 @font-face {
-  font-family: 'GothamPro';
+  font-family: 'Gotham Pro';
   font-style: normal;
   font-weight: 400;
-  src: url('../fonts/GothamProRegular/GothaProReg.otf');
-  src: url('../fonts/GothamProRegular/GothaProReg.otf') format('otf');
-  src: url('../fonts/GothamProRegular/GothaProReg.eot') format('eot');
-  src: url('../fonts/GothamProRegular/GothaProReg.woff') format('woff');
+  src: url('../fonts/GothaProReg.eot');
+  src:
+    url('../fonts/GothaProReg.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/GothaProReg.woff2') format('woff2'),
+    url('../fonts/GothaProReg.woff') format('woff'),
+    url('../fonts/GothaProReg.otf') format('opentype'),
+    url('../fonts/GothaProReg.ttf') format('truetype'),
+    url('../fonts/GothaProReg.svg#GothaProReg') format('svg');
+}
+
+@font-face {
+  font-family: 'Gotham Pro';
+  font-style: normal;
+  font-weight: 500;
+  src: url('../fonts/GothaProMed.eot');
+  src:
+    url('../fonts/GothaProMed.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/GothaProMed.woff2') format('woff2'),
+    url('../fonts/GothaProMed.woff') format('woff'),
+    url('../fonts/GothaProMed.otf') format('opentype'),
+    url('../fonts/GothaProMed.ttf') format('truetype'),
+    url('../fonts/GothaProMed.svg#GothaProMed') format('svg');
 }

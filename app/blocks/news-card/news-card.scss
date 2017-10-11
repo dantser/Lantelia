@@ -9,6 +9,8 @@
   position: relative;
   cursor: pointer;
 
+  .link__text:hover { opacity: 1; }
+
   &::after {
     @include pseudo;
 
@@ -19,7 +21,7 @@
 
   &:hover {
     .news-card__link {
-      color: $color-gray;
+      color: $color-main;
       opacity: 1;
     }
   }
@@ -52,30 +54,6 @@
     }
   }
 
-  &_with-hover {
-
-    &:hover {
-      // border: none;
-      //
-      // &::after {
-      //   @include center-block;
-      //
-      //   right: 0;
-      //   width: 104%;
-      //   height: 104%;
-      //   z-index: -1;
-      //   background-color: $color-main;
-      // }
-
-      .news-card__link {
-        color: $color-gray;
-      }
-
-      // .news-card__text {
-      //   color: $color-white;
-      // }
-    }
-  }
 
   &_blue {
     @extend %gradient-card_blue;
@@ -145,10 +123,8 @@
 
   &__type {
     font-size: 13px;
-    font-weight: 300;
     color: $color-gray;
     margin-bottom: 25px;
-    letter-spacing: .015em;
   }
 
   &__text {
@@ -157,7 +133,6 @@
     color: $color-basic;
     flex-grow: 1;
     margin-bottom: $grid-gap;
-    letter-spacing: .01em;
     display: block;
     max-height: 144px;
   }

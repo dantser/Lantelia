@@ -9,12 +9,8 @@ mixin product-card(img, link)
       +e.A(href=link).link.js-fancybox
     +e.wrapper
       +e.top
-        +e.H3.line 
-          | Professional
-          br
-          | botox
-          br
-          | therapy
+        +e.H3.line
+          span Professional Botox Therapy
         +e.UL
           +e.LI.name Шампунь
           +e.LI.name Кератин
@@ -38,11 +34,7 @@ mixin product-card-cart(img, price)
         +e.image
           img(src= img)
         +e.H3.__line 
-          | Professional
-          br
-          | botox
-          br
-          | therapy
+          span Professional Botox Therapy
         +e.UL.names._mobile
           +e.LI.name Шампунь 250 мл
           +e.LI.name Реконструктор 250 мл

@@ -148,7 +148,7 @@
     cursor: pointer;
     display: inline-flex;
     height: 2px;
-    flex-basis: 48px;
+    flex-basis: 36px;
     background-color: rgba(255, 255, 255, .3);
     transition: flex $ease-pagination_main;
     margin-right: 10px;
@@ -162,6 +162,8 @@
       display: block;
       transform: scale3d(0, 1, 1);
       transform-origin: left;
+      transition: transform $ease-main, opacity $ease-main;
+      opacity: 0;
     }
 
     &:last-child {
@@ -174,6 +176,7 @@
       &::before {
         transform: scale3d(1, 1, 1);
         transition: transform $ease-pagination_linear;
+        opacity: 1;
       }
     }
   }

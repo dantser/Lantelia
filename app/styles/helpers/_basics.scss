@@ -58,7 +58,7 @@ body {
   font-family: $font-main; // Задаем основной шрифт
   font-size: 0; // Убираем проблему с отступами между inline-элементами
   color: $color-basic;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 img {
@@ -73,6 +73,8 @@ h1, h2, h3, h4, h5, h6, p, span, ul, li, tr, td, th, table {
   margin: 0;
   padding: 0;
 }
+
+h1, h2, h3, h4, h5, h6, p { font-weight: inherit; }
 
 ul {
   list-style: none;

@@ -1,6 +1,5 @@
 .product-card {
   border: 1px solid $color-border;
-  max-width: 362px;
   box-sizing: border-box;
   position: relative;
   cursor: pointer;
@@ -8,7 +7,7 @@
   &__link {
     position: absolute;
     width: 100%;
-    height: 90%;
+    height: 100%;
     top: 0;
     left: 0;
     z-index: 10;
@@ -18,31 +17,20 @@
     display: flex;
     flex-flow: column nowrap;
     justify-content: space-between;
-    width: 100%;
-    padding: 52px 57px 53px $container-padding;
+    padding: 52px $container-padding 53px $container-padding;
     box-sizing: border-box;
-    min-height: 528px;
   }
 
   &:hover {
 
     .product-card__cart {
       opacity: 1;
-      visibility: visible;
-    }
-  }
-
-  &_xl {
-    max-width: 722px;
-
-    .product-card__volume:not(:last-child) {
-      margin-right: 74px;
+      transform: translate3d(0, 0, 0);
     }
   }
 
   &__line {
     font-size: 16px;
-    font-weight: 300;
     text-align: left;
     line-height: 1.37;
     text-transform: capitalize;
@@ -50,6 +38,10 @@
     letter-spacing: .013em;
     color: $color-basic;
     z-index: 3;
+
+    span {
+      display: table-caption;
+    }
   }
 
   &__top {
@@ -92,15 +84,15 @@
   &__volume {
     text-align: center;
     width: 50%;
+    flex: 1;
 
     &:not(:last-child) {
-      margin-right: 24px;
+      margin-right: 10px;
     }
   }
 
   &__image {
     height: 360px;
-    align-self: center;
     z-index: 3;
     position: relative;
     margin-top: -11px;
@@ -125,21 +117,21 @@
 
   &__cart {
     position: absolute;
-    visibility: hidden;
     display: flex;
     opacity: 0;
-    bottom: -7px;
-    right: -5px;
+    bottom: -6px;
+    right: -6px;
     align-items: center;
     justify-content: space-between;
     color: $color-white;
     background-color: $color-main;
-    padding: 17px 15px 14px 25px;
+    padding: 15px 15px 15px 25px;
     box-sizing: border-box;
-    letter-spacing: .126em;
+    letter-spacing: .13em;
     font-size: 12px;
-    z-index: 3;
-    transition: opacity $ease-pagination;
+    z-index: 11;
+    transition: opacity $ease-main, transform $ease-main;
+    transform: translate3d(0, 10px, 0);
 
     svg {
       width: 24px;
