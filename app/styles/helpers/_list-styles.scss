@@ -27,6 +27,7 @@
 
   li {
     counter-increment: list1;
+    list-style: none;
 
     &::before {
       font-size: 28px;

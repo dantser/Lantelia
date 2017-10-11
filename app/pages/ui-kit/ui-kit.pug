@@ -7,9 +7,11 @@ include ../../components/header/header
 include ../../components/map/map
 include ../../blocks/product-card/product-card
 include ../../components/needHelp/needHelp
+include ../../components/product-popup/product-popup
+include ../../components/about-popup/about-popup
 
 block head
-  - var pageTitle = 'Versta Project Template'
+  - var pageTitle = 'ui-kit'
 
 block content
   
@@ -114,16 +116,16 @@ block content
               h4 Внутри могут быть заголовки
               p Текст с <a href="#">ссылкой в тексте</a>
             p Картинка в тексте (img):
-            img(src="http://verstaburo.com/patterns/pattern.jpg")
-            p Маркированный список ul. Стили взяты из styles/helpers/_list-styles.scss
-            ul
-              li Элемент списка
-              li Другой элемент
-                ul
-                  li Элемент списка
-                  li Другой элемент
-                  li Элемент списка
-              li Элемент списка
+            img(src="assets/images/pic company/company 1@2x.jpg")
+            //- p Маркированный список ul. Стили взяты из styles/helpers/_list-styles.scss
+            //- ul
+            //-   li Элемент списка
+            //-   li Другой элемент
+            //-     ul
+            //-       li Элемент списка
+            //-       li Другой элемент
+            //-       li Элемент списка
+            //-   li Элемент списка
             p Нумерованный список ol. Стили взяты из styles/helpers/_list-styles.scss
             ol
               li Элемент списка
@@ -164,9 +166,9 @@ block content
         p Блок: blocks/button
       +ui-section-content()
         +ui-elements-list()
-          +button('button')
-          +button('button')._gradiented
-          +button('button')._black
+          +button() начать работать с lantelia
+          +button()._gradiented начать работать с lantelia
+          //- +button('button')._black начать работать с lantelia
           
         +ui-description При клике на .js-anchor происходит скролл к элементу из атрибута href. Блок: blocks/js-functions/anchor.js
         +button()(href="#section0").js-anchor .js-anchor
@@ -215,26 +217,22 @@ block content
           +col(6)
             +ui-description .select.js-select
             +inputbox
-              +select
+              select.select.js-select
                 option(value="Опция 1") Опция 1
                 option(value="Опция 2") Опция 2
                 option(value="Опция 3") Опция 3
-          +col(6)
-            +ui-description .js-datepicker<br> Параметры задаются через дата-атрибуты
-            +inputbox()
-              +input()(placeholder="Выберите дату" readonly).js-datepicker
+          //- +col(6)
+          //-   +ui-description .js-datepicker<br> Параметры задаются через дата-атрибуты
+          //-   +inputbox()
+          //-     +input()(placeholder="Выберите дату" readonly).js-datepicker
           +col(6)
             +ui-description Поле ввода номера телефона.<br> Маска определяется через атрибут data-type="tel"
             +inputbox()
-              +input()(placeholder="+7 (___) ___-__-__" data-type="tel")
+              +input()(data-type="tel", type="tel")
           +col(6)
             +ui-description Поле ввода e-mail.<br> Маска определяется через атрибут data-type="email"
             +inputbox()
-              +input()(placeholder="E-mail" data-type="email")
-          +col(6)
-            +ui-description .js-number-input<br> Поле изменения количества
-            +inputbox()
-              +input-number()(placeholder="Количество товара")
+              +input()(placeholder="E-mail" data-type="email", type="email")
           +col(12)
             +textarea(placeholder="Текстовое поле")
           +col(6)
@@ -247,10 +245,6 @@ block content
               +ui-elements-list
                 +radio('ui-radio', 'test', 'true') Радиокнопка
                 +radio('ui-radio', 'test-2') Радиокнопка
-          +col(6)
-            +ui-description .range.js-range<br> Все параметры задаются дата-атрибутами
-            +inputbox()
-              +range()(data-start='40', data-connect='[true, false]', data-min='0', data-max='100')
       
     //- Табы
     +ui-section
@@ -277,14 +271,59 @@ block content
         p Блок: blocks/popups
       +ui-section-content()
         +ui-description .js-fancybox
-        +link()(href="#testpopup").js-fancybox Открыть попап
+        +link()(href="#product1").js-fancybox Открыть попап товара
+        br
+        +link()(href="#about-popup").js-fancybox Открыть попап "Хочу работать с Lantelia"
         +ui-description Верстка попапов:
         +link()(onclick="$('.popups').toggle()") Показать попапы
+        +product-popup('assets/images/picProduct/botox_250ml_07 (line)@2x.png', '7 990 ₽', 'product1')
+        +about-popup()
         +popups.__ui-popups
-          +popup#testpopup
-            +content-zone
-              h2 Тестовый попап
-              p С тестовым контентом
+          +popup().product-popup
+            .product-popup__wrapper
+              +product-card('assets/images/picProduct/botox_250ml_07 (line)@2x.png')
+              .product-popup__info
+                .product-popup__info-wrapper
+                  .product-popup__price-block
+                    span.product-popup__text Цена
+                    span.product-popup__price 7 990 ₽
+                  .product-popup__foot
+                    span.product-popup__text Количество
+                    .product-popup__dropdown
+                      select.select_bordered.select_triangle.product-popup__select.js-select
+                        option(value="1", selected) 1
+                        option(value='2') 2
+                        option(value='3') 3
+                    +button('shopping-cart')._gradiented._white.product-popup__button в корзину
+              +icon('close').icon-close.modal__close.product-popup__icon-close
+        +popups
+          +popup().about-popup
+            .about-popup__wrapper
+              .about-popup__content
+                .about-popup__content-wrapper
+                  .about-popup__head
+                    span Начать работать с
+                    h2.about-popup__title Lantelia
+                  form(action="#", method="post").about-popup__form
+                    +grid()
+                      +col(6)
+                        +inputbox('Название салона', true)
+                          +input()(type="text", name="name", required)
+                        +inputbox('Город', true)
+                          +input()(type="text", name="city", required)
+                        +inputbox('ФИО', true)
+                          +input()(type="text", name="fio", required)
+                        +inputbox('Телефон', true)
+                          +input()(type="text", name="phone", required)
+                      +col(6)
+                        +inputbox('EMAIL', true)
+                          +input()(type="text", name="email", required)
+                        +inputbox('Сообщение', true)
+                          +textarea()(name="message", required)
+                    +button(false, true)(type="submit", value="Отправить")._white._fill-black.about-popup__button отправить
+              .about-popup__image
+                img(src="assets/images/form@2x.jpg")
+            +icon('close')(data-fancybox-close).icon-close.modal__close.about-popup__icon-close
         
     //- Ссылки
     +ui-section
@@ -407,8 +446,8 @@ block content
         h2 Карты
         p Блок: components/map/map
       +ui-section-content()
-        +ui-description #main-map
-        +map()#main-map
+        +ui-description #contactMap
+        +map()#contactMap
 
   script
     |

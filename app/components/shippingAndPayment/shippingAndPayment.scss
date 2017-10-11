@@ -43,6 +43,11 @@
 
   &__map {
     margin-bottom: 29px;
+
+
+    .leaflet-control-container {
+      z-index: 400;
+    }
   }
 
 
@@ -103,6 +108,10 @@
 
   .map {
     height: 396px;
+
+    .leaflet-popup-content {
+      margin-top: 40px;
+    }
   }
 
   @include screen('temp', max) {

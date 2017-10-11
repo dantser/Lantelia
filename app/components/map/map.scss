@@ -4,16 +4,14 @@
   box-sizing: border-box;
   background-color: $color-gray;
 
-
-
   .custom {
 
+    .cluster-wrap {
+      position: relative;
+      width: 49px;
+      height: 49px;
+    }
 
-  .cluster-wrap {
-    position: relative;
-    width: 49px;
-    height: 49px;
-  }
     img {
       width: 49px;
       height: 49px;
@@ -46,6 +44,13 @@
   .leaflet-popup {
     margin-bottom: 15px;
     margin-top: 20px;
+
+    &_shipping {
+
+      .leaflet-popup-content {
+        padding: $grid-gap/2;
+      }
+    }
   }
 
   .leaflet-popup-close-button, .leaflet-popup-tip-container {

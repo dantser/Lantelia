@@ -13,6 +13,7 @@ export default () => {
 
   const contactMap = $('#contactMap');
   const mainMap = $('#map');
+  const shippingMap = $('#shippingMap');
 
   // кастомное оформление
   const roads = L.gridLayer.googleMutant({
@@ -84,6 +85,10 @@ export default () => {
     mainMaps();
   }
 
+  if (shippingMap.length) {
+    shippingMaps();
+  }
+
   // для страниц контактоы
   function contactMaps() {
     var contactMapC = L.map('contactMap').setView([55.7788008, 37.5821708], 5);
@@ -133,6 +138,20 @@ export default () => {
     centerPopup(mymap);
   }
 
+  function shippingMaps() {
+    const shippingMap = L.map('shippingMap').setView([55.7788008, 37.5821708], 15);
+    roads.addTo(shippingMap);
+    L.control.zoom({
+       position:'bottomleft'
+    }).addTo(shippingMap);
+
+    markers["marker1"] = L.marker([55.7788008, 37.5821708], {icon: iconActive}).addTo(shippingMap)
+                        .bindPopup(L.popup({maxWidth:201, 'className' : 'leaflet-popup_shipping'})
+                        .setContent("<h3>Цветной Москва</h3> <p>г. Москва, Ленинградский проспект, д. 2, цокольный этаж, оф. №1</p><h3>Контакты</h3> <p>Тел.: 79269464613<br>Эл. почта: msk.bel@cdek.ru</p> <p>Пн-Пт – с 10:00 до 20:00<br>Сб, Вс – с 10:00 до 16:00</p>")).on('click', clickZoom);
+
+    topPopup(shippingMap);
+  }
+
   // центрируем попап
   function centerPopup(mapID) {
     mapID.on('popupopen', function(e) {
@@ -141,6 +160,14 @@ export default () => {
       mapID.panTo(mapID.unproject(px),{animate: true}); // pan to new center
     });
   };
+
+  function topPopup(mapID) {
+    mapID.on('popupopen', function(e) {
+      var px = mapID.project(e.popup._latlng); // find the pixel location on the map where the popup anchor is
+      px.y -= e.popup._container.clientHeight/1.5
+      mapID.panTo(mapID.unproject(px),{animate: true}); // pan to new center
+    });
+  }
 
   function clickZoom(e) {
     e.stopPropagation;

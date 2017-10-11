@@ -6,33 +6,46 @@ export default () => {
         DEL_CARD = CARD.find('.product-card__delete');
 
   const NUMBER_OF_GOODS = $('.js-num-goods .order-price__price');
+  const SELECT_PRICE = CARD.find('.js-select');
 
   let CARD_LENDTH = CARD.length;
+  let COUNT, TOTAL, TOTAL_STRING;
   NUMBER_OF_GOODS.text(CARD_LENDTH);
 
 
 
-
-  function numberOfProducts () { // считаем околичество позици
+  function numberOfProducts () { // считаем околичество позиций
     let CARD = $('.product-card');
     CARD_LENDTH = CARD.length;
     NUMBER_OF_GOODS.text(CARD_LENDTH);
   };
 
+  $('.order-price__price').toLocaleString();
+
 
   $(document).ready(function () {
 
     let TOTAL_RESULT;
-    $('.order-price__price').toLocaleString();
 
     DEL_CARD.on('click', function () {
       $(this).parents('.product-card').remove();
       numberOfProducts();
       result();
-      $('.js-total-sum .order-price__price').text(TOTAL_RESULT);
+      $('.js-total-sum .order-price__price').text(TOTAL_RESULT.toLocaleString());
     });
 
     productCount();
+
+    SELECT_PRICE.each(function () {
+      const PARENT = $(this).parents('.product-card');
+      const PRICE = PARENT.attr('data-price');
+      COUNT = $(this).val();
+      TOTAL = COUNT * PRICE;
+      TOTAL_STRING = TOTAL.toLocaleString();
+      PARENT.find('.product-card__bottom .order-price__price').text(TOTAL_STRING);
+      PARENT.find('.product-card__bottom .order-price__price').attr('data-total', TOTAL);
+    });
+
 
 
     function result() { // считаем общую сумму
@@ -49,29 +62,23 @@ export default () => {
 
       $('.js-total-sum .order-price__price').text(TOTAL_RESULT_STR);
 
-      return TOTAL_RESULT;
     }
 
 
     function productCount() { // считаем в одной карточке
-      const SELECT_PRICE = CARD.find('.product-card__right .option');
-      let COUNT, TOTAL, TOTAL_STRING;
 
-      SELECT_PRICE.on('click', function () {
+
+
+      SELECT_PRICE.on('change', function () {
         const PARENT = $(this).parents('.product-card');
         const PRICE = PARENT.attr('data-price');
-        COUNT = $(this).text();
+        COUNT = $(this).val();
         TOTAL = COUNT * PRICE;
         TOTAL_STRING = TOTAL.toLocaleString();
         PARENT.find('.product-card__bottom .order-price__price').text(TOTAL_STRING);
         PARENT.find('.product-card__bottom .order-price__price').attr('data-total', TOTAL);
         result();
       });
-
-
-
-
-
     };
 
   });
