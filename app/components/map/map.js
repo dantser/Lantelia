@@ -3,6 +3,7 @@ import $ from 'jquery';
 import 'leaflet';
 import 'leaflet.gridlayer.googlemutant';
 import 'leaflet.markercluster';
+import 'choices.js';
 
 export default () => {
   const map = $('.map');
@@ -52,17 +53,17 @@ export default () => {
                       .bindPopup(L.popup({maxWidth:201})
                       .setContent("<h3>Петровский Пассаж</h3> <p>г. Псков, Рижский пр-кт, д.16</p><h3>Контакты</h3> <p>Тел.: 79269464613<br>Эл. почта: msk.bel@cdek.ru</p> <p>Пн-Пт – с 10:00 до 20:00<br>Сб, Вс – с 10:00 до 16:00</p>")).on('click', clickZoom);
 
-  markers["marker5"] = L.marker([57.231244, 28.314583], {icon: iconInactive})
+  markers["marker5"] = L.marker([57.231244, 28.8], {icon: iconInactive})
                       .bindPopup(L.popup({maxWidth:201})
                       .setContent("<h3>Петровский Пассаж</h3> <p>г. Псков, Рижский пр-кт, д.16</p><h3>Контакты</h3> <p>Тел.: 79269464613<br>Эл. почта: msk.bel@cdek.ru</p> <p>Пн-Пт – с 10:00 до 20:00<br>Сб, Вс – с 10:00 до 16:00</p>")).on('click', clickZoom);
 
-  markers["marker6"] = L.marker([57.455676, 28.314583], {icon: iconInactive})
+  markers["marker6"] = L.marker([55.6788008, 37.7], {icon: iconInactive})
                       .bindPopup(L.popup({maxWidth:201})
                       .setContent("<h3>Петровский Пассаж</h3> <p>г. Псков, Рижский пр-кт, д.16</p><h3>Контакты</h3> <p>Тел.: 79269464613<br>Эл. почта: msk.bel@cdek.ru</p> <p>Пн-Пт – с 10:00 до 20:00<br>Сб, Вс – с 10:00 до 16:00</p>")).on('click', clickZoom);
-  markers["marker7"] = L.marker([57.753355, 28.314583], {icon: iconInactive})
+  markers["marker7"] = L.marker([55.7788008, 37.6], {icon: iconInactive})
                       .bindPopup(L.popup({maxWidth:201})
                       .setContent("<h3>Петровский Пассаж</h3> <p>г. Псков, Рижский пр-кт, д.16</p><h3>Контакты</h3> <p>Тел.: 79269464613<br>Эл. почта: msk.bel@cdek.ru</p> <p>Пн-Пт – с 10:00 до 20:00<br>Сб, Вс – с 10:00 до 16:00</p>")).on('click', clickZoom);
-  markers["marker8"] = L.marker([57.679006, 28.314583], {icon: iconInactive})
+  markers["marker8"] = L.marker([55.8788008, 37.5921708], {icon: iconInactive})
                       .bindPopup(L.popup({maxWidth:201})
                       .setContent("<h3>Петровский Пассаж</h3> <p>г. Псков, Рижский пр-кт, д.16</p><h3>Контакты</h3> <p>Тел.: 79269464613<br>Эл. почта: msk.bel@cdek.ru</p> <p>Пн-Пт – с 10:00 до 20:00<br>Сб, Вс – с 10:00 до 16:00</p>")).on('click', clickZoom);
 
@@ -91,6 +92,7 @@ export default () => {
 
   // для страниц контактоы
   function contactMaps() {
+    var select = $('.js-select');
     var contactMapC = L.map('contactMap').setView([55.7788008, 37.5821708], 5);
     roads.addTo(contactMapC);
     L.control.zoom({
@@ -103,6 +105,23 @@ export default () => {
 
     contactMapC.addLayer(markerClusterer);
     centerPopup(contactMapC);
+
+    if (select.length) {
+      select.on('change', function () {
+        var currMarker = $(this).val();
+        console.log(currMarker);
+        switch (currMarker) {
+          case 'all': contactMapC.setView([55.7788008, 37.5821708], 5)
+          break;
+          case 'msk': contactMapC.setView([55.751244, 37.618423], 10)
+          break;
+          case 'spb': contactMapC.setView([59.8944444, 30.2641667], 10)
+          break;
+          default: contactMapC.setView([55.751244, 37.618423], 15)
+
+        }
+      });
+    }
   }
 
   // Карта с привязкой к карточкам адресов

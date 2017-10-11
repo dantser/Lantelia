@@ -7,6 +7,6 @@ mixin contact-page()
     .container
       .section__head.section__head_flex
         +section-head('Контакты', 'Контактная информация')
-        +button()._gradiented.contact-page__button Начать работу с Lantelia
+        +button()(href="#about-popup")._gradiented.contact-page__button.js-fancybox Начать работу с Lantelia
     +e.map
       +map()#contactMap

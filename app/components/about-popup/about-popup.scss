@@ -19,7 +19,6 @@
     position: relative;
     min-width: 380px;
     overflow: hidden;
-    height: 789px;
 
     img {
       @include fill-img;
@@ -74,6 +73,10 @@
     &:hover {
       opacity: .7;
     }
+  }
+
+  .textarea {
+    overflow-y: hidden !important;
   }
 
   @include screen('temp', max) {
