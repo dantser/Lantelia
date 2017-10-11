@@ -29,12 +29,6 @@
     }
   }
 
-  &_xl {
-    .product-card__volume:not(:last-child) {
-      margin-right: 74px;
-    }
-  }
-
   &__line {
     font-size: 16px;
     text-align: left;
@@ -44,6 +38,10 @@
     letter-spacing: .013em;
     color: $color-basic;
     z-index: 3;
+
+    span {
+      display: table-caption;
+    }
   }
 
   &__top {
@@ -86,9 +84,10 @@
   &__volume {
     text-align: center;
     width: 50%;
+    flex: 1;
 
     &:not(:last-child) {
-      margin-right: 24px;
+      margin-right: 10px;
     }
   }
 
@@ -126,7 +125,7 @@
     justify-content: space-between;
     color: $color-white;
     background-color: $color-main;
-    padding: 17px 15px 14px 25px;
+    padding: 15px 15px 15px 25px;
     box-sizing: border-box;
     letter-spacing: .13em;
     font-size: 12px;

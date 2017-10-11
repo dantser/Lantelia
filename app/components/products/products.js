@@ -8,6 +8,8 @@ export default () => {
     return
   };
 
+  console.log('products');
+
   const span = $('.products__helper');
   const section = $('.products__line');
   const doc = $(document);
