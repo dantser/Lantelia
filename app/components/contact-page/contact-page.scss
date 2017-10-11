@@ -1,0 +1,23 @@
+.contact-page {
+  display: block;
+
+  .section__head {
+    margin-bottom: $container-padding;
+  }
+
+  @include screen('temp', max) {
+    padding-top: 89px;
+
+    .section__head_flex {
+      display: block;
+    }
+
+    &__button {
+      display: none;
+    }
+
+    .map {
+      display: block;
+    }
+  }
+}

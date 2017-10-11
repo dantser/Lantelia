@@ -1,0 +1,12 @@
+include ../../blocks/section-head/section-head
+include ../../blocks/button/button
+include ../../components/map/map
+
+mixin contact-page()
+  +b.SECTION.contact-page.section&attributes(attributes)
+    .container
+      .section__head.section__head_flex
+        +section-head('Контакты', 'Контактная информация')
+        +button()._gradiented.contact-page__button Начать работу с Lantelia
+    +e.map
+      +map()#contactMap

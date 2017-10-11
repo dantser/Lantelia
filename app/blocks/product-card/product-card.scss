@@ -326,6 +326,10 @@
     border-right: none;
     width: 100%;
 
+    &:hover {
+      .product-card__cart { transform: none }
+    }
+
     &__volumes, &__link, &__price {
       display: none;
     }

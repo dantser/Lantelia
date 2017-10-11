@@ -4,6 +4,30 @@
   box-sizing: border-box;
   background-color: $color-gray;
 
+
+
+  .custom {
+
+
+  .cluster-wrap {
+    position: relative;
+    width: 49px;
+    height: 49px;
+  }
+    img {
+      width: 49px;
+      height: 49px;
+      display: block;
+    }
+
+    .count {
+      @include center-block;
+
+      color: $color-white;
+      display: block;
+    }
+  }
+
   .leaflet-popup-content-wrapper {
     background-color: $color-main;
     border-radius: 0;
@@ -21,6 +45,7 @@
 
   .leaflet-popup {
     margin-bottom: 15px;
+    margin-top: 20px;
   }
 
   .leaflet-popup-close-button, .leaflet-popup-tip-container {
