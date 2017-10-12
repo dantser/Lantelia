@@ -3,15 +3,15 @@
 include ../../blocks/link/link
 
 mixin news-card(type, text, link)
-  +b.news-card&attributes(attributes)
+  +b.A(href="#").news-card&attributes(attributes)
     +e.wrapper
       +e.type= type
       +e.text
         p= text
-      +link().news-card__link= link
+      .news-card__link= link
 
 mixin news-card-large(type, text, link)
-  +b.news-card._xl&attributes(attributes)
+  +b.A(href="#").news-card._xl&attributes(attributes)
     +e.image-wrapper
       +e.IMG(src="assets/images/picMainPage/aboutUs@2x.jpg").image
     +e.wrapper
@@ -20,4 +20,4 @@ mixin news-card-large(type, text, link)
         +e.logo Lantelia
       +e.bottom
         +e.P.text= text
-        +link().news-card__link= link
+        .news-card__link= link

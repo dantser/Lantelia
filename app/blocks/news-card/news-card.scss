@@ -1,5 +1,5 @@
 .news-card {
-  display: block;
+  display: flex;
   border: 1px solid $color-border;
   box-sizing: border-box;
   width: 100%;
@@ -37,6 +37,22 @@
       width: auto;
       height: 6px;
     }
+
+    &_blue {
+      @extend %gradient-card_blue;
+    }
+
+    &_pink {
+      @extend %gradient-card_pink;
+    }
+
+    &_yellow {
+      @extend %gradient-card_yellow;
+    }
+
+    &_green {
+      @extend %gradient-card_green;
+    }
   }
 
   &_scale {
@@ -55,22 +71,6 @@
   }
 
 
-  &_blue {
-    @extend %gradient-card_blue;
-  }
-
-  &_pink {
-    @extend %gradient-card_pink;
-  }
-
-  &_gray {
-    @extend %gradient-card_gray;
-  }
-
-  &_green {
-    @extend %gradient-card_green;
-  }
-
   &_xl {
     border: none;
     min-height: 648px;
@@ -88,6 +88,13 @@
 
     .news-card__type {
       margin-bottom: 31px;
+    }
+
+    &:hover {
+
+      .news-card__link {
+        opacity: .7;
+      }
     }
   }
 
@@ -117,14 +124,14 @@
     display: flex;
     flex-flow: column;
     justify-content: space-between;
-    height: 100%;
-
+    flex: 1;
   }
 
   &__type {
     font-size: 13px;
     color: $color-gray;
     margin-bottom: 25px;
+    display: block;
   }
 
   &__text {
@@ -135,12 +142,16 @@
     margin-bottom: $grid-gap;
     display: block;
     max-height: 144px;
+    min-height: 50px;
   }
 
   &__link {
     font-size: 11px;
     letter-spacing: .127em;
     color: rgba(0, 0, 0, .5);
+    text-transform: uppercase;
+    transition: color $ease-main, opacity $ease-main;
+    will-change: opacity;
   }
 
   &__logo {
@@ -154,6 +165,7 @@
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
+    min-height: 150px;
   }
 
   @include screen('temp', max) {

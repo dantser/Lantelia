@@ -5,13 +5,13 @@ include ../../blocks/button/button
 
 mixin extra-products(subtitle, title)
   +b.SECTION.extra-products.section&attributes(attributes)
-    .container
-      .section__head
+    .section__head
+      .container
         +section-head(subtitle, title)
     .container.container_slider
       +slider(false, true)
         +slide()._big
-          +product-card('assets/images/picProduct/triple.png')(href="#product3")._xl.js-fancybox
+          +product-card('assets/images/picProduct/botox_100ml_04(procedure).png')(href="#product3")._xl.js-fancybox
         +slide()
           +product-card('assets/images/picProduct/botox_250ml_05@2x.png')(href="#product2").js-fancybox
         +slide()

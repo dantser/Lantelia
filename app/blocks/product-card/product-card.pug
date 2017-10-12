@@ -34,15 +34,40 @@ mixin product-card-cart(img, price)
         +e.image
           img(src= img)
         +e.H3.__line 
-          span Professional Botox Therapy
+          span Professional Clarifying Care
         +e.UL.names._mobile
-          +e.LI.name Шампунь 250 мл
-          +e.LI.name Реконструктор 250 мл
-          +e.LI.name Серум 250 мл
+          +e.LI.name Шампунь
+          +e.LI.name Кондиционер
       +e.UL.col.__names
         +e.LI.name Шампунь 250 мл
-        +e.LI.name Реконструктор 250 мл
-        +e.LI.name Серум 250 мл
+        +e.LI.name Кондиционер 250 мл
+      +e.col.__right
+        +order-price('Цена', price).js-price
+        +e.SELECT.select.select._bordered._triangle.js-select
+          option(value=1, selected) 1
+          option(value=2) 2
+          option(value=3) 3
+      +e.col.__bottom
+        +order-price('Итого', price).__total
+      +e.delete
+        +icon('close').icon.cart__delete
+
+mixin product-card-cart2(img, price)
+  +b.product-card._cart&attributes(attributes)
+    +e.wrapper
+      +e.col.__left
+        +e.image
+          img(src= img)
+        +e.H3.__line 
+          span Professional Botox Therapy
+        +e.UL.names._mobile
+          +e.LI.name Шампунь
+          +e.LI.name Реконструктор
+          +e.LI.name Серум
+      +e.UL.col.__names
+        +e.LI.name Шампунь 100 мл
+        +e.LI.name Реконструктор 100 мл
+        +e.LI.name Серум 100 мл
       +e.col.__right
         +order-price('Цена', price).js-price
         +e.SELECT.select.select._bordered._triangle.js-select

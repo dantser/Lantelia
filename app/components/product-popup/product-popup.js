@@ -1,6 +1,7 @@
 /* eslint-disable */
-import $ from 'jquery';
-// import '@fancyapps/fancybox';
+
+import '@fancyapps/fancybox';
+const $ = window.$;
 
 export default () => {
 
@@ -13,6 +14,11 @@ export default () => {
   //   $('.needHelp').addClass('needHelp_animated');
   // });
 
+
+  $('.product-card__link').on('click', function () {
+    $('.needHelp').fadeIn();
+    $('.addcart').fadeIn();
+  });
 
   // if(!CLOSE) {
   //   return;

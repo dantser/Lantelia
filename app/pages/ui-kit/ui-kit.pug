@@ -130,10 +130,6 @@ block content
             ol
               li Элемент списка
               li Другой элемент
-                ol
-                  li Элемент списка
-                  li Другой элемент
-                  li Элемент списка
               li Элемент списка
         +ui-description Другие стили текстов:
         +ui-custom-text._style-1 Пример кастомного стиля на примере стандартного (%text)
@@ -167,8 +163,10 @@ block content
       +ui-section-content()
         +ui-elements-list()
           +button() начать работать с lantelia
-          +button()._gradiented начать работать с lantelia
-          //- +button('button')._black начать работать с lantelia
+          +button()._gradiented градиентная кнопка
+          +button(false, true)._white._fill-black Продолжить оформление заказа
+          .bg-dark
+            +button('shopping-cart')._gradiented._white Кнопка с иконкой на темном фоне
           
         +ui-description При клике на .js-anchor происходит скролл к элементу из атрибута href. Блок: blocks/js-functions/anchor.js
         +button()(href="#section0").js-anchor .js-anchor
@@ -212,8 +210,8 @@ block content
         +grid
           +col(6)
             +ui-description .input
-            +inputbox
-              +input('Имя', true)
+            +inputbox('Имя', true)
+              +input()(type="text", name="name", required)
           +col(6)
             +ui-description .select.js-select
             +inputbox
@@ -376,13 +374,23 @@ block content
       +ui-section-head
         h2 Слайдер
       +ui-section-content()
-      .address-container
-        .address-wrapper
-          +address-card-linkedToMap('Цветной Москва', 'г. Москва, Ленинградский пр., д. 2, цоколь 1234', 'marker1')
-          +address-card-linkedToMap('Молен Руж', 'Санкт-Петербург, просп. Науки, 23а', 'marker2')
-          +address-card-linkedToMap('Петровский пассаж', 'Псков, Рижский пр-кт, д.16', 'marker3')
-          +address-card-linkedToMap('Райкин Плаза', 'Москва, Северный бульвар 3к2', 'marker4')
-          +address-card-linkedToMap('Цветной Москва', 'г. Москва, Ленинградский пр., д. 2, цоколь 1234', 'marker5')
+      +slider()
+        +slide()
+          +address-card('Цветной Москва', 'г. Москва, Ленинградский пр., д. 2, цоколь 1234')
+        +slide()
+          +address-card('Молен Руж', 'Санкт-Петербург, просп. Науки, 23а')
+        +slide()
+          +address-card('Петровский пассаж', 'Псков, Рижский пр-кт, д.16')
+        +slide()
+          +address-card('Райкин Плаза', 'Москва, Северный бульвар 3к2')
+        +slide()
+          +address-card('Цветной Москва', 'г. Москва, Ленинградский пр., д. 2, цоколь 1234')
+        +slide()
+          +address-card('Торговый центр Палладиум', 'Псков, Рижский пр-кт, д.16')
+        +slide()
+          +address-card('Авиапарк', 'Москва, Тверская улица 7')
+        +slide()
+          +address-card('Афимолл Сити', 'Санкт-Петербург, просп. Науки, 23а')
 
     //- Карточки адресов
     +ui-section
@@ -400,12 +408,12 @@ block content
       +ui-section-content()
         +ui-description +news-card-large()
         +news-card-large('О компании', 'Профессиональная косметика для волос премиум сегмента для самых искушенных', 'Подробнее')
-        +ui-description +news-card()._with-hover
-        +news-card('Новость', 'Еще один магазин Lantelia открылся в в Варшаве. Подарки первым десяти покупателям.', 'Читать')._with-hover
-        +ui-description +news-card()._colored._pink
-        +news-card('Обучение', 'Обучающий Мастер-класс по применению линнии Professional Botox Therapy', 'Подробнее')._colored._pink
-        +ui-description +news-card()._colored._gray
-        +news-card('Обучение', 'Обучающий Мастер-класс по применению линнии Professional SPA Therapy', 'Подробнее')._colored._gray
+        +ui-description +news-card()
+        +news-card('Новость', 'Еще один магазин Lantelia открылся в в Варшаве. Подарки первым десяти покупателям.', 'Читать')
+        +ui-description +news-card()._colored._colored_pink
+        +news-card('Обучение', 'Обучающий Мастер-класс по применению линнии Professional Botox Therapy', 'Подробнее')._colored._colored_pink
+        +ui-description +news-card()._colored._colored_yellow
+        +news-card('Обучение', 'Обучающий Мастер-класс по применению линнии Professional SPA Therapy', 'Подробнее')._colored._colored_yellow
     
     //- Карточки товаров
     +ui-section

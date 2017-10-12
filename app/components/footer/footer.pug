@@ -9,7 +9,8 @@ mixin footer()
       +e.wrapper
         +grid
           +col(2).footer__col_logo
-            +icon('lantelia').logo
+            +e.A(href="index.html", title="Lantelia").logo
+              +icon('lantelia')
           +col(2).footer__col_social
             +e.descr Профессиональная косметика для волос Lantelia
             +social('vk', 'f', 'instagram').__social

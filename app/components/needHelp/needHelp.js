@@ -17,6 +17,7 @@ export default () => {
   const burgerClass = '.js-burger';
   const activeBurgerClass = 'burger_active';
   const menu = $('.header__nav');
+  const cart = $('.addcart');
 
   $.fn.actualSize = function (margins) {
     var el = this,
@@ -97,13 +98,15 @@ export default () => {
     w.on('scroll', function (e) { // eslint-disable-line
       const scrollTop = w.scrollTop();
       // eslint-disable-next-line
-      if (needHelp.hasClass('needHelp_opened')) {
+      if (needHelp.hasClass('needHelp_opened') || $('.fancybox-is-open').length) {
         return
       }
       if (scrollTop > SHOW_ELEMENT_AT) {
         needHelp.fadeIn();
+        cart.fadeIn();
       } else {
         needHelp.fadeOut();
+        cart.fadeOut();
       }
     });
   }

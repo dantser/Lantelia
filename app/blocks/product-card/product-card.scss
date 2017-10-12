@@ -327,7 +327,7 @@
     width: 100%;
 
     &:hover {
-      .product-card__cart { transform: none }
+      .product-card__cart { transform: translate3d(0,10px,0) }
     }
 
     &__volumes, &__link, &__price {
@@ -425,12 +425,22 @@
     // на странице cart.html
     &_cart {
       .product-card__wrapper {
-        padding-right: 0;
+        padding: 28px 0 30px;
         display: block;
+      }
+
+      .product-card__line {
+        font-size: 16px;
+        line-height: 1.5;
+        transform: translateY(5px);
       }
 
       .product-card__col {
         margin-right: 0;
+      }
+
+      .product-card__name {
+        line-height: 1.77;
       }
 
       .product-card__names {
@@ -443,7 +453,7 @@
       }
 
       .product-card__left {
-        margin-bottom: $grid-gap;
+        margin-bottom: 32px;
       }
 
       .product-card__right {
@@ -457,10 +467,23 @@
       }
 
       .product-card__delete {
-        top: 26px;
+        top: 44px;
         transform: none;
+        opacity: 1;
+        visibility: visible;
       }
 
+      .choices {
+        margin-left: $grid-gap;
+      }
+
+      .choices__list--single .choices__item {
+        font-size: 12px;
+      }
+
+      .order-price:not(:last-child) {
+        padding-right: 0;
+      }
 
       .product-card__bottom {
         display: none;

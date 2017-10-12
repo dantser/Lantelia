@@ -1,7 +1,7 @@
 .needHelp {
   position: fixed;
   bottom: 24px;
-  right: 23px;
+  right: 101px;
   box-shadow: 0 12px 36px 0 rgba(0, 0, 0, .11);
   border-radius: 100px;
   background-color: $color-basic;
@@ -11,7 +11,7 @@
   overflow: hidden;
   min-width: 54px;
   min-height: 54px;
-  // display: none;
+  display: none;
   // transition: min-width $ease-pagination, border-radius $ease-pagination;
 
   // &:hover {
@@ -228,5 +228,57 @@
         padding: 30px 75px 32px 22px;
       }
     }
+  }
+}
+.addcart {
+  padding: 15px;
+  border-radius: 50%;
+  box-shadow: 0 12px 36px 0 rgba(0, 0, 0, .11);
+  position: fixed;
+  bottom: 24px;
+  right: 23px;
+  z-index: 100;
+  cursor: pointer;
+  display: none;
+
+  // @keyframes go-left-right {
+  //
+  //   from {
+  //     bottom: 100%;
+  //   }
+  //
+  //   to {
+  //     bottom: 24px;
+  //   }
+  // }
+  //
+  // animation: go-left-right 1s;
+
+  @extend %gradient-cart;
+
+  &__num {
+    position: absolute;
+    top: -3px;
+    display: block;
+    right: -3px;
+    width: 23px;
+    height: 23px;
+    border-radius: 50%;
+    font-size: 11px;
+    background-color: $color-main;
+    color: $color-white;
+    text-align: center;
+    line-height: 21px;
+  }
+
+  &__icon {
+    width: 24px;
+    height: 24px;
+    fill: $color-white;
+    display: inline-block;
+  }
+
+  @include screen('temp', max) {
+    display: none;
   }
 }

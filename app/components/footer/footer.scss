@@ -42,9 +42,12 @@
   }
 
   &__logo {
-    width: 149px;
-    height: 18px;
-    fill: $color-basic;
+
+    svg {
+      width: 149px;
+      height: 18px;
+      fill: $color-basic;
+    }
   }
 
   &__descr {
@@ -157,10 +160,6 @@
       width: 100%;
       max-width: none;
       padding: 16px 25px 16px;
-    }
-
-    &__logo {
-      font-size: 17px;
     }
 
     .social__item:not(:last-child) {

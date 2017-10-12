@@ -16,7 +16,7 @@
   }
 
   .section__head {
-    margin-bottom: 31px;
+    margin-bottom: 47px;
   }
 
   .container_slider {
@@ -27,6 +27,10 @@
 
   @include screen('temp', max) {
     padding-bottom: 0;
+
+    .section__head {
+      margin-bottom: 31px;
+    }
 
     .container_slider {
       padding-right: 22px;
@@ -52,6 +56,17 @@
 
       &:last-child {
         border-right: 0;
+      }
+    }
+
+    .product-card {
+
+      &__wrapper {
+        padding: 38px 40px 40px 114px;
+      }
+
+      &__cart {
+        bottom: 50px;
       }
     }
   }

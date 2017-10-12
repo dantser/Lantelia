@@ -227,57 +227,5 @@
       }
     }
   }
-
-  .addcart {
-    display: none;
-  }
 }
 /* stylelint-enable */
-
-.addcart {
-  padding: 15px;
-  border-radius: 50%;
-  box-shadow: 0 12px 36px 0 rgba(0, 0, 0, .11);
-  position: fixed;
-  bottom: 24px;
-  right: 23px;
-  cursor: pointer;
-
-  @keyframes go-left-right {
-
-    from {
-      right: -23px;
-    }
-
-    to {
-      right: 23px;
-    }
-  }
-
-  animation: go-left-right 1s;
-  transition: all $ease-main;
-
-  @extend %gradient-cart;
-
-  &__num {
-    position: absolute;
-    top: -3px;
-    display: block;
-    right: -3px;
-    width: 23px;
-    height: 23px;
-    border-radius: 50%;
-    font-size: 11px;
-    background-color: $color-main;
-    color: $color-white;
-    text-align: center;
-    line-height: 21px;
-  }
-
-  &__icon {
-    width: 24px;
-    height: 24px;
-    fill: $color-white;
-    display: inline-block;
-  }
-}
