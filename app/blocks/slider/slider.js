@@ -5,7 +5,9 @@ import Swiper from 'swiper';
 const $ = window.$;
 
 export default function slider() {
-
+  if ($('.js-slider').length == 0 ) {
+    return
+  }
   var mySlider = undefined;
   function initSwiper() {
     var screenWidth = $(window).width();

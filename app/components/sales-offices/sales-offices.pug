@@ -12,7 +12,7 @@ mixin sales-offices()
         +filter-contacts('Показать на карте', 'contacts.html')
         
       +e.wrapper
-        +e.map
+        +e.map.hidden
           +map()#contactMap
           +e.A(href="#").map-close.js-close
             +icon('close')

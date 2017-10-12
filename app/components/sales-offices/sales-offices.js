@@ -1,6 +1,7 @@
-import $ from 'jquery';
-
 /* eslint-disable */
+import $ from 'jquery';
+import { shippingMap } from '../map/map';
+import L from 'leaflet';
 
 export default () => {
   const CARD = $('.address-card');
@@ -10,33 +11,40 @@ export default () => {
     e.preventDefault();
     $(this).parents('.sales-offices__map').slideUp('slow');
   });
-  const cardWidth = CARD.width(),
-        parentWidth = $('.sales-offices__wrapper').width(),
-        rowsCount = Math.ceil((CARD.length * cardWidth) / parentWidth),
-        perRow = Math.ceil(CARD.length / rowsCount);
-    console.log(rowsCount);
 
-  CARD.on('click', function () {
-    $(this).parents('.sales-offices__map').slideUp('slow');
-    const cardIndex = $(this).index();
-    console.log(cardIndex);
-    const cardInRow = Math.ceil(cardIndex / perRow);
-    const lastCardInRow = cardInRow * perRow + 1;
-    console.log(lastCardInRow);
-    if(CARD.eq(lastCardInRow).length + 1) {
-      MAP.insertAfter(CARD.eq(lastCardInRow)).slideDown();
-    } else {
-      MAP.insertAfter(CARD.eq(rowsCount)).slideDown();
-    }
+  const cardWidth = CARD.outerWidth(true);
+  let parentWidth = $('.sales-offices__wrapper').width(),
+      rowsCount = Math.ceil((CARD.length * cardWidth) / parentWidth),
+      perRow = Math.ceil(CARD.length / rowsCount),
+      cardsCount = rowsCount * perRow,
+      lastCardsInRow = CARD.eq(perRow n);
+  lastCardsInRow.css('margin-right', '0');
+  console.log(perRow);
 
+  function reInitVars() {
+      parentWidth = $('.sales-offices__wrapper').width(),
+      rowsCount = Math.ceil((CARD.length * cardWidth) / parentWidth),
+      perRow = Math.ceil(CARD.length / rowsCount),
+      cardsCount = rowsCount * perRow;
+  }
 
+  if ($(window).width() > 1399) {
+    CARD.on('click', function () {
+      const cardIndex = $(this).index('.address-card') + 1;
+      const cardInRow = Math.ceil(cardIndex / perRow);
+      const lastCardInRow = cardInRow * perRow;
 
-    // if (cardIndex <= perRow) {
-    //
-    // } else {
-    //   MAP.insertAfter(CARD.eq(perRow*2-1)).slideDown();
-    // }
-  });
+      if(CARD.eq(lastCardInRow - 1).length) {
+        MAP.insertAfter(CARD.eq(lastCardInRow - 1)).slideDown().removeClass('hidden');
+      } else {
+        MAP.insertAfter(CARD.last()).slideDown().removeClass('hidden');
+      }
+    });
+
+    $(window).resize(function () {
+      reInitVars()
+    });
+  }
 }
 
 /* eslint-enable */

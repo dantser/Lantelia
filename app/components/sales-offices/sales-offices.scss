@@ -20,7 +20,12 @@
     margin-left: -$container-padding;
     margin-right: -$container-padding;
     position: relative;
-    display: none;
+    margin-bottom: $grid-gap;
+    will-change: opacity;
+
+    &.hidden {
+      display: none;
+    }
   }
 
   &__map-close {
@@ -58,7 +63,9 @@
 
     .section__head {
       display: block;
-      margin-bottom: 35px;
+      margin-bottom: 0;
+      padding-bottom: 35px;
+      border-bottom: 1px solid $color-border;
     }
 
     .filter {

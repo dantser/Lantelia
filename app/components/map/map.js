@@ -109,7 +109,6 @@ export default () => {
     if (select.length) {
       select.on('change', function () {
         var currMarker = $(this).val();
-        console.log(currMarker);
         switch (currMarker) {
           case 'all': contactMapC.setView([55.7788008, 37.5821708], 5)
           break;
@@ -118,9 +117,21 @@ export default () => {
           case 'spb': contactMapC.setView([59.8944444, 30.2641667], 10)
           break;
           default: contactMapC.setView([55.751244, 37.618423], 15)
-
         }
       });
+    }
+
+
+    if ($('.address-card').length) {
+      $('.address-card').on('click', function () {
+        var currMarker = $(this).find('.address-card__wrapper').attr('id');
+
+        setTimeout(function () {
+          contactMapC.invalidateSize();
+          focusOn(currMarker, contactMapC);
+        }, 500)
+
+      })
     }
   }
 
