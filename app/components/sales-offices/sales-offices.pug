@@ -10,12 +10,11 @@ mixin sales-offices()
       .section__head.section__head_flex
         +section-head('Где купить', 'Офисы продаж')
         +filter-contacts('Показать на карте', 'contacts.html')
-        
+      +e.map.hidden
+        +map()#contactMap
+        +e.A(href="#").map-close.js-close
+          +icon('close')
       +e.wrapper
-        +e.map.hidden
-          +map()#contactMap
-          +e.A(href="#").map-close.js-close
-            +icon('close')
         +address-card('Цветной Москва', 'г. Москва, Ленинградский пр., д. 2, цоколь 1234', 'marker1')(data-city="msk")
         +address-card('Молен Руж', 'Санкт-Петербург, просп. Науки, 23а', 'marker2')(data-city="spb")
         +address-card('Петровский пассаж', 'Псков, Рижский пр-кт, д.16', 'marker3')(data-city="psk")

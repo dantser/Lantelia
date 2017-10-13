@@ -90,7 +90,7 @@ export default () => {
     shippingMaps();
   }
 
-  // для страниц контактоы
+  // для страниц контактов
   function contactMaps() {
     var select = $('.js-select');
     var contactMapC = L.map('contactMap').setView([55.7788008, 37.5821708], 5);
