@@ -273,4 +273,8 @@ $ui-kit-color-darkbg: #111;
   .address-card {
     width: 100%;
   }
+
+  .products__line {
+    border-top: 1px solid $color-border;
+  }
 }

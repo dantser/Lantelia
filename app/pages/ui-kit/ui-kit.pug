@@ -9,6 +9,11 @@ include ../../blocks/product-card/product-card
 include ../../components/needHelp/needHelp
 include ../../components/product-popup/product-popup
 include ../../components/about-popup/about-popup
+include ../../components/products/products
+include ../../components/news/news
+include ../../blocks/order-price/order-price
+include ../../blocks/video/video
+include ../../components/social/social
 
 block head
   - var pageTitle = 'ui-kit'
@@ -73,8 +78,11 @@ block content
           +ui-color('#252525', '$color-main', true)
           +ui-color('#777', '$color-placeholder', true)
           +ui-color('black', '$color-input', true)
+          +ui-color('#7c7c7c', '$color-gray', true)
           +ui-color('#ededed', '$color-border')
           +ui-color('#ebebeb', '$color-border-popup')
+          +ui-color('#dcdcdc', '$color-border-input')
+          +ui-color('#e2507c', '$color-error', true)
           
     //- Цвета
     +ui-section
@@ -117,19 +125,19 @@ block content
               p Текст с <a href="#">ссылкой в тексте</a>
             p Картинка в тексте (img):
             img(src="assets/images/pic company/company 1@2x.jpg")
-            //- p Маркированный список ul. Стили взяты из styles/helpers/_list-styles.scss
-            //- ul
-            //-   li Элемент списка
-            //-   li Другой элемент
-            //-     ul
-            //-       li Элемент списка
-            //-       li Другой элемент
-            //-       li Элемент списка
-            //-   li Элемент списка
-            p Нумерованный список ol. Стили взяты из styles/helpers/_list-styles.scss
-            ol
+            p Маркированный список ul. Стили взяты из styles/helpers/_list-styles.scss
+            ul
               li Элемент списка
               li Другой элемент
+                ul
+                  li Элемент списка
+                  li Другой элемент
+                  li Элемент списка
+              li Элемент списка
+            p Нумерованный список ol. Стили взяты из styles/helpers/_list-styles.scss
+            ol
+              li Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in 
+              li Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint 
               li Элемент списка
         +ui-description Другие стили текстов:
         +ui-custom-text._style-1 Пример кастомного стиля на примере стандартного (%text)
@@ -374,23 +382,23 @@ block content
       +ui-section-head
         h2 Слайдер
       +ui-section-content()
-      +slider()
-        +slide()
-          +address-card('Цветной Москва', 'г. Москва, Ленинградский пр., д. 2, цоколь 1234')
-        +slide()
-          +address-card('Молен Руж', 'Санкт-Петербург, просп. Науки, 23а')
-        +slide()
-          +address-card('Петровский пассаж', 'Псков, Рижский пр-кт, д.16')
-        +slide()
-          +address-card('Райкин Плаза', 'Москва, Северный бульвар 3к2')
-        +slide()
-          +address-card('Цветной Москва', 'г. Москва, Ленинградский пр., д. 2, цоколь 1234')
-        +slide()
-          +address-card('Торговый центр Палладиум', 'Псков, Рижский пр-кт, д.16')
-        +slide()
-          +address-card('Авиапарк', 'Москва, Тверская улица 7')
-        +slide()
-          +address-card('Афимолл Сити', 'Санкт-Петербург, просп. Науки, 23а')
+        +slider()
+          +slide()
+            +address-card('Цветной Москва', 'г. Москва, Ленинградский пр., д. 2, цоколь 1234')
+          +slide()
+            +address-card('Молен Руж', 'Санкт-Петербург, просп. Науки, 23а')
+          +slide()
+            +address-card('Петровский пассаж', 'Псков, Рижский пр-кт, д.16')
+          +slide()
+            +address-card('Райкин Плаза', 'Москва, Северный бульвар 3к2')
+          +slide()
+            +address-card('Цветной Москва', 'г. Москва, Ленинградский пр., д. 2, цоколь 1234')
+          +slide()
+            +address-card('Торговый центр Палладиум', 'Псков, Рижский пр-кт, д.16')
+          +slide()
+            +address-card('Авиапарк', 'Москва, Тверская улица 7')
+          +slide()
+            +address-card('Афимолл Сити', 'Санкт-Петербург, просп. Науки, 23а')
 
     //- Карточки адресов
     +ui-section
@@ -403,17 +411,28 @@ block content
     //- Карточки новостей
     +ui-section
       +ui-section-head
-        h2 Карточки новостей
+        h2 Карточки новостей 
         p Блок: blocks/news-card/news-card
       +ui-section-content()
+        +news()
+          +col(3)
+            +news-card('Новость', '+news-card()', 'Читать')
+          +col(3)
+            +news-card('Новость', '+news-card()._colored._colored_pink', 'Читать')._colored._colored_pink
+          +col(3)
+            +news-card('Новость', '+news-card()._colored._colored_yellow', 'Читать')._colored._colored_yellow
+          +col(3)
+            +news-card('Новость', '+news-card()._colored._colored_blue', 'Читать')._colored._colored_blue
+          +col(3)
+            +news-card('Обучение', '+news-card()._colored._colored_green', 'Читать')._colored._colored_green
         +ui-description +news-card-large()
         +news-card-large('О компании', 'Профессиональная косметика для волос премиум сегмента для самых искушенных', 'Подробнее')
-        +ui-description +news-card()
-        +news-card('Новость', 'Еще один магазин Lantelia открылся в в Варшаве. Подарки первым десяти покупателям.', 'Читать')
-        +ui-description +news-card()._colored._colored_pink
-        +news-card('Обучение', 'Обучающий Мастер-класс по применению линнии Professional Botox Therapy', 'Подробнее')._colored._colored_pink
-        +ui-description +news-card()._colored._colored_yellow
-        +news-card('Обучение', 'Обучающий Мастер-класс по применению линнии Professional SPA Therapy', 'Подробнее')._colored._colored_yellow
+        //- +ui-description +news-card()
+        //- +news-card('Новость', 'Еще один магазин Lantelia открылся в в Варшаве. Подарки первым десяти покупателям.', 'Читать')
+        //- +ui-description +news-card()._colored._colored_pink
+        //- +news-card('Обучение', 'Обучающий Мастер-класс по применению линнии Professional Botox Therapy', 'Подробнее')._colored._colored_pink
+        //- +ui-description +news-card()
+        //- +news-card('Обучение', 'Обучающий Мастер-класс по применению линнии Professional SPA Therapy', 'Подробнее')._colored._colored_yellow
     
     //- Карточки товаров
     +ui-section
@@ -421,10 +440,17 @@ block content
         h2 Карточки товаров
         p Блок: blocks/product-card/product-card
       +ui-section-content()
-        +ui-description стандартная карточка product-card
-        +product-card('assets/images/picProduct/botox_250ml_07 (line)@2x.png')
-        +ui-description большая карточка .product-card_xl
-        +product-card('assets/images/picProduct/smooth_100ml_05(procedure)@2x.png')._xl
+      +products()
+        +product-card('assets/images/picProduct/botox_250ml_07 (line)@2x.png', '#product1')
+        +product-card('assets/images/picProduct/clarify_250ml_03(line)@2x.png', '#product2')
+        +product-card('assets/images/picProduct/botox_100ml_04(procedure).png', '#product3')._xl
+        +product-card('assets/images/picProduct/smooth_100ml_05(procedure)@2x.png', '#product4')._xl
+        +product-card('assets/images/picProduct/spa_250ml_03(line)@2x.png', '#product5')
+        +product-card('assets/images/picProduct/smooth_250ml_03(line)@2x.png', '#product6')
+        //- +ui-description стандартная карточка product-card
+        //- +product-card('assets/images/picProduct/botox_250ml_07 (line)@2x.png')
+        //- +ui-description большая карточка .product-card_xl
+        //- +product-card('assets/images/picProduct/smooth_100ml_05(procedure)@2x.png')._xl
         
     //- //- Подсказки
     //- +ui-section
@@ -447,7 +473,30 @@ block content
         +ui-description корзина
         .needHelp-ui
           +addcart()
+    
+    //- Цена
+    +ui-section
+      +ui-section-head
+        h2 Блок цены с описанием
+        p Блок: blocks/order-price/order-price
+      +ui-section-content()
+        +order-price('Стоимость заказа', '29 990')
         
+    //-Видео
+    +ui-section
+      +ui-section-head
+        h2 Видео
+        p Блок: blocks/video/video
+      +ui-section-content()
+        +video('assets/images/video@2x.jpg', 'https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1&amp;rel=0&amp;showinfo=0').training-page__video
+    
+    //- Социальные кнопки
+    +ui-section
+      +ui-section-head
+        h2 Социальные кнопки
+        p Блок: blocks/social/social
+      +ui-section-content()
+        +social('vk', 'f', 'twitter', 'instagram').__social
     //- Карты
     +ui-section
       +ui-section-head

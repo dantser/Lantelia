@@ -1,6 +1,7 @@
 .video {
   position: relative;
   overflow: hidden;
+  cursor: pointer;
 
   &__icon {
     @include center-block;

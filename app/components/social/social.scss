@@ -25,7 +25,8 @@
     @include transited;
 
     &:hover {
-      opacity: .7;
+      opacity: .6;
+      fill: $color-main;
     }
   }
 }
