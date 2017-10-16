@@ -129,7 +129,7 @@ export default () => {
         setTimeout(function () {
           contactMapC.invalidateSize();
           focusOn(currMarker, contactMapC);
-        }, 500)
+        }, 600)
 
       })
     }

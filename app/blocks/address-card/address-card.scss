@@ -1,7 +1,7 @@
 .address-card {
   display: inline-block;
   vertical-align: middle;
-  border: 1px solid #ededed;
+  border: 1px solid $color-border;
   max-width: 376px;
   box-sizing: border-box;
   cursor: pointer;
@@ -22,15 +22,15 @@
     z-index: -1;
     background-color: $color-main;
     transition: box-shadow $ease-main, opacity $ease-main;
-    box-shadow: 0 0 0 0 $color-main, 0 8px 20px 0 rgba(black, 0.21);
+    box-shadow: 0 0 0 0 $color-main, 0 8px 20px 0 rgba(black, .21);
     opacity: 0;
   }
 
-  &_active, &:hover {
+  &.active, &:hover {
     border-color: transparent;
 
     &::after {
-      box-shadow: 0 0 0 8px $color-main, 0 8px 20px 8px rgba(black, 0.21);
+      box-shadow: 0 0 0 8px $color-main, 0 8px 20px 8px rgba(black, .21);
       opacity: 1;
     }
 

@@ -1,8 +1,8 @@
 .sales-offices {
-  padding-bottom: 36px;
+  padding-bottom: 48px;
 
   .section__head {
-    margin-bottom: 46px;
+    margin-bottom: 35px;
   }
 
   .filter {
@@ -11,20 +11,27 @@
   }
 
   &__wrapper {
-    // display: flex;
-    // flex-flow: row wrap;
-    margin-right: -24px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -35px;
+    margin-left: -11px;
   }
 
   &__map {
-    margin-left: -$container-padding;
-    margin-right: -$container-padding;
     position: relative;
-    margin-bottom: $grid-gap;
     will-change: opacity;
+    opacity: 0;
+    height: 0;
+    transition: height $ease-pagination_main, margin $ease-pagination_main, opacity $ease-pagination_main;
+    width: 100%;
 
-    &.hidden {
-      display: none;
+    &.active {
+      height: 541px;
+      opacity: 1;
+      // margin-bottom: $grid-gap;
+      margin-left: -$container-padding;
+      margin-right: -$container-padding;
+      width: 100vw;
     }
   }
 
@@ -48,9 +55,19 @@
   }
 
   .address-card {
+    display: block;
     min-width: 424px;
-    margin-bottom: $grid-gap;
-    margin-right: $grid-gap;
+    min-width: 31%;
+    margin: 12px;
+    flex: 1;
+    transition: box-shadow $ease-main, background-color $ease-main, opacity $ease-main;
+
+    &__address {
+      letter-spacing: normal;
+    }
+    // &::after {
+    //   display: none;
+    // }
   }
 
   @include screen('temp', max) {
@@ -65,7 +82,6 @@
       display: block;
       margin-bottom: 0;
       padding-bottom: 35px;
-      border-bottom: 1px solid $color-border;
     }
 
     .filter {
@@ -75,6 +91,7 @@
 
     &__wrapper {
       margin: 0;
+      flex-direction: column;
     }
 
     .address-card {

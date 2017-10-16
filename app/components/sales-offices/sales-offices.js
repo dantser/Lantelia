@@ -2,8 +2,7 @@
 import $ from 'jquery';
 
 export default () => {
-  const CARD = $('.address-card');
-  const MAP = $('.sales-offices__map');
+  const cardClass = '.address-card';
 
   if($('.sales-offices__map').length == 0) {
     return
@@ -11,71 +10,83 @@ export default () => {
 
   $('.js-close').on('click',function (e) {
     e.preventDefault();
-    $(this).parents('.sales-offices__map').slideUp('slow');
+    $(this).parents('.sales-offices__map').removeClass('active');
   });
 
-  const cardWidth = CARD.outerWidth(true);
-  let parentWidth = $('.sales-offices__wrapper').width(),
-      perRow = calculatePerRow(),
-      rowsCount = Math.ceil($('.address-card:visible').length / perRow),
-      cardsCount = rowsCount * perRow;
+  $(cardClass).click(function () {
+  var el = $(this),
+      container = el.parents('.js-cards'),
+      map = container.find('.sales-offices__map'),
+      ease = 500,
+      activeClass = 'active',
+      amount = container.find(cardClass).length;
 
-  console.log('rowsCount = ' + rowsCount);
-  console.log('perRow = ' + perRow);
+  if (el.hasClass(activeClass)) {
+    el.removeClass(activeClass);
+    map.removeClass(activeClass);
+    return false;
+  }
 
-  function calculatePerRow() {
-    perRow = 0;
-    $('.address-card:visible').each(function() {
-        if($(this).prev().length > 0) {
-            if($(this).position().top != $(this).prev().position().top) return false;
-            perRow++;
+  el.addClass(activeClass).siblings(cardClass).removeClass(activeClass);
+
+
+  // Ищем целевое положение (index)
+  var mapIndex = map.index(),
+      elIndex = mapIndex < el.index() ? el.index() - 1 : el.index(),
+      elPos = el.offset().top;
+
+  // Перебираем карточки, чтобы найти нужную позицию
+  container.find(cardClass).each(function () {
+    var card = $(this),
+        cardIndex = mapIndex < card.index() ? card.index() - 1 : card.index(),
+        cardPos = card.offset().top,
+        targetPos,
+        islast = card.is(':last-child') || (cardIndex === mapIndex - 1 && map.is(':last-child'));
+
+        // Проверяем, не лежит ли карточка в другом ряду
+        if ((cardIndex > elIndex && cardPos > elPos) || islast) {
+          targetPos = !islast ? cardIndex : amount;
+
+          // Если карта в правильном положении, сразу делаем активной
+          if (targetPos === mapIndex) {
+            if (!map.hasClass(activeClass)) map.addClass(activeClass);
+            return false;
+          }
+
+          // Если карту надо переставить, сначала скрываем ее, потом показываем
+          map.removeClass(activeClass);
+
+          setTimeout(function () {
+           islast ? card.after(map) : card.before(map);
+          }, ease + 10);
+
+         setTimeout(function () {
+           map.addClass(activeClass);
+         }, ease + 50);
+
+         return false;
         }
-        else {
-            perRow++;
-        }
+      });
     });
 
-    return perRow;
 
-    // var lisInLastRow = CARD.length % lisInRow;
-    // if(lisInLastRow == 0) lisInLastRow = lisInRow;
-  }
-  function reInitVars() {
-    parentWidth = $('.sales-offices__wrapper').width(),
-    perRow = calculatePerRow(),
-    rowsCount = Math.ceil($('.address-card:visible').length / perRow),
-    cardsCount = rowsCount * perRow;
-    console.log('rowsCount = ' + rowsCount);
-    console.log('perRow = ' + perRow);
 
-    // console.log($('.address-card:visible').length);
 
-  }
 
-  if ($(window).width() > 1399) {
-    CARD.on('click', function () {
-      const cardIndex = $(this).siblings(":visible").addBack().index($(this)) + 1;
-      const cardInRow = Math.ceil(cardIndex / perRow);
-      const lastCardInRow = cardInRow * perRow;
-      console.log(lastCardInRow);
-
-      if(CARD.eq(lastCardInRow - 1).length && CARD.eq(lastCardInRow - 1).is(':visible')) {
-        MAP.insertAfter($('.address-card:visible').eq(lastCardInRow - 1)).slideDown().removeClass('hidden');
-      } else {
-        MAP.insertAfter($('.address-card:visible:last')).slideDown().removeClass('hidden');
-      }
-    });
-
-    $(window).resize(function () {
-      $('.sales-offices__map').slideUp();
-      reInitVars();
-    });
-
-    $('.js-select').on('change', function () {
-      $('.sales-offices__map').slideUp();
-      reInitVars();
-    })
-  }
+  // $(window).resize(function () {
+  //   reInitVars();
+  //   $('.sales-offices__map').slideUp();
+  //
+  // });
+  //
+  // $('.js-select').on('change', function () {
+  //   setTimeout(function () {
+  //     reInitVars();
+  //   }, 300);
+  //
+  //   $('.sales-offices__map').slideUp();
+  // })
 }
+
 
 /* eslint-enable */
