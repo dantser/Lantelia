@@ -38,7 +38,8 @@
   }
 
   .leaflet-popup-content {
-    margin: 35px 36px;
+    padding: 35px 36px;
+    box-sizing: border-box;
   }
 
   .leaflet-popup {
@@ -53,7 +54,7 @@
     }
   }
 
-  .leaflet-popup-close-button, .leaflet-popup-tip-container {
+  .leaflet-popup-tip-container {
     display: none;
   }
 
@@ -72,7 +73,7 @@
     color: $color-gray;
     font-size: 13px;
     line-height: 1.77;
-    margin-bottom: 25px;
+    margin-bottom: 26px;
     margin-top: 0;
 
     &:last-child {
@@ -85,6 +86,23 @@
     color: $color-white;
     line-height: 1.31;
     margin-bottom: 7px;
+  }
+
+  a.leaflet-popup-close-button {
+    top: 14px;
+    right: 10px;
+    padding: 12px;
+    cursor: pointer;
+    color: $color-white;
+    font-weight: 300;
+    font: 25px/7px Tahoma,Verdana,sans-serif;
+  }
+
+  .custom-popup {
+
+    &__pin {
+      margin-bottom: 25px;
+    }
   }
 
   @include screen('tablet', max) {

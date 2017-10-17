@@ -3,9 +3,12 @@
   padding-bottom: 0;
 
   .section__head {
-    margin-bottom: 53px;
+    margin-bottom: 46px;
   }
 
+  .map {
+    height: 715px;
+  }
 
   @include screen('temp', max) {
     padding-top: 89px;
@@ -15,6 +18,7 @@
       display: block;
       margin-bottom: 35px;
     }
+
     .map {
       display: block;
       height: 100vh;

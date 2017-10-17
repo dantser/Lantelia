@@ -2,14 +2,14 @@ include ../../blocks/icon/icons
 
 mixin address-card(title, address, id)
   +b.address-card&attributes(attributes)
-    +e.A(href="#", id=id).wrapper
+    +e.A(id=id).wrapper
       +e.H3.title= title
       +e.SPAN.address= address
       +icon('arrow').arrow
 
 mixin address-card-linkedToMap(title, address, id)
   +b.address-card&attributes(attributes)
-    +e.A(href="#", id = id).wrapper
+    +e.A(id = id).wrapper
       +e.H3.title= title
       +e.SPAN.address= address
       +icon('arrow').arrow

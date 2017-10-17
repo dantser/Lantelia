@@ -13,7 +13,7 @@ export default () => {
     $(this).parents('.sales-offices__map').removeClass('active');
   });
 
-  $(cardClass).click(function () {
+  $(cardClass).click(function (e) {
   var el = $(this),
       container = el.parents('.js-cards'),
       map = container.find('.sales-offices__map'),
