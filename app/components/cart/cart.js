@@ -1,5 +1,5 @@
-import $ from 'jquery';
 /* eslint-disable */
+import $ from 'jquery';
 
 export default () => {
   const CARD = $('.product-card'),
@@ -12,8 +12,6 @@ export default () => {
   let COUNT, TOTAL, TOTAL_STRING;
   NUMBER_OF_GOODS.text(CARD_LENDTH);
 
-
-
   function numberOfProducts () { // считаем околичество позиций
     let CARD = $('.product-card');
     CARD_LENDTH = CARD.length;
@@ -22,9 +20,7 @@ export default () => {
 
   $('.order-price__price').toLocaleString();
 
-
   $(document).ready(function () {
-
     let TOTAL_RESULT;
 
     DEL_CARD.on('click', function () {
@@ -46,8 +42,6 @@ export default () => {
       PARENT.find('.product-card__bottom .order-price__price').attr('data-total', TOTAL);
     });
 
-
-
     function result() { // считаем общую сумму
       let CARD_TOTAL = $('.product-card__total .order-price__price');
 
@@ -61,14 +55,9 @@ export default () => {
       let TOTAL_RESULT_STR = TOTAL_RESULT.toLocaleString();
 
       $('.js-total-sum .order-price__price').text(TOTAL_RESULT_STR);
-
     }
 
-
     function productCount() { // считаем в одной карточке
-
-
-
       SELECT_PRICE.on('change', function () {
         const PARENT = $(this).parents('.product-card');
         const PRICE = PARENT.attr('data-price');
@@ -80,15 +69,5 @@ export default () => {
         result();
       });
     };
-
   });
-
-
-
-
-
-
-
-
-
 }

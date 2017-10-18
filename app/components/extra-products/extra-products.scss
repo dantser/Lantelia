@@ -12,6 +12,7 @@
 
     &:last-child {
       border-right: 1px solid $color-border;
+      margin-right: $container-padding;
     }
   }
 
@@ -23,6 +24,12 @@
     padding-right: 0;
     padding-left: 0;
     position: relative;
+  }
+
+  @media (max-width: 1280px) {
+    .swiper-slide:last-child {
+      margin-right: 22px;
+    }
   }
 
   @include screen('tablet-wide', max) {
@@ -44,6 +51,7 @@
     .swiper-slide {
       width: 100%;
       border: 0;
+      margin: 0;
 
       &:not(:last-child) {
         border-bottom: 1px solid $color-border;
@@ -56,6 +64,7 @@
 
       &:last-child {
         border-right: 0;
+        margin: 0;
       }
     }
 
