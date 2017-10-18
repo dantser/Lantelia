@@ -39,6 +39,11 @@
   @include screen('temp', max) {
     padding-top: 95px;
 
+    &__wrapper {
+      max-width: 640px;
+      margin: 0 auto;
+    }
+
     .section__head {
       margin-bottom: 31px;
     }
@@ -61,9 +66,13 @@
       display: flex;
       justify-content: space-between;
     }
+  }
+
+  @include screen('tablet', max) {
 
     .button {
       padding-bottom: 21px;
+      width: 100%;
     }
   }
 }

@@ -53,7 +53,7 @@
     color: $color-white;
   }
 
-  @include screen('temp', max) {
+  @include screen('tablet', max) {
     margin-top: 54px;
 
     &__top {

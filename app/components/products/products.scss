@@ -62,12 +62,19 @@
     }
   }
 
-  @include screen('tablet', max) {
-    border-bottom: 1px solid $color-border;
+  @include screen('temp', max) {
 
     &__helper {
       display: none;
     }
+
+    &__line {
+      border: 0;
+    }
+  }
+
+  @include screen('tablet-wide', max) {
+    border-bottom: 1px solid $color-border;
 
     &__line {
       flex-flow: column nowrap;

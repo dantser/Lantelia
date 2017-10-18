@@ -25,7 +25,7 @@
     margin-top: -9px;
   }
 
-  @include screen('temp', max) {
+  @include screen('tablet', max) {
     display: block !important;
 
     &__subtitle {

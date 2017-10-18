@@ -4,6 +4,7 @@
   min-height: 533px;
   padding-top: 117px;
   padding-bottom: 0;
+  background-color: #1e1e1e;
 
   &_about {
 
@@ -106,6 +107,21 @@
   }
 
   @include screen('temp', max) {
+
+    &__button {
+      padding: 18px 27px 16px 24px;
+    }
+  }
+
+  @include screen('tablet-wide', max) {
+
+    &__wrapper {
+      width: 50%;
+      padding-left: 0;
+    }
+  }
+
+  @include screen('tablet', max) {
     min-height: 503px;
     padding-top: 65px;
 
@@ -123,6 +139,7 @@
     &__image-wrapper {
 
       img {
+        object-fit: contain;
         display: none;
 
         &:last-child {
@@ -264,36 +281,31 @@
     }
   }
 
+  @include screen('desktop-wide', max) {
+
+    .grid__col {
+
+      &_seven {
+        width: 50%;
+      }
+
+      &_five {
+        width: 50%;
+      }
+    }
+  }
+
   @include screen('temp', max) {
     padding-top: 36px;
     border-bottom: 0;
-
-    .container {
-      padding: 0;
-    }
 
     &__wrapper {
       padding: 0;
     }
 
     &__title {
-      font-size: 16px;
       margin-bottom: 21px;
       padding-top: 29px;
-    }
-
-    &__col {
-      padding: 0;
-      min-height: 0;
-
-      &:last-child {
-        padding: 0;
-      }
-
-      &-wrapper {
-        padding: 0 22px 32px;
-        border-bottom: 1px solid $color-border;
-      }
     }
 
     .grid {
@@ -319,6 +331,31 @@
       .product-content__subtitle {
         margin-top: 0;
       }
+    }
+
+    &__col {
+      padding: 0;
+      min-height: 0;
+
+      &:last-child {
+        padding: 0;
+      }
+
+      &-wrapper {
+        padding: 0 22px 32px;
+        border-bottom: 1px solid $color-border;
+      }
+    }
+  }
+
+  @include screen('tablet-wide', max) {
+
+    .container {
+      padding: 0;
+    }
+
+    &__title {
+      font-size: 16px;
     }
 
     &__tabs {
@@ -374,8 +411,13 @@
     }
 
     .container_slider {
-      padding-left: 22px;
       margin-top: 32px;
+    }
+  }
+
+  @include screen('tablet-wide', max) {
+    .container_slider {
+      padding-left: 22px;
     }
   }
 

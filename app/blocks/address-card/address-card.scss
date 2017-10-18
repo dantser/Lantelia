@@ -80,7 +80,7 @@
     transition: fill $ease-main;
   }
 
-  @include screen('temp', max) {
+  @include screen('tablet', max) {
     border: none;
     border-bottom: 1px solid #ededed;
     max-width: none;

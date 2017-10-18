@@ -63,7 +63,7 @@
   }
 
 
-  @include screen('temp', max) {
+  @include screen('tablet', max) {
     padding-top: 40px;
     padding-bottom: 36px;
 

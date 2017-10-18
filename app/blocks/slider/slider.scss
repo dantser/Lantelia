@@ -61,7 +61,7 @@
     visibility: hidden;
   }
 
-  @include screen('temp', max) {
+  @include screen('tablet-wide', max) {
     &__button {
       display: none;
     }

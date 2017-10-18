@@ -28,7 +28,7 @@
     display: none;
   }
 
-  @include screen('temp', max) {
+  @include screen('tablet', max) {
     border-bottom: 1px solid $color-border;
 
     .container {

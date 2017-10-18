@@ -11,7 +11,7 @@ export default function slider() {
   var mySlider = undefined;
   function initSwiper() {
     var screenWidth = $(window).width();
-    if(screenWidth > 1399 && mySlider == undefined) {
+    if(screenWidth > 899 && mySlider == undefined) {
       mySlider = new Swiper('.js-slider', {
         // loop: true,
         speed: 700,
@@ -25,9 +25,14 @@ export default function slider() {
         bulletClass: 'slider__dot',
         bulletActiveClass: 'active',
         slidesOffsetBefore: '60',
-        roundLengths: true
+        roundLengths: true,
+        breakpoints: {
+          1280: {
+            slidesOffsetBefore: '24',
+          }
+        }
       });
-    } else if (screenWidth < 1400 && mySlider != undefined) {
+    } else if (screenWidth < 900 && mySlider != undefined) {
         mySlider.destroy();
         mySlider = undefined;
         // jQuery('.swiper-wrapper').removeAttr('style');

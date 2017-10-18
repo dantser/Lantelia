@@ -205,6 +205,67 @@
   }
 
   @include screen('temp', max) {
+
+    .button {
+      width: 50%;
+      margin: 0 auto;
+    }
+
+    &__wrapper {
+      padding: 34px 0 $container-padding;
+
+      &_foot {
+        padding-top: 33px;
+        padding-bottom: 36px;
+
+        .grid {
+          margin-right: 0;
+          margin-left: auto;
+
+          &__col {
+            padding-left: 0;
+            padding-right: 0;
+            width: 100% !important;
+          }
+
+          &__col_five {
+            padding-bottom: 29px;
+            border-bottom: 1px solid $color-border;
+            display: flex;
+            justify-content: space-between;
+          }
+
+          &__col_four {
+            padding-top: 31px !important;
+          }
+        }
+      }
+    }
+  }
+
+  @include screen('tablet-xl', max) {
+
+    &__wrapper {
+      padding: 34px 0 $container-padding;
+    }
+
+    .grid__col {
+
+      &_three {
+        width: 50%;
+      }
+
+      &_six {
+        width: 100%;
+      }
+    }
+
+    &__wrapper {
+
+    }
+  }
+
+  @include screen('tablet', max) {
     padding-top: 94px;
 
     &__error-close {
@@ -255,30 +316,6 @@
 
         .checkradio__content p {
           line-height: 1.77;
-        }
-      }
-
-      &_foot {
-        padding-top: 33px;
-        padding-bottom: 36px;
-
-        .grid {
-          margin-right: 0;
-          margin-left: auto;
-
-          &__col {
-            padding-left: 0;
-            padding-right: 0;
-          }
-
-          &__col_five {
-            padding-bottom: 29px;
-            border-bottom: 1px solid $color-border;
-          }
-
-          &__col_four {
-            padding-top: 31px !important;
-          }
         }
       }
     }
