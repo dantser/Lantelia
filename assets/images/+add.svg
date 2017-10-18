@@ -1,1 +1,12 @@
-<svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>icon/+add</title><path d="M12 12H4v1h8v8h1v-8h8v-1h-8V4h-1v8z" fill="#FFF" fill-rule="evenodd"/></svg>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46.2 (44496) - http://www.bohemiancoding.com/sketch -->
+    <title>icon/+add</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="icon/+add" fill="#FFFFFF">
+            <path d="M12,12 L4,12 L4,13 L12,13 L12,21 L13,21 L13,13 L21,13 L21,12 L13,12 L13,4 L12,4 L12,12 Z" id="Combined-Shape"></path>
+        </g>
+    </g>
+</svg>
