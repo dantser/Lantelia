@@ -28,6 +28,8 @@
     flex-wrap: wrap;
     position: relative;
     margin-right: -1px;
+    margin-left: -1px;
+    border-left: 1px solid $color-border;
   }
 
   &__helper {
@@ -60,7 +62,7 @@
     }
   }
 
-  @include screen('temp', max) {
+  @include screen('tablet', max) {
     border-bottom: 1px solid $color-border;
 
     &__helper {

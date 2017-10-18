@@ -322,7 +322,7 @@
   //   }
   // }
 
-  @include screen('temp', max) {
+  @include screen('tablet', max) {
     border-right: none;
     width: 100%;
 

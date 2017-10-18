@@ -37,7 +37,6 @@ export default () => {
 
   // markers array
   let markers = [];
-  let markers2 = [];
 
   markers["marker1"] = L.marker([55.7788008, 37.5821708], {icon: iconInactive})
                       .bindPopup(L.popup({maxWidth:274})
@@ -69,24 +68,9 @@ export default () => {
                       .bindPopup(L.popup({maxWidth:274})
                       .setContent("<div class='custom-popup'><img src='assets/images/pin3.svg' class='custom-popup__pin'><h3>Петровский Пассаж</h3> <p>г. Псков, Рижский пр-кт, д.16</p><h3>Контакты</h3> <p>Тел.: 79269464613<br>Эл. почта: msk.bel@cdek.ru</p> <p>Пн-Пт – с 10:00 до 20:00<br>Сб, Вс – с 10:00 до 16:00</p>")).on('click', clickZoom);
 
-  markers2["marker9"] = L.marker([55.1788008, 37.5921708], {icon: iconInactive})
-                      .bindPopup(L.popup({maxWidth:274})
-                      .setContent("<div class='custom-popup'><img src='assets/images/pin3.svg' class='custom-popup__pin'><h3>Цветной Москва</h3> <p>г. Москва, Ленинградский проспект, д. 2, цокольный этаж, оф. №1</p><h3>Контакты</h3> <p>Тел.: 79269464613<br>Эл. почта: msk.bel@cdek.ru</p> <p>Пн-Пт – с 10:00 до 20:00<br>Сб, Вс – с 10:00 до 16:00</p></div>")).on('click', clickZoom);
-  markers2["marker10"] = L.marker([55.388008, 37.5921708], {icon: iconInactive})
-                    .bindPopup(L.popup({maxWidth:274})
-                    .setContent("<div class='custom-popup'><img src='assets/images/pin3.svg' class='custom-popup__pin'><h3>Цветной Москва</h3> <p>г. Москва, Ленинградский проспект, д. 2, цокольный этаж, оф. №1</p><h3>Контакты</h3> <p>Тел.: 79269464613<br>Эл. почта: msk.bel@cdek.ru</p> <p>Пн-Пт – с 10:00 до 20:00<br>Сб, Вс – с 10:00 до 16:00</p></div>")).on('click', clickZoom);
-  markers2["marker11"] = L.marker([55.8888008, 37.5921708], {icon: iconInactive})
-                      .bindPopup(L.popup({maxWidth:274})
-                      .setContent("<div class='custom-popup'><img src='assets/images/pin3.svg' class='custom-popup__pin'><h3>Цветной Москва</h3> <p>г. Москва, Ленинградский проспект, д. 2, цокольный этаж, оф. №1</p><h3>Контакты</h3> <p>Тел.: 79269464613<br>Эл. почта: msk.bel@cdek.ru</p> <p>Пн-Пт – с 10:00 до 20:00<br>Сб, Вс – с 10:00 до 16:00</p></div>")).on('click', clickZoom);
-  markers2["marker12"] = L.marker([55.7788008, 37.6], {icon: iconInactive})
-                      .bindPopup(L.popup({maxWidth:274})
-                      .setContent("<div class='custom-popup'><img src='assets/images/pin3.svg' class='custom-popup__pin'><h3>Цветной Москва</h3> <p>г. Москва, Ленинградский проспект, д. 2, цокольный этаж, оф. №1</p><h3>Контакты</h3> <p>Тел.: 79269464613<br>Эл. почта: msk.bel@cdek.ru</p> <p>Пн-Пт – с 10:00 до 20:00<br>Сб, Вс – с 10:00 до 16:00</p></div>")).on('click', clickZoom);
-  markers2["marker13"] = L.marker([55.8788008, 37.5921708], {icon: iconInactive})
-                      .bindPopup(L.popup({maxWidth:274})
-                      .setContent("<div class='custom-popup'><img src='assets/images/pin3.svg' class='custom-popup__pin'><h3>Цветной Москва</h3> <p>г. Москва, Ленинградский проспект, д. 2, цокольный этаж, оф. №1</p><h3>Контакты</h3> <p>Тел.: 79269464613<br>Эл. почта: msk.bel@cdek.ru</p> <p>Пн-Пт – с 10:00 до 20:00<br>Сб, Вс – с 10:00 до 16:00</p></div>")).on('click', clickZoom);
-
   // Кластер
   let markerClusterer = L.markerClusterGroup({
+    showCoverageOnHover: false,
     iconCreateFunction: function(cluster) {
       var count = cluster.getChildCount();
       return L.divIcon({
@@ -117,8 +101,8 @@ export default () => {
        position:'bottomleft'
     }).addTo(contactMapC);
 
-    for (var i in markers2) {
-      markerClusterer.addLayer(markers2[i]);
+    for (var i in markers) {
+      markerClusterer.addLayer(markers[i]);
     }
 
     contactMapC.addLayer(markerClusterer);

@@ -13,25 +13,35 @@
   &__wrapper {
     display: flex;
     flex-wrap: wrap;
-    margin-right: -35px;
-    margin-left: -11px;
+    // margin-right: -35px;
+    // margin-left: -11px;
   }
 
   &__map {
     position: relative;
-    will-change: opacity;
     opacity: 0;
     height: 0;
-    transition: height $ease-pagination_main, margin $ease-pagination_main, opacity $ease-pagination_main;
+    transition: height $ease-main, margin $ease-main, opacity $ease-main;
     width: 100%;
+    margin-left: -$container-padding;
+    margin-right: -$container-padding;
+    background-color: $color-gray;
 
     &.active {
       height: 541px;
       opacity: 1;
       // margin-bottom: $grid-gap;
-      margin-left: -$container-padding;
-      margin-right: -$container-padding;
+
       width: 100vw;
+      .map {
+        height: 541px;
+        opacity: 1;
+      }
+    }
+
+    .map {
+      height: 0;
+      opacity: 0;
     }
   }
 

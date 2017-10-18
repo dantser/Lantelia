@@ -7,7 +7,6 @@
   cursor: pointer;
   position: relative;
   z-index: 1;
-  transition: border-color $ease-main;
 
   @include transited;
 

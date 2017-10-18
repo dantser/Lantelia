@@ -1,6 +1,6 @@
 /* eslint-disable*/
 const $ = window.$;
-import 'velocity-animate';
+// import 'velocity-animate';
 
 export default () => {
   function parallaxInit() {
@@ -12,6 +12,7 @@ export default () => {
       const el = $(this);
 
       if (!el.attr('data-top')) el.attr('data-top', el.offset().top);
+
       const thistop = +el.attr('data-top');
       const next = el.next() || false;
 
@@ -31,12 +32,14 @@ export default () => {
         return;
       }
 
-      el.velocity({
-        translateY: value,
-      }, {
-        duration: 0,
-        easing: 'linear',
-      });
+      el.attr('style', 'transform: translate3d(0, ' + value + 'px, 0)');
+
+      // el.velocity({
+      //   translateY: value,
+      // }, {
+      //   duration: 0,
+      //   easing: 'linear',
+      // });
     });
   }
 

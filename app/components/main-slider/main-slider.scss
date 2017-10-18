@@ -205,13 +205,18 @@
   // }
 
   @include screen('temp', max) {
+    &__heading {
+      padding: 0;
+      padding-top: 35px;
+    }
+  }
+
+  @include screen('tablet', max) {
     padding-top: 54px;
     min-height: 568px;
 
     &__heading {
-      padding: 0;
       width: 100%;
-      padding-top: 35px;
       min-height: 0;
     }
 
