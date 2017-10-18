@@ -42,13 +42,21 @@
 
   @include screen('temp', max) {
 
-    &__content {
-      border-bottom: 1px solid $color-border;
-    }
-
     &__wrapper {
       padding: 42px 0 31px;
       border: 0;
+    }
+
+    &__video {
+      max-width: 648px;
+      margin: 0 auto;
+    }
+  }
+
+  @include screen('tablet', max) {
+
+    &__content {
+      border-bottom: 1px solid $color-border;
     }
 
     &__text-block {
@@ -130,6 +138,24 @@
     padding-top: 91px;
     padding-bottom: 3px;
 
+    &__image {
+      height: 283px;
+      text-align: center;
+
+      img {
+        max-height: 100%;
+      }
+    }
+
+    &__title {
+      font-size: 16px;
+      line-height: 1.5;
+      width: 100%;
+    }
+  }
+
+  @include screen('tablet', max) {
+
     &__wrapper {
       padding: 0;
       display: block;
@@ -140,25 +166,10 @@
       padding: 0;
     }
 
-    &__title {
-      font-size: 16px;
-      line-height: 1.5;
-      width: 100%;
-    }
-
     &__subtitle {
       font-size: 13px;
       color: $color-main;
       margin-bottom: 12px;
-    }
-
-    &__image {
-      height: 283px;
-      text-align: center;
-
-      img {
-        max-height: 100%;
-      }
     }
   }
 }

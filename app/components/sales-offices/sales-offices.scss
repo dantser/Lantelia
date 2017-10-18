@@ -55,6 +55,7 @@
     top: $grid-gap;
     right: $grid-gap*2;
     z-index: 2;
+    transition: opacity $ease-main;
 
     svg {
       @include center-block;
@@ -62,12 +63,17 @@
       width: 12px;
       height: 12px;
     }
+
+    &:hover {
+      opacity: .7;
+    }
   }
 
   .address-card {
     display: block;
-    min-width: 424px;
+    // min-width: 424px;
     min-width: 31%;
+
     margin: 12px;
     flex: 1;
     transition: box-shadow $ease-main, background-color $ease-main, opacity $ease-main;
@@ -82,6 +88,14 @@
 
   @include screen('temp', max) {
     padding-top: 89px;
+
+    &__map {
+      margin-left: -22px;
+      margin-right: -22px;
+    }
+  }
+
+  @include screen('tablet', max) {
     padding-bottom: 0;
 
     .section-head {

@@ -28,6 +28,8 @@
 
     &_image {
       margin-top: 8px;
+      display: flex;
+      align-items: flex-end;
     }
 
     &_head {
@@ -117,13 +119,24 @@
       padding-right: 22px;
     }
 
+    &__wrapper {
+      padding: 0;
+    }
+
+    .masthead__wrapper {
+      padding-left: 0;
+    }
+  }
+
+  @include screen('tablet', max) {
+
+    .masthead__image-wrapper img {
+      object-fit: cover;
+    }
+
     &__content {
       padding-top: 31px;
       padding-bottom: 27px;
-    }
-
-    &__wrapper {
-      padding: 0;
     }
 
     &__top {
@@ -160,6 +173,7 @@
         order: 3;
         margin-bottom: 39px;
         margin-top: 0;
+        display: block;
       }
     }
 

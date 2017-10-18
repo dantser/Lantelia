@@ -9,6 +9,7 @@ export default () => {
   const needHelp = $('.needHelp');
   const needHelpPopup = $('.needHelp-popup');
   const grayscreen = $('#overlay');
+  const header = $('.header');
 
   $(burgerClass).on('click', (e) => {
     const burger = $(burgerClass);
@@ -18,6 +19,9 @@ export default () => {
     menu.toggleClass('header__nav_active');
     needHelp.removeClass('needHelp_opened');
     needHelpPopup.hide();
+    if ( header.hasClass('header_top') ) {
+      header.toggleClass('header_fill');
+    }
 
     if (burger.hasClass(activeBurgerClass)) {
       freeze();
@@ -38,6 +42,7 @@ export default () => {
     unfreeze();
     grayscreen.fadeOut();
     menu.removeClass('header__nav_active');
+    $('.header').removeClass('header_fill');
   });
 };
 /* eslint-enable */

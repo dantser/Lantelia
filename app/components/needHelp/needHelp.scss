@@ -167,7 +167,7 @@
     }
   }
 
-  @include screen('temp', max) {
+  @include screen('tablet', max) {
     border-radius: 0;
     position: absolute;
     top: 0;
@@ -276,7 +276,7 @@
     display: inline-block;
   }
 
-  @include screen('temp', max) {
+  @include screen('teblet', max) {
     display: none;
   }
 }

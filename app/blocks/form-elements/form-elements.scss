@@ -387,7 +387,7 @@
     }
   }
 
-  @include screen('temp', max) {
+  @include screen('tablet', max) {
 
     &__list {
 

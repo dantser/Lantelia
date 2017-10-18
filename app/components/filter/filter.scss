@@ -130,7 +130,7 @@
       right: 22px;
     }
 
-    @include screen('temp', max) {
+    @include screen('tablet', max) {
       display: block;
       border: 0;
       overflow: inherit;
@@ -169,7 +169,7 @@
     }
   }
 
-  @include screen('temp', max) {
+  @include screen('tablet', max) {
     border-top: 1px solid $color-border;
     overflow-x: scroll;
     overflow-y: hidden;

@@ -4,8 +4,12 @@ import $ from 'jquery';
 export default () => {
   const cardClass = '.address-card';
 
-  if($('.sales-offices__map').length == 0) {
+  if($('.sales-offices__map').length == 0 || $(window).width() < 768) {
     return
+  }
+
+  if($(window).width() < 1280) {
+    $('.sales-offices__map').insertAfter($('.address-card:last-child'));
   }
 
   $('.js-close').on('click',function (e) {

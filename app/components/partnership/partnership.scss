@@ -64,8 +64,36 @@
   }
 
   @include screen('temp', max) {
+
+    &__wrapper {
+      padding-left: 75px;
+    }
+  }
+
+  @include screen('tablet-xl', max) {
     border: 0;
+    border-top: 1px solid $color-border;
     padding-top: 31px;
+
+    &__wrapper {
+      padding: $grid-gap 0 $grid-gap;
+    }
+
+    .grid__col {
+
+      &_four {
+        width: 40%;
+        padding-left: $grid-gap;
+      }
+
+      &_eight {
+        width: 60%;
+      }
+    }
+  }
+
+  @include screen('tablet', max) {
+    border: 0;
 
     &__wrapper {
       padding: 0;
@@ -85,6 +113,13 @@
 
       .button__text {
         font-size: 11px;
+      }
+    }
+
+    .grid__col {
+
+      &_eight {
+        width: 100%;
       }
     }
 

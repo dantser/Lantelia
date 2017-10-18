@@ -3,6 +3,18 @@
 
   @include screen('temp', max) {
     .grid__col {
+      width: 33.33%;
+    }
+  }
+
+  @include screen('tablet-wide', max) {
+    .grid__col {
+      width: 50%;
+    }
+  }
+
+  @include screen('tablet', max) {
+    .grid__col {
       width: 100%;
     }
   }

@@ -95,16 +95,38 @@
     }
   }
 
+  @include screen('desktop-wide', max) {
+
+    &__caption {
+      width: 100%;
+      margin-bottom: 36px;
+    }
+  }
+
   @include screen('temp', max) {
 
-    .container {
-      padding-top: 90px;
+    &__wrapper {
+      padding: 0 0 27px;
     }
 
     &__heading {
       padding: 0;
-      display: block;
-      margin-bottom: 14px;
+    }
+
+    &__image {
+      max-width: 640px;
+      margin: 0 auto 52px;
+
+      &:not(:first-child):not(:last-child) {
+        margin: 54px auto 52px;
+      }
+    }
+  }
+
+  @include screen('tablet', max) {
+
+    .container {
+      padding-top: 90px;
     }
 
     &__date {
@@ -115,12 +137,13 @@
       display: none;
     }
 
-    &__wrapper {
-      padding: 0 0 27px;
+    &__heading {
+      padding: 0;
+      display: block;
+      margin-bottom: 14px;
     }
 
     &__caption {
-      width: 100%;
       font-size: 16px;
       margin-bottom: 24px;
     }

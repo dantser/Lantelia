@@ -106,11 +106,18 @@
     letter-spacing: .05em;
   }
 
-  .map {
+  &__map {
     height: 396px;
 
     .leaflet-popup-content {
       margin-top: 40px;
+    }
+  }
+
+  @include screen('desktop-wide', max) {
+
+    &__wrapper {
+      padding: 0;
     }
   }
 
@@ -119,10 +126,6 @@
 
     .section__head {
       margin-bottom: 31px;
-    }
-
-    &__wrapper {
-      padding: 0;
     }
 
     .grid {
@@ -146,13 +149,15 @@
       }
     }
 
-    .map {
+    &__map {
       display: block;
-      height: auto;
-      min-height: 149px;
       max-width: 100%;
       margin-top: 32px;
       margin-bottom: 9px;
+
+      .leaflet-bottom.leaflet-left {
+        display: none;
+      }
     }
 
     &__item {
@@ -192,6 +197,14 @@
 
     &__label, &__label2 {
       display: none;
+    }
+  }
+
+  @include screen('tablet', max) {
+
+    &__map {
+      height: auto;
+      min-height: 149px;
     }
   }
 }

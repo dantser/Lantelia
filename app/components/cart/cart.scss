@@ -39,9 +39,10 @@
   @include screen('temp', max) {
     padding-top: 95px;
 
-    &__wrapper {
+    .product-card__wrapper {
       max-width: 640px;
       margin: 0 auto;
+      position: relative;
     }
 
     .section__head {
@@ -62,13 +63,16 @@
 
     &__stats {
       margin-bottom: 30px;
-      padding-right: 33px;
       display: flex;
       justify-content: space-between;
     }
   }
 
   @include screen('tablet', max) {
+
+    &__stats {
+      padding-right: 33px;
+    }
 
     .button {
       padding-bottom: 21px;

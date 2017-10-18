@@ -143,6 +143,10 @@
     }
   }
 
+  &_fill {
+    background-color: $color-main !important;
+  }
+
   // @media (max-width: 1300px) {
   //
   //   &__logo {

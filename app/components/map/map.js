@@ -117,6 +117,8 @@ export default () => {
 
     if (select.length) {
       select.on('change', function () {
+        $('.address-card').removeClass('active');
+        $('.sales-offices__map').removeClass('active').insertAfter($('.address-card:last-child'));
         var currMarker = $(this).val();
         switch (currMarker) {
           case 'all': contactMapC.setView([55.7788008, 37.5821708], 5)
