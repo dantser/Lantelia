@@ -28,7 +28,7 @@
     background-color: $color-gray;
 
     &.active {
-      height: 541px;
+      min-height: 541px;
       opacity: 1;
       // margin-bottom: $grid-gap;
 

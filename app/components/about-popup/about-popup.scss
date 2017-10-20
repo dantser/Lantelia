@@ -4,6 +4,7 @@
   &__wrapper {
     display: flex;
     flex-flow: row nowrap;
+    background-color: $color-white;
   }
 
   &__content {

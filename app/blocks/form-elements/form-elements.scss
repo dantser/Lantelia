@@ -14,15 +14,36 @@
 
   &.errorHighlight {
     border-color: $color-error;
+
+    & + .input__line {
+      display: block;
+      content: "222";
+      @extend %gradient-border-tabs;
+    }
   }
 
-  &:active, &:focus {
-    @extend %gradient-border-tabs;
+  &__line {
+    @include pseudo;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 100%;
+    color: white;
+    transition: transform $ease-main;
+
+    transform: scale3d(0, 1 ,1) translate3d(0, 0, 0);
+    transform-origin: left;
+    @extend %gradient-underline;
   }
+}
+
+.input:active + .input__line, .input:focus + .input__line {
+  transform: scale3d(1, 1, 1) translate3d(0, 0, 0);
 }
 
 .inputbox {
   display: block;
+  position: relative;
 
   &__label {
     font-size: 11px;
@@ -72,7 +93,7 @@
     &:checked {
 
       & + .checkradio__box {
-        border-color: $color-basic;
+        border-color: transparent;
         &::before { opacity: 1; }
 
         background-color: $color-basic;
@@ -91,6 +112,7 @@
 
       & + .checkradio__box {
 
+
         &::before {
           content: '';
           width: 7px;
@@ -104,6 +126,7 @@
           left: auto;
           top: auto;
           right: 5px;
+          transition: opacity $ease-main;
 
           transform: rotate(45deg);
         }
@@ -136,7 +159,7 @@
       content: '';
       width: 8px;
       height: 8px;
-      border-radius: 50%;
+      border-radius: 100px;
       background-color: $color-white;
       display: block;
       opacity: 0;
@@ -359,11 +382,12 @@
             background-color: transparent !important;
 
             &::after {
+              transition: opacity $ease-main;
               content: '';
               right: 22px;
-              top: 25%;
-              width: 7px;
-              height: 14px;
+              top: 39%;
+              width: 6px;
+              height: 9px;
               border-right: 1px solid $color-white;
               border-bottom: 1px solid $color-white;
               background-color: transparent;

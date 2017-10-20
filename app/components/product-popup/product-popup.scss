@@ -74,20 +74,12 @@
     width: 100%;
 
     &::after {
-     border: 3px solid transparent;
-     border-top: 6px solid $color-white;
-     height: auto;
-     width: auto;
-     top: 53%;
-     right: 18px;
-     transform: none;
-     transform-origin: 50% 25%;
+     border-color: $color-white;
+     right: 22px;
     }
 
     &.is-open::after {
-      transform: rotate(180deg) translate3d(0, 0, 0, 0) !important;
-      border: 3px solid transparent;
-      border-top: 6px solid $color-white;
+      border-color: $color-white;
     }
 
     &__list--single .choices__item {
@@ -135,6 +127,7 @@
     top: 24px;
     right: 23px;
     cursor: pointer;
+    z-index: 5;
 
     @include transited;
 
@@ -143,7 +136,7 @@
     }
   }
 
-  @include screen('tablet', max) {
+  @include screen('tablet-wide', max) {
 
     .list {
       bottom: 100%;
@@ -167,7 +160,7 @@
 }
 
 /* stylelint-disable */
-@include screen('tablet', max) {
+@include screen('tablet-wide', max) {
 
   .choices__list--dropdown {
     top: auto;

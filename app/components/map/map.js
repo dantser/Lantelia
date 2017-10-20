@@ -95,7 +95,7 @@ export default () => {
   // для страниц контактов
   function contactMaps() {
     var select = $('.js-select');
-    var contactMapC = L.map('contactMap').setView([55.7788008, 37.5821708], 5);
+    var contactMapC = L.map('contactMap', {scrollWheelZoom: false}).setView([55.7788008, 37.5821708], 5);
     roads.addTo(contactMapC);
     L.control.zoom({
        position:'bottomleft'
@@ -148,7 +148,7 @@ export default () => {
 
   // Карта с привязкой к карточкам адресов
   function mainMaps() {
-    const mymap = L.map('map').setView([55.7788008, 37.5821708], 15);
+    const mymap = L.map('map', {scrollWheelZoom: false}).setView([55.7788008, 37.5821708], 15);
     roads.addTo(mymap);
     L.control.zoom({
        position:'bottomleft'
@@ -180,7 +180,7 @@ export default () => {
   }
 
   function shippingMaps() {
-    const shippingMap = L.map('shippingMap').setView([55.7788008, 37.5821708], 15);
+    const shippingMap = L.map('shippingMap', {scrollWheelZoom: false}).setView([55.7788008, 37.5821708], 15);
     roads.addTo(shippingMap);
     L.control.zoom({
        position:'bottomleft'

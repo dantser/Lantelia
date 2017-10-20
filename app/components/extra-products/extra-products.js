@@ -1,38 +1,23 @@
 /* eslint-disable */
 // http://idangero.us/swiper/#.WcIu5oy0OHs
+import $ from 'jquery';
 import Swiper from 'swiper';
 
-const $ = window.$;
+export default () => {
+  if ($('.extra-products__slider').length === 0) {
+    return;
+  }
+  var prodSlider = undefined;
 
-export default function slider() {
-
-  var mySlider = undefined;
-  function initSwiper() {
-    var screenWidth = $(window).width();
-    if(screenWidth > 1399 && mySlider == undefined) { //
-      if ($('.js-slider').parents().hasClass('product-page')) {
-        var mySlider = new Swiper('.js-slider', {
+  if ($('.orderdone').length) {
+    function initSlider() {
+      var screenWidth = $(window).width();
+      if (screenWidth > 899 && prodSlider == undefined) { //
+        prodSlider = new Swiper('.extra-products__slider', {
           // loop: true,
           speed: 700,
           // autoplay: 2000,
-          freemode: 'true',
-          slidesPerView: 'auto',
-          nextButton: '.slider__button_next',
-          prevButton: '.slider__button_prev',
-          pagination: '.slider__dots',
-          paginationClickable: true,
-          paginationClickableClass: 'slider__dots_clickable',
-          bulletClass: 'slider__dot',
-          bulletActiveClass: 'active',
-          slidesOffsetBefore: '133',
-          roundLengths: true
-        });
-      } else {
-        var mySlider = new Swiper('.js-slider', {
-          // loop: true,
-          speed: 700,
-          // autoplay: 2000,
-          freemode: 'true',
+          // freemode: 'true',
           slidesPerView: 'auto',
           nextButton: '.slider__button_next',
           prevButton: '.slider__button_prev',
@@ -42,26 +27,71 @@ export default function slider() {
           bulletClass: 'slider__dot',
           bulletActiveClass: 'active',
           slidesOffsetBefore: '60',
-          roundLengths: true
+          roundLengths: true,
+          breakpoints: {
+            1280: {
+              slidesOffsetBefore: '24',
+            }
+          }
         });
+      } else if (screenWidth < 900  && prodSlider != undefined) { //
+          prodSlider.destroy();
+          prodSlider = undefined;
+          $('.swiper-wrapper').css('transform', 'translate3d(0, 0, 0)');
+          // jQuery('.swiper-wrapper').removeAttr('style');
+          // jQuery('.swiper-slide').removeAttr('style');
       }
     }
-    else if (screenWidth < 1401  && mySlider != undefined) { //
-        mySlider.destroy();
-        mySlider = undefined;
+
+    //Swiper plugin initialization
+    initSlider();
+
+    //Swiper plugin initialization on window resize
+    $(window).resize( function() {
+      initSlider();
+    });
+
+    return
+  }
+  function initSlider() {
+    var screenWidth = $(window).width();
+    if (screenWidth > 899 && prodSlider == undefined) { //
+      prodSlider = new Swiper('.extra-products__slider', {
+        // loop: true,
+        speed: 700,
+        // autoplay: 2000,
+        // freemode: 'true',
+        slidesPerView: 'auto',
+        nextButton: '.slider__button_next',
+        prevButton: '.slider__button_prev',
+        pagination: '.slider__dots',
+        paginationClickable: true,
+        paginationClickableClass: 'slider__dots_clickable',
+        bulletClass: 'slider__dot',
+        bulletActiveClass: 'active',
+        slidesOffsetBefore: '133',
+        roundLengths: true,
+        breakpoints: {
+          1280: {
+            slidesOffsetBefore: '24',
+          }
+        }
+      });
+    } else if (screenWidth < 900  && prodSlider != undefined) { //
+        prodSlider.destroy();
+        prodSlider = undefined;
+        $('.swiper-wrapper').css('transform', 'translate3d(0, 0, 0)');
         // jQuery('.swiper-wrapper').removeAttr('style');
         // jQuery('.swiper-slide').removeAttr('style');
     }
   }
 
   //Swiper plugin initialization
-  initSwiper();
+  initSlider();
 
   //Swiper plugin initialization on window resize
-  $(window).on('resize', function() {
-    initSwiper();
+  $(window).resize( function() {
+    initSlider();
   });
-
-  $(window).trigger('resize');
 }
 /* eslint-enable */

@@ -56,16 +56,19 @@
 
 
   &_round {
-    border-radius: 50%;
+    border-radius: 100px;
     border: 0;
     padding: 15px;
     background-color: $color-main;
     box-shadow: 0 12px 36px 0 rgba(0, 0, 0, .11);
+    width: 54px;
+    height: 54px;
 
     .button__icon {
       fill: $color-white;
       height: 24px;
-      width: 25px;
+      width: 24px;
+      @include center-block;
       margin-right: 0;
     }
   }

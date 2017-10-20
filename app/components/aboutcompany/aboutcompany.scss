@@ -62,6 +62,20 @@
     }
   }
 
+  @include screen('tablet-xl', max) {
+    .grid__col_six {
+
+      &_large {
+        width: 100%;
+        flex: auto;
+      }
+
+      &_small {
+        width: 100%;
+      }
+    }
+  }
+
 
   @include screen('tablet', max) {
     padding-top: 40px;

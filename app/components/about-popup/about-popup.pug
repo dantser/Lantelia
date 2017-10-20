@@ -13,7 +13,7 @@ mixin about-popup()
               .about-popup__head
                 span Начать работать с
                 h2.about-popup__title Lantelia
-              form(action="#", method="post").about-popup__form
+              form(action="", method="post", id="about-form").about-popup__form
                 +grid()
                   +col(6)
                     +inputbox('Название салона', true)

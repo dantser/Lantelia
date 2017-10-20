@@ -2,6 +2,7 @@
   z-index: 100;
   width: 100%;
   background-color: transparent;
+  box-sizing: border-box;
 
   .burger {
     display: none;
@@ -270,7 +271,7 @@
       opacity: 0;
       will-change: opacity;
       position: absolute;
-      top: 101%;
+      top: 54px;
       left: 0;
       padding: 30px 0 0;
       background-color: $color-white;

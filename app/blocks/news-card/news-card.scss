@@ -143,6 +143,11 @@
     display: block;
     max-height: 144px;
     min-height: 50px;
+
+    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+      max-height: none;
+      height: 144px;
+    }
   }
 
   &__link {

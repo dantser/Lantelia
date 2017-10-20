@@ -7,9 +7,6 @@ include ../../blocks/order-price/order-price
 
 mixin order()
   +b.SECTION.order.section&attributes(attributes)
-    #error-messages
-      ul
-      +icon('close').error-close
     .container
       .section__head
         +section-head('Покупки', 'Оформление заказа')

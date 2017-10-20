@@ -285,20 +285,12 @@
 
 
       &::after {
-       border: 3px solid transparent;
-       border-top: 6px solid $color-basic;
-       height: auto;
-       width: auto;
-       top: 53%;
-       right: 18px;
-       transform: none;
-       transform-origin: 50% 25%;
+       border-color: $color-basic;
+       right: 22px;
       }
 
       &.is-open::after {
-        transform: rotate(180deg) translate3d(0, 0, 0, 0) !important;
-        border: 3px solid transparent;
-        border-top: 6px solid $color-basic;
+        border-color: $color-basic;
       }
     }
   }

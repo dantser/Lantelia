@@ -1,17 +1,17 @@
 /* eslint-disable */
 // http://idangero.us/swiper/#.WcIu5oy0OHs
+const $ = window.$;
 import Swiper from 'swiper';
 
-const $ = window.$;
-
 export default function slider() {
-  if ($('.js-slider').length == 0 ) {
-    return
+  const sliderS = $('.js-slider');
+  if (sliderS.length == 0 || $('.product-page').length == 1) {
+    return;
   }
   var mySlider = undefined;
   function initSwiper() {
     var screenWidth = $(window).width();
-    if(screenWidth > 899 && mySlider == undefined) {
+    if (screenWidth > 767 && mySlider == undefined) {
       mySlider = new Swiper('.js-slider', {
         // loop: true,
         speed: 700,
@@ -32,9 +32,11 @@ export default function slider() {
           }
         }
       });
-    } else if (screenWidth < 900 && mySlider != undefined) {
+
+    } else if (screenWidth < 768 && mySlider != undefined) {
         mySlider.destroy();
         mySlider = undefined;
+        $('.swiper-wrapper').css('transform', 'translate3d(0, 0, 0)');
         // jQuery('.swiper-wrapper').removeAttr('style');
         // jQuery('.swiper-slide').removeAttr('style');
     }

@@ -18,6 +18,49 @@
     }
   }
 
+  @include screen('desktop-wide', max) {
+    .section-head {
+      display: block;
+    }
+
+    .filter {
+      border-top: 1px solid $color-border;
+      overflow-x: scroll;
+      overflow-y: hidden;
+      width: 100%;
+      padding: 28px 0 18px;
+      margin-bottom: -18px;
+      margin-top: 31px;
+
+      &__item {
+        min-width: 182px;
+        margin-right: 22px;
+
+        &_checkbox {
+          min-width: 30px;
+          margin-right: -5px !important;
+        }
+
+        &:not(:last-child) {
+          margin-right: -11px;
+        }
+      }
+
+      &__button {
+        display: none;
+      }
+
+      &_contacts {
+        overflow: inherit;
+        border-top: 0;
+
+        .choices__list--single .choices__item {
+          text-transform: none;
+        }
+      }
+    }
+  }
+
   @include screen('temp', max) {
     padding-top: 95px;
     padding-bottom: 0;

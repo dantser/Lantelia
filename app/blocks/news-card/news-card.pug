@@ -8,7 +8,7 @@ mixin news-card(type, text, link)
       +e.type= type
       +e.text
         p= text
-      .news-card__link= link
+      span.news-card__link= link
 
 mixin news-card-large(type, text, link)
   +b.A(href="#").news-card._xl&attributes(attributes)
@@ -20,4 +20,4 @@ mixin news-card-large(type, text, link)
         +e.logo Lantelia
       +e.bottom
         +e.P.text= text
-        .news-card__link= link
+        span.news-card__link= link

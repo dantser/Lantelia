@@ -1,56 +1,5 @@
-#error-messages {
-  position: fixed;
-  max-width: 1920px;
-  top: 0;
-  left: 0;
-  right: 0;
-  margin: 0 auto;
-  transform: translateY(-200%);
-  will-change: transform, opacity;
-  background-color: #cc3c63;
-  box-shadow: 0 12px 36px 0 rgba(0, 0, 0, .11);
-  z-index: 101;
-  width: auto;
-  padding: 22px $container-padding;
-  text-align: center;
-  transition: transform $ease-pagination;
-  z-index: 101;
-
-  li {
-    font-size: 14px;
-    color: $color-white;
-    margin-bottom: 10px;
-
-    &:last-child {
-      margin-bottom: 0;
-    }
-  }
-
-  &.active {
-    transform: none;
-  }
-
-  @include screen('temp', max) {
-    padding: $container-padding-mobile;
-  }
-}
-
 .order {
   display: block;
-
-  &__error-close {
-    position: absolute;
-    right: 24px;
-    top: 24px;
-    fill: $color-white;
-    width: 12px;
-    height: 12px;
-    cursor: pointer;
-
-    &:hover {
-      opacity: .7;
-    }
-  }
 
   .section__head {
     margin-bottom: 47px;
@@ -205,6 +154,7 @@
   }
 
   @include screen('temp', max) {
+    padding-top: 94px;
 
     .button {
       width: 50%;
@@ -232,11 +182,12 @@
             padding-bottom: 29px;
             border-bottom: 1px solid $color-border;
             display: flex;
-            justify-content: space-between;
+            justify-content: flex-end;
           }
 
           &__col_four {
             padding-top: 31px !important;
+            text-align: right;
           }
         }
       }
@@ -266,7 +217,6 @@
   }
 
   @include screen('tablet', max) {
-    padding-top: 94px;
 
     &__error-close {
       top: 12px;
@@ -289,6 +239,18 @@
 
     &__wrapper {
       padding: 34px 0 $container-padding;
+
+
+      &_foot {
+
+        .grid__col_five {
+          justify-content: space-between;
+        }
+
+        .grid__col_four {
+          text-align: left;
+        }
+      }
 
       &_contacts {
         padding-bottom: 55px;
@@ -330,6 +292,9 @@
       overflow-x: scroll;
       overflow-y: hidden;
       width: 100vw;
+      -ms-overflow-style: none;
+
+      &::-webkit-scrollbar { width: 0; }
 
       .tabs {
         min-width: 380px;
@@ -386,6 +351,7 @@
 
     p.rule {
       line-height: 1.78;
+      padding-right: $grid-gap/2;
     }
 
     .order-price {

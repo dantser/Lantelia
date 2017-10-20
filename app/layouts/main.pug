@@ -15,12 +15,14 @@ include ../components/footer/footer
 include ../components/needHelp/needHelp
 include ../blocks/preloader/preloader
 include ../components/about-popup/about-popup
+include ../blocks/error-messages/error-messages
 
 doctype html
 html(lang='ru')
   include head
   body
     +header()._short._top
+    +error-messages()
     block content
     +needHelp()._main
     +addcart()

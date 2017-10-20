@@ -34,8 +34,11 @@
     }
   }
 
-  @include screen('tablet', max) {
+  @include screen('temp', max) {
     padding-top: 95px;
+  }
+
+  @include screen('tablet', max) {
 
     .section__head {
       display: none;

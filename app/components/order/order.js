@@ -7,7 +7,7 @@ import Inputmask from 'inputmask';
 export default () => {
   const SLIDE_EL = '.js-slide-el';
   const BUTTON = $('.order__button .button__text');
-  const MESSAGE_BOX = $('#error-messages');
+  const MESSAGE_BOX = $('.error-messages');
 
   $('#orderForm').validate({
     // invalidHandler: function(form, validator) {
@@ -23,7 +23,7 @@ export default () => {
       MESSAGE_BOX.find('.error__text').html(error)
     },
     errorContainer: MESSAGE_BOX,
-    errorLabelContainer: $('#error-messages ul'),
+    errorLabelContainer: $('.error-messages ul'),
     wrapper: 'li',
     highlight: function (element, errorClass, validClass) {
       MESSAGE_BOX.fadeIn().addClass('active'); //animation
@@ -56,7 +56,7 @@ export default () => {
       address: "Не заполнено поле Адрес доставки"
     },
     focusCleanup: true,
-    errorContainer: $('#error-message')
+    // errorContainer: $('#error-message')
   });
 
   $('.order__error-close').on('click', () => {
@@ -82,7 +82,7 @@ export default () => {
 
   };
 
-  if ($(window).width() < 1001) {
+  if ($(window).width() < 769) {
     BUTTON.text('Оформить заказ');
     slide();
   } else {
@@ -90,7 +90,7 @@ export default () => {
   }
 
   $(window).resize(function () {
-    if ($(window).width() < 1001) {
+    if ($(window).width() < 769) {
       BUTTON.text('Оформить заказ');
       slide();
     } else {

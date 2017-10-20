@@ -11,7 +11,7 @@ mixin extra-products(subtitle, title)
       .container
         +section-head(subtitle, title)
     .container.container_slider
-      +slider(false, true)
+      +slider(false, true).extra-products__slider
         +slide()._big
           +product-card('assets/images/picProduct/botox_100ml_04(procedure).png')(href="#product3")._xl.js-fancybox
         +slide()
