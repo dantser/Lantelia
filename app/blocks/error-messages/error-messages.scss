@@ -25,8 +25,8 @@
 
   &__close {
     position: absolute;
-    right: 24px;
-    top: 24px;
+    right: $grid-gap;
+    top: $grid-gap;
     fill: $color-white;
     width: 12px;
     height: 12px;
@@ -46,7 +46,12 @@
   //   transform: none;
   // }
 
-  @include screen('temp', max) {
+  @include screen('tablet', max) {
     padding: $container-padding-mobile;
+
+    &__close {
+      right: $grid-gap/2;
+      top: $grid-gap/2;
+    }
   }
 }
