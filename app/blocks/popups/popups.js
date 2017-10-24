@@ -2,12 +2,7 @@
 /* eslint-disable */
 const $ = window.$;
 import '@fancyapps/fancybox';
-import 'jquery-validation';
-
 import { freeze, unfreeze } from '../js-functions/freeze';
-
-
-const MESSAGE_BOX = $('.error-messages');
 
 $(document).on('click', '.popup__icon-close', () => {
   $.fancybox.close();
@@ -21,19 +16,6 @@ export default function popups() {
     afterClose: unfreeze,
     touch: false
   });
-
-
-
-
 }
-
-// afterLoad: function () {
-//   freeze,
-//   $('.needHelp').addClass('needHelp_animated')
-// },
-// afterClose: function () {
-//   unfreeze,
-//   $('.needHelp').removeClass('needHelp_animated')
-// },
 
 /* eslint-enable */

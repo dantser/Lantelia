@@ -7,6 +7,12 @@ import { freeze, unfreeze } from '../../blocks/js-functions/freeze';
 export default () => {
   const MESSAGE_BOX = $('.error-messages');
 
+  $('.about-popup').on('click', function (e) {
+    e.preventDefault();
+    e.stopPropagation();
+    freeze();
+  })
+
   $("#orderForm").submit(function(event){
       event.preventDefault(); // Stop default action
       window.emptyfields = 0;

@@ -167,7 +167,9 @@
   //   }
   // }
 
-  @include screen('temp', max) {
+  @media screen and (max-width: 1148px) {
+
+
     background-color: $color-white;
     position: absolute;
     top: 0;
@@ -267,6 +269,11 @@
       letter-spacing: .142em;
     }
 
+    &__link {
+      padding: 15px 50px 14px 22px;
+      display: block;
+    }
+
     &__nav {
       opacity: 0;
       will-change: opacity;
@@ -315,17 +322,20 @@
       }
 
       &-item {
-        display: flex;
+        display: block;
         width: auto;
-        align-items: center;
-        justify-content: space-between;
         margin-right: 0;
-        padding: 15px 15px 14px 22px;
         border-top: 1px solid $color-border-popup;
+        position: relative;
       }
 
       &-icon {
-        display: inline-flex;
+        display: block;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+
+        right: $container-padding-mobile;
         fill: $color-basic;
       }
     }

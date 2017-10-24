@@ -1,5 +1,4 @@
 import $ from 'jquery';
-import 'jquery-validation';
 import Inputmask from 'inputmask';
 
 /* eslint-disable */
@@ -7,9 +6,6 @@ import Inputmask from 'inputmask';
 export default () => {
   const SLIDE_EL = '.js-slide-el';
   const BUTTON = $('.order__button .button__text');
-  const MESSAGE_BOX = $('.error-messages');
-
-
 
   Inputmask({
     mask: '+7 (999) 999-99-99',
