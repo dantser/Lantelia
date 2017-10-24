@@ -14,7 +14,13 @@
   padding: 22px $container-padding;
   text-align: center;
   transition: transform $ease-pagination;
-  z-index: 101;
+  z-index: 99993;
+
+  &.active {
+    display: block !important;
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
 
 
   &__close {
@@ -31,19 +37,14 @@
     }
   }
 
-  li {
+  p {
     font-size: 14px;
     color: $color-white;
-    margin-bottom: 10px;
-
-    &:last-child {
-      margin-bottom: 0;
-    }
   }
 
-  &.active {
-    transform: none;
-  }
+  // &.active {
+  //   transform: none;
+  // }
 
   @include screen('temp', max) {
     padding: $container-padding-mobile;

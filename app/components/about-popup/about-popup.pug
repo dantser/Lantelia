@@ -6,30 +6,30 @@ include ../../blocks/icon/icons
 mixin about-popup()
   +b.about-popup&attributes(attributes)
     +popups
-      +popup()#about-popup.about-popup.js-freeze
-        .about-popup__wrapper.js-freeze
+      +popup()#about-popup.about-popup
+        .about-popup__wrapper
           .about-popup__content
             .about-popup__content-wrapper
               .about-popup__head
                 span Начать работать с
                 h2.about-popup__title Lantelia
-              form(action="", method="post", id="about-form").about-popup__form
-                +grid()
+              form(method="get", id="aboutForm", action="test.php").about-popup__form
+                +grid().js-freeze
                   +col(6)
                     +inputbox('Название салона', true)
-                      +input()(type="text", name="name", required)
+                      +input()(type="text", name="workName", id="workName", title="Название салона", data-required)
                     +inputbox('Город', true)
-                      +input()(type="text", name="city", required)
+                      +input()(type="text", name="workCity", id="workCity", title="Город", data-required)
                     +inputbox('ФИО', true)
-                      +input()(type="text", name="fio", required)
+                      +input()(type="text", name="workFio", id="workFio", title="ФИО", data-required)
                     +inputbox('Телефон', true)
-                      +input()(type="text", name="phone", required)
+                      +input()(type="tel", name="workPhone", id="workPhone", title="Телефон", data-type="tel", data-required)
                   +col(6)
                     +inputbox('EMAIL', true)
-                      +input()(type="text", name="email", required)
+                      +input()(type="email", name="workEmail", id="workEmail", title="EMAIL", data-type="email", data-required)
                     +inputbox('Сообщение', true)
-                      +textarea()(name="message", required)
-                +button(false, true)(type="submit", value="Отправить")._white._fill-black.about-popup__button отправить
+                      +textarea()(name="workMessage", id="workMessage", title="Сообщение", data-required)
+                +button(false, true)(type="submit", value="send", data-fancybox-href="#login_form_ajax")._white._fill-black.about-popup__button отправить
           .about-popup__image
             img(src="assets/images/form@2x.jpg")
         +icon('close')(data-fancybox-close).icon-close.modal__close.about-popup__icon-close
