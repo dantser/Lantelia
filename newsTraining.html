@@ -94,6 +94,13 @@
             </div>
         </div>
     </div>
+    <div class="error-messages">
+        <p>
+            <span class="basic-msg"></span>
+            <span class="errors"></span>
+        </p>
+        <svg class="error-messages__close"><use xlink:href="assets/images/icon.svg#icon_close"></use></svg>
+    </div>
     <div class="newsTraining">
         <div class="container">
             <div class="section__head section__head_mobile">
@@ -129,7 +136,7 @@
                                         <span class="news-card__text">
                                             <p>Обучающий Мастер-класс по применению процедуры Professional Botox Therapy</p>
                                         </span>
-                                        <div class="news-card__link">Подробнее</div>
+                                        <span class="news-card__link">Подробнее</span>
                                     </span>
                                 </a>
                             </div>
@@ -140,7 +147,7 @@
                                         <span class="news-card__text">
                                             <p>Обучающий Мастер-класс по применению процедуры Professional Botox Therapy</p>
                                         </span>
-                                        <div class="news-card__link">Подробнее</div>
+                                        <span class="news-card__link">Подробнее</span>
                                     </span>
                                 </a>
                             </div>
@@ -149,9 +156,10 @@
                                     <span class="news-card__wrapper">
                                         <span class="news-card__type">Обучение</span>
                                         <span class="news-card__text">
-                                            <p>Обучающий Мастер-класс по применению линнии Professional SPA Therapy</p>
+                                            <p>Обучающий Мастер-класс по применению линнии Professional SPA Therapy Обучающий Мастер-класс по применению линнии Professional SPA Therapy Обучающий Мастер-класс по применению линнии Professional SPA Therapy
+                                                Обучающий Мастер-класс по применению линнии Professional SPA Therapy Обучающий Мастер-класс по применению линнии Professional SPA Therapy Обучающий Мастер-класс по применению линнии Professional SPA Therapy</p>
                                         </span>
-                                        <div class="news-card__link">Подробнее</div>
+                                        <span class="news-card__link">Подробнее</span>
                                     </span>
                                 </a>
                             </div>
@@ -162,7 +170,7 @@
                                         <span class="news-card__text">
                                             <p>Обучающий Мастер-класс по применению линнии Professional Сlarifying Сare</p>
                                         </span>
-                                        <div class="news-card__link">Подробнее</div>
+                                        <span class="news-card__link">Подробнее</span>
                                     </span>
                                 </a>
                             </div>
@@ -173,7 +181,7 @@
                                         <span class="news-card__text">
                                             <p>Обучающий Мастер-класс по применению процедуры Professional Smoothing Thrapy</p>
                                         </span>
-                                        <div class="news-card__link">Подробнее</div>
+                                        <span class="news-card__link">Подробнее</span>
                                     </span>
                                 </a>
                             </div>
@@ -184,7 +192,7 @@
                                         <span class="news-card__text">
                                             <p>Обучающий Мастер-класс по применению линнии Professional Smoothing Thrapy</p>
                                         </span>
-                                        <div class="news-card__link">Подробнее</div>
+                                        <span class="news-card__link">Подробнее</span>
                                     </span>
                                 </a>
                             </div>
@@ -209,7 +217,7 @@
                                         <span class="news-card__text">
                                             <p>Еще один магазин Lantelia открылся в в Варшаве. Подарки первым десяти покупателям.</p>
                                         </span>
-                                        <div class="news-card__link">Читать</div>
+                                        <span class="news-card__link">Читать</span>
                                     </span>
                                 </a>
                             </div>
@@ -220,7 +228,7 @@
                                         <span class="news-card__text">
                                             <p>Открыта вакансия менеджера в call-центре компании Lantelia</p>
                                         </span>
-                                        <div class="news-card__link">Читать</div>
+                                        <span class="news-card__link">Читать</span>
                                     </span>
                                 </a>
                             </div>
@@ -231,7 +239,7 @@
                                         <span class="news-card__text">
                                             <p>За кулисами Dior Makeup: эксклюзивные материалы с показов мод</p>
                                         </span>
-                                        <div class="news-card__link">Читать</div>
+                                        <span class="news-card__link">Читать</span>
                                     </span>
                                 </a>
                             </div>
@@ -341,7 +349,7 @@
                         </ul>
                     </div>
                     <div class="grid__col grid__col_two footer__col_right">
-                        <a class="button button_gradiented js-fancybox" href="#about-popup">
+                        <a class="button button_gradiented js-fancyform" href="#about-popup">
                             <span class="button__text">НАЧАТЬ РАБОТАТЬ С LANTELIA</span>
                         </a>
                         <div class="footer__copyright">&#169; 2017 Lantelia. Все права защищены</div>
@@ -352,46 +360,52 @@
     </section>
     <div class="about-popup">
         <div class="popups">
-            <div class="popup about-popup js-freeze" id="about-popup">
-                <div class="about-popup__wrapper js-freeze">
+            <div class="popup about-popup" id="about-popup">
+                <div class="about-popup__wrapper">
                     <div class="about-popup__content">
                         <div class="about-popup__content-wrapper">
                             <div class="about-popup__head">
                                 <span>Начать работать с</span>
                                 <h2 class="about-popup__title">Lantelia</h2>
                             </div>
-                            <form class="about-popup__form" action="#" method="post">
-                                <div class="grid">
+                            <form class="about-popup__form" method="get" id="aboutForm" action="test.php">
+                                <div class="grid js-freeze">
                                     <div class="grid__col grid__col_six">
                                         <div class="inputbox">
                                             <span class="inputbox__label inputbox__label_required">Название салона</span>
-                                            <input class="input" type="text" name="name" required="required" />
+                                            <input class="input" type="text" name="workName" id="workName" title="Название салона" data-required="data-required" />
+                                            <span class="input__line"></span>
                                         </div>
                                         <div class="inputbox">
                                             <span class="inputbox__label inputbox__label_required">Город</span>
-                                            <input class="input" type="text" name="city" required="required" />
+                                            <input class="input" type="text" name="workCity" id="workCity" title="Город" data-required="data-required" />
+                                            <span class="input__line"></span>
                                         </div>
                                         <div class="inputbox">
                                             <span class="inputbox__label inputbox__label_required">ФИО</span>
-                                            <input class="input" type="text" name="fio" required="required" />
+                                            <input class="input" type="text" name="workFio" id="workFio" title="ФИО" data-required="data-required" />
+                                            <span class="input__line"></span>
                                         </div>
                                         <div class="inputbox">
                                             <span class="inputbox__label inputbox__label_required">Телефон</span>
-                                            <input class="input" type="text" name="phone" required="required" />
+                                            <input class="input" type="tel" name="workPhone" id="workPhone" title="Телефон" data-type="tel" data-required="data-required" />
+                                            <span class="input__line"></span>
                                         </div>
                                     </div>
                                     <div class="grid__col grid__col_six">
                                         <div class="inputbox">
                                             <span class="inputbox__label inputbox__label_required">EMAIL</span>
-                                            <input class="input" type="text" name="email" required="required" />
+                                            <input class="input" type="email" name="workEmail" id="workEmail" title="EMAIL" data-type="email" data-required="data-required" />
+                                            <span class="input__line"></span>
                                         </div>
                                         <div class="inputbox">
                                             <span class="inputbox__label inputbox__label_required">Сообщение</span>
-                                            <textarea class="textarea" name="message" required="required"></textarea>
+                                            <textarea class="textarea" name="workMessage" id="workMessage" title="Сообщение" data-required="data-required"></textarea>
+                                            <span class="input__line"></span>
                                         </div>
                                     </div>
                                 </div>
-                                <button class="button button_white button_fill-black about-popup__button" type="submit" value="Отправить">
+                                <button class="button button_white button_fill-black about-popup__button" type="submit" value="send" data-fancybox-href="#login_form_ajax">
                                     <div class="button__text">отправить</div>
                                 </button>
                             </form>
