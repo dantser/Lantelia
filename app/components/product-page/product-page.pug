@@ -11,8 +11,9 @@ mixin product-page()
 mixin masthead()
   +b.SECTION.masthead.section&attributes(attributes)
     +e.image-wrapper
-      img(src="assets/images/picMainPage/1@2x.jpg")
-      img(src="assets/images/picMainPage/M_bg_1@2x.jpg")
+      +e.image
+        img(src="assets/images/picMainPage/1@2x.jpg")
+        img(src="assets/images/picMainPage/M_bg_1@2x.jpg")
     .container
       +e.wrapper
         +e.H4.subtitle Покупки
