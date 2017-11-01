@@ -8,8 +8,15 @@ export default () => {
     return
   }
 
-  if($(window).width() < 1280) {
+  if( $(window).width() < 1280 ) {
     $('.sales-offices__map').insertAfter($('.address-card:last-child'));
+  }
+
+  if( $(window).width() < 769 ) {
+    $(cardClass).click(function (e) {
+      window.preventAction = false;
+    })
+    return
   }
 
   $('.js-close').on('click',function (e) {

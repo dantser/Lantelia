@@ -6,7 +6,7 @@ include ../../blocks/form-elements/form-elements
 mixin product-card(img, link)
   +b.product-card&attributes(attributes)
     if link
-      +e.A(href=link).link.js-fancybox
+      +e.A(href="product.html").link
     +e.wrapper
       +e.top
         +e.H3.line
@@ -20,10 +20,10 @@ mixin product-card(img, link)
         +e.volumes
           +e.SPAN.volume 250 мл
           +e.SPAN.volume 250 мл
-        +e.A(href="#", title="Перейти к товару").arrow
+        +e.A(href="product.html", title="Перейти к товару").arrow
           +e.null
           +icon('arrow')
-        +e.A(href="#", title="Добавить в корзину").cart
+        +e.A(href=link, title="Добавить в корзину").cart.js-fancybox
           +e.price 2 199 ₽
           +icon('shopping-cart')
 

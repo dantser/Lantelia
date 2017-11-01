@@ -87,6 +87,22 @@
     padding-right: 0;
     padding-left: 0;
 
+    &::after {
+      display: none;
+    }
+
+    &:hover {
+      border-color: $color-border;
+
+      .address-card__title {
+        color: $color-basic;
+      }
+
+      .address-card__arrow {
+        fill: $color-basic;
+      }
+    }
+
     &__wrapper {
       padding: 33px 20px 36px 0;
     }

@@ -26,6 +26,18 @@ export default () => {
 
   };
 
+  $('.tabs__tab').on('click', function () {
+    setTimeout(function () {
+      if ($('[data-tab-target="tab2"]').hasClass('active')) {
+        console.log('work');
+        $('.checkradio__input[value="offline"]').parents('.grid__col_four').hide()
+      } else {
+        $('.checkradio__input[value="offline"]').parents('.grid__col_four').show()
+      }
+    }, 100)
+
+  });
+
   if ($(window).width() < 769) {
     BUTTON.text('Оформить заказ');
     slide();

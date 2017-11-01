@@ -17,6 +17,12 @@
     // margin-left: -11px;
   }
 
+  .choices__list--dropdown {
+    bottom: auto;
+    top: 100%;
+    z-index: 5;
+  }
+
   &__map {
     position: relative;
     opacity: 0;

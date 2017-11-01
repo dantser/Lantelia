@@ -26,7 +26,20 @@
     margin-right: $grid-gap;
   }
 
-  .button {
+  .slider__button {
+
+
+    &_prev {
+      left: $container-padding;
+    }
+
+    &_next {
+      right: $container-padding;
+      display: none;
+    }
+  }
+
+  &__showAll {
     display: none;
   }
 
@@ -42,10 +55,11 @@
       margin-bottom: 23px;
     }
 
-    .button {
+    &__showAll {
       display: block;
       width: 100%;
       padding: 21px 23px 24px 24px;
+      margin-top: 36px;
     }
 
     // .address-container {
@@ -72,10 +86,6 @@
 
     .address-card {
       border: none;
-    }
-
-    .button {
-      margin-top: 36px;
     }
   }
 }

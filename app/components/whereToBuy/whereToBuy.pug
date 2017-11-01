@@ -8,7 +8,7 @@ mixin whereToBuy()
     .container
       .section__head
         +section-head('Где купить', 'Офисы продаж', true)
-    +slider()
+    +slider(false, true)
       +slide()
         +address-card('Цветной Москва', 'г. Москва, Ленинградский пр., д. 2, цоколь 1234', 'marker1')(data-city='msk')
       +slide()
@@ -25,4 +25,4 @@ mixin whereToBuy()
         +address-card('Авиапарк', 'Москва, Тверская улица 7', 'marker7')(data-city="msk")
       +slide()
         +address-card('Афимолл Сити', 'Санкт-Петербург, просп. Науки, 23а', 'marker8')(data-city="spb")
-      +button()._fill-black._white показать все
+      +button()._fill-black._white.whereToBuy__showAll показать все

@@ -11,14 +11,14 @@ mixin sales-offices()
         +section-head('Где купить', 'Офисы продаж')
         +filter-contacts('Показать на карте', 'contacts.html')
       +e.wrapper.js-cards
-        +address-card('Цветной Москва', 'г. Москва, Ленинградский пр., д. 2, цоколь 1234', 'marker1')(data-city="msk")
-        +address-card('Молен Руж', 'Санкт-Петербург, просп. Науки, 23а', 'marker2')(data-city="spb")
-        +address-card('Петровский пассаж', 'Псков, Рижский пр-кт, д.16', 'marker3')(data-city="psk")
-        +address-card('ТВК Тишинка', 'Москва, Тверская улица 7', 'marker4')(data-city="msk")
-        +address-card('На Беговой ТЦ', 'Санкт-Петербург, просп. Науки, 23а', 'marker5')(data-city="spb")
-        +address-card('Торговый центр Палладиум', 'Псков, Рижский пр-кт, д.16', 'marker6')(data-city="psk")
-        +address-card('Авиапарк', 'Москва, Тверская улица 7', 'marker7')(data-city="msk")
-        +address-card('Афимолл Сити', 'Санкт-Петербург, просп. Науки, 23а', 'marker8')(data-city="spb")
+        +address-card('Цветной Москва', 'г. Москва, Ленинградский пр., д. 2, цоколь 1234', 'marker1', 'contacts.html')(data-city="msk")
+        +address-card('Молен Руж', 'Санкт-Петербург, просп. Науки, 23а', 'marker2', 'contacts.html')(data-city="spb")
+        +address-card('Петровский пассаж', 'Псков, Рижский пр-кт, д.16', 'marker3', 'contacts.html')(data-city="psk")
+        +address-card('ТВК Тишинка', 'Москва, Тверская улица 7', 'marker4', 'contacts.html')(data-city="msk")
+        +address-card('На Беговой ТЦ', 'Санкт-Петербург, просп. Науки, 23а', 'marker5', 'contacts.html')(data-city="spb")
+        +address-card('Торговый центр Палладиум', 'Псков, Рижский пр-кт, д.16', 'marker6', 'contacts.html')(data-city="psk")
+        +address-card('Авиапарк', 'Москва, Тверская улица 7', 'marker7', 'contacts.html')(data-city="msk")
+        +address-card('Афимолл Сити', 'Санкт-Петербург, просп. Науки, 23а', 'marker8', 'contacts.html')(data-city="spb")
         +e.map
           +map()#contactMap
           +e.A(href="#").map-close.js-close

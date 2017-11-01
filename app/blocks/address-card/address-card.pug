@@ -1,8 +1,8 @@
 include ../../blocks/icon/icons
 
-mixin address-card(title, address, id)
+mixin address-card(title, address, id, href)
   +b.address-card&attributes(attributes)
-    +e.A(id=id).wrapper
+    +e.A(id=id href=href).wrapper
       +e.H3.title= title
       +e.SPAN.address= address
       +icon('arrow').arrow

@@ -1,15 +1,13 @@
 /* eslint-disable */
-// import $ from 'jquery';
-
-import {slider} from '../../blocks/slider/slider';
+import $ from 'jquery';
 
 export default () => {
 
-
-
-
-
-
-  // mySlider.params.slidesPerView = 5;
-  /* eslint-ensable */
+  $(document).ready(function () {
+    $('.swiper-slide-visible').last().hover(function () {
+      $('.slider__button_next').show();
+      return false
+    })
+  })
 }
+  /* eslint-ensable */

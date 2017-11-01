@@ -26,6 +26,8 @@ export default function slider() {
         bulletActiveClass: 'active',
         slidesOffsetBefore: '60',
         roundLengths: true,
+        watchSlidesProgress: true,
+        watchSlidesVisibility: true,
         breakpoints: {
           1280: {
             slidesOffsetBefore: '24',

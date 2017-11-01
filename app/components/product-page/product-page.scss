@@ -27,12 +27,10 @@
   &__image-wrapper {
     position: absolute;
     top: 0;
-    left: 0;
     right: 0;
     width: 100%;
-    max-width: 100%;
     height: 100%;
-    max-width: $container-width;
+    max-width: 1440px;
     margin: 0 auto;
     z-index: -1;
 
@@ -82,6 +80,11 @@
 
     display: inline-block;
     vertical-align: middle;
+    transition: opacity $ease-main;
+
+    &:hover {
+      opacity: .7;
+    }
   }
 
   &__button {

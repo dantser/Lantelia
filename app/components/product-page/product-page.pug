@@ -18,9 +18,9 @@ mixin masthead()
         +e.H4.subtitle Покупки
         +e.H1.title Professional Botox Therapy
         +e.P.text Шампунь 250мл и Кондиционер 250мл
-        +e.buttons
-          +button('shopping-cart')._white.masthead__button_cart в корзину
-          +button()._white.masthead__button_price 4 990 ₽
+        +e.A(href="cart.html").buttons
+          +button-double('shopping-cart')._white.masthead__button_cart в корзину
+          +button-double()._white.masthead__button_price 4 990 ₽
           
 mixin masthead-about()
   +b.SECTION.masthead._about.section&attributes(attributes)

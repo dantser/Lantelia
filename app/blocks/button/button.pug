@@ -17,3 +17,10 @@ mixin round(icon)
   +b.BUTTON.button._round&attributes(attributes)
     +icon(icon).icon
     block
+
+mixin button-double(icon)
+  +b.button&attributes(attributes)
+    if icon
+      +icon(icon).icon
+    +e.text
+      block

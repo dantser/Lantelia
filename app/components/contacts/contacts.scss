@@ -10,6 +10,12 @@
     height: 715px;
   }
 
+  .choices__list--dropdown {
+    bottom: auto;
+    top: 100%;
+    z-index: 5;
+  }
+
   @include screen('temp', max) {
     padding-top: 89px;
     padding-bottom: 0;

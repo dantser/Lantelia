@@ -11,7 +11,6 @@
   overflow: hidden;
   min-width: 54px;
   min-height: 54px;
-  display: none;
   // transition: min-width $ease-pagination, border-radius $ease-pagination;
 
   // &:hover {
@@ -238,7 +237,6 @@
   right: 23px;
   z-index: 100;
   cursor: pointer;
-  display: none;
 
   // @keyframes go-left-right {
   //
@@ -267,7 +265,7 @@
     background-color: $color-main;
     color: $color-white;
     text-align: center;
-    line-height: 21px;
+    line-height: 22px;
   }
 
   &__icon {

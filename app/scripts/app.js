@@ -5,7 +5,7 @@ import parallax from '../blocks/js-functions/parallax';
 import { freezebuttons } from '../blocks/js-functions/freeze';
 import mainSlider from '../components/main-slider/main-slider';
 // import addressCard from '../blocks/address-card/address-card';
-// import whereToBuy from '../components/whereToBuy/whereToBuy';
+import whereToBuy from '../components/whereToBuy/whereToBuy';
 import map from '../components/map/map';
 import newsCard from '../blocks/news-card/news-card';
 import needHelp from '../components/needHelp/needHelp';
@@ -39,7 +39,7 @@ $(() => {
   parallax();
   mainSlider();
   // addressCard();
-  // whereToBuy();
+  whereToBuy();
   map();
   newsCard();
   needHelp();

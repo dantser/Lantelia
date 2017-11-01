@@ -15,6 +15,7 @@ export default () => {
   const contactMap = $('#contactMap');
   const mainMap = $('#map');
   const shippingMap = $('#shippingMap');
+  const contactMapOne = $('#contactMapOne');
 
   // кастомное оформление
   const roads = L.gridLayer.googleMutant({
@@ -82,6 +83,7 @@ export default () => {
 
   if (contactMap.length) {
     contactMaps();
+
   }
 
   if (mainMap.length) {
@@ -90,6 +92,10 @@ export default () => {
 
   if (shippingMap.length) {
     shippingMaps();
+  }
+
+  if (contactMapOne.length) {
+    contactMapsOne();
   }
 
   // для страниц контактов
@@ -108,12 +114,10 @@ export default () => {
     contactMapC.addLayer(markerClusterer);
     centerPopup(contactMapC);
 
-
-      $('.custom-popup__close').on('click', function () {
-        console.log('clock')
-        $(".leaflet-popup-close-button").click();
-      })
-
+    $('.custom-popup__close').on('click', function () {
+      console.log('clock')
+      $(".leaflet-popup-close-button").click();
+    })
 
     if (select.length) {
       select.on('change', function () {
@@ -132,8 +136,10 @@ export default () => {
       });
     }
 
+    focusOn('marker1', contactMapC);
+    tapZoom(contactMapC);
 
-    if ($('.address-card').length) {
+    if ($('.address-card').length && $(window).width() > 768) {
       $('.address-card').on('click', function () {
         var currMarker = $(this).find('.address-card__wrapper').attr('id');
 
@@ -176,6 +182,7 @@ export default () => {
     //   }
     // }
 
+    tapZoom(mymap);
     centerPopup(mymap);
   }
 
@@ -191,7 +198,20 @@ export default () => {
                         .setContent("<div class='custom-popup'><img src='assets/images/pin3.svg' class='custom-popup__pin'><h3>Цветной Москва</h3> <p>г. Москва, Ленинградский проспект, д. 2, цокольный этаж, оф. №1</p><h3>Контакты</h3> <p>Тел.: 79269464613<br>Эл. почта: msk.bel@cdek.ru</p> <p>Пн-Пт – с 10:00 до 20:00<br>Сб, Вс – с 10:00 до 16:00</p>")).on('click', clickZoom);
 
     topPopup(shippingMap);
+    tapZoom(shippingMap);
   }
+
+  function contactMapsOne() {
+    const contactMapOneC = L.map('contactMapOne', {scrollWheelZoom: false}).setView([55.7800008, 37.5821708], 15);
+    roads.addTo(contactMapOneC);
+    L.control.zoom({
+       position:'bottomleft'
+    }).addTo(contactMapOneC);
+
+    topPopup(contactMapOneC);
+    tapZoom(contactMapOneC);
+  }
+
 
   // центрируем попап
   function centerPopup(mapID) {
@@ -218,7 +238,6 @@ export default () => {
     e.target.setIcon(iconActive);
   };
 
-
   function focusOn(marker, mapID) {
     var pos = markers[marker].getLatLng();
     mapID.setView(pos, 15);
@@ -229,14 +248,18 @@ export default () => {
     markers[marker].setIcon(iconActive);
   };
 
-  // var greenIcon = new LeafIcon({iconUrl: 'assets/images/pin.svg'});
-  // L.marker([55.7788008, 37.5821708], {icon: greenIcon}).addTo(mymap).bindPopup(L.popup({maxWidth:274}).setContent("<div class='custom-popup'><img src='assets/images/pin3.svg' class='custom-popup__pin'><h3>Цветной Москва</h3> <p>г. Москва, Ленинградский проспект, д. 2, цокольный этаж, оф. №1</p><h3>Контакты</h3> <p>Тел.: 79269464613<br>Эл. почта: msk.bel@cdek.ru</p> <p>Пн-Пт – с 10:00 до 20:00<br>Сб, Вс – с 10:00 до 16:00</p>"));
-  // var greenIcon = new LeafIcon({iconUrl: 'assets/images/pin.svg'});
-  // L.marker([55.7788008, 37.5821708], {icon: greenIcon}).addTo(mymap).bindPopup(L.popup({maxWidth:274}).setContent("<div class='custom-popup'><img src='assets/images/pin3.svg' class='custom-popup__pin'><h3>Цветной Москва</h3> <p>г. Москва, Ленинградский проспект, д. 2, цокольный этаж, оф. №1</p><h3>Контакты</h3> <p>Тел.: 79269464613<br>Эл. почта: msk.bel@cdek.ru</p> <p>Пн-Пт – с 10:00 до 20:00<br>Сб, Вс – с 10:00 до 16:00</p>"));
-  // const markerCl = L.markerClusterGroup([55.7788008, 37.5821708]).addTo(mymap);
 
-  // mymap.addLayer(markerCl);
-
+  // зум по тапу
+  function tapZoom (map) {
+    map.on('click', function() {
+    if (map.scrollWheelZoom.enabled()) {
+      map.scrollWheelZoom.disable();
+    }
+    else {
+      map.scrollWheelZoom.enable();
+    }
+    });
+  };
 
 
 
