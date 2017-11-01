@@ -21,7 +21,11 @@
   //     visibility: visible;
   //     opacity: 1;
   //   }
-  // }
+  //
+
+  &_cart {
+    right: 23px;
+  }
 
   &_opened {
     width: 54px;

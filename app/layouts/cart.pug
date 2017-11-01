@@ -1,0 +1,32 @@
+include ../../node_modules/bemto.pug/bemto
+include ../blocks/grid/grid
+include ../blocks/icon/icons
+include ../blocks/content-zone/content-zone
+include ../blocks/table/table
+include ../blocks/button/button
+include ../blocks/lists/lists
+include ../blocks/form-elements/form-elements
+include ../blocks/tabs/tabs
+include ../blocks/link/link
+include ../blocks/popups/popups
+include ../blocks/slider/slider
+include ../components/header/header
+include ../components/footer/footer
+include ../components/needHelp/needHelp
+include ../blocks/preloader/preloader
+include ../components/about-popup/about-popup
+include ../blocks/error-messages/error-messages
+
+doctype html
+html(lang='ru')
+  include head
+  body
+    +header()
+    +error-messages()
+    block content
+    +needHelp()._cart
+    +footer()
+    +about-popup()
+    #overlay
+    script(src='assets/scripts/app.min.js')
+    script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAxPYPIFoyo8a8749Pi9ooi_WBnXZKpBoA")

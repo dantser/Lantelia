@@ -2,6 +2,7 @@
 import $ from 'jquery';
 
 export default () => {
+  // $('.cart').siblings('.addcart').hide();
   const CARD = $('.product-card'),
         DEL_CARD = CARD.find('.product-card__delete');
 
@@ -19,6 +20,7 @@ export default () => {
   };
 
   $('.order-price__price').toLocaleString();
+
 
   $(document).ready(function () {
     let TOTAL_RESULT;
