@@ -1,6 +1,6 @@
 .main-slider {
   display: block;
-  background-color: #1e1e1e;
+  background: linear-gradient(to right, rgba(30,30,30,1) 0%, rgba(28,28,28,1) 50%, rgba(28,28,28,1) 51%, rgba(30,30,30,1) 100% );
   padding-top: 0;
   padding-bottom: 52px;
   position: relative;
@@ -58,23 +58,6 @@
     height: 100%;
     display: flex;
     box-sizing: border-box;
-
-    &::after, &::before {
-      @include pseudo;
-      top: 0;
-      width: 100px;
-      height: 100%;
-    }
-
-    &::after {
-      left: 0;
-      background: linear-gradient(to right, rgba(30,30,30,1) 0%, rgba(28,28,28,0) 100%);
-    }
-
-    &::before {
-      right: 0;
-      background: linear-gradient(to left, rgba(28,28,28,0) 0%, rgba(30,30,30,1) 100%);
-    }
   }
 
   .product-slide {
@@ -92,6 +75,27 @@
       &:last-child {
         display: none;
       }
+    }
+  }
+
+  &__image {
+
+    &::after, &::before {
+      @include pseudo;
+      top: 0;
+      width: 100px;
+      height: 100%;
+      z-index: 1;
+    }
+
+    &::after {
+      left: 0;
+      background: linear-gradient(to right, rgba(30,30,30,1) 0%, rgba(28,28,28,0) 100%);
+    }
+
+    &::before {
+      right: 0;
+      background: linear-gradient(to right, rgba(28,28,28,0) 0%, rgba(30,30,30,1) 100%);
     }
   }
 
@@ -265,20 +269,7 @@
       position: relative;
 
       &::after, &::before {
-        @include pseudo;
-        top: 0;
-        width: 100px;
-        height: 100%;
-      }
-
-      &::after {
-        left: 0;
-        background: linear-gradient(to right, rgba(30,30,30,1) 0%, rgba(28,28,28,0) 100%);
-      }
-
-      &::before {
-        right: 0;
-        background: linear-gradient(to left, rgba(28,28,28,0) 0%, rgba(30,30,30,1) 100%);
+        width: 50px;
       }
     }
 

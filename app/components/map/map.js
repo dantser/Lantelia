@@ -101,7 +101,7 @@ export default () => {
   // для страниц контактов
   function contactMaps() {
     var select = $('.js-select');
-    var contactMapC = L.map('contactMap', {scrollWheelZoom: false}).setView([55.7788008, 37.5821708], 5);
+    var contactMapC = L.map('contactMap', {scrollWheelZoom: false, tap: false, dragging: false}).setView([55.7788008, 37.5821708], 5);
     roads.addTo(contactMapC);
     L.control.zoom({
        position:'bottomleft'
@@ -154,7 +154,7 @@ export default () => {
 
   // Карта с привязкой к карточкам адресов
   function mainMaps() {
-    const mymap = L.map('map', {scrollWheelZoom: false}).setView([55.7788008, 37.5821708], 15);
+    const mymap = L.map('map', {scrollWheelZoom: false, tap: false, dragging: false}).setView([55.7788008, 37.5821708], 15);
     roads.addTo(mymap);
     L.control.zoom({
        position:'bottomleft'
@@ -187,7 +187,7 @@ export default () => {
   }
 
   function shippingMaps() {
-    const shippingMap = L.map('shippingMap', {scrollWheelZoom: false}).setView([55.7788008, 37.5821708], 15);
+    const shippingMap = L.map('shippingMap', {scrollWheelZoom: false, tap: false, dragging: false}).setView([55.7788008, 37.5821708], 15);
     roads.addTo(shippingMap);
     L.control.zoom({
        position:'bottomleft'
@@ -202,7 +202,7 @@ export default () => {
   }
 
   function contactMapsOne() {
-    const contactMapOneC = L.map('contactMapOne', {scrollWheelZoom: false}).setView([55.7800008, 37.5821708], 15);
+    const contactMapOneC = L.map('contactMapOne', {scrollWheelZoom: false, tap: false, dragging: false}).setView([55.7800008, 37.5821708], 15);
     roads.addTo(contactMapOneC);
     L.control.zoom({
        position:'bottomleft'
@@ -251,13 +251,18 @@ export default () => {
 
   // зум по тапу
   function tapZoom (map) {
-    map.on('click', function() {
-    if (map.scrollWheelZoom.enabled()) {
-      map.scrollWheelZoom.disable();
-    }
-    else {
-      map.scrollWheelZoom.enable();
-    }
+    $('.leaflet-control').on('click', function () {
+      return
+    })
+    map.on('click tap', function() {
+      if (map.scrollWheelZoom.enabled()) {
+        map.scrollWheelZoom.disable();
+        map.dragging.disable();
+      }
+      else {
+        map.scrollWheelZoom.enable();
+        map.dragging.enable();
+      }
     });
   };
 

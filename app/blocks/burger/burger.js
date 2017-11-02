@@ -6,10 +6,11 @@ export default () => {
   const burgerClass = '.js-burger';
   const activeBurgerClass = 'burger_active';
   const menu = $('.header__nav');
-  const needHelp = $('.needHelp');
+
   const needHelpPopup = $('.needHelp-popup');
   const grayscreen = $('#overlay');
   const header = $('.header');
+  const needHelp = header.find('.needHelp');
 
   $(burgerClass).on('click', (e) => {
     const burger = $(burgerClass);

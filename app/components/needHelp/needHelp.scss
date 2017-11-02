@@ -172,11 +172,13 @@
   }
 
   @include screen('tablet', max) {
+    position: absolute;
+    display: none;
+    transform: translate3d(0, 0, 0);
+    backface-visibility: hidden;
     border-radius: 0;
-    position: fixed;
     top: 0;
     right: 0;
-    display: block !important;
     width: 54px;
     height: 54px;
     background-color: transparent;
@@ -189,6 +191,10 @@
 
     &__wrapper {
       padding: 16px;
+    }
+
+    &__text {
+      display: none !important;
     }
 
     &:hover {
@@ -279,7 +285,7 @@
     display: inline-block;
   }
 
-  @include screen('teblet', max) {
-    display: none;
-  }
+  // @include screen('tablet', max) {
+  //   display: none;
+  // }
 }
