@@ -43,6 +43,11 @@
     display: none;
   }
 
+  .choices__list {
+    top: inherit;
+    bottom: auto;
+  }
+
   @include screen('tablet', max) {
     border-bottom: 1px solid $color-border;
 

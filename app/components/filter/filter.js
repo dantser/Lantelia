@@ -34,9 +34,12 @@ export default () => {
     const mFilter = $(this).val();
     if (mFilter === 'all') {
       ADDRESS_CARD.show();
+      ADDRESS_CARD.parents('.swiper-slide').show();
     } else {
-      ADDRESS_CARD.hide();
+      ADDRESS_CARD.hide()
+      ADDRESS_CARD.parents('.swiper-slide').hide();
       $('[data-city="'+mFilter+'"]').show();
+      $('[data-city="'+mFilter+'"]').parents('.swiper-slide').show();
     }
     // $('select').niceSelect('update');
   });

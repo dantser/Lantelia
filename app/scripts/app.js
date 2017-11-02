@@ -27,6 +27,7 @@ import salesOffices from '../components/sales-offices/sales-offices';
 import shippingAndPayment from '../components/shippingAndPayment/shippingAndPayment';
 import partnership from '../components/partnership/partnership';
 import aboutPopup from '../components/about-popup/about-popup';
+import header from '../components/header/header';
 
 const $ = window.$;
 
@@ -60,4 +61,5 @@ $(() => {
   shippingAndPayment();
   partnership();
   aboutPopup();
+  header();
 });
