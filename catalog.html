@@ -155,7 +155,7 @@
                 </div>
             </div>
         </div>
-        <div class="products">
+        <div class="products" id="products">
             <div class="container">
                 <div class="products__line">
                     <span class="products__helper"></span>
@@ -1622,51 +1622,65 @@
                 <div class="about-popup__wrapper">
                     <div class="about-popup__content">
                         <div class="about-popup__content-wrapper">
-                            <div class="about-popup__head">
-                                <span>Начать работать с</span>
-                                <h2 class="about-popup__title">Lantelia</h2>
-                            </div>
-                            <form class="about-popup__form" method="get" id="aboutForm" action="1.php">
-                                <div class="grid">
-                                    <div class="grid__col grid__col_six">
-                                        <div class="inputbox">
-                                            <span class="inputbox__label inputbox__label_required">Название салона</span>
-                                            <input class="input" type="text" name="workName" id="workName" title="Название салона" data-required="data-required" />
-                                            <span class="input__line"></span>
-                                        </div>
-                                        <div class="inputbox">
-                                            <span class="inputbox__label inputbox__label_required">Город</span>
-                                            <input class="input" type="text" name="workCity" id="workCity" title="Город" data-required="data-required" />
-                                            <span class="input__line"></span>
-                                        </div>
-                                        <div class="inputbox">
-                                            <span class="inputbox__label inputbox__label_required">ФИО</span>
-                                            <input class="input" type="text" name="workFio" id="workFio" title="ФИО" data-required="data-required" />
-                                            <span class="input__line"></span>
-                                        </div>
-                                        <div class="inputbox">
-                                            <span class="inputbox__label inputbox__label_required">Телефон</span>
-                                            <input class="input" type="tel" name="workPhone" id="workPhone" title="Телефон" data-type="tel" data-required="data-required" />
-                                            <span class="input__line"></span>
-                                        </div>
-                                    </div>
-                                    <div class="grid__col grid__col_six">
-                                        <div class="inputbox">
-                                            <span class="inputbox__label inputbox__label_required">EMAIL</span>
-                                            <input class="input" type="email" name="workEmail" id="workEmail" title="EMAIL" data-type="email" data-required="data-required" />
-                                            <span class="input__line"></span>
-                                        </div>
-                                        <div class="inputbox">
-                                            <span class="inputbox__label inputbox__label_required">Сообщение</span>
-                                            <textarea class="textarea" name="workMessage" id="workMessage" title="Сообщение" data-required="data-required"></textarea>
-                                            <span class="input__line"></span>
-                                        </div>
-                                    </div>
+                            <div class="about-popup__success">
+                                <div class="about-popup__box">
+                                    <span class="about-popup__check"></span>
                                 </div>
-                                <button class="button button_white button_fill-black about-popup__button js-unfreeze" type="submit" value="send">
-                                    <div class="button__text">отправить</div>
-                                </button>
-                            </form>
+                                <div class="about-popup__success-content">
+                                    <h2 class="about-popup__title">Ваша заявка успешно отправлена.</h2>
+                                    <p class="about-popup__text">Наш менеджер с Вами свяжется в ближайшее время.</p>
+                                </div>
+                                <a class="button button_white button_fill-black js-unfreeze popup__icon-close">
+                                    <span class="button__text">Хорошо</span>
+                                </a>
+                            </div>
+                            <div class="about-popup__main">
+                                <div class="about-popup__head">
+                                    <span>Начать работать с</span>
+                                    <h2 class="about-popup__title">Lantelia</h2>
+                                </div>
+                                <form class="about-popup__form" method="get" id="aboutForm" action="1.php">
+                                    <div class="grid">
+                                        <div class="grid__col grid__col_six">
+                                            <div class="inputbox">
+                                                <span class="inputbox__label inputbox__label_required">Название салона</span>
+                                                <input class="input" type="text" name="workName" id="workName" title="Название салона" data-required="data-required" />
+                                                <span class="input__line"></span>
+                                            </div>
+                                            <div class="inputbox">
+                                                <span class="inputbox__label inputbox__label_required">Город</span>
+                                                <input class="input" type="text" name="workCity" id="workCity" title="Город" data-required="data-required" />
+                                                <span class="input__line"></span>
+                                            </div>
+                                            <div class="inputbox">
+                                                <span class="inputbox__label inputbox__label_required">ФИО</span>
+                                                <input class="input" type="text" name="workFio" id="workFio" title="ФИО" data-required="data-required" />
+                                                <span class="input__line"></span>
+                                            </div>
+                                            <div class="inputbox">
+                                                <span class="inputbox__label inputbox__label_required">Телефон</span>
+                                                <input class="input" type="tel" name="workPhone" id="workPhone" title="Телефон" data-type="tel" data-required="data-required" />
+                                                <span class="input__line"></span>
+                                            </div>
+                                        </div>
+                                        <div class="grid__col grid__col_six">
+                                            <div class="inputbox">
+                                                <span class="inputbox__label inputbox__label_required">EMAIL</span>
+                                                <input class="input" type="email" name="workEmail" id="workEmail" title="EMAIL" data-type="email" data-required="data-required" />
+                                                <span class="input__line"></span>
+                                            </div>
+                                            <div class="inputbox">
+                                                <span class="inputbox__label inputbox__label_required">Сообщение</span>
+                                                <textarea class="textarea" name="workMessage" id="workMessage" title="Сообщение" data-required="data-required"></textarea>
+                                                <span class="input__line"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button class="button button_white button_fill-black about-popup__button js-unfreeze" type="submit" value="send">
+                                        <div class="button__text">отправить</div>
+                                    </button>
+                                </form>
+                            </div>
                         </div>
                     </div>
                     <div class="about-popup__image">
