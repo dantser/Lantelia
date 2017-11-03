@@ -1,10 +1,11 @@
 .main-slider {
   display: block;
-  background: linear-gradient(to right, rgba(30,30,30,1) 0%, rgba(28,28,28,1) 50%, rgba(28,28,28,1) 51%, rgba(30,30,30,1) 100% );
+  // background: linear-gradient(to right, rgba(30,30,30,1) 0%, rgba(28,28,28,1) 50%, rgba(28,28,28,1) 51%, rgba(30,30,30,1) 100% );
+  background-color: #1e1e1e;
   padding-top: 0;
   padding-bottom: 52px;
   position: relative;
-  max-height: 900px;
+  height: 100vh;
   box-sizing: border-box;
   color: $color-white;
 
@@ -15,6 +16,12 @@
   //   z-index: -1;
   // }
 
+  .container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
   &__heading {
     padding: 155px 0 0 73px;
     display: flex;
@@ -23,6 +30,7 @@
     width: 50%;
     box-sizing: border-box;
     min-height: 802px;
+    flex: 1;
   }
 
   // .container {
@@ -218,10 +226,12 @@
   @include screen('tablet', max) {
     padding-top: 54px;
     min-height: 568px;
+    height: auto;
 
     &__heading {
       width: 100%;
       min-height: 0;
+      flex: initial;
     }
 
     &__title {

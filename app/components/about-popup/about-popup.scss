@@ -56,7 +56,7 @@
 
   &__button {
     width: calc(50% - 12px);
-    padding-bottom: 21px;
+    padding: 17px 0;
   }
 
   &__icon-close {
@@ -95,6 +95,7 @@
     &__content {
       padding-left: 22px;
       padding-right: 22px;
+      max-width: none;
 
       &-wrapper {
         padding: 41px 0 0;

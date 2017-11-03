@@ -13,8 +13,8 @@ mixin about-popup()
               .about-popup__head
                 span Начать работать с
                 h2.about-popup__title Lantelia
-              form(method="get", id="aboutForm", action="test.php").about-popup__form
-                +grid().js-freeze
+              form(method="get", id="aboutForm", action="1.php").about-popup__form
+                +grid()
                   +col(6)
                     +inputbox('Название салона', true)
                       +input()(type="text", name="workName", id="workName", title="Название салона", data-required)
@@ -29,7 +29,7 @@ mixin about-popup()
                       +input()(type="email", name="workEmail", id="workEmail", title="EMAIL", data-type="email", data-required)
                     +inputbox('Сообщение', true)
                       +textarea()(name="workMessage", id="workMessage", title="Сообщение", data-required)
-                +button(false, true)(type="submit", value="send", data-fancybox-href="#login_form_ajax")._white._fill-black.about-popup__button отправить
+                +button(false, true)(type="submit", value="send")._white._fill-black.about-popup__button.js-unfreeze отправить
           .about-popup__image
             img(src="assets/images/form@2x.jpg")
-        +icon('close')(data-fancybox-close).icon-close.modal__close.about-popup__icon-close
+        +icon('close')(data-fancybox-close).icon-close.popup__icon-close.about-popup__icon-close

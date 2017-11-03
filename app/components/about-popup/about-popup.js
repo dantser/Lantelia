@@ -14,89 +14,48 @@ export default () => {
   })
 
   $("#orderForm").submit(function(event){
-      event.preventDefault(); // Stop default action
-      window.emptyfields = 0;
-      window.errors = "";
-      const postData = $(this).serializeArray();
-      const formURL = $(this).attr("action");
-      const method = $(this).attr("method");
+    event.preventDefault(); // Stop default action
+    window.emptyfields = 0;
+    window.errors = "";
+    const postData = $(this).serializeArray();
+    const formURL = $(this).attr("action");
+    const method = $(this).attr("method");
 
-      // Проверяем каждый инпут на ошибку
-      $(this).find("[data-required]").each(function(){
-          if ( (!$(this).val()) || ($(this).attr("type") === "checkbox" && $(this).prop('checked')===false) ) {
-              emptyfields += 1;
-              errors += "«"+$(this).attr("title")+"», ";
-              $(this).prev(".inputbox__label").addClass("inputbox__label_error");
-          }
-      });
-
-      if (emptyfields === 1) {
-          $('.error-messages .basic-msg').text("Не заполнено поле");
-      } else {$('.error-messages .basic-msg').text("Не заполнены поля");}
-
-
-      if (emptyfields === 0 ) {
-          return true;
-      } else {
-          errors = errors.slice(0, -2);
-          $('.error-messages .errors').text(errors);
-          showerror();
-          return false;
-      }
-
-      $.ajax({
-        url : formURL,
-        type: method,
-        data : postData,
-        success: function (data, textStatus, jqXHR) {
-          alert("Send success. data: " + data + ", textStatus: " + textStatus + ", jqXHR: " + jqXHR);
-        },
-        error: function (jqXHR, textStatus, errorThrown) {
-          alert("Send fails. jqXHR: " + jqXHR + ", textStatus: " + textStatus + ", errorThrown: " + errorThrown);
+    // Проверяем каждый инпут на ошибку
+    $(this).find("[data-required]").each(function(){
+        if ( (!$(this).val()) || ($(this).attr("type") === "checkbox" && $(this).prop('checked')===false) ) {
+            emptyfields += 1;
+            errors += "«"+$(this).attr("title")+"», ";
+            $(this).prev(".inputbox__label").addClass("inputbox__label_error");
         }
-      });
+    });
+
+    if (emptyfields === 1) {
+        $('.error-messages .basic-msg').text("Не заполнено поле");
+    } else {$('.error-messages .basic-msg').text("Не заполнены поля");}
+
+
+    if (emptyfields === 0 ) {
+        return true;
+    } else {
+        errors = errors.slice(0, -2);
+        $('.error-messages .errors').text(errors);
+        showerror();
+        return false;
+    }
+
+    $.ajax({
+      url : formURL,
+      type: method,
+      data : postData,
+      success: function (data, textStatus, jqXHR) {
+        alert("Send success. data: " + data + ", textStatus: " + textStatus + ", jqXHR: " + jqXHR);
+      },
+      error: function (jqXHR, textStatus, errorThrown) {
+        alert("Send fails. jqXHR: " + jqXHR + ", textStatus: " + textStatus + ", errorThrown: " + errorThrown);
+      }
+    });
   });
-  // $('#orderForm').validate({
-  //   // invalidHandler: function(form, validator) {
-  //   //   var errors = validator.numberOfInvalids();
-  //   //
-  //   //   if (errors) {
-  //   //       $("#error-message").show();
-  //   //   } else {
-  //   //       $("#error-message").hide();
-  //   //   }
-  //   // },
-  //   errorPlacement: function (error, element) {
-  //     MESSAGE_BOX.find('.error__text').html(error)
-  //   },
-  //   errorContainer: MESSAGE_BOX,
-  //   errorLabelContainer: $('.error-messages ul'),
-  //   wrapper: 'li',
-  //   highlight: function (element, errorClass, validClass) {
-  //     MESSAGE_BOX.fadeIn().addClass('active'); //animation
-  //     setTimeout(function () {
-  //       MESSAGE_BOX.fadeOut().removeClass('active'); //animation
-  //     }, 10000);
-  //     $(element).addClass("errorHighlight");
-  //     $(element).siblings('.input__label').addClass('input__label_error')
-  //   },
-  //   unhighlight: function (element) {
-  //     $(element).removeClass("errorHighlight");
-  //     $(element).siblings('.input__label').removeClass('input__label_error')
-  //   },
-  //   messages: {
-  //     name: "Не заполнено поле Имя",
-  //     surname: "Не заполнено поле Фамилия",
-  //     phone: "Не заполнено поле Телефон",
-  //     email: {
-  //       required: "Не заполнено поле E-mail",
-  //       email: "Введите корректный E-mail"
-  //     },
-  //     city: "Не заполнено поле Город/Населенный пункт",
-  //     address: "Не заполнено поле Адрес доставки"
-  //   }
-  //   // errorContainer: $('#error-message')
-  // });
 
   $('.order__error-close').on('click', () => {
     MESSAGE_BOX.fadeOut().removeClass('active');
@@ -112,39 +71,6 @@ export default () => {
       MESSAGE_BOX.fadeOut().removeClass('active');
     },
     touch: false
-    // afterLoad: function () {
-    //   $('#aboutForm').validate({
-    //     errorPlacement: function (error, element) {
-    //       MESSAGE_BOX.find('.error__text').html(error)
-    //     },
-    //     errorContainer: MESSAGE_BOX,
-    //     errorLabelContainer: $('.error-messages ul'),
-    //     wrapper: 'li',
-    //     highlight: function (element, errorClass, validClass) {
-    //       MESSAGE_BOX.fadeIn().addClass('active'); //animation
-    //       setTimeout(function () {
-    //         MESSAGE_BOX.fadeOut().removeClass('active'); //animation
-    //       }, 10000);
-    //       $(element).addClass("errorHighlight");
-    //       $(element).siblings('.inputbox__label').addClass('inputbox__label_error')
-    //     },
-    //     unhighlight: function (element) {
-    //       $(element).removeClass("errorHighlight");
-    //       $(element).siblings('.inputbox__label').removeClass('inputbox__label_error')
-    //     },
-    //     messages: {
-    //       workName: "Не заполнено поле название салона",
-    //       workCity: "Не заполнено поле Город",
-    //       workFio: "Не заполнено поле ФИО",
-    //       workPhone: "Не заполнено поле Телефон",
-    //       workEmail: {
-    //         required: "Не заполнено поле E-mail",
-    //         email: "Введите корректный E-mail"
-    //       },
-    //       workMessage: "Не заполнено поле Сообщение"
-    //     },
-    //   });
-    // },
 
   });
 
@@ -186,7 +112,7 @@ function hideblock(el) {
 }
 
 
-$("#aboutForm").submit(function(event){
+$("#aboutForm").on('submit', function(event) {
     freeze();
     event.preventDefault(); // Stop default action
     window.emptyfields = 0;
@@ -244,6 +170,11 @@ function showerror() {
 $("input, textarea").on("change keyup", function(){
     $(this).prev(".inputbox__label").removeClass("inputbox__label_error");
 });
+
+$('.about-popup__button').on('click',function (e) {
+  $("#aboutForm").submit();
+  return false;
+})
 
 
 

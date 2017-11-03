@@ -127,6 +127,11 @@ export default () => {
       freeze();
       grayscreen.fadeIn('fast');
       popup.fadeIn();
+    });
+
+    $('html, body').on('click', function (e) {
+      // menu.slideUp();
+      $('.header__wrapper .needHelp').removeClass('needHelp_opened');
     })
   } else {
     $('.header__wrapper .needHelp').remove();

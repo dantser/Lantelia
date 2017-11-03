@@ -4,7 +4,7 @@ const $ = window.$;
 import '@fancyapps/fancybox';
 import { freeze, unfreeze } from '../js-functions/freeze';
 
-$(document).on('click', '.popup__icon-close', () => {
+$('.popup').on('click', '.popup__icon-close', () => {
   $.fancybox.close();
 });
 
