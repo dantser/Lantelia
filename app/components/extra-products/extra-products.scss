@@ -1,6 +1,10 @@
 .extra-products {
   display: block;
 
+  .product-card {
+    border: 0;
+  }
+
   .swiper-slide {
     width: 25%;
     border: 1px solid $color-border;
@@ -69,6 +73,10 @@
     }
 
     .product-card {
+
+      &_xl {
+        max-width: none;
+      }
 
       &__wrapper {
         padding: 38px 40px 40px 114px;

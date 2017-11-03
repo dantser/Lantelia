@@ -4,7 +4,6 @@ include ../../blocks/product-card/product-card
 include ../../blocks/button/button
 include ../../components/product-popup/product-popup
 
-
 mixin extra-products(subtitle, title)
   +b.SECTION.extra-products.section&attributes(attributes)
     .section__head
@@ -13,15 +12,15 @@ mixin extra-products(subtitle, title)
     .container.container_slider
       +slider(false, true).extra-products__slider
         +slide()._big
-          +product-card('assets/images/picProduct/botox_100ml_04(procedure).png')(href="#product3")._xl.js-fancybox
+          +product-card('assets/images/picProduct/botox_100ml_04(procedure).png', '#product3')._xl
         +slide()
-          +product-card('assets/images/picProduct/botox_250ml_05@2x.png')(href="#product2").js-fancybox
+          +product-card('assets/images/picProduct/botox_250ml_05@2x.png', '#product2')
         +slide()
-          +product-card('assets/images/picProduct/botox_100ml_03@2x.png')(href="#product4").js-fancybox
+          +product-card('assets/images/picProduct/botox_100ml_03@2x.png', '#product4')
         +slide()
-          +product-card('assets/images/picProduct/botox_250ml_05@2x.png')(href="#product1").js-fancybox
+          +product-card('assets/images/picProduct/botox_250ml_05@2x.png', '#product1')
         +slide()
-          +product-card('assets/images/picProduct/botox_100ml_01@2x.png')(href="#product5").js-fancybox
+          +product-card('assets/images/picProduct/botox_100ml_01@2x.png', '#product5')
     +product-popup('assets/images/picProduct/botox_250ml_07 (line)@2x.png', '7 990 ₽', 'product1')
     +product-popup('assets/images/picProduct/clarify_250ml_03(line)@2x.png', '7 990 ₽', 'product2')
     +product-popup('assets/images/picProduct/botox_100ml_04(procedure).png', '7 990 ₽', 'product3')
