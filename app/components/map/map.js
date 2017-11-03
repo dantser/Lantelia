@@ -207,9 +207,13 @@ export default () => {
     L.control.zoom({
        position:'bottomleft'
     }).addTo(contactMapOneC);
+    markers["marker1"] = L.marker([55.7788008, 37.5821708], {icon: iconActive}).addTo(contactMapOneC)
+                        .bindPopup(L.popup({maxWidth:274})
+                        .setContent("<div class='custom-popup'><img src='assets/images/pin3.svg' class='custom-popup__pin'><h3>Петровский Пассаж</h3> <p>г. Псков, Рижский пр-кт, д.16</p><h3>Контакты</h3> <p>Тел.: 79269464613<br>Эл. почта: msk.bel@cdek.ru</p> <p>Пн-Пт – с 10:00 до 20:00<br>Сб, Вс – с 10:00 до 16:00</p>")).on('click', clickZoom);
 
     topPopup(contactMapOneC);
     tapZoom(contactMapOneC);
+    focusOn('marker1', contactMapOneC);
   }
 
 

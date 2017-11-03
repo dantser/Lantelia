@@ -4,7 +4,7 @@ include ../../blocks/modal/modal
 include ../../blocks/grid/grid
 
 mixin products()
-  +b.products&attributes(attributes)
+  +b.products#products&attributes(attributes)
     .container
       +e.line
         +e.SPAN.helper

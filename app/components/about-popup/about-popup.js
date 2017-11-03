@@ -136,7 +136,9 @@ $("#aboutForm").on('submit', function(event) {
 
 
     if (emptyfields === 0 ) {
-        return true;
+        $('.about-popup__main').hide();
+        $('.about-popup__success').addClass('active');
+
     } else {
         errors = errors.slice(0, -2);
         $('.error-messages .errors').text(errors);

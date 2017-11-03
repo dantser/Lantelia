@@ -10,26 +10,35 @@ mixin about-popup()
         .about-popup__wrapper
           .about-popup__content
             .about-popup__content-wrapper
-              .about-popup__head
-                span Начать работать с
-                h2.about-popup__title Lantelia
-              form(method="get", id="aboutForm", action="1.php").about-popup__form
-                +grid()
-                  +col(6)
-                    +inputbox('Название салона', true)
-                      +input()(type="text", name="workName", id="workName", title="Название салона", data-required)
-                    +inputbox('Город', true)
-                      +input()(type="text", name="workCity", id="workCity", title="Город", data-required)
-                    +inputbox('ФИО', true)
-                      +input()(type="text", name="workFio", id="workFio", title="ФИО", data-required)
-                    +inputbox('Телефон', true)
-                      +input()(type="tel", name="workPhone", id="workPhone", title="Телефон", data-type="tel", data-required)
-                  +col(6)
-                    +inputbox('EMAIL', true)
-                      +input()(type="email", name="workEmail", id="workEmail", title="EMAIL", data-type="email", data-required)
-                    +inputbox('Сообщение', true)
-                      +textarea()(name="workMessage", id="workMessage", title="Сообщение", data-required)
-                +button(false, true)(type="submit", value="send")._white._fill-black.about-popup__button.js-unfreeze отправить
+              .about-popup__success
+                .about-popup__box
+                  span.about-popup__check
+                .about-popup__success-content
+                  h2.about-popup__title Ваша заявка успешно отправлена.
+                  p.about-popup__text Наш менеджер с Вами свяжется в ближайшее время.
+                
+                +button()._white._fill-black.js-unfreeze.popup__icon-close Хорошо
+              .about-popup__main
+                .about-popup__head
+                  span Начать работать с
+                  h2.about-popup__title Lantelia
+                form(method="get", id="aboutForm", action="1.php").about-popup__form
+                  +grid()
+                    +col(6)
+                      +inputbox('Название салона', true)
+                        +input()(type="text", name="workName", id="workName", title="Название салона", data-required)
+                      +inputbox('Город', true)
+                        +input()(type="text", name="workCity", id="workCity", title="Город", data-required)
+                      +inputbox('ФИО', true)
+                        +input()(type="text", name="workFio", id="workFio", title="ФИО", data-required)
+                      +inputbox('Телефон', true)
+                        +input()(type="tel", name="workPhone", id="workPhone", title="Телефон", data-type="tel", data-required)
+                    +col(6)
+                      +inputbox('EMAIL', true)
+                        +input()(type="email", name="workEmail", id="workEmail", title="EMAIL", data-type="email", data-required)
+                      +inputbox('Сообщение', true)
+                        +textarea()(name="workMessage", id="workMessage", title="Сообщение", data-required)
+                  +button(false, true)(type="submit", value="send")._white._fill-black.about-popup__button.js-unfreeze отправить
           .about-popup__image
             img(src="assets/images/form@2x.jpg")
         +icon('close')(data-fancybox-close).icon-close.popup__icon-close.about-popup__icon-close

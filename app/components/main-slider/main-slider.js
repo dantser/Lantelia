@@ -27,5 +27,16 @@ export default () => {
 		$(this).addClass('active');
   });
 
+  $('.js-link').on('click',function (e) {
+    e.preventDefault();
+    $("html, body").animate({
+        scrollTop: $($(this).attr("href")).offset().top + "px"
+     }, {
+        duration: 500,
+        easing: "swing"
+     });
+     return false;
+  })
+
 }
 /* eslint-enable */

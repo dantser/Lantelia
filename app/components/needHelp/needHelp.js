@@ -124,6 +124,7 @@ export default () => {
       menu.removeClass('header__nav_active');
       $(burgerClass).removeClass(activeBurgerClass);
       $(this).addClass('needHelp_opened');
+      $(this).parents('.header').addClass('header_fill');
       freeze();
       grayscreen.fadeIn('fast');
       popup.fadeIn();
@@ -152,9 +153,10 @@ export default () => {
     unfreeze();
     popup.fadeOut();
     grayscreen.fadeOut();
+    $('.header').removeClass('header_fill');
   });
 
-  $('.needHelp-popup, .header__nav, .header__logo').on('click',function (e) {
+  $('.needHelp-popup, .header__nav, .header__logo').on('click', function (e) {
     e.stopPropagation();
   });
 

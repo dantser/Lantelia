@@ -20,9 +20,7 @@ export default () => {
     menu.toggleClass('header__nav_active');
     needHelp.removeClass('needHelp_opened');
     needHelpPopup.hide();
-    if ( header.hasClass('header_top') ) {
-      header.toggleClass('header_fill');
-    }
+    header.addClass('header_fill');
 
     if (burger.hasClass(activeBurgerClass)) {
       freeze();

@@ -4,14 +4,14 @@
   background-color: transparent;
   box-sizing: border-box;
   transition: background-color $ease-main;
+  min-height: 54px;
 
-  &_top.header_bg {
-    background-color: $color-main !important;
-    box-shadow: 0 2px 2px 0 rgba(25, 25, 25, .5);
-  }
-
-  &_bg {
+  &.header_bg {
+    background-color: $color-white !important;
     box-shadow: 0 1px 0 0 rgba(5, 47, 124, .1);
+
+    svg { fill: $color-main !important; }
+
   }
 
   .burger {
@@ -142,20 +142,25 @@
       border: 0;
     }
 
+    &.header_fill {
+      background-color: $color-white;
+
+      svg {
+        fill: $color-main !important;
+      }
+    }
+
     .header__nav {
       padding: 53px 60px 51px 20px;
     }
 
-    .burger {
-
-      &__icon {
-        fill: $color-white;
-      }
+    .burger__icon {
+      fill: $color-white;
     }
   }
 
   &_fill {
-    background-color: $color-main !important;
+    background-color: $color-white !important;
   }
 
   // @media (max-width: 1300px) {
@@ -188,35 +193,25 @@
       padding: 0;
     }
 
-    .header__wrapper {
+    &__wrapper {
       padding: 17px 0;
       border: 0;
+      display: block;
+
+      @include clearfix;
     }
 
     // без кнопки нужна помощь
 
-    &_short {
+
       border-bottom: 0;
 
       .header__wrapper {
-        display: block;
 
-        @include clearfix;
       }
 
       .header__logo {
-        float: right;
-        padding-right: 23px;
-        position: relative;
-        display: inline-block;
-        vertical-align: middle;
-        top: auto;
-        left: auto;
-        transform: none;
 
-        svg {
-          height: 20px;
-        }
       }
 
       .header__call {
@@ -227,10 +222,10 @@
         padding: 30px 0 0;
         border-top: 1px solid $color-border;
       }
-    }
+
 
     div.needHelp_main {
-      display: none !important;
+      .needHelp__icon { fill: $color-white }
     }
 
     &_top {
@@ -267,6 +262,7 @@
 
       svg {
         fill: $color-main;
+        height: 20px;
       }
     }
 

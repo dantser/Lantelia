@@ -10,9 +10,11 @@
   &__content {
     max-width: 696px;
     box-sizing: border-box;
+    display: flex;
+    padding-bottom: $container-padding;
 
     &-wrapper {
-      padding: 58px $container-padding $container-padding;
+      padding: 58px $container-padding 0;
     }
   }
 
@@ -41,6 +43,54 @@
     color: $color-basic;
     text-transform: uppercase;
     @extend %heading-21;
+  }
+
+  &__text {
+    @extend %text;
+  }
+
+  &__success {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    min-height: 300px;
+
+
+    .button {
+      width: calc(50% - 12px);
+      padding: 17px 0;
+    }
+
+    &.active {
+      display: flex;
+    }
+  }
+
+  &__box {
+    width: 27px;
+    height: 27px;
+    border: 1px solid $color-border;
+    position: relative;
+
+    .about-popup__check {
+      @include center-block;
+      width: 7px;
+      height: 14px;
+
+      &::before {
+        content: '';
+        width: 7px;
+        height: 14px;
+        border-right: 1px solid $color-main;
+        border-bottom: 1px solid $color-main;
+        background-color: transparent;
+        border-radius: 0;
+        position: absolute;
+        transition: opacity $ease-main;
+        transform: rotate(45deg);
+      }
+    }
   }
 
   .inputbox {
