@@ -25,18 +25,36 @@ export default () => {
     });
 
   };
+  function input(value) {
+    return $('.checkradio__input[value='+value+']')
+  }
 
-  // $('.tabs__tab').on('click', function () {
-  //   setTimeout(function () {
-  //     if ($('[data-tab-target="tab2"]').hasClass('active')) {
-  //       console.log('work');
-  //       $('.checkradio__input[value="offline"]').parents('.grid__col_four').hide()
-  //     } else {
-  //       $('.checkradio__input[value="offline"]').parents('.grid__col_four').show()
-  //     }
-  //   }, 100)
-  //
-  // });
+  $('.tabs__tab').on('click', function () {
+    setTimeout(function () {
+      if ($('[data-tab-target="tab1"]').hasClass('active')) {
+        input('online').prop('checked', true);
+        input('msk-courier').prop('checked', true);
+        input('offline').parents('.grid__col').show();
+      } else if ($('[data-tab-target="tab2"]').hasClass('active')) {
+        input('online').prop('checked', true);
+        input('mo-courier').prop('checked', true);
+        input('offline').parents('.grid__col').show();
+      } else if ($('[data-tab-target="tab3"]').hasClass('active')) {
+        input('russia').prop('checked', true);
+        input('online').prop('checked', true);
+        input('offline').parents('.grid__col').hide();
+      }
+    }, 100);
+  });
+
+  input('mo-tk').on('click', function () {
+    input('offline').parents('.grid__col').hide();
+    input('online').prop('checked', true);
+  })
+
+  input('mo-courier').on('click', function () {
+    input('offline').parents('.grid__col').show();
+  })
 
   if ($(window).width() < 769) {
     BUTTON.text('Оформить заказ');
