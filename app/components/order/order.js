@@ -11,7 +11,10 @@ export default () => {
     mask: '+7 (999) 999-99-99',
   }).mask('input[data-type="tel"]');
 
+
   function slide() {
+    $('.js-slide-el:not(.js-slide-el_active)').find('.checkradio__content').find('p').not('.rule').slideUp();
+    input('msk-courier').click();
     $('.order__form').on('change', '.checkradio__input', function () {
       if (this.checked) {
         let SLIDE_EL_SIBLINGS = $(this).parents(SLIDE_EL).parents('.grid__col').siblings().find(SLIDE_EL);
