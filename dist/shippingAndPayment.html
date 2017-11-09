@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimal-ui">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Доставка и оплата</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="msapplication-config" content="/assets/images/favicons/browserconfig.xml">
+    <meta name="theme-color" content="#252525">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicons/favicon-16x16.png">
+    <link rel="manifest" href="/assets/images/favicons/manifest.json">
+    <link rel="mask-icon" href="/assets/images/favicons/safari-pinned-tab.svg" color="#252525">
+    <link href="/assets/images/favicons/favicon.ico" rel="shortcut icon">
+    <link href="assets/styles/app.min.css" rel="stylesheet">
+    <script src="assets/scripts/libs/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="header">
+        <div class="container">
+            <div class="header__wrapper">
+                <div class="burger js-burger js-burger_white">
+                    <svg class="burger__icon burger__icon_type_burger"><use xlink:href="assets/images/icon.svg#icon_burger"></use></svg>
+                    <svg class="burger__icon burger__icon_type_close"><use xlink:href="assets/images/icon.svg#icon_close"></use></svg>
+                </div>
+                <a class="header__logo" href="index.html" title="Lantelia">
+                    <svg><use xlink:href="assets/images/icon.svg#icon_lantelia"></use></svg>
+                </a>
+                <a class="header__call" href="#"></a>
+                <nav class="header__nav">
+                    <div class="header__nav-wrapper">
+                        <div class="header__nav-content">
+                            <span class="header__nav-name">Lantelia</span>
+                            <p class="header__nav-text">Профессиональная косметика для волос Lantelia</p>
+                            <ul class="social header__social">
+                                <li class="social__item">
+                                    <a class="social__link social__link social__link_type_vk" href="#">
+                                        <svg class="social__icon"><use xlink:href="assets/images/icon.svg#icon_vk"></use></svg>
+                                    </a>
+                                </li>
+                                <li class="social__item">
+                                    <a class="social__link social__link social__link_type_f" href="#">
+                                        <svg class="social__icon"><use xlink:href="assets/images/icon.svg#icon_f"></use></svg>
+                                    </a>
+                                </li>
+                                <li class="social__item">
+                                    <a class="social__link social__link social__link_type_twitter" href="#">
+                                        <svg class="social__icon"><use xlink:href="assets/images/icon.svg#icon_twitter"></use></svg>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <ul class="header__nav-group">
+                            <li class="header__nav-item">
+                                <a class="link link_small header__link" href="catalog.html">
+                                    <span class="link__text">Продукция</span>
+                                </a>
+                                <svg class="header__nav-icon"><use xlink:href="assets/images/icon.svg#icon_arrow"></use></svg>
+                            </li>
+                            <li class="header__nav-item">
+                                <a class="link link_small header__link" href="sales-offices.html">
+                                    <span class="link__text">Где купить</span>
+                                </a>
+                                <svg class="header__nav-icon"><use xlink:href="assets/images/icon.svg#icon_arrow"></use></svg>
+                            </li>
+                        </ul>
+                        <ul class="header__nav-group">
+                            <li class="header__nav-item">
+                                <a class="link link_small header__link" href="newsTraining.html">
+                                    <span class="link__text">Обучение и новости</span>
+                                </a>
+                                <svg class="header__nav-icon"><use xlink:href="assets/images/icon.svg#icon_arrow"></use></svg>
+                            </li>
+                            <li class="header__nav-item">
+                                <a class="link link_small header__link" href="about.html">
+                                    <span class="link__text">О компании</span>
+                                </a>
+                                <svg class="header__nav-icon"><use xlink:href="assets/images/icon.svg#icon_arrow"></use></svg>
+                            </li>
+                            <li class="header__nav-item">
+                                <a class="link link_small header__link" href="contact.html">
+                                    <span class="link__text">Контакты</span>
+                                </a>
+                                <svg class="header__nav-icon"><use xlink:href="assets/images/icon.svg#icon_arrow"></use></svg>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <div class="error-messages">
+        <p>
+            <span class="basic-msg"></span>
+            <span class="errors"></span>
+        </p>
+        <svg class="error-messages__close"><use xlink:href="assets/images/icon.svg#icon_close"></use></svg>
+    </div>
+    <div class="shippingAndPayment">
+        <div class="container">
+            <div class="section__head">
+                <div class="section-head">
+                    <div class="section-head__wrapper">
+                        <h4 class="section-head__subtitle">Информация</h4>
+                        <h2 class="section-head__title">Доставка и оплата</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="shippingAndPayment__content">
+                <div class="shippingAndPayment__item">
+                    <div class="shippingAndPayment__wrapper">
+                        <div class="grid">
+                            <div class="grid__col grid__col_two">
+                                <span class="shippingAndPayment__label">Москва</span>
+                            </div>
+                            <div class="grid__col grid__col_seven">
+                                <h3 class="shippingAndPayment__title js-label">Курьерская доставка по Москве (в пределах МКАД)</h3>
+                                <p class="shippingAndPayment__text">Бесплатная доставка от 3 000 руб.</p>
+                                <p class="shippingAndPayment__text">Курьер LANTELIA (по Москве):
+                                    <br/>Доставка осуществляется на следующий день.
+                                    <br/>Стоимость: 250 руб.</p>
+                                <p class="shippingAndPayment__text">Способ оплаты: Наличные, по Карте</p>
+                                <h3 class="shippingAndPayment__title">Самовывоз</h3>
+                                <p class="shippingAndPayment__text">При себе иметь паспорт или иной документ подтверждающий личность - для входа на территорию бизнес-центра.
+                                    <br/>Стоимость: 0 руб.</p>
+                                <p class="shippingAndPayment__text">Оплата заказа в пункте самовывоза осуществляется только НАЛИЧНЫМИ</p>
+                                <p class="shippingAndPayment__text"> Адрес: ул. Ярославская 8 к.5
+                                    <br/>Режим работы: пн.-пт. c 10:00 – 18:00</p>
+                            </div>
+                            <div class="grid__col grid__col_three">
+                                <section class="map shippingAndPayment__map" id="shippingMap"></section>
+                                <span class="shippingAndPayment__label">Пункт самовывоза в Москве:</span>
+                                <p class="shippingAndPayment__label2"> ул. Ярославская 8 к.5
+                                    <br/>Режим работы: пн.-пт. c 10:00 – 18:00</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="shippingAndPayment__item">
+                    <div class="shippingAndPayment__wrapper">
+                        <div class="grid">
+                            <div class="grid__col grid__col_two">
+                                <span class="shippingAndPayment__label">Московская обл</span>
+                            </div>
+                            <div class="grid__col grid__col_seven">
+                                <h3 class="shippingAndPayment__title js-label">Курьерская доставка по Московской области</h3>
+                                <p class="shippingAndPayment__text">Бесплатная доставка от 7 000 руб.</p>
+                                <p class="shippingAndPayment__text">Курьер LANTELIA: Доставка осуществляется на следующий день.
+                                    <br/>Ближайшее Подмосковье (до ~10 км от МКАД: Митино, Мытищи, Балашиха, Реутов, Люберцы, Видное, Одинцово, Красногорск, Химки и др.)
+                                    <br/>Стоимость: 400 руб.</p>
+                                <h3 class="shippingAndPayment__title">Доставка Транспортными Компаниями</h3>
+                                <p class="shippingAndPayment__text">СДЭК:
+                                    <br/>Экспресс лайт дверь-дверь, после 100% оплаты!
+                                    <br/>Стоимость: 250 руб.</p>
+                                <p class="shippingAndPayment__text">ПОЧТА РОССИИ:
+                                    <br/>Забор заказа в почтовом отделении по месту жительства, после 100% оплаты!
+                                    <br/>Стоимость: 250 руб.</p>
+                                <p class="shippingAndPayment__text">Способ оплаты: Наличными, Банковская карта, Robokassa, извещением для банка</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="shippingAndPayment__item">
+                    <div class="shippingAndPayment__wrapper">
+                        <div class="grid">
+                            <div class="grid__col grid__col_two">
+                                <span class="shippingAndPayment__label">Вся Россия</span>
+                            </div>
+                            <div class="grid__col grid__col_seven">
+                                <h3 class="shippingAndPayment__title js-label">Доставка по России</h3>
+                                <p class="shippingAndPayment__text">Мы отправляем заказы по всей России. Срок оформления заказа составляет 1 рабочий день, после оплаты заказ отправляется в соответствующую службу доставки.</p>
+                                <p class="shippingAndPayment__text">ДОСТАВКА ЗАКАЗА ОСУЩЕСТВЛЯЕТСЯ, ТОЛЬКО при 100% ПРЕДОПЛАТЕ!</p>
+                                <p class="shippingAndPayment__text">Доставка Транспортными Компаниями</p>
+                                <p class="shippingAndPayment__text">СДЭК:
+                                    <br/>Экспресс лайт дверь-дверь, после 100% оплаты!
+                                    <br/>Стоимость: 350 руб.</p>
+                                <p class="shippingAndPayment__text">ПОЧТА РОССИИ:
+                                    <br/>Забор заказа в почтовом отделении по месту жительства, после 100% оплаты!
+                                    <br/>Стоимость: 350 руб.</p>
+                                <p class="shippingAndPayment__text">Способ оплаты: Банковская карта, Robokassa, извещением для банка</p>
+                                <p class="shippingAndPayment__text">Если вас интересует любая другая служба доставка, просьба уточнять стоимость доставки по телефонам: </p>
+                                <p class="shippingAndPayment__text"> Бесплатно для звонков по России
+                                    <br/>Тел.: 8 800 874 54 60</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="needHelp">
+        <div class="needHelp__wrapper">
+            <svg class="needHelp__icon"><use xlink:href="assets/images/icon.svg#icon_phone"></use></svg>
+            <svg class="needHelp__close"><use xlink:href="assets/images/icon.svg#icon_close"></use></svg>
+            <div class="needHelp__text">
+                <p>Нужна помощь</p>
+            </div>
+        </div>
+    </div>
+    <div class="needHelp-popup">
+        <div class="needHelp-popup__content">
+            <h3 class="needHelp-popup__heading">Нужна помощь?</h3>
+            <p class="needHelp-popup__text">Позвоните нам и наш менеджер ответит на Ваши вопросы</p>
+        </div>
+        <a class="needHelp-popup__phone" href="tel:8 800 870—0697">
+            <span class="needHelp-popup__num">8 800 870—0697</span>
+            <svg class="needHelp-popup__icon"><use xlink:href="assets/images/icon.svg#icon_phonecopy3"></use></svg>
+        </a>
+        <a class="needHelp-popup__phone" href="tel:8 495 700—0201">
+            <span class="needHelp-popup__num">8 495 700—0201</span>
+            <svg class="needHelp-popup__icon"><use xlink:href="assets/images/icon.svg#icon_phonecopy3"></use></svg>
+        </a>
+    </div>
+    <a class="addcart" href="cart.html">
+        <svg class="addcart__icon"><use xlink:href="assets/images/icon.svg#icon_shopping-cart"></use></svg>
+        <span class="addcart__num">1</span>
+    </a>
+    <section class="footer">
+        <div class="container">
+            <div class="footer__wrapper">
+                <div class="grid">
+                    <div class="grid__col grid__col_two footer__col_logo">
+                        <a class="footer__logo" href="index.html" title="Lantelia">
+                            <svg><use xlink:href="assets/images/icon.svg#icon_lantelia"></use></svg>
+                        </a>
+                    </div>
+                    <div class="grid__col grid__col_two footer__col_social">
+                        <div class="footer__descr">Профессиональная косметика для волос Lantelia</div>
+                        <ul class="social footer__social">
+                            <li class="social__item">
+                                <a class="social__link social__link social__link_type_vk" href="#">
+                                    <svg class="social__icon"><use xlink:href="assets/images/icon.svg#icon_vk"></use></svg>
+                                </a>
+                            </li>
+                            <li class="social__item">
+                                <a class="social__link social__link social__link_type_f" href="#">
+                                    <svg class="social__icon"><use xlink:href="assets/images/icon.svg#icon_f"></use></svg>
+                                </a>
+                            </li>
+                            <li class="social__item">
+                                <a class="social__link social__link social__link_type_instagram" href="#">
+                                    <svg class="social__icon"><use xlink:href="assets/images/icon.svg#icon_instagram"></use></svg>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="grid__col grid__col_two footer__col_links">
+                        <ul class="footer__links">
+                            <li class="footer__link">
+                                <a class="link" href="catalog.html">
+                                    <span class="link__text">Продукция</span>
+                                </a>
+                            </li>
+                            <li class="footer__link">
+                                <a class="link" href="sales-offices.html">
+                                    <span class="link__text">Где купить</span>
+                                </a>
+                            </li>
+                            <li class="footer__link">
+                                <a class="link" href="newsTraining.html">
+                                    <span class="link__text">Обучение и новости</span>
+                                </a>
+                            </li>
+                            <li class="footer__link">
+                                <a class="link" href="about.html">
+                                    <span class="link__text">О компании</span>
+                                </a>
+                            </li>
+                            <li class="footer__link">
+                                <a class="link" href="contacts.html">
+                                    <span class="link__text">Контакты</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="grid__col grid__col_two footer__col_links">
+                        <ul class="footer__links">
+                            <li class="footer__link">
+                                <a class="link">
+                                    <span class="link__text">Публичная оферта</span>
+                                </a>
+                            </li>
+                            <li class="footer__link">
+                                <a class="link" href="shippingAndPayment.html">
+                                    <span class="link__text">Доставка и оплата</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="grid__col grid__col_two footer__col_right">
+                        <a class="button button_gradiented js-fancyform" href="#about-popup">
+                            <span class="button__text">НАЧАТЬ РАБОТАТЬ С LANTELIA</span>
+                        </a>
+                        <div class="footer__copyright">&#169; 2017 Lantelia. Все права защищены</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="about-popup">
+        <div class="popups">
+            <div class="popup about-popup" id="about-popup">
+                <div class="about-popup__wrapper">
+                    <div class="about-popup__content">
+                        <div class="about-popup__content-wrapper">
+                            <div class="about-popup__success">
+                                <div class="about-popup__box">
+                                    <span class="about-popup__check"></span>
+                                </div>
+                                <div class="about-popup__success-content">
+                                    <h2 class="about-popup__title">Ваша заявка успешно отправлена.</h2>
+                                    <p class="about-popup__text">Наш менеджер с Вами свяжется в ближайшее время.</p>
+                                </div>
+                                <a class="button button_white button_fill-black js-unfreeze popup__icon-close">
+                                    <span class="button__text">Хорошо</span>
+                                </a>
+                            </div>
+                            <div class="about-popup__main">
+                                <div class="about-popup__head">
+                                    <span>Начать работать с</span>
+                                    <h2 class="about-popup__title">Lantelia</h2>
+                                </div>
+                                <form class="about-popup__form" method="get" id="aboutForm" action="1.php">
+                                    <div class="grid">
+                                        <div class="grid__col grid__col_six">
+                                            <div class="inputbox">
+                                                <span class="inputbox__label inputbox__label_required">Название салона</span>
+                                                <input class="input" type="text" name="workName" id="workName" title="Название салона" data-required="data-required" />
+                                                <span class="input__line"></span>
+                                            </div>
+                                            <div class="inputbox">
+                                                <span class="inputbox__label inputbox__label_required">Город</span>
+                                                <input class="input" type="text" name="workCity" id="workCity" title="Город" data-required="data-required" />
+                                                <span class="input__line"></span>
+                                            </div>
+                                            <div class="inputbox">
+                                                <span class="inputbox__label inputbox__label_required">ФИО</span>
+                                                <input class="input" type="text" name="workFio" id="workFio" title="ФИО" data-required="data-required" />
+                                                <span class="input__line"></span>
+                                            </div>
+                                            <div class="inputbox">
+                                                <span class="inputbox__label inputbox__label_required">Телефон</span>
+                                                <input class="input" type="tel" name="workPhone" id="workPhone" title="Телефон" data-type="tel" data-required="data-required" />
+                                                <span class="input__line"></span>
+                                            </div>
+                                        </div>
+                                        <div class="grid__col grid__col_six">
+                                            <div class="inputbox">
+                                                <span class="inputbox__label inputbox__label_required">EMAIL</span>
+                                                <input class="input" type="email" name="workEmail" id="workEmail" title="EMAIL" data-type="email" data-required="data-required" />
+                                                <span class="input__line"></span>
+                                            </div>
+                                            <div class="inputbox">
+                                                <span class="inputbox__label inputbox__label_required">Сообщение</span>
+                                                <textarea class="textarea" name="workMessage" id="workMessage" title="Сообщение" data-required="data-required"></textarea>
+                                                <span class="input__line"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button class="button button_white button_fill-black about-popup__button js-unfreeze" type="submit" value="send">
+                                        <div class="button__text">отправить</div>
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about-popup__image">
+                        <img src="assets/images/form@2x.jpg" />
+                    </div>
+                </div>
+                <svg class="popup__icon-close popup__icon-close about-popup__icon-close" data-fancybox-close="data-fancybox-close"><use xlink:href="assets/images/icon.svg#icon_close"></use></svg>
+            </div>
+        </div>
+    </div>
+    <div id="overlay"></div>
+    <script src="assets/scripts/app.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAxPYPIFoyo8a8749Pi9ooi_WBnXZKpBoA"></script>
+</body>
+
+</html>

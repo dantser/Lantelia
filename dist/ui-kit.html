@@ -1,0 +1,2512 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimal-ui">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>ui-kit</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="msapplication-config" content="/assets/images/favicons/browserconfig.xml">
+    <meta name="theme-color" content="#252525">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicons/favicon-16x16.png">
+    <link rel="manifest" href="/assets/images/favicons/manifest.json">
+    <link rel="mask-icon" href="/assets/images/favicons/safari-pinned-tab.svg" color="#252525">
+    <link href="/assets/images/favicons/favicon.ico" rel="shortcut icon">
+    <link href="assets/styles/app.min.css" rel="stylesheet">
+    <script src="assets/scripts/libs/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="header">
+        <div class="container">
+            <div class="header__wrapper">
+                <div class="burger js-burger js-burger_white">
+                    <svg class="burger__icon burger__icon_type_burger"><use xlink:href="assets/images/icon.svg#icon_burger"></use></svg>
+                    <svg class="burger__icon burger__icon_type_close"><use xlink:href="assets/images/icon.svg#icon_close"></use></svg>
+                </div>
+                <a class="header__logo" href="index.html" title="Lantelia">
+                    <svg><use xlink:href="assets/images/icon.svg#icon_lantelia"></use></svg>
+                </a>
+                <a class="header__call" href="#"></a>
+                <nav class="header__nav">
+                    <div class="header__nav-wrapper">
+                        <div class="header__nav-content">
+                            <span class="header__nav-name">Lantelia</span>
+                            <p class="header__nav-text">Профессиональная косметика для волос Lantelia</p>
+                            <ul class="social header__social">
+                                <li class="social__item">
+                                    <a class="social__link social__link social__link_type_vk" href="#">
+                                        <svg class="social__icon"><use xlink:href="assets/images/icon.svg#icon_vk"></use></svg>
+                                    </a>
+                                </li>
+                                <li class="social__item">
+                                    <a class="social__link social__link social__link_type_f" href="#">
+                                        <svg class="social__icon"><use xlink:href="assets/images/icon.svg#icon_f"></use></svg>
+                                    </a>
+                                </li>
+                                <li class="social__item">
+                                    <a class="social__link social__link social__link_type_twitter" href="#">
+                                        <svg class="social__icon"><use xlink:href="assets/images/icon.svg#icon_twitter"></use></svg>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <ul class="header__nav-group">
+                            <li class="header__nav-item">
+                                <a class="link link_small header__link" href="catalog.html">
+                                    <span class="link__text">Продукция</span>
+                                </a>
+                                <svg class="header__nav-icon"><use xlink:href="assets/images/icon.svg#icon_arrow"></use></svg>
+                            </li>
+                            <li class="header__nav-item">
+                                <a class="link link_small header__link" href="sales-offices.html">
+                                    <span class="link__text">Где купить</span>
+                                </a>
+                                <svg class="header__nav-icon"><use xlink:href="assets/images/icon.svg#icon_arrow"></use></svg>
+                            </li>
+                        </ul>
+                        <ul class="header__nav-group">
+                            <li class="header__nav-item">
+                                <a class="link link_small header__link" href="newsTraining.html">
+                                    <span class="link__text">Обучение и новости</span>
+                                </a>
+                                <svg class="header__nav-icon"><use xlink:href="assets/images/icon.svg#icon_arrow"></use></svg>
+                            </li>
+                            <li class="header__nav-item">
+                                <a class="link link_small header__link" href="about.html">
+                                    <span class="link__text">О компании</span>
+                                </a>
+                                <svg class="header__nav-icon"><use xlink:href="assets/images/icon.svg#icon_arrow"></use></svg>
+                            </li>
+                            <li class="header__nav-item">
+                                <a class="link link_small header__link" href="contact.html">
+                                    <span class="link__text">Контакты</span>
+                                </a>
+                                <svg class="header__nav-icon"><use xlink:href="assets/images/icon.svg#icon_arrow"></use></svg>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <div class="error-messages">
+        <p>
+            <span class="basic-msg"></span>
+            <span class="errors"></span>
+        </p>
+        <svg class="error-messages__close"><use xlink:href="assets/images/icon.svg#icon_close"></use></svg>
+    </div>
+    <div class="ui-kit">
+        <div class="ui-kit__navigation">
+            <div class="ui-kit__navigation-burger"></div>
+            <ul class="ui-kit__navigation__list"></ul>
+        </div>
+        <section class="ui-kit__head">
+            <div class="container">
+                <svg class="ui-kit__logo"><use xlink:href="assets/images/icon.svg#icon_lantelia"></use></svg>
+                <div class="ui-kit__name">Lantelia</div>
+            </div>
+        </section>
+        <section class="ui-kit__section">
+            <div class="ui-kit__section-head">
+                <div class="container">
+                    <h2>header</h2>
+                    <p>Блок: blocks/header/header</p>
+                    <p>.header_main</p>
+                </div>
+            </div>
+            <div class="ui-kit__section-content">
+                <div class="container">
+                    <div class="header header_main">
+                        <div class="container">
+                            <div class="header__wrapper">
+                                <div class="burger js-burger js-burger_white">
+                                    <svg class="burger__icon burger__icon_type_burger"><use xlink:href="assets/images/icon.svg#icon_burger"></use></svg>
+                                    <svg class="burger__icon burger__icon_type_close"><use xlink:href="assets/images/icon.svg#icon_close"></use></svg>
+                                </div>
+                                <a class="header__logo" href="index.html" title="Lantelia">
+                                    <svg><use xlink:href="assets/images/icon.svg#icon_lantelia"></use></svg>
+                                </a>
+                                <a class="header__call" href="#"></a>
+                                <nav class="header__nav">
+                                    <div class="header__nav-wrapper">
+                                        <div class="header__nav-content">
+                                            <span class="header__nav-name">Lantelia</span>
+                                            <p class="header__nav-text">Профессиональная косметика для волос Lantelia</p>
+                                            <ul class="social header__social">
+                                                <li class="social__item">
+                                                    <a class="social__link social__link social__link_type_vk" href="#">
+                                                        <svg class="social__icon"><use xlink:href="assets/images/icon.svg#icon_vk"></use></svg>
+                                                    </a>
+                                                </li>
+                                                <li class="social__item">
+                                                    <a class="social__link social__link social__link_type_f" href="#">
+                                                        <svg class="social__icon"><use xlink:href="assets/images/icon.svg#icon_f"></use></svg>
+                                                    </a>
+                                                </li>
+                                                <li class="social__item">
+                                                    <a class="social__link social__link social__link_type_twitter" href="#">
+                                                        <svg class="social__icon"><use xlink:href="assets/images/icon.svg#icon_twitter"></use></svg>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <ul class="header__nav-group">
+                                            <li class="header__nav-item">
+                                                <a class="link link_small header__link" href="catalog.html">
+                                                    <span class="link__text">Продукция</span>
+                                                </a>
+                                                <svg class="header__nav-icon"><use xlink:href="assets/images/icon.svg#icon_arrow"></use></svg>
+                                            </li>
+                                            <li class="header__nav-item">
+                                                <a class="link link_small header__link" href="sales-offices.html">
+                                                    <span class="link__text">Где купить</span>
+                                                </a>
+                                                <svg class="header__nav-icon"><use xlink:href="assets/images/icon.svg#icon_arrow"></use></svg>
+                                            </li>
+                                        </ul>
+                                        <ul class="header__nav-group">
+                                            <li class="header__nav-item">
+                                                <a class="link link_small header__link" href="newsTraining.html">
+                                                    <span class="link__text">Обучение и новости</span>
+                                                </a>
+                                                <svg class="header__nav-icon"><use xlink:href="assets/images/icon.svg#icon_arrow"></use></svg>
+                                            </li>
+                                            <li class="header__nav-item">
+                                                <a class="link link_small header__link" href="about.html">
+                                                    <span class="link__text">О компании</span>
+                                                </a>
+                                                <svg class="header__nav-icon"><use xlink:href="assets/images/icon.svg#icon_arrow"></use></svg>
+                                            </li>
+                                            <li class="header__nav-item">
+                                                <a class="link link_small header__link" href="contact.html">
+                                                    <span class="link__text">Контакты</span>
+                                                </a>
+                                                <svg class="header__nav-icon"><use xlink:href="assets/images/icon.svg#icon_arrow"></use></svg>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="ui-kit__section ui-kit__section_grid">
+            <div class="ui-kit__section-head">
+                <div class="container">
+                    <h2>Сетка</h2>
+                    <p>Отступы слева и справа от экрана: 60px ($container-padding)</p>
+                    <p>Ширина контейнера: 1920px ($container-width)</p>
+                    <p>Ширина контейнера сетки: 100% ($grid-container-width)</p>
+                    <p>Колонок: 12 ($grid-cols)</p>
+                    <p>Горизонтальное расстояние между колонками: 24px ($grid-gap)</p>
+                    <p>Вертикальное расстояние между колонками: 24px ($grid-gap-vertical)</p>
+                    <p>Переменные: styles/helpers/_variables.scss</p>
+                    <p>Блок: blocks/grid/</p>
+                </div>
+            </div>
+            <div class="ui-kit__section-content">
+                <div class="container">
+                    <div class="grid">
+                        <div class="grid__col grid__col_one"></div>
+                        <div class="grid__col grid__col_one"></div>
+                        <div class="grid__col grid__col_one"></div>
+                        <div class="grid__col grid__col_one"></div>
+                        <div class="grid__col grid__col_one"></div>
+                        <div class="grid__col grid__col_one"></div>
+                        <div class="grid__col grid__col_one"></div>
+                        <div class="grid__col grid__col_one"></div>
+                        <div class="grid__col grid__col_one"></div>
+                        <div class="grid__col grid__col_one"></div>
+                        <div class="grid__col grid__col_one"></div>
+                        <div class="grid__col grid__col_one"></div>
+                        <div class="grid__col grid__col_four"></div>
+                        <div class="grid__col grid__col_four"></div>
+                        <div class="grid__col grid__col_four"></div>
+                        <div class="grid__col grid__col_six"></div>
+                        <div class="grid__col grid__col_six"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="ui-kit__section">
+            <div class="ui-kit__section-head">
+                <div class="container">
+                    <h2>Цвета сайта</h2>
+                    <p>Переменные находятся в файле styles/helpers/_variables.scss</p>
+                </div>
+            </div>
+            <div class="ui-kit__section-content">
+                <div class="container">
+                    <div class="ui-kit__elements-list">
+                        <div class="ui-kit__color ui-kit__color_bg_dark" style="background-color: black;">black
+                            <br>$color-basic</div>
+                        <div class="ui-kit__color ui-kit__color_bg_dark" style="background-color: #252525;">#252525
+                            <br>$color-main</div>
+                        <div class="ui-kit__color ui-kit__color_bg_dark" style="background-color: #777;">#777
+                            <br>$color-placeholder</div>
+                        <div class="ui-kit__color ui-kit__color_bg_dark" style="background-color: black;">black
+                            <br>$color-input</div>
+                        <div class="ui-kit__color ui-kit__color_bg_dark" style="background-color: #7c7c7c;">#7c7c7c
+                            <br>$color-gray</div>
+                        <div class="ui-kit__color" style="background-color: #ededed;">#ededed
+                            <br>$color-border</div>
+                        <div class="ui-kit__color" style="background-color: #ebebeb;">#ebebeb
+                            <br>$color-border-popup</div>
+                        <div class="ui-kit__color" style="background-color: #dcdcdc;">#dcdcdc
+                            <br>$color-border-input</div>
+                        <div class="ui-kit__color ui-kit__color_bg_dark" style="background-color: #e2507c;">#e2507c
+                            <br>$color-error</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="ui-kit__section">
+            <div class="ui-kit__section-head">
+                <div class="container">
+                    <h2>Градиенты</h2>
+                    <p>Цвета для градиентов находятся в файле styles/helpers/_variables.scss</p>
+                    <p>Сами градиенты в styles/helpers/_gradients.scss</p>
+                </div>
+            </div>
+            <div class="ui-kit__section-content">
+                <div class="container">
+                    <div class="ui-kit__elements-list">
+                        <div class="ui-kit__color ui-kit__color_gradient_border" style="background: undefined;">%gradient-border</div>
+                        <div class="ui-kit__color ui-kit__color_gradient_card_blue" style="background: undefined;">%gradient-card_blue</div>
+                        <div class="ui-kit__color ui-kit__color_gradient_card_pink" style="background: undefined;">%gradient-card_pink</div>
+                        <div class="ui-kit__color ui-kit__color_gradient_card_gray" style="background: undefined;">%gradient-card_gray</div>
+                        <div class="ui-kit__color ui-kit__color_gradient_card_green" style="background: undefined;">%gradient-card_green</div>
+                        <div class="ui-kit__color ui-kit__color_bg_dark ui-kit__color_gradient_underline" style="background: undefined;">%gradient-underline</div>
+                        <div class="ui-kit__color ui-kit__color_bg_dark ui-kit__color_gradient_cart" style="background: undefined;">%gradient-cart</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="ui-kit__section">
+            <div class="ui-kit__section-head">
+                <div class="container">
+                    <h2>Шрифты и контентная зона</h2>
+                    <p>Основной шрифт: GothamPro ($font-main), font-weight: 300, 400, 500</p>
+                    <p>Переменные находятся в файле styles/helpers/_variables.scss</p>
+                    <p>Шрифты подключены в styles/helpers/_fonts.scss</p>
+                    <p>Контентная зона: blocks/content-zone</p>
+                    <p>Стили всех текстов лежат в файле styles/helpers/_text-styles.scss и должны импортироваться из него через директиву @extend и задаваться через "временные" классы %className</p>
+                </div>
+            </div>
+            <div class="ui-kit__section-content">
+                <div class="container">
+                    <p class="ui-kit__description">.content-zone</p>
+                    <div class="ui-kit__special">
+                        <div class="content-zone">
+                            <h1>Заголовок H1 (%heading-1)</h1>
+                            <h2>Заголовок H2 (%heading-2)</h2>
+                            <h3>Заголовок H3 (%heading-3)</h3>
+                            <h4>Заголовок H4 (%heading-4)</h4>
+                            <p>Текст p (%text)
+                                <br> Цитата внутри текста p:
+                                <q>Цитата q</q>
+                            </p>
+                            <blockquote>
+                                <p>Демонстрация цитаты через тег blockquote</p>
+                                <h4>Внутри могут быть заголовки</h4>
+                                <p>Текст с
+                                    <a href="#">ссылкой в тексте</a>
+                                </p>
+                            </blockquote>
+                            <p>Картинка в тексте (img):</p>
+                            <img src="assets/images/pic company/company 1@2x.jpg">
+                            <p>Маркированный список ul. Стили взяты из styles/helpers/_list-styles.scss</p>
+                            <ul>
+                                <li>Элемент списка</li>
+                                <li>Другой элемент
+                                    <ul>
+                                        <li>Элемент списка</li>
+                                        <li>Другой элемент</li>
+                                        <li>Элемент списка</li>
+                                    </ul>
+                                </li>
+                                <li>Элемент списка</li>
+                            </ul>
+                            <p>Нумерованный список ol. Стили взяты из styles/helpers/_list-styles.scss</p>
+                            <ol>
+                                <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                    consequat. Duis aute irure dolor in </li>
+                                <li>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint </li>
+                                <li>Элемент списка</li>
+                            </ol>
+                        </div>
+                    </div>
+                    <p class="ui-kit__description">Другие стили текстов:</p>
+                    <div class="ui-kit__custom-text ui-kit__custom-text_style-1">Пример кастомного стиля на примере стандартного (%text)</div>
+                </div>
+            </div>
+        </section>
+        <section class="ui-kit__section">
+            <div class="ui-kit__section-head">
+                <div class="container">
+                    <h2>Кнопки</h2>
+                    <p>Блок: blocks/button</p>
+                </div>
+            </div>
+            <div class="ui-kit__section-content">
+                <div class="container">
+                    <div class="ui-kit__elements-list">
+                        <a class="button">
+                            <span class="button__text">начать работать с lantelia</span>
+                        </a>
+                        <a class="button button_gradiented">
+                            <span class="button__text">градиентная кнопка</span>
+                        </a>
+                        <button class="button button_white button_fill-black" type="submit">
+                            <div class="button__text">Продолжить оформление заказа</div>
+                        </button>
+                        <div class="bg-dark">
+                            <a class="button button_gradiented button_white">
+                                <svg class="button__icon"><use xlink:href="assets/images/icon.svg#icon_shopping-cart"></use></svg>
+                                <span class="button__text">Кнопка с иконкой на темном фоне</span>
+                            </a>
+                        </div>
+                    </div>
+                    <p class="ui-kit__description">При клике на .js-anchor происходит скролл к элементу из атрибута href. Блок: blocks/js-functions/anchor.js</p>
+                    <a class="button js-anchor" href="#section0">
+                        <span class="button__text">.js-anchor</span>
+                    </a>
+                    <p class="ui-kit__description">При клике на .js-freeze скролл страницы блокируется, на .js-unfreeze разблокируется. Блок: blocks/js-functions/freeze.js. Функции freeze() и unfreeze() можно импортировать и использовать в модалках, бургере или где-то еще</p>
+                    <div class="ui-kit__elements-list">
+                        <a class="button js-freeze" href="#">
+                            <span class="button__text">.js-freeze</span>
+                        </a>
+                        <a class="button js-unfreeze" href="#">
+                            <span class="button__text">.js-unfreeze</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="ui-kit__section">
+            <div class="ui-kit__section-head">
+                <div class="container">
+                    <h2>Элементы форм</h2>
+                    <p>Блок: blocks/form-elements</p>
+                </div>
+            </div>
+            <div class="ui-kit__section-content">
+                <div class="container">
+                    <div class="grid">
+                        <div class="grid__col grid__col_six">
+                            <p class="ui-kit__description">.input</p>
+                            <div class="inputbox">
+                                <span class="inputbox__label inputbox__label_required">Имя</span>
+                                <input class="input" type="text" name="name" required="required" />
+                                <span class="input__line"></span>
+                            </div>
+                        </div>
+                        <div class="grid__col grid__col_six">
+                            <p class="ui-kit__description">.select.js-select</p>
+                            <div class="inputbox">
+                                <span class="inputbox__label"></span>
+                                <select class="select js-select">
+                                    <option value="Опция 1">Опция 1</option>
+                                    <option value="Опция 2">Опция 2</option>
+                                    <option value="Опция 3">Опция 3</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="grid__col grid__col_six">
+                            <p class="ui-kit__description">Поле ввода номера телефона.
+                                <br> Маска определяется через атрибут data-type="tel"</p>
+                            <div class="inputbox">
+                                <span class="inputbox__label"></span>
+                                <input class="input" data-type="tel" type="tel" />
+                                <span class="input__line"></span>
+                            </div>
+                        </div>
+                        <div class="grid__col grid__col_six">
+                            <p class="ui-kit__description">Поле ввода e-mail.
+                                <br> Маска определяется через атрибут data-type="email"</p>
+                            <div class="inputbox">
+                                <span class="inputbox__label"></span>
+                                <input class="input" placeholder="E-mail" data-type="email" type="email" />
+                                <span class="input__line"></span>
+                            </div>
+                        </div>
+                        <div class="grid__col grid__col_twelve">
+                            <textarea class="textarea" placeholder="Текстовое поле"></textarea>
+                            <span class="input__line"></span>
+                        </div>
+                        <div class="grid__col grid__col_six">
+                            <p class="ui-kit__description">.checkradio</p>
+                            <div class="inputbox">
+                                <span class="inputbox__label"></span>
+                                <label class="checkradio">
+                                    <input class="checkradio__input" name="ui-checkbox" value="test" checked="true" type="checkbox" />
+                                    <span class="checkradio__box"></span>
+                                    <span class="checkradio__content">Чекбокс</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="grid__col grid__col_six">
+                            <p class="ui-kit__description">.checkradio</p>
+                            <div class="inputbox">
+                                <span class="inputbox__label"></span>
+                                <div class="ui-kit__elements-list">
+                                    <label class="checkradio">
+                                        <input class="checkradio__input" name="ui-radio" value="test" checked="true" type="radio" />
+                                        <span class="checkradio__box"></span>
+                                        <span class="checkradio__content">Радиокнопка</span>
+                                    </label>
+                                    <label class="checkradio">
+                                        <input class="checkradio__input" name="ui-radio" value="test-2" type="radio" />
+                                        <span class="checkradio__box"></span>
+                                        <span class="checkradio__content">Радиокнопка</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="ui-kit__section">
+            <div class="ui-kit__section-head">
+                <div class="container">
+                    <h2>Табы</h2>
+                    <p>Блок: blocks/tabs</p>
+                </div>
+            </div>
+            <div class="ui-kit__section-content">
+                <div class="container">
+                    <ul class="tabs">
+                        <li class="tabs__tab active" data-tab-target="tab1">Информация</li>
+                        <li class="tabs__tab" data-tab-target="tab2">Контент</li>
+                        <li class="tabs__tab" data-tab-target="tab3">Тексты</li>
+                    </ul>
+                    <div class="tabs-content">
+                        <div class="tabs-content__wrapper active" data-tab="tab1" data-tab-group="testtabs">
+                            <p>Это таб 1</p>
+                        </div>
+                        <div class="tabs-content__wrapper" data-tab="tab2" data-tab-group="testtabs">
+                            <p>Это таб 2</p>
+                        </div>
+                        <div class="tabs-content__wrapper" data-tab="tab3" data-tab-group="testtabs">
+                            <p>Это таб 3</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="ui-kit__section">
+            <div class="ui-kit__section-head">
+                <div class="container">
+                    <h2>Попапы</h2>
+                    <p>Блок: blocks/popups</p>
+                </div>
+            </div>
+            <div class="ui-kit__section-content">
+                <div class="container">
+                    <p class="ui-kit__description">.js-fancybox</p>
+                    <a class="link js-fancybox" href="#product1">
+                        <span class="link__text">Открыть попап товара</span>
+                    </a>
+                    <br>
+                    <a class="link js-fancybox" href="#about-popup">
+                        <span class="link__text">Открыть попап "Хочу работать с Lantelia"</span>
+                    </a>
+                    <p class="ui-kit__description">Верстка попапов:</p>
+                    <a class="link" onclick="$('.popups').toggle()">
+                        <span class="link__text">Показать попапы</span>
+                    </a>
+                    <div class="product-popup">
+                        <div class="popups product-popup__ui-popups">
+                            <div class="popup product-popup js-freeze" id="product1">
+                                <div class="product-popup__wrapper">
+                                    <div class="product-card">
+                                        <div class="product-card__wrapper">
+                                            <div class="product-card__top">
+                                                <h3 class="product-card__line">
+                                                    <span>Professional Botox Therapy</span>
+                                                </h3>
+                                                <ul>
+                                                    <li class="product-card__name">Шампунь</li>
+                                                    <li class="product-card__name">Кератин</li>
+                                                </ul>
+                                            </div>
+                                            <div class="product-card__image">
+                                                <img src="assets/images/picProduct/botox_250ml_07 (line)@2x.png" />
+                                            </div>
+                                            <div class="product-card__bottom">
+                                                <div class="product-card__volumes">
+                                                    <span class="product-card__volume">250 мл</span>
+                                                    <span class="product-card__volume">250 мл</span>
+                                                </div>
+                                                <a class="product-card__arrow" href="product.html" title="Перейти к товару">
+                                                    <span class="product-card__null"></span>
+                                                    <svg><use xlink:href="assets/images/icon.svg#icon_arrow"></use></svg>
+                                                </a>
+                                                <a class="product-card__cart js-fancybox" title="Добавить в корзину">
+                                                    <span class="product-card__price">2 199 ₽</span>
+                                                    <svg><use xlink:href="assets/images/icon.svg#icon_shopping-cart"></use></svg>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="product-popup__info">
+                                        <div class="product-popup__info-wrapper">
+                                            <div class="product-popup__price-block">
+                                                <span class="product-popup__text">Цена</span>
+                                                <span class="product-popup__price">7 990 ₽</span>
+                                            </div>
+                                            <div class="product-popup__foot">
+                                                <span class="product-popup__text">Количество</span>
+                                                <div class="product-popup__dropdown">
+                                                    <select class="select_bordered select_triangle product-popup__select js-select">
+                                                        <option value="1" selected="selected">1</option>
+                                                        <option value="2">2</option>
+                                                        <option value="3">3</option>
+                                                    </select>
+                                                </div>
+                                                <a class="button button_gradiented button_white product-popup__button">
+                                                    <svg class="button__icon"><use xlink:href="assets/images/icon.svg#icon_shopping-cart"></use></svg>
+                                                    <span class="button__text">в корзину</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <svg class="popup__icon-close modal__close product-popup__icon-close"><use xlink:href="assets/images/icon.svg#icon_close"></use></svg>
+                                </div>
+                                <a class="addcart" href="cart.html">
+                                    <svg class="addcart__icon"><use xlink:href="assets/images/icon.svg#icon_shopping-cart"></use></svg>
+                                    <span class="addcart__num">1</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about-popup">
+                        <div class="popups">
+                            <div class="popup about-popup" id="about-popup">
+                                <div class="about-popup__wrapper">
+                                    <div class="about-popup__content">
+                                        <div class="about-popup__content-wrapper">
+                                            <div class="about-popup__success">
+                                                <div class="about-popup__box">
+                                                    <span class="about-popup__check"></span>
+                                                </div>
+                                                <div class="about-popup__success-content">
+                                                    <h2 class="about-popup__title">Ваша заявка успешно отправлена.</h2>
+                                                    <p class="about-popup__text">Наш менеджер с Вами свяжется в ближайшее время.</p>
+                                                </div>
+                                                <a class="button button_white button_fill-black js-unfreeze popup__icon-close">
+                                                    <span class="button__text">Хорошо</span>
+                                                </a>
+                                            </div>
+                                            <div class="about-popup__main">
+                                                <div class="about-popup__head">
+                                                    <span>Начать работать с</span>
+                                                    <h2 class="about-popup__title">Lantelia</h2>
+                                                </div>
+                                                <form class="about-popup__form" method="get" id="aboutForm" action="1.php">
+                                                    <div class="grid">
+                                                        <div class="grid__col grid__col_six">
+                                                            <div class="inputbox">
+                                                                <span class="inputbox__label inputbox__label_required">Название салона</span>
+                                                                <input class="input" type="text" name="workName" id="workName" title="Название салона" data-required="data-required" />
+                                                                <span class="input__line"></span>
+                                                            </div>
+                                                            <div class="inputbox">
+                                                                <span class="inputbox__label inputbox__label_required">Город</span>
+                                                                <input class="input" type="text" name="workCity" id="workCity" title="Город" data-required="data-required" />
+                                                                <span class="input__line"></span>
+                                                            </div>
+                                                            <div class="inputbox">
+                                                                <span class="inputbox__label inputbox__label_required">ФИО</span>
+                                                                <input class="input" type="text" name="workFio" id="workFio" title="ФИО" data-required="data-required" />
+                                                                <span class="input__line"></span>
+                                                            </div>
+                                                            <div class="inputbox">
+                                                                <span class="inputbox__label inputbox__label_required">Телефон</span>
+                                                                <input class="input" type="tel" name="workPhone" id="workPhone" title="Телефон" data-type="tel" data-required="data-required" />
+                                                                <span class="input__line"></span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="grid__col grid__col_six">
+                                                            <div class="inputbox">
+                                                                <span class="inputbox__label inputbox__label_required">EMAIL</span>
+                                                                <input class="input" type="email" name="workEmail" id="workEmail" title="EMAIL" data-type="email" data-required="data-required" />
+                                                                <span class="input__line"></span>
+                                                            </div>
+                                                            <div class="inputbox">
+                                                                <span class="inputbox__label inputbox__label_required">Сообщение</span>
+                                                                <textarea class="textarea" name="workMessage" id="workMessage" title="Сообщение" data-required="data-required"></textarea>
+                                                                <span class="input__line"></span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <button class="button button_white button_fill-black about-popup__button js-unfreeze" type="submit" value="send">
+                                                        <div class="button__text">отправить</div>
+                                                    </button>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="about-popup__image">
+                                        <img src="assets/images/form@2x.jpg" />
+                                    </div>
+                                </div>
+                                <svg class="popup__icon-close popup__icon-close about-popup__icon-close" data-fancybox-close="data-fancybox-close"><use xlink:href="assets/images/icon.svg#icon_close"></use></svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="popups ui-kit__ui-popups">
+                        <div class="popup product-popup">
+                            <div class="product-popup__wrapper">
+                                <div class="product-card">
+                                    <div class="product-card__wrapper">
+                                        <div class="product-card__top">
+                                            <h3 class="product-card__line">
+                                                <span>Professional Botox Therapy</span>
+                                            </h3>
+                                            <ul>
+                                                <li class="product-card__name">Шампунь</li>
+                                                <li class="product-card__name">Кератин</li>
+                                            </ul>
+                                        </div>
+                                        <div class="product-card__image">
+                                            <img src="assets/images/picProduct/botox_250ml_07 (line)@2x.png" />
+                                        </div>
+                                        <div class="product-card__bottom">
+                                            <div class="product-card__volumes">
+                                                <span class="product-card__volume">250 мл</span>
+                                                <span class="product-card__volume">250 мл</span>
+                                            </div>
+                                            <a class="product-card__arrow" href="product.html" title="Перейти к товару">
+                                                <span class="product-card__null"></span>
+                                                <svg><use xlink:href="assets/images/icon.svg#icon_arrow"></use></svg>
+                                            </a>
+                                            <a class="product-card__cart js-fancybox" title="Добавить в корзину">
+                                                <span class="product-card__price">2 199 ₽</span>
+                                                <svg><use xlink:href="assets/images/icon.svg#icon_shopping-cart"></use></svg>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="product-popup__info">
+                                    <div class="product-popup__info-wrapper">
+                                        <div class="product-popup__price-block">
+                                            <span class="product-popup__text">Цена</span>
+                                            <span class="product-popup__price">7 990 ₽</span>
+                                        </div>
+                                        <div class="product-popup__foot">
+                                            <span class="product-popup__text">Количество</span>
+                                            <div class="product-popup__dropdown">
+                                                <select class="select_bordered select_triangle product-popup__select js-select">
+                                                    <option value="1" selected>1</option>
+                                                    <option value="2">2</option>
+                                                    <option value="3">3</option>
+                                                </select>
+                                            </div>
+                                            <a class="button button_gradiented button_white product-popup__button">
+                                                <svg class="button__icon"><use xlink:href="assets/images/icon.svg#icon_shopping-cart"></use></svg>
+                                                <span class="button__text">в корзину</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <svg class="popup__icon-close modal__close product-popup__icon-close"><use xlink:href="assets/images/icon.svg#icon_close"></use></svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="popups">
+                        <div class="popup about-popup">
+                            <div class="about-popup__wrapper">
+                                <div class="about-popup__content">
+                                    <div class="about-popup__content-wrapper">
+                                        <div class="about-popup__head">
+                                            <span>Начать работать с</span>
+                                            <h2 class="about-popup__title">Lantelia</h2>
+                                        </div>
+                                        <form class="about-popup__form" action="#" method="post">
+                                            <div class="grid">
+                                                <div class="grid__col grid__col_six">
+                                                    <div class="inputbox">
+                                                        <span class="inputbox__label inputbox__label_required">Название салона</span>
+                                                        <input class="input" type="text" name="name" required="required" />
+                                                        <span class="input__line"></span>
+                                                    </div>
+                                                    <div class="inputbox">
+                                                        <span class="inputbox__label inputbox__label_required">Город</span>
+                                                        <input class="input" type="text" name="city" required="required" />
+                                                        <span class="input__line"></span>
+                                                    </div>
+                                                    <div class="inputbox">
+                                                        <span class="inputbox__label inputbox__label_required">ФИО</span>
+                                                        <input class="input" type="text" name="fio" required="required" />
+                                                        <span class="input__line"></span>
+                                                    </div>
+                                                    <div class="inputbox">
+                                                        <span class="inputbox__label inputbox__label_required">Телефон</span>
+                                                        <input class="input" type="text" name="phone" required="required" />
+                                                        <span class="input__line"></span>
+                                                    </div>
+                                                </div>
+                                                <div class="grid__col grid__col_six">
+                                                    <div class="inputbox">
+                                                        <span class="inputbox__label inputbox__label_required">EMAIL</span>
+                                                        <input class="input" type="text" name="email" required="required" />
+                                                        <span class="input__line"></span>
+                                                    </div>
+                                                    <div class="inputbox">
+                                                        <span class="inputbox__label inputbox__label_required">Сообщение</span>
+                                                        <textarea class="textarea" name="message" required="required"></textarea>
+                                                        <span class="input__line"></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <button class="button button_white button_fill-black about-popup__button" type="submit" value="Отправить">
+                                                <div class="button__text">отправить</div>
+                                            </button>
+                                        </form>
+                                    </div>
+                                </div>
+                                <div class="about-popup__image">
+                                    <img src="assets/images/form@2x.jpg">
+                                </div>
+                            </div>
+                            <svg class="popup__icon-close modal__close about-popup__icon-close" data-fancybox-close="data-fancybox-close"><use xlink:href="assets/images/icon.svg#icon_close"></use></svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="ui-kit__section">
+            <div class="ui-kit__section-head">
+                <div class="container">
+                    <h2>Ссылки</h2>
+                    <p>Блок: blocks/link</p>
+                    <p>Стили ссылок: helpers/_link-styles.scss</p>
+                </div>
+            </div>
+            <div class="ui-kit__section-content">
+                <div class="container">
+                    <p class="ui-kit__description">.link</p>
+                    <a class="link" href="#">
+                        <span class="link__text">Обычная ссылка</span>
+                    </a>
+                    <p class="ui-kit__description">.link._white</p>
+                    <a class="link link_white" href="#">
+                        <span class="link__text">Белая ссылка на темном фоне</span>
+                    </a>
+                    <p class="ui-kit__description">.link._animated</p>
+                    <a class="link link_animated" href="#">
+                        <span class="link__text">Ссылка с анимацией и градиентом</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <section class="ui-kit__section">
+            <div class="ui-kit__section-head">
+                <div class="container">
+                    <h2>Кастомный селект</h2>
+                </div>
+            </div>
+            <div class="ui-kit__section-content">
+                <div class="container">
+                    <p class="ui-kit__description">.js-select</p>
+                    <select class="ui-kit__select js-select">
+                        <option value selected>Все офисы продаж</option>
+                        <option value="moskow">Москва</option>
+                        <option value="spb">Санкт-Петербург</option>
+                    </select>
+                </div>
+            </div>
+        </section>
+        <section class="ui-kit__section">
+            <div class="ui-kit__section-head">
+                <div class="container">
+                    <h2>Заголовок секции</h2>
+                </div>
+            </div>
+            <div class="ui-kit__section-content">
+                <div class="container">
+                    <div class="section-head">
+                        <div class="section-head__wrapper">
+                            <h4 class="section-head__subtitle">Компания Lantelia</h4>
+                            <h2 class="section-head__title">Информация</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="ui-kit__section">
+            <div class="ui-kit__section-head">
+                <div class="container">
+                    <h2>Слайдер</h2>
+                </div>
+            </div>
+            <div class="ui-kit__section-content">
+                <div class="container">
+                    <div class="slider swiper-container js-slider">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="slider__slide">
+                                    <div class="address-card">
+                                        <a class="address-card__wrapper">
+                                            <h3 class="address-card__title">Цветной Москва</h3>
+                                            <span class="address-card__address">г. Москва, Ленинградский пр., д. 2, цоколь 1234</span>
+                                            <svg class="address-card__arrow"><use xlink:href="assets/images/icon.svg#icon_arrow"></use></svg>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="slider__slide">
+                                    <div class="address-card">
+                                        <a class="address-card__wrapper">
+                                            <h3 class="address-card__title">Молен Руж</h3>
+                                            <span class="address-card__address">Санкт-Петербург, просп. Науки, 23а</span>
+                                            <svg class="address-card__arrow"><use xlink:href="assets/images/icon.svg#icon_arrow"></use></svg>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="slider__slide">
+                                    <div class="address-card">
+                                        <a class="address-card__wrapper">
+                                            <h3 class="address-card__title">Петровский пассаж</h3>
+                                            <span class="address-card__address">Псков, Рижский пр-кт, д.16</span>
+                                            <svg class="address-card__arrow"><use xlink:href="assets/images/icon.svg#icon_arrow"></use></svg>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="slider__slide">
+                                    <div class="address-card">
+                                        <a class="address-card__wrapper">
+                                            <h3 class="address-card__title">Райкин Плаза</h3>
+                                            <span class="address-card__address">Москва, Северный бульвар 3к2</span>
+                                            <svg class="address-card__arrow"><use xlink:href="assets/images/icon.svg#icon_arrow"></use></svg>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="slider__slide">
+                                    <div class="address-card">
+                                        <a class="address-card__wrapper">
+                                            <h3 class="address-card__title">Цветной Москва</h3>
+                                            <span class="address-card__address">г. Москва, Ленинградский пр., д. 2, цоколь 1234</span>
+                                            <svg class="address-card__arrow"><use xlink:href="assets/images/icon.svg#icon_arrow"></use></svg>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="slider__slide">
+                                    <div class="address-card">
+                                        <a class="address-card__wrapper">
+                                            <h3 class="address-card__title">Торговый центр Палладиум</h3>
+                                            <span class="address-card__address">Псков, Рижский пр-кт, д.16</span>
+                                            <svg class="address-card__arrow"><use xlink:href="assets/images/icon.svg#icon_arrow"></use></svg>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="slider__slide">
+                                    <div class="address-card">
+                                        <a class="address-card__wrapper">
+                                            <h3 class="address-card__title">Авиапарк</h3>
+                                            <span class="address-card__address">Москва, Тверская улица 7</span>
+                                            <svg class="address-card__arrow"><use xlink:href="assets/images/icon.svg#icon_arrow"></use></svg>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="slider__slide">
+                                    <div class="address-card">
+                                        <a class="address-card__wrapper">
+                                            <h3 class="address-card__title">Афимолл Сити</h3>
+                                            <span class="address-card__address">Санкт-Петербург, просп. Науки, 23а</span>
+                                            <svg class="address-card__arrow"><use xlink:href="assets/images/icon.svg#icon_arrow"></use></svg>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="ui-kit__section">
+            <div class="ui-kit__section-head">
+                <div class="container">
+                    <h2>Карточки адресов</h2>
+                    <p>Блок: blocks/address-card/address-card</p>
+                </div>
+            </div>
+            <div class="ui-kit__section-content">
+                <div class="container">
+                    <div class="address-card">
+                        <a class="address-card__wrapper">
+                            <h3 class="address-card__title">Цветной Москва</h3>
+                            <span class="address-card__address">г. Москва, Ленинградский пр., д. 2, цоколь 1234</span>
+                            <svg class="address-card__arrow"><use xlink:href="assets/images/icon.svg#icon_arrow"></use></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="ui-kit__section">
+            <div class="ui-kit__section-head">
+                <div class="container">
+                    <h2>Карточки новостей </h2>
+                    <p>Блок: blocks/news-card/news-card</p>
+                </div>
+            </div>
+            <div class="ui-kit__section-content">
+                <div class="container">
+                    <section class="news section">
+                        <div class="section__head">
+                            <div class="section-head">
+                                <div class="section-head__wrapper">
+                                    <h4 class="section-head__subtitle"></h4>
+                                    <h2 class="section-head__title"></h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid">
+                            <div class="grid__col grid__col_three">
+                                <a class="news-card" href="#">
+                                    <span class="news-card__wrapper">
+                                        <span class="news-card__type">Новость</span>
+                                        <span class="news-card__text">
+                                            <p>+news-card()</p>
+                                        </span>
+                                        <span class="news-card__link">Читать</span>
+                                    </span>
+                                </a>
+                            </div>
+                            <div class="grid__col grid__col_three">
+                                <a class="news-card news-card_colored news-card_colored_pink" href="#">
+                                    <span class="news-card__wrapper">
+                                        <span class="news-card__type">Новость</span>
+                                        <span class="news-card__text">
+                                            <p>+news-card()._colored._colored_pink</p>
+                                        </span>
+                                        <span class="news-card__link">Читать</span>
+                                    </span>
+                                </a>
+                            </div>
+                            <div class="grid__col grid__col_three">
+                                <a class="news-card news-card_colored news-card_colored_yellow" href="#">
+                                    <span class="news-card__wrapper">
+                                        <span class="news-card__type">Новость</span>
+                                        <span class="news-card__text">
+                                            <p>+news-card()._colored._colored_yellow</p>
+                                        </span>
+                                        <span class="news-card__link">Читать</span>
+                                    </span>
+                                </a>
+                            </div>
+                            <div class="grid__col grid__col_three">
+                                <a class="news-card news-card_colored news-card_colored_blue" href="#">
+                                    <span class="news-card__wrapper">
+                                        <span class="news-card__type">Новость</span>
+                                        <span class="news-card__text">
+                                            <p>+news-card()._colored._colored_blue</p>
+                                        </span>
+                                        <span class="news-card__link">Читать</span>
+                                    </span>
+                                </a>
+                            </div>
+                            <div class="grid__col grid__col_three">
+                                <a class="news-card news-card_colored news-card_colored_green" href="#">
+                                    <span class="news-card__wrapper">
+                                        <span class="news-card__type">Обучение</span>
+                                        <span class="news-card__text">
+                                            <p>+news-card()._colored._colored_green</p>
+                                        </span>
+                                        <span class="news-card__link">Читать</span>
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                    </section>
+                    <p class="ui-kit__description">+news-card-large()</p>
+                    <a class="news-card news-card_xl" href="#">
+                        <span class="news-card__image-wrapper">
+                            <img class="news-card__image" src="assets/images/picMainPage/aboutUs@2x.jpg" alt="" role="presentation" />
+                        </span>
+                        <span class="news-card__wrapper">
+                            <span class="news-card__top">
+                                <span class="news-card__type">О компании</span>
+                                <span class="news-card__logo">Lantelia</span>
+                            </span>
+                            <span class="news-card__bottom">
+                                <p class="news-card__text">Профессиональная косметика для волос премиум сегмента для самых искушенных</p>
+                                <span class="news-card__link">Подробнее</span>
+                            </span>
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <section class="ui-kit__section">
+            <div class="ui-kit__section-head">
+                <div class="container">
+                    <h2>Карточки товаров</h2>
+                    <p>Блок: blocks/product-card/product-card</p>
+                </div>
+            </div>
+            <div class="ui-kit__section-content">
+                <div class="container"> </div>
+            </div>
+            <div class="products" id="products">
+                <div class="container">
+                    <div class="products__line">
+                        <span class="products__helper"></span>
+                        <div class="product-card">
+                            <a class="product-card__link" href="product.html"></a>
+                            <div class="product-card__wrapper">
+                                <div class="product-card__top">
+                                    <h3 class="product-card__line">
+                                        <span>Professional Botox Therapy</span>
+                                    </h3>
+                                    <ul>
+                                        <li class="product-card__name">Шампунь</li>
+                                        <li class="product-card__name">Кератин</li>
+                                    </ul>
+                                </div>
+                                <div class="product-card__image">
+                                    <img src="assets/images/picProduct/botox_250ml_07 (line)@2x.png" />
+                                </div>
+                                <div class="product-card__bottom">
+                                    <div class="product-card__volumes">
+                                        <span class="product-card__volume">250 мл</span>
+                                        <span class="product-card__volume">250 мл</span>
+                                    </div>
+                                    <a class="product-card__arrow" href="product.html" title="Перейти к товару">
+                                        <span class="product-card__null"></span>
+                                        <svg><use xlink:href="assets/images/icon.svg#icon_arrow"></use></svg>
+                                    </a>
+                                    <a class="product-card__cart js-fancybox" href="#product1" title="Добавить в корзину">
+                                        <span class="product-card__price">2 199 ₽</span>
+                                        <svg><use xlink:href="assets/images/icon.svg#icon_shopping-cart"></use></svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-card">
+                            <a class="product-card__link" href="product.html"></a>
+                            <div class="product-card__wrapper">
+                                <div class="product-card__top">
+                                    <h3 class="product-card__line">
+                                        <span>Professional Botox Therapy</span>
+                                    </h3>
+                                    <ul>
+                                        <li class="product-card__name">Шампунь</li>
+                                        <li class="product-card__name">Кератин</li>
+                                    </ul>
+                                </div>
+                                <div class="product-card__image">
+                                    <img src="assets/images/picProduct/clarify_250ml_03(line)@2x.png" />
+                                </div>
+                                <div class="product-card__bottom">
+                                    <div class="product-card__volumes">
+                                        <span class="product-card__volume">250 мл</span>
+                                        <span class="product-card__volume">250 мл</span>
+                                    </div>
+                                    <a class="product-card__arrow" href="product.html" title="Перейти к товару">
+                                        <span class="product-card__null"></span>
+                                        <svg><use xlink:href="assets/images/icon.svg#icon_arrow"></use></svg>
+                                    </a>
+                                    <a class="product-card__cart js-fancybox" href="#product2" title="Добавить в корзину">
+                                        <span class="product-card__price">2 199 ₽</span>
+                                        <svg><use xlink:href="assets/images/icon.svg#icon_shopping-cart"></use></svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-card product-card_xl">
+                            <a class="product-card__link" href="product.html"></a>
+                            <div class="product-card__wrapper">
+                                <div class="product-card__top">
+                                    <h3 class="product-card__line">
+                                        <span>Professional Botox Therapy</span>
+                                    </h3>
+                                    <ul>
+                                        <li class="product-card__name">Шампунь</li>
+                                        <li class="product-card__name">Кератин</li>
+                                    </ul>
+                                </div>
+                                <div class="product-card__image">
+                                    <img src="assets/images/picProduct/botox_100ml_04(procedure).png" />
+                                </div>
+                                <div class="product-card__bottom">
+                                    <div class="product-card__volumes">
+                                        <span class="product-card__volume">250 мл</span>
+                                        <span class="product-card__volume">250 мл</span>
+                                    </div>
+                                    <a class="product-card__arrow" href="product.html" title="Перейти к товару">
+                                        <span class="product-card__null"></span>
+                                        <svg><use xlink:href="assets/images/icon.svg#icon_arrow"></use></svg>
+                                    </a>
+                                    <a class="product-card__cart js-fancybox" href="#product3" title="Добавить в корзину">
+                                        <span class="product-card__price">2 199 ₽</span>
+                                        <svg><use xlink:href="assets/images/icon.svg#icon_shopping-cart"></use></svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-card product-card_xl">
+                            <a class="product-card__link" href="product.html"></a>
+                            <div class="product-card__wrapper">
+                                <div class="product-card__top">
+                                    <h3 class="product-card__line">
+                                        <span>Professional Botox Therapy</span>
+                                    </h3>
+                                    <ul>
+                                        <li class="product-card__name">Шампунь</li>
+                                        <li class="product-card__name">Кератин</li>
+                                    </ul>
+                                </div>
+                                <div class="product-card__image">
+                                    <img src="assets/images/picProduct/smooth_100ml_05(procedure)@2x.png" />
+                                </div>
+                                <div class="product-card__bottom">
+                                    <div class="product-card__volumes">
+                                        <span class="product-card__volume">250 мл</span>
+                                        <span class="product-card__volume">250 мл</span>
+                                    </div>
+                                    <a class="product-card__arrow" href="product.html" title="Перейти к товару">
+                                        <span class="product-card__null"></span>
+                                        <svg><use xlink:href="assets/images/icon.svg#icon_arrow"></use></svg>
+                                    </a>
+                                    <a class="product-card__cart js-fancybox" href="#product4" title="Добавить в корзину">
+                                        <span class="product-card__price">2 199 ₽</span>
+                                        <svg><use xlink:href="assets/images/icon.svg#icon_shopping-cart"></use></svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-card">
+                            <a class="product-card__link" href="product.html"></a>
+                            <div class="product-card__wrapper">
+                                <div class="product-card__top">
+                                    <h3 class="product-card__line">
+                                        <span>Professional Botox Therapy</span>
+                                    </h3>
+                                    <ul>
+                                        <li class="product-card__name">Шампунь</li>
+                                        <li class="product-card__name">Кератин</li>
+                                    </ul>
+                                </div>
+                                <div class="product-card__image">
+                                    <img src="assets/images/picProduct/spa_250ml_03(line)@2x.png" />
+                                </div>
+                                <div class="product-card__bottom">
+                                    <div class="product-card__volumes">
+                                        <span class="product-card__volume">250 мл</span>
+                                        <span class="product-card__volume">250 мл</span>
+                                    </div>
+                                    <a class="product-card__arrow" href="product.html" title="Перейти к товару">
+                                        <span class="product-card__null"></span>
+                                        <svg><use xlink:href="assets/images/icon.svg#icon_arrow"></use></svg>
+                                    </a>
+                                    <a class="product-card__cart js-fancybox" href="#product5" title="Добавить в корзину">
+                                        <span class="product-card__price">2 199 ₽</span>
+                                        <svg><use xlink:href="assets/images/icon.svg#icon_shopping-cart"></use></svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-card">
+                            <a class="product-card__link" href="product.html"></a>
+                            <div class="product-card__wrapper">
+                                <div class="product-card__top">
+                                    <h3 class="product-card__line">
+                                        <span>Professional Botox Therapy</span>
+                                    </h3>
+                                    <ul>
+                                        <li class="product-card__name">Шампунь</li>
+                                        <li class="product-card__name">Кератин</li>
+                                    </ul>
+                                </div>
+                                <div class="product-card__image">
+                                    <img src="assets/images/picProduct/smooth_250ml_03(line)@2x.png" />
+                                </div>
+                                <div class="product-card__bottom">
+                                    <div class="product-card__volumes">
+                                        <span class="product-card__volume">250 мл</span>
+                                        <span class="product-card__volume">250 мл</span>
+                                    </div>
+                                    <a class="product-card__arrow" href="product.html" title="Перейти к товару">
+                                        <span class="product-card__null"></span>
+                                        <svg><use xlink:href="assets/images/icon.svg#icon_arrow"></use></svg>
+                                    </a>
+                                    <a class="product-card__cart js-fancybox" href="#product6" title="Добавить в корзину">
+                                        <span class="product-card__price">2 199 ₽</span>
+                                        <svg><use xlink:href="assets/images/icon.svg#icon_shopping-cart"></use></svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-popup">
+                    <div class="popups product-popup__ui-popups">
+                        <div class="popup product-popup js-freeze" id="product1">
+                            <div class="product-popup__wrapper">
+                                <div class="product-card">
+                                    <div class="product-card__wrapper">
+                                        <div class="product-card__top">
+                                            <h3 class="product-card__line">
+                                                <span>Professional Botox Therapy</span>
+                                            </h3>
+                                            <ul>
+                                                <li class="product-card__name">Шампунь</li>
+                                                <li class="product-card__name">Кератин</li>
+                                            </ul>
+                                        </div>
+                                        <div class="product-card__image">
+                                            <img src="assets/images/picProduct/botox_250ml_07 (line)@2x.png" />
+                                        </div>
+                                        <div class="product-card__bottom">
+                                            <div class="product-card__volumes">
+                                                <span class="product-card__volume">250 мл</span>
+                                                <span class="product-card__volume">250 мл</span>
+                                            </div>
+                                            <a class="product-card__arrow" href="product.html" title="Перейти к товару">
+                                                <span class="product-card__null"></span>
+                                                <svg><use xlink:href="assets/images/icon.svg#icon_arrow"></use></svg>
+                                            </a>
+                                            <a class="product-card__cart js-fancybox" title="Добавить в корзину">
+                                                <span class="product-card__price">2 199 ₽</span>
+                                                <svg><use xlink:href="assets/images/icon.svg#icon_shopping-cart"></use></svg>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="product-popup__info">
+                                    <div class="product-popup__info-wrapper">
+                                        <div class="product-popup__price-block">
+                                            <span class="product-popup__text">Цена</span>
+                                            <span class="product-popup__price">7 990 ₽</span>
+                                        </div>
+                                        <div class="product-popup__foot">
+                                            <span class="product-popup__text">Количество</span>
+                                            <div class="product-popup__dropdown">
+                                                <select class="select_bordered select_triangle product-popup__select js-select">
+                                                    <option value="1" selected="selected">1</option>
+                                                    <option value="2">2</option>
+                                                    <option value="3">3</option>
+                                                </select>
+                                            </div>
+                                            <a class="button button_gradiented button_white product-popup__button">
+                                                <svg class="button__icon"><use xlink:href="assets/images/icon.svg#icon_shopping-cart"></use></svg>
+                                                <span class="button__text">в корзину</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <svg class="popup__icon-close modal__close product-popup__icon-close"><use xlink:href="assets/images/icon.svg#icon_close"></use></svg>
+                            </div>
+                            <a class="addcart" href="cart.html">
+                                <svg class="addcart__icon"><use xlink:href="assets/images/icon.svg#icon_shopping-cart"></use></svg>
+                                <span class="addcart__num">1</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-popup">
+                    <div class="popups product-popup__ui-popups">
+                        <div class="popup product-popup js-freeze" id="product2">
+                            <div class="product-popup__wrapper">
+                                <div class="product-card">
+                                    <div class="product-card__wrapper">
+                                        <div class="product-card__top">
+                                            <h3 class="product-card__line">
+                                                <span>Professional Botox Therapy</span>
+                                            </h3>
+                                            <ul>
+                                                <li class="product-card__name">Шампунь</li>
+                                                <li class="product-card__name">Кератин</li>
+                                            </ul>
+                                        </div>
+                                        <div class="product-card__image">
+                                            <img src="assets/images/picProduct/clarify_250ml_03(line)@2x.png" />
+                                        </div>
+                                        <div class="product-card__bottom">
+                                            <div class="product-card__volumes">
+                                                <span class="product-card__volume">250 мл</span>
+                                                <span class="product-card__volume">250 мл</span>
+                                            </div>
+                                            <a class="product-card__arrow" href="product.html" title="Перейти к товару">
+                                                <span class="product-card__null"></span>
+                                                <svg><use xlink:href="assets/images/icon.svg#icon_arrow"></use></svg>
+                                            </a>
+                                            <a class="product-card__cart js-fancybox" title="Добавить в корзину">
+                                                <span class="product-card__price">2 199 ₽</span>
+                                                <svg><use xlink:href="assets/images/icon.svg#icon_shopping-cart"></use></svg>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="product-popup__info">
+                                    <div class="product-popup__info-wrapper">
+                                        <div class="product-popup__price-block">
+                                            <span class="product-popup__text">Цена</span>
+                                            <span class="product-popup__price">7 990 ₽</span>
+                                        </div>
+                                        <div class="product-popup__foot">
+                                            <span class="product-popup__text">Количество</span>
+                                            <div class="product-popup__dropdown">
+                                                <select class="select_bordered select_triangle product-popup__select js-select">
+                                                    <option value="1" selected="selected">1</option>
+                                                    <option value="2">2</option>
+                                                    <option value="3">3</option>
+                                                </select>
+                                            </div>
+                                            <a class="button button_gradiented button_white product-popup__button">
+                                                <svg class="button__icon"><use xlink:href="assets/images/icon.svg#icon_shopping-cart"></use></svg>
+                                                <span class="button__text">в корзину</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <svg class="popup__icon-close modal__close product-popup__icon-close"><use xlink:href="assets/images/icon.svg#icon_close"></use></svg>
+                            </div>
+                            <a class="addcart" href="cart.html">
+                                <svg class="addcart__icon"><use xlink:href="assets/images/icon.svg#icon_shopping-cart"></use></svg>
+                                <span class="addcart__num">1</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-popup">
+                    <div class="popups product-popup__ui-popups">
+                        <div class="popup product-popup js-freeze" id="product3">
+                            <div class="product-popup__wrapper">
+                                <div class="product-card">
+                                    <div class="product-card__wrapper">
+                                        <div class="product-card__top">
+                                            <h3 class="product-card__line">
+                                                <span>Professional Botox Therapy</span>
+                                            </h3>
+                                            <ul>
+                                                <li class="product-card__name">Шампунь</li>
+                                                <li class="product-card__name">Кератин</li>
+                                            </ul>
+                                        </div>
+                                        <div class="product-card__image">
+                                            <img src="assets/images/picProduct/botox_100ml_04(procedure).png" />
+                                        </div>
+                                        <div class="product-card__bottom">
+                                            <div class="product-card__volumes">
+                                                <span class="product-card__volume">250 мл</span>
+                                                <span class="product-card__volume">250 мл</span>
+                                            </div>
+                                            <a class="product-card__arrow" href="product.html" title="Перейти к товару">
+                                                <span class="product-card__null"></span>
+                                                <svg><use xlink:href="assets/images/icon.svg#icon_arrow"></use></svg>
+                                            </a>
+                                            <a class="product-card__cart js-fancybox" title="Добавить в корзину">
+                                                <span class="product-card__price">2 199 ₽</span>
+                                                <svg><use xlink:href="assets/images/icon.svg#icon_shopping-cart"></use></svg>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="product-popup__info">
+                                    <div class="product-popup__info-wrapper">
+                                        <div class="product-popup__price-block">
+                                            <span class="product-popup__text">Цена</span>
+                                            <span class="product-popup__price">7 990 ₽</span>
+                                        </div>
+                                        <div class="product-popup__foot">
+                                            <span class="product-popup__text">Количество</span>
+                                            <div class="product-popup__dropdown">
+                                                <select class="select_bordered select_triangle product-popup__select js-select">
+                                                    <option value="1" selected="selected">1</option>
+                                                    <option value="2">2</option>
+                                                    <option value="3">3</option>
+                                                </select>
+                                            </div>
+                                            <a class="button button_gradiented button_white product-popup__button">
+                                                <svg class="button__icon"><use xlink:href="assets/images/icon.svg#icon_shopping-cart"></use></svg>
+                                                <span class="button__text">в корзину</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <svg class="popup__icon-close modal__close product-popup__icon-close"><use xlink:href="assets/images/icon.svg#icon_close"></use></svg>
+                            </div>
+                            <a class="addcart" href="cart.html">
+                                <svg class="addcart__icon"><use xlink:href="assets/images/icon.svg#icon_shopping-cart"></use></svg>
+                                <span class="addcart__num">1</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-popup">
+                    <div class="popups product-popup__ui-popups">
+                        <div class="popup product-popup js-freeze" id="product4">
+                            <div class="product-popup__wrapper">
+                                <div class="product-card">
+                                    <div class="product-card__wrapper">
+                                        <div class="product-card__top">
+                                            <h3 class="product-card__line">
+                                                <span>Professional Botox Therapy</span>
+                                            </h3>
+                                            <ul>
+                                                <li class="product-card__name">Шампунь</li>
+                                                <li class="product-card__name">Кератин</li>
+                                            </ul>
+                                        </div>
+                                        <div class="product-card__image">
+                                            <img src="assets/images/picProduct/smooth_100ml_05(procedure)@2x.png" />
+                                        </div>
+                                        <div class="product-card__bottom">
+                                            <div class="product-card__volumes">
+                                                <span class="product-card__volume">250 мл</span>
+                                                <span class="product-card__volume">250 мл</span>
+                                            </div>
+                                            <a class="product-card__arrow" href="product.html" title="Перейти к товару">
+                                                <span class="product-card__null"></span>
+                                                <svg><use xlink:href="assets/images/icon.svg#icon_arrow"></use></svg>
+                                            </a>
+                                            <a class="product-card__cart js-fancybox" title="Добавить в корзину">
+                                                <span class="product-card__price">2 199 ₽</span>
+                                                <svg><use xlink:href="assets/images/icon.svg#icon_shopping-cart"></use></svg>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="product-popup__info">
+                                    <div class="product-popup__info-wrapper">
+                                        <div class="product-popup__price-block">
+                                            <span class="product-popup__text">Цена</span>
+                                            <span class="product-popup__price">7 990 ₽</span>
+                                        </div>
+                                        <div class="product-popup__foot">
+                                            <span class="product-popup__text">Количество</span>
+                                            <div class="product-popup__dropdown">
+                                                <select class="select_bordered select_triangle product-popup__select js-select">
+                                                    <option value="1" selected="selected">1</option>
+                                                    <option value="2">2</option>
+                                                    <option value="3">3</option>
+                                                </select>
+                                            </div>
+                                            <a class="button button_gradiented button_white product-popup__button">
+                                                <svg class="button__icon"><use xlink:href="assets/images/icon.svg#icon_shopping-cart"></use></svg>
+                                                <span class="button__text">в корзину</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <svg class="popup__icon-close modal__close product-popup__icon-close"><use xlink:href="assets/images/icon.svg#icon_close"></use></svg>
+                            </div>
+                            <a class="addcart" href="cart.html">
+                                <svg class="addcart__icon"><use xlink:href="assets/images/icon.svg#icon_shopping-cart"></use></svg>
+                                <span class="addcart__num">1</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-popup">
+                    <div class="popups product-popup__ui-popups">
+                        <div class="popup product-popup js-freeze" id="product5">
+                            <div class="product-popup__wrapper">
+                                <div class="product-card">
+                                    <div class="product-card__wrapper">
+                                        <div class="product-card__top">
+                                            <h3 class="product-card__line">
+                                                <span>Professional Botox Therapy</span>
+                                            </h3>
+                                            <ul>
+                                                <li class="product-card__name">Шампунь</li>
+                                                <li class="product-card__name">Кератин</li>
+                                            </ul>
+                                        </div>
+                                        <div class="product-card__image">
+                                            <img src="assets/images/picProduct/spa_250ml_03(line)@2x.png" />
+                                        </div>
+                                        <div class="product-card__bottom">
+                                            <div class="product-card__volumes">
+                                                <span class="product-card__volume">250 мл</span>
+                                                <span class="product-card__volume">250 мл</span>
+                                            </div>
+                                            <a class="product-card__arrow" href="product.html" title="Перейти к товару">
+                                                <span class="product-card__null"></span>
+                                                <svg><use xlink:href="assets/images/icon.svg#icon_arrow"></use></svg>
+                                            </a>
+                                            <a class="product-card__cart js-fancybox" title="Добавить в корзину">
+                                                <span class="product-card__price">2 199 ₽</span>
+                                                <svg><use xlink:href="assets/images/icon.svg#icon_shopping-cart"></use></svg>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="product-popup__info">
+                                    <div class="product-popup__info-wrapper">
+                                        <div class="product-popup__price-block">
+                                            <span class="product-popup__text">Цена</span>
+                                            <span class="product-popup__price">7 990 ₽</span>
+                                        </div>
+                                        <div class="product-popup__foot">
+                                            <span class="product-popup__text">Количество</span>
+                                            <div class="product-popup__dropdown">
+                                                <select class="select_bordered select_triangle product-popup__select js-select">
+                                                    <option value="1" selected="selected">1</option>
+                                                    <option value="2">2</option>
+                                                    <option value="3">3</option>
+                                                </select>
+                                            </div>
+                                            <a class="button button_gradiented button_white product-popup__button">
+                                                <svg class="button__icon"><use xlink:href="assets/images/icon.svg#icon_shopping-cart"></use></svg>
+                                                <span class="button__text">в корзину</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <svg class="popup__icon-close modal__close product-popup__icon-close"><use xlink:href="assets/images/icon.svg#icon_close"></use></svg>
+                            </div>
+                            <a class="addcart" href="cart.html">
+                                <svg class="addcart__icon"><use xlink:href="assets/images/icon.svg#icon_shopping-cart"></use></svg>
+                                <span class="addcart__num">1</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-popup">
+                    <div class="popups product-popup__ui-popups">
+                        <div class="popup product-popup js-freeze" id="product6">
+                            <div class="product-popup__wrapper">
+                                <div class="product-card">
+                                    <div class="product-card__wrapper">
+                                        <div class="product-card__top">
+                                            <h3 class="product-card__line">
+                                                <span>Professional Botox Therapy</span>
+                                            </h3>
+                                            <ul>
+                                                <li class="product-card__name">Шампунь</li>
+                                                <li class="product-card__name">Кератин</li>
+                                            </ul>
+                                        </div>
+                                        <div class="product-card__image">
+                                            <img src="assets/images/picProduct/smooth_250ml_03(line)@2x.png" />
+                                        </div>
+                                        <div class="product-card__bottom">
+                                            <div class="product-card__volumes">
+                                                <span class="product-card__volume">250 мл</span>
+                                                <span class="product-card__volume">250 мл</span>
+                                            </div>
+                                            <a class="product-card__arrow" href="product.html" title="Перейти к товару">
+                                                <span class="product-card__null"></span>
+                                                <svg><use xlink:href="assets/images/icon.svg#icon_arrow"></use></svg>
+                                            </a>
+                                            <a class="product-card__cart js-fancybox" title="Добавить в корзину">
+                                                <span class="product-card__price">2 199 ₽</span>
+                                                <svg><use xlink:href="assets/images/icon.svg#icon_shopping-cart"></use></svg>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="product-popup__info">
+                                    <div class="product-popup__info-wrapper">
+                                        <div class="product-popup__price-block">
+                                            <span class="product-popup__text">Цена</span>
+                                            <span class="product-popup__price">7 990 ₽</span>
+                                        </div>
+                                        <div class="product-popup__foot">
+                                            <span class="product-popup__text">Количество</span>
+                                            <div class="product-popup__dropdown">
+                                                <select class="select_bordered select_triangle product-popup__select js-select">
+                                                    <option value="1" selected="selected">1</option>
+                                                    <option value="2">2</option>
+                                                    <option value="3">3</option>
+                                                </select>
+                                            </div>
+                                            <a class="button button_gradiented button_white product-popup__button">
+                                                <svg class="button__icon"><use xlink:href="assets/images/icon.svg#icon_shopping-cart"></use></svg>
+                                                <span class="button__text">в корзину</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <svg class="popup__icon-close modal__close product-popup__icon-close"><use xlink:href="assets/images/icon.svg#icon_close"></use></svg>
+                            </div>
+                            <a class="addcart" href="cart.html">
+                                <svg class="addcart__icon"><use xlink:href="assets/images/icon.svg#icon_shopping-cart"></use></svg>
+                                <span class="addcart__num">1</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-popup">
+                    <div class="popups product-popup__ui-popups">
+                        <div class="popup product-popup js-freeze" id="product7">
+                            <div class="product-popup__wrapper">
+                                <div class="product-card">
+                                    <div class="product-card__wrapper">
+                                        <div class="product-card__top">
+                                            <h3 class="product-card__line">
+                                                <span>Professional Botox Therapy</span>
+                                            </h3>
+                                            <ul>
+                                                <li class="product-card__name">Шампунь</li>
+                                                <li class="product-card__name">Кератин</li>
+                                            </ul>
+                                        </div>
+                                        <div class="product-card__image">
+                                            <img src="assets/images/picProduct/botox_250ml_07 (line)@2x.png" />
+                                        </div>
+                                        <div class="product-card__bottom">
+                                            <div class="product-card__volumes">
+                                                <span class="product-card__volume">250 мл</span>
+                                                <span class="product-card__volume">250 мл</span>
+                                            </div>
+                                            <a class="product-card__arrow" href="product.html" title="Перейти к товару">
+                                                <span class="product-card__null"></span>
+                                                <svg><use xlink:href="assets/images/icon.svg#icon_arrow"></use></svg>
+                                            </a>
+                                            <a class="product-card__cart js-fancybox" title="Добавить в корзину">
+                                                <span class="product-card__price">2 199 ₽</span>
+                                                <svg><use xlink:href="assets/images/icon.svg#icon_shopping-cart"></use></svg>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="product-popup__info">
+                                    <div class="product-popup__info-wrapper">
+                                        <div class="product-popup__price-block">
+                                            <span class="product-popup__text">Цена</span>
+                                            <span class="product-popup__price">7 990 ₽</span>
+                                        </div>
+                                        <div class="product-popup__foot">
+                                            <span class="product-popup__text">Количество</span>
+                                            <div class="product-popup__dropdown">
+                                                <select class="select_bordered select_triangle product-popup__select js-select">
+                                                    <option value="1" selected="selected">1</option>
+                                                    <option value="2">2</option>
+                                                    <option value="3">3</option>
+                                                </select>
+                                            </div>
+                                            <a class="button button_gradiented button_white product-popup__button">
+                                                <svg class="button__icon"><use xlink:href="assets/images/icon.svg#icon_shopping-cart"></use></svg>
+                                                <span class="button__text">в корзину</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <svg class="popup__icon-close modal__close product-popup__icon-close"><use xlink:href="assets/images/icon.svg#icon_close"></use></svg>
+                            </div>
+                            <a class="addcart" href="cart.html">
+                                <svg class="addcart__icon"><use xlink:href="assets/images/icon.svg#icon_shopping-cart"></use></svg>
+                                <span class="addcart__num">1</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-popup">
+                    <div class="popups product-popup__ui-popups">
+                        <div class="popup product-popup js-freeze" id="product8">
+                            <div class="product-popup__wrapper">
+                                <div class="product-card">
+                                    <div class="product-card__wrapper">
+                                        <div class="product-card__top">
+                                            <h3 class="product-card__line">
+                                                <span>Professional Botox Therapy</span>
+                                            </h3>
+                                            <ul>
+                                                <li class="product-card__name">Шампунь</li>
+                                                <li class="product-card__name">Кератин</li>
+                                            </ul>
+                                        </div>
+                                        <div class="product-card__image">
+                                            <img src="assets/images/picProduct/smooth_100ml_05(procedure)@2x.png" />
+                                        </div>
+                                        <div class="product-card__bottom">
+                                            <div class="product-card__volumes">
+                                                <span class="product-card__volume">250 мл</span>
+                                                <span class="product-card__volume">250 мл</span>
+                                            </div>
+                                            <a class="product-card__arrow" href="product.html" title="Перейти к товару">
+                                                <span class="product-card__null"></span>
+                                                <svg><use xlink:href="assets/images/icon.svg#icon_arrow"></use></svg>
+                                            </a>
+                                            <a class="product-card__cart js-fancybox" title="Добавить в корзину">
+                                                <span class="product-card__price">2 199 ₽</span>
+                                                <svg><use xlink:href="assets/images/icon.svg#icon_shopping-cart"></use></svg>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="product-popup__info">
+                                    <div class="product-popup__info-wrapper">
+                                        <div class="product-popup__price-block">
+                                            <span class="product-popup__text">Цена</span>
+                                            <span class="product-popup__price">7 990 ₽</span>
+                                        </div>
+                                        <div class="product-popup__foot">
+                                            <span class="product-popup__text">Количество</span>
+                                            <div class="product-popup__dropdown">
+                                                <select class="select_bordered select_triangle product-popup__select js-select">
+                                                    <option value="1" selected="selected">1</option>
+                                                    <option value="2">2</option>
+                                                    <option value="3">3</option>
+                                                </select>
+                                            </div>
+                                            <a class="button button_gradiented button_white product-popup__button">
+                                                <svg class="button__icon"><use xlink:href="assets/images/icon.svg#icon_shopping-cart"></use></svg>
+                                                <span class="button__text">в корзину</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <svg class="popup__icon-close modal__close product-popup__icon-close"><use xlink:href="assets/images/icon.svg#icon_close"></use></svg>
+                            </div>
+                            <a class="addcart" href="cart.html">
+                                <svg class="addcart__icon"><use xlink:href="assets/images/icon.svg#icon_shopping-cart"></use></svg>
+                                <span class="addcart__num">1</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-popup">
+                    <div class="popups product-popup__ui-popups">
+                        <div class="popup product-popup js-freeze" id="product9">
+                            <div class="product-popup__wrapper">
+                                <div class="product-card">
+                                    <div class="product-card__wrapper">
+                                        <div class="product-card__top">
+                                            <h3 class="product-card__line">
+                                                <span>Professional Botox Therapy</span>
+                                            </h3>
+                                            <ul>
+                                                <li class="product-card__name">Шампунь</li>
+                                                <li class="product-card__name">Кератин</li>
+                                            </ul>
+                                        </div>
+                                        <div class="product-card__image">
+                                            <img src="assets/images/picProduct/smooth_250ml_01@2x.png" />
+                                        </div>
+                                        <div class="product-card__bottom">
+                                            <div class="product-card__volumes">
+                                                <span class="product-card__volume">250 мл</span>
+                                                <span class="product-card__volume">250 мл</span>
+                                            </div>
+                                            <a class="product-card__arrow" href="product.html" title="Перейти к товару">
+                                                <span class="product-card__null"></span>
+                                                <svg><use xlink:href="assets/images/icon.svg#icon_arrow"></use></svg>
+                                            </a>
+                                            <a class="product-card__cart js-fancybox" title="Добавить в корзину">
+                                                <span class="product-card__price">2 199 ₽</span>
+                                                <svg><use xlink:href="assets/images/icon.svg#icon_shopping-cart"></use></svg>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="product-popup__info">
+                                    <div class="product-popup__info-wrapper">
+                                        <div class="product-popup__price-block">
+                                            <span class="product-popup__text">Цена</span>
+                                            <span class="product-popup__price">7 990 ₽</span>
+                                        </div>
+                                        <div class="product-popup__foot">
+                                            <span class="product-popup__text">Количество</span>
+                                            <div class="product-popup__dropdown">
+                                                <select class="select_bordered select_triangle product-popup__select js-select">
+                                                    <option value="1" selected="selected">1</option>
+                                                    <option value="2">2</option>
+                                                    <option value="3">3</option>
+                                                </select>
+                                            </div>
+                                            <a class="button button_gradiented button_white product-popup__button">
+                                                <svg class="button__icon"><use xlink:href="assets/images/icon.svg#icon_shopping-cart"></use></svg>
+                                                <span class="button__text">в корзину</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <svg class="popup__icon-close modal__close product-popup__icon-close"><use xlink:href="assets/images/icon.svg#icon_close"></use></svg>
+                            </div>
+                            <a class="addcart" href="cart.html">
+                                <svg class="addcart__icon"><use xlink:href="assets/images/icon.svg#icon_shopping-cart"></use></svg>
+                                <span class="addcart__num">1</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-popup">
+                    <div class="popups product-popup__ui-popups">
+                        <div class="popup product-popup js-freeze" id="product10">
+                            <div class="product-popup__wrapper">
+                                <div class="product-card">
+                                    <div class="product-card__wrapper">
+                                        <div class="product-card__top">
+                                            <h3 class="product-card__line">
+                                                <span>Professional Botox Therapy</span>
+                                            </h3>
+                                            <ul>
+                                                <li class="product-card__name">Шампунь</li>
+                                                <li class="product-card__name">Кератин</li>
+                                            </ul>
+                                        </div>
+                                        <div class="product-card__image">
+                                            <img src="assets/images/picProduct/smooth_250ml_02@2x.png" />
+                                        </div>
+                                        <div class="product-card__bottom">
+                                            <div class="product-card__volumes">
+                                                <span class="product-card__volume">250 мл</span>
+                                                <span class="product-card__volume">250 мл</span>
+                                            </div>
+                                            <a class="product-card__arrow" href="product.html" title="Перейти к товару">
+                                                <span class="product-card__null"></span>
+                                                <svg><use xlink:href="assets/images/icon.svg#icon_arrow"></use></svg>
+                                            </a>
+                                            <a class="product-card__cart js-fancybox" title="Добавить в корзину">
+                                                <span class="product-card__price">2 199 ₽</span>
+                                                <svg><use xlink:href="assets/images/icon.svg#icon_shopping-cart"></use></svg>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="product-popup__info">
+                                    <div class="product-popup__info-wrapper">
+                                        <div class="product-popup__price-block">
+                                            <span class="product-popup__text">Цена</span>
+                                            <span class="product-popup__price">7 990 ₽</span>
+                                        </div>
+                                        <div class="product-popup__foot">
+                                            <span class="product-popup__text">Количество</span>
+                                            <div class="product-popup__dropdown">
+                                                <select class="select_bordered select_triangle product-popup__select js-select">
+                                                    <option value="1" selected="selected">1</option>
+                                                    <option value="2">2</option>
+                                                    <option value="3">3</option>
+                                                </select>
+                                            </div>
+                                            <a class="button button_gradiented button_white product-popup__button">
+                                                <svg class="button__icon"><use xlink:href="assets/images/icon.svg#icon_shopping-cart"></use></svg>
+                                                <span class="button__text">в корзину</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <svg class="popup__icon-close modal__close product-popup__icon-close"><use xlink:href="assets/images/icon.svg#icon_close"></use></svg>
+                            </div>
+                            <a class="addcart" href="cart.html">
+                                <svg class="addcart__icon"><use xlink:href="assets/images/icon.svg#icon_shopping-cart"></use></svg>
+                                <span class="addcart__num">1</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-popup">
+                    <div class="popups product-popup__ui-popups">
+                        <div class="popup product-popup js-freeze" id="product11">
+                            <div class="product-popup__wrapper">
+                                <div class="product-card">
+                                    <div class="product-card__wrapper">
+                                        <div class="product-card__top">
+                                            <h3 class="product-card__line">
+                                                <span>Professional Botox Therapy</span>
+                                            </h3>
+                                            <ul>
+                                                <li class="product-card__name">Шампунь</li>
+                                                <li class="product-card__name">Кератин</li>
+                                            </ul>
+                                        </div>
+                                        <div class="product-card__image">
+                                            <img src="assets/images/picProduct/smooth_250ml_03(line)@2x.png" />
+                                        </div>
+                                        <div class="product-card__bottom">
+                                            <div class="product-card__volumes">
+                                                <span class="product-card__volume">250 мл</span>
+                                                <span class="product-card__volume">250 мл</span>
+                                            </div>
+                                            <a class="product-card__arrow" href="product.html" title="Перейти к товару">
+                                                <span class="product-card__null"></span>
+                                                <svg><use xlink:href="assets/images/icon.svg#icon_arrow"></use></svg>
+                                            </a>
+                                            <a class="product-card__cart js-fancybox" title="Добавить в корзину">
+                                                <span class="product-card__price">2 199 ₽</span>
+                                                <svg><use xlink:href="assets/images/icon.svg#icon_shopping-cart"></use></svg>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="product-popup__info">
+                                    <div class="product-popup__info-wrapper">
+                                        <div class="product-popup__price-block">
+                                            <span class="product-popup__text">Цена</span>
+                                            <span class="product-popup__price">7 990 ₽</span>
+                                        </div>
+                                        <div class="product-popup__foot">
+                                            <span class="product-popup__text">Количество</span>
+                                            <div class="product-popup__dropdown">
+                                                <select class="select_bordered select_triangle product-popup__select js-select">
+                                                    <option value="1" selected="selected">1</option>
+                                                    <option value="2">2</option>
+                                                    <option value="3">3</option>
+                                                </select>
+                                            </div>
+                                            <a class="button button_gradiented button_white product-popup__button">
+                                                <svg class="button__icon"><use xlink:href="assets/images/icon.svg#icon_shopping-cart"></use></svg>
+                                                <span class="button__text">в корзину</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <svg class="popup__icon-close modal__close product-popup__icon-close"><use xlink:href="assets/images/icon.svg#icon_close"></use></svg>
+                            </div>
+                            <a class="addcart" href="cart.html">
+                                <svg class="addcart__icon"><use xlink:href="assets/images/icon.svg#icon_shopping-cart"></use></svg>
+                                <span class="addcart__num">1</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-popup">
+                    <div class="popups product-popup__ui-popups">
+                        <div class="popup product-popup js-freeze" id="product12">
+                            <div class="product-popup__wrapper">
+                                <div class="product-card">
+                                    <div class="product-card__wrapper">
+                                        <div class="product-card__top">
+                                            <h3 class="product-card__line">
+                                                <span>Professional Botox Therapy</span>
+                                            </h3>
+                                            <ul>
+                                                <li class="product-card__name">Шампунь</li>
+                                                <li class="product-card__name">Кератин</li>
+                                            </ul>
+                                        </div>
+                                        <div class="product-card__image">
+                                            <img src="assets/images/picProduct/spa_250ml_02@2x.png" />
+                                        </div>
+                                        <div class="product-card__bottom">
+                                            <div class="product-card__volumes">
+                                                <span class="product-card__volume">250 мл</span>
+                                                <span class="product-card__volume">250 мл</span>
+                                            </div>
+                                            <a class="product-card__arrow" href="product.html" title="Перейти к товару">
+                                                <span class="product-card__null"></span>
+                                                <svg><use xlink:href="assets/images/icon.svg#icon_arrow"></use></svg>
+                                            </a>
+                                            <a class="product-card__cart js-fancybox" title="Добавить в корзину">
+                                                <span class="product-card__price">2 199 ₽</span>
+                                                <svg><use xlink:href="assets/images/icon.svg#icon_shopping-cart"></use></svg>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="product-popup__info">
+                                    <div class="product-popup__info-wrapper">
+                                        <div class="product-popup__price-block">
+                                            <span class="product-popup__text">Цена</span>
+                                            <span class="product-popup__price">7 990 ₽</span>
+                                        </div>
+                                        <div class="product-popup__foot">
+                                            <span class="product-popup__text">Количество</span>
+                                            <div class="product-popup__dropdown">
+                                                <select class="select_bordered select_triangle product-popup__select js-select">
+                                                    <option value="1" selected="selected">1</option>
+                                                    <option value="2">2</option>
+                                                    <option value="3">3</option>
+                                                </select>
+                                            </div>
+                                            <a class="button button_gradiented button_white product-popup__button">
+                                                <svg class="button__icon"><use xlink:href="assets/images/icon.svg#icon_shopping-cart"></use></svg>
+                                                <span class="button__text">в корзину</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <svg class="popup__icon-close modal__close product-popup__icon-close"><use xlink:href="assets/images/icon.svg#icon_close"></use></svg>
+                            </div>
+                            <a class="addcart" href="cart.html">
+                                <svg class="addcart__icon"><use xlink:href="assets/images/icon.svg#icon_shopping-cart"></use></svg>
+                                <span class="addcart__num">1</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-popup">
+                    <div class="popups product-popup__ui-popups">
+                        <div class="popup product-popup js-freeze" id="product13">
+                            <div class="product-popup__wrapper">
+                                <div class="product-card">
+                                    <div class="product-card__wrapper">
+                                        <div class="product-card__top">
+                                            <h3 class="product-card__line">
+                                                <span>Professional Botox Therapy</span>
+                                            </h3>
+                                            <ul>
+                                                <li class="product-card__name">Шампунь</li>
+                                                <li class="product-card__name">Кератин</li>
+                                            </ul>
+                                        </div>
+                                        <div class="product-card__image">
+                                            <img src="assets/images/picProduct/spa_250ml_01@2x.png" />
+                                        </div>
+                                        <div class="product-card__bottom">
+                                            <div class="product-card__volumes">
+                                                <span class="product-card__volume">250 мл</span>
+                                                <span class="product-card__volume">250 мл</span>
+                                            </div>
+                                            <a class="product-card__arrow" href="product.html" title="Перейти к товару">
+                                                <span class="product-card__null"></span>
+                                                <svg><use xlink:href="assets/images/icon.svg#icon_arrow"></use></svg>
+                                            </a>
+                                            <a class="product-card__cart js-fancybox" title="Добавить в корзину">
+                                                <span class="product-card__price">2 199 ₽</span>
+                                                <svg><use xlink:href="assets/images/icon.svg#icon_shopping-cart"></use></svg>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="product-popup__info">
+                                    <div class="product-popup__info-wrapper">
+                                        <div class="product-popup__price-block">
+                                            <span class="product-popup__text">Цена</span>
+                                            <span class="product-popup__price">7 990 ₽</span>
+                                        </div>
+                                        <div class="product-popup__foot">
+                                            <span class="product-popup__text">Количество</span>
+                                            <div class="product-popup__dropdown">
+                                                <select class="select_bordered select_triangle product-popup__select js-select">
+                                                    <option value="1" selected="selected">1</option>
+                                                    <option value="2">2</option>
+                                                    <option value="3">3</option>
+                                                </select>
+                                            </div>
+                                            <a class="button button_gradiented button_white product-popup__button">
+                                                <svg class="button__icon"><use xlink:href="assets/images/icon.svg#icon_shopping-cart"></use></svg>
+                                                <span class="button__text">в корзину</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <svg class="popup__icon-close modal__close product-popup__icon-close"><use xlink:href="assets/images/icon.svg#icon_close"></use></svg>
+                            </div>
+                            <a class="addcart" href="cart.html">
+                                <svg class="addcart__icon"><use xlink:href="assets/images/icon.svg#icon_shopping-cart"></use></svg>
+                                <span class="addcart__num">1</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-popup">
+                    <div class="popups product-popup__ui-popups">
+                        <div class="popup product-popup js-freeze" id="product14">
+                            <div class="product-popup__wrapper">
+                                <div class="product-card">
+                                    <div class="product-card__wrapper">
+                                        <div class="product-card__top">
+                                            <h3 class="product-card__line">
+                                                <span>Professional Botox Therapy</span>
+                                            </h3>
+                                            <ul>
+                                                <li class="product-card__name">Шампунь</li>
+                                                <li class="product-card__name">Кератин</li>
+                                            </ul>
+                                        </div>
+                                        <div class="product-card__image">
+                                            <img src="assets/images/picProduct/spa_250ml_03(line)@2x.png" />
+                                        </div>
+                                        <div class="product-card__bottom">
+                                            <div class="product-card__volumes">
+                                                <span class="product-card__volume">250 мл</span>
+                                                <span class="product-card__volume">250 мл</span>
+                                            </div>
+                                            <a class="product-card__arrow" href="product.html" title="Перейти к товару">
+                                                <span class="product-card__null"></span>
+                                                <svg><use xlink:href="assets/images/icon.svg#icon_arrow"></use></svg>
+                                            </a>
+                                            <a class="product-card__cart js-fancybox" title="Добавить в корзину">
+                                                <span class="product-card__price">2 199 ₽</span>
+                                                <svg><use xlink:href="assets/images/icon.svg#icon_shopping-cart"></use></svg>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="product-popup__info">
+                                    <div class="product-popup__info-wrapper">
+                                        <div class="product-popup__price-block">
+                                            <span class="product-popup__text">Цена</span>
+                                            <span class="product-popup__price">7 990 ₽</span>
+                                        </div>
+                                        <div class="product-popup__foot">
+                                            <span class="product-popup__text">Количество</span>
+                                            <div class="product-popup__dropdown">
+                                                <select class="select_bordered select_triangle product-popup__select js-select">
+                                                    <option value="1" selected="selected">1</option>
+                                                    <option value="2">2</option>
+                                                    <option value="3">3</option>
+                                                </select>
+                                            </div>
+                                            <a class="button button_gradiented button_white product-popup__button">
+                                                <svg class="button__icon"><use xlink:href="assets/images/icon.svg#icon_shopping-cart"></use></svg>
+                                                <span class="button__text">в корзину</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <svg class="popup__icon-close modal__close product-popup__icon-close"><use xlink:href="assets/images/icon.svg#icon_close"></use></svg>
+                            </div>
+                            <a class="addcart" href="cart.html">
+                                <svg class="addcart__icon"><use xlink:href="assets/images/icon.svg#icon_shopping-cart"></use></svg>
+                                <span class="addcart__num">1</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="ui-kit__section">
+            <div class="ui-kit__section-head">
+                <div class="container">
+                    <h2>Круглый блок - нужна помощь и корзина</h2>
+                    <p>Блок: components/needHelp/needHelp</p>
+                </div>
+            </div>
+            <div class="ui-kit__section-content">
+                <div class="container">
+                    <p class="ui-kit__description">нужна помощь</p>
+                    <div class="needHelp-ui">
+                        <div class="needHelp">
+                            <div class="needHelp__wrapper">
+                                <svg class="needHelp__icon"><use xlink:href="assets/images/icon.svg#icon_phone"></use></svg>
+                                <svg class="needHelp__close"><use xlink:href="assets/images/icon.svg#icon_close"></use></svg>
+                                <div class="needHelp__text">
+                                    <p>Нужна помощь</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="needHelp-popup">
+                            <div class="needHelp-popup__content">
+                                <h3 class="needHelp-popup__heading">Нужна помощь?</h3>
+                                <p class="needHelp-popup__text">Позвоните нам и наш менеджер ответит на Ваши вопросы</p>
+                            </div>
+                            <a class="needHelp-popup__phone" href="tel:8 800 870—0697">
+                                <span class="needHelp-popup__num">8 800 870—0697</span>
+                                <svg class="needHelp-popup__icon"><use xlink:href="assets/images/icon.svg#icon_phonecopy3"></use></svg>
+                            </a>
+                            <a class="needHelp-popup__phone" href="tel:8 495 700—0201">
+                                <span class="needHelp-popup__num">8 495 700—0201</span>
+                                <svg class="needHelp-popup__icon"><use xlink:href="assets/images/icon.svg#icon_phonecopy3"></use></svg>
+                            </a>
+                        </div>
+                    </div>
+                    <p class="ui-kit__description">корзина</p>
+                    <div class="needHelp-ui">
+                        <a class="addcart" href="cart.html">
+                            <svg class="addcart__icon"><use xlink:href="assets/images/icon.svg#icon_shopping-cart"></use></svg>
+                            <span class="addcart__num">1</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="ui-kit__section">
+            <div class="ui-kit__section-head">
+                <div class="container">
+                    <h2>Блок цены с описанием</h2>
+                    <p>Блок: blocks/order-price/order-price</p>
+                </div>
+            </div>
+            <div class="ui-kit__section-content">
+                <div class="container">
+                    <div class="order-price">
+                        <span class="order-price__text">Стоимость заказа</span>
+                        <div class="order-price__price-block">
+                            <span class="order-price__price" data-total="29 990">29 990</span>
+                            <span class="order-price__rouble">₽</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="ui-kit__section">
+            <div class="ui-kit__section-head">
+                <div class="container">
+                    <h2>Видео</h2>
+                    <p>Блок: blocks/video/video</p>
+                </div>
+            </div>
+            <div class="ui-kit__section-content">
+                <div class="container">
+                    <div class="video training-page__video">
+                        <div class="video__icon">
+                            <svg><use xlink:href="assets/images/icon.svg#icon_play"></use></svg>
+                        </div>
+                        <img class="video__image" src="assets/images/video@2x.jpg" data-video="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1&amp;amp;rel=0&amp;amp;showinfo=0" alt="" role="presentation" />
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="ui-kit__section">
+            <div class="ui-kit__section-head">
+                <div class="container">
+                    <h2>Социальные кнопки</h2>
+                    <p>Блок: blocks/social/social</p>
+                </div>
+            </div>
+            <div class="ui-kit__section-content">
+                <div class="container">
+                    <ul class="social ui-kit__social">
+                        <li class="social__item">
+                            <a class="social__link social__link social__link_type_vk" href="#">
+                                <svg class="social__icon"><use xlink:href="assets/images/icon.svg#icon_vk"></use></svg>
+                            </a>
+                        </li>
+                        <li class="social__item">
+                            <a class="social__link social__link social__link_type_f" href="#">
+                                <svg class="social__icon"><use xlink:href="assets/images/icon.svg#icon_f"></use></svg>
+                            </a>
+                        </li>
+                        <li class="social__item">
+                            <a class="social__link social__link social__link_type_twitter" href="#">
+                                <svg class="social__icon"><use xlink:href="assets/images/icon.svg#icon_twitter"></use></svg>
+                            </a>
+                        </li>
+                        <li class="social__item">
+                            <a class="social__link social__link social__link_type_instagram" href="#">
+                                <svg class="social__icon"><use xlink:href="assets/images/icon.svg#icon_instagram"></use></svg>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section class="ui-kit__section">
+            <div class="ui-kit__section-head">
+                <div class="container">
+                    <h2>Карты</h2>
+                    <p>Блок: components/map/map</p>
+                </div>
+            </div>
+            <div class="ui-kit__section-content">
+                <div class="container">
+                    <p class="ui-kit__description">#contactMap</p>
+                    <section class="map" id="contactMap"></section>
+                </div>
+            </div>
+        </section>
+    </div>
+    <script>
+        $('.ui-kit__section').each(function(i) {
+            var id = 'section' + i;
+            var name = $(this).find('.ui-kit__section-head h2').text();
+            var li = $('<li></li>');
+            var a = $('<a></a>');
+
+            a.attr('href', '#' + id).text(name).addClass('js-anchor');
+            li.append(a);
+
+            $('.ui-kit__navigation__list').append(li);
+            $(this).attr('id', id);
+        });
+    </script>
+    <div class="needHelp">
+        <div class="needHelp__wrapper">
+            <svg class="needHelp__icon"><use xlink:href="assets/images/icon.svg#icon_phone"></use></svg>
+            <svg class="needHelp__close"><use xlink:href="assets/images/icon.svg#icon_close"></use></svg>
+            <div class="needHelp__text">
+                <p>Нужна помощь</p>
+            </div>
+        </div>
+    </div>
+    <div class="needHelp-popup">
+        <div class="needHelp-popup__content">
+            <h3 class="needHelp-popup__heading">Нужна помощь?</h3>
+            <p class="needHelp-popup__text">Позвоните нам и наш менеджер ответит на Ваши вопросы</p>
+        </div>
+        <a class="needHelp-popup__phone" href="tel:8 800 870—0697">
+            <span class="needHelp-popup__num">8 800 870—0697</span>
+            <svg class="needHelp-popup__icon"><use xlink:href="assets/images/icon.svg#icon_phonecopy3"></use></svg>
+        </a>
+        <a class="needHelp-popup__phone" href="tel:8 495 700—0201">
+            <span class="needHelp-popup__num">8 495 700—0201</span>
+            <svg class="needHelp-popup__icon"><use xlink:href="assets/images/icon.svg#icon_phonecopy3"></use></svg>
+        </a>
+    </div>
+    <a class="addcart" href="cart.html">
+        <svg class="addcart__icon"><use xlink:href="assets/images/icon.svg#icon_shopping-cart"></use></svg>
+        <span class="addcart__num">1</span>
+    </a>
+    <section class="footer">
+        <div class="container">
+            <div class="footer__wrapper">
+                <div class="grid">
+                    <div class="grid__col grid__col_two footer__col_logo">
+                        <a class="footer__logo" href="index.html" title="Lantelia">
+                            <svg><use xlink:href="assets/images/icon.svg#icon_lantelia"></use></svg>
+                        </a>
+                    </div>
+                    <div class="grid__col grid__col_two footer__col_social">
+                        <div class="footer__descr">Профессиональная косметика для волос Lantelia</div>
+                        <ul class="social footer__social">
+                            <li class="social__item">
+                                <a class="social__link social__link social__link_type_vk" href="#">
+                                    <svg class="social__icon"><use xlink:href="assets/images/icon.svg#icon_vk"></use></svg>
+                                </a>
+                            </li>
+                            <li class="social__item">
+                                <a class="social__link social__link social__link_type_f" href="#">
+                                    <svg class="social__icon"><use xlink:href="assets/images/icon.svg#icon_f"></use></svg>
+                                </a>
+                            </li>
+                            <li class="social__item">
+                                <a class="social__link social__link social__link_type_instagram" href="#">
+                                    <svg class="social__icon"><use xlink:href="assets/images/icon.svg#icon_instagram"></use></svg>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="grid__col grid__col_two footer__col_links">
+                        <ul class="footer__links">
+                            <li class="footer__link">
+                                <a class="link" href="catalog.html">
+                                    <span class="link__text">Продукция</span>
+                                </a>
+                            </li>
+                            <li class="footer__link">
+                                <a class="link" href="sales-offices.html">
+                                    <span class="link__text">Где купить</span>
+                                </a>
+                            </li>
+                            <li class="footer__link">
+                                <a class="link" href="newsTraining.html">
+                                    <span class="link__text">Обучение и новости</span>
+                                </a>
+                            </li>
+                            <li class="footer__link">
+                                <a class="link" href="about.html">
+                                    <span class="link__text">О компании</span>
+                                </a>
+                            </li>
+                            <li class="footer__link">
+                                <a class="link" href="contacts.html">
+                                    <span class="link__text">Контакты</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="grid__col grid__col_two footer__col_links">
+                        <ul class="footer__links">
+                            <li class="footer__link">
+                                <a class="link">
+                                    <span class="link__text">Публичная оферта</span>
+                                </a>
+                            </li>
+                            <li class="footer__link">
+                                <a class="link" href="shippingAndPayment.html">
+                                    <span class="link__text">Доставка и оплата</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="grid__col grid__col_two footer__col_right">
+                        <a class="button button_gradiented js-fancyform" href="#about-popup">
+                            <span class="button__text">НАЧАТЬ РАБОТАТЬ С LANTELIA</span>
+                        </a>
+                        <div class="footer__copyright">&#169; 2017 Lantelia. Все права защищены</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="about-popup">
+        <div class="popups">
+            <div class="popup about-popup" id="about-popup">
+                <div class="about-popup__wrapper">
+                    <div class="about-popup__content">
+                        <div class="about-popup__content-wrapper">
+                            <div class="about-popup__success">
+                                <div class="about-popup__box">
+                                    <span class="about-popup__check"></span>
+                                </div>
+                                <div class="about-popup__success-content">
+                                    <h2 class="about-popup__title">Ваша заявка успешно отправлена.</h2>
+                                    <p class="about-popup__text">Наш менеджер с Вами свяжется в ближайшее время.</p>
+                                </div>
+                                <a class="button button_white button_fill-black js-unfreeze popup__icon-close">
+                                    <span class="button__text">Хорошо</span>
+                                </a>
+                            </div>
+                            <div class="about-popup__main">
+                                <div class="about-popup__head">
+                                    <span>Начать работать с</span>
+                                    <h2 class="about-popup__title">Lantelia</h2>
+                                </div>
+                                <form class="about-popup__form" method="get" id="aboutForm" action="1.php">
+                                    <div class="grid">
+                                        <div class="grid__col grid__col_six">
+                                            <div class="inputbox">
+                                                <span class="inputbox__label inputbox__label_required">Название салона</span>
+                                                <input class="input" type="text" name="workName" id="workName" title="Название салона" data-required="data-required" />
+                                                <span class="input__line"></span>
+                                            </div>
+                                            <div class="inputbox">
+                                                <span class="inputbox__label inputbox__label_required">Город</span>
+                                                <input class="input" type="text" name="workCity" id="workCity" title="Город" data-required="data-required" />
+                                                <span class="input__line"></span>
+                                            </div>
+                                            <div class="inputbox">
+                                                <span class="inputbox__label inputbox__label_required">ФИО</span>
+                                                <input class="input" type="text" name="workFio" id="workFio" title="ФИО" data-required="data-required" />
+                                                <span class="input__line"></span>
+                                            </div>
+                                            <div class="inputbox">
+                                                <span class="inputbox__label inputbox__label_required">Телефон</span>
+                                                <input class="input" type="tel" name="workPhone" id="workPhone" title="Телефон" data-type="tel" data-required="data-required" />
+                                                <span class="input__line"></span>
+                                            </div>
+                                        </div>
+                                        <div class="grid__col grid__col_six">
+                                            <div class="inputbox">
+                                                <span class="inputbox__label inputbox__label_required">EMAIL</span>
+                                                <input class="input" type="email" name="workEmail" id="workEmail" title="EMAIL" data-type="email" data-required="data-required" />
+                                                <span class="input__line"></span>
+                                            </div>
+                                            <div class="inputbox">
+                                                <span class="inputbox__label inputbox__label_required">Сообщение</span>
+                                                <textarea class="textarea" name="workMessage" id="workMessage" title="Сообщение" data-required="data-required"></textarea>
+                                                <span class="input__line"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button class="button button_white button_fill-black about-popup__button js-unfreeze" type="submit" value="send">
+                                        <div class="button__text">отправить</div>
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about-popup__image">
+                        <img src="assets/images/form@2x.jpg" />
+                    </div>
+                </div>
+                <svg class="popup__icon-close popup__icon-close about-popup__icon-close" data-fancybox-close="data-fancybox-close"><use xlink:href="assets/images/icon.svg#icon_close"></use></svg>
+            </div>
+        </div>
+    </div>
+    <div id="overlay"></div>
+    <script src="assets/scripts/app.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAxPYPIFoyo8a8749Pi9ooi_WBnXZKpBoA"></script>
+</body>
+
+</html>
